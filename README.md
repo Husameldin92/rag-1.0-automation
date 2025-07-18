@@ -25,7 +25,7 @@ This project provides **automated testing and AI evaluation** for RAG systems:
    - 🧪 Cypress tests query your RAG system in **English** and **German**
    - 📝 Each test creates **JSON files** with query results: `test_1_en.json`, `test_1_de.json`, etc.
    - 👀 **Watcher detects** new JSON files automatically
-   - 🤖 **AI evaluator** processes each file using OpenAI GPT-4
+   - 🤖 **AI evaluator** processes each file using OpenAI GPT-4 (or any module you want)
    - ✅ **Verdict files** appear: `test_1_en_verdict.txt`, `test_1_de_verdict.txt`, etc.
 
 4. **Get Results**: Check the `all_tests/` folder for AI evaluation verdicts
