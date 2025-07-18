@@ -1,0 +1,100 @@
+More on this topic Prompt:
+
+# Determine localized section headers
+def get_sources_header(language):
+    if language == "German":
+        return "Quellen"
+    elif language == "Dutch":
+        return "Bronnen"
+    elif language == "English":
+        return "Sources"
+    else:
+        return None
+
+
+def get_more_on_topic_header(language):
+    if language == "German":
+        return "Mehr zu diesem Thema"
+    elif language == "Dutch":
+        return "Meer over dit onderwerp"
+    elif language == "English":
+        return "More on this Topic"
+    else:
+        return None
+
+
+# Start building more_on_topic_str with instructions
+more_on_topic_str = (
+        "User Context Header:\n"
+        f"platform: {platform}\n"
+        f"communityExperience: {community_experience}\n"
+        f"tags: {', '.join(tags)}\n"
+        f"accessTier: {access_tier}\n"
+        f"addOnDiscountAmount: {discount_amount}\n"
+        f"addOnDiscountType: {discount_type}\n"
+        f"languagePreference: {language}\n"
+
+    f"Original Query:\n{query}"
+    + f"\n\nAll output must, without exception, be written in {language}. This includes section headers, summaries, access information, and any other generated text."
+    + "\n\nIf there are no relevant references, return an empty message."
+    + "\n\nIf there are relevant references for further reading and the query was not nonsense, generate an additional section with the following structure:"
+    + "\n\nAppend the section directly after your main answer (previous response, see assistant message). Under no circumstances are you allowed to repost the main answer (by this we mean previous response, see assistant message) in full or in part or a recap thereof or any other kind of introduction."
+    + "\n\n---"
+    + f"\n\n#### {sources_header}:" if sources_header else f"\n\n#### Translate 'Sources' into {language}:"
+    + "\nList all the citations mentioned in your previous message together with a short summary of what the user can learn from the document associated with the retrieved document chunk.” 
+    + "\nFor each, include the content type (from chunk metadata: READ, TUTORIAL, FSLE, RHEINGOLD, CAMP, FLEX_CAMP) in the summary."
++ "\nIf the content type is not an add-on (READ, TUTORIAL, FSLE), determine access based on the user’s accessTier (see “Access Rights & Membership Level” in User Context Field Guide). If the chunk’s access = restricted, state which tier is required for access."
++ "\nIf the content type is an add-on (RHEINGOLD, CAMP, FLEX_CAMP), never use accessTier to infer access. Always check the chunk’s access field: if access = granted, user has access; if access = restricted, tell the user they must purchase access separately."
++ f"\nFor add-ons where date < {today}, do not mention discounts."
++ f"\nFor add-ons where date >= {today}, explain available discounts using addOnDiscountAmount and addOnDiscountType (see “Add-on Eligibility” in User Context Field Guide)."
++ "\nImportant: Follow these instructions exactly. Never make assumptions about access rights or content availability. Always rely on the metadata (contentType, access, date) and the rules defined in the Content Type Guide and User Context Field Guide. If no clear information is available, state so rather than guessing."
+)
+
+# 🔁 Increment over cited document chunks
+for doc_id in citations:
+    content_type = "article (example placeholder; replace with actual metadata lookup)" 
+    access_info = "Accessible with current Basic membership. (placeholder; derive from metadata)"
+    more_on_topic_str += (
+        f"\n - <citation><document_id>{doc_id}</document_id></citation>"
+        + f" This {content_type} provides insights on Angular Signals migration. {access_info}"
+    )
+
+# Add divider and section header for uncited document chunks
+more_on_topic_str += (
+    "\n\n---"
+    + f”\n\n#### {more_on_topic_header}:" if more_on_topic_header else f"\n\n#### Translate 'More on this Topic' into {language}:"
+    + "\nThen list any other documents associated to document chunks in Context Documents that were not cited previously and are still relevant."
+     + "\nFor each, include the content type (from chunk metadata: READ, TUTORIAL, FSLE, RHEINGOLD, CAMP, FLEX_CAMP) in the summary."
++ "\nIf the content type is not an add-on (READ, TUTORIAL, FSLE), determine access based on the user’s accessTier (see “Access Rights & Membership Level” in User Context Field Guide). If the chunk’s access = restricted, state which tier is required for access."
++ "\nIf the content type is an add-on (RHEINGOLD, CAMP, FLEX_CAMP), never use accessTier to infer access. Always check the chunk’s access field: if access = granted, user has access; if access = restricted, tell the user they must purchase access separately."
++ f"\nFor add-ons where date < {today}, do not mention discounts."
++ f"\nFor add-ons where date >= {today}, explain available discounts using addOnDiscountAmount and addOnDiscountType (see “Add-on Eligibility” in User Context Field Guide)."
++ "\nImportant: Follow these instructions exactly. Never make assumptions about access rights or content availability. Always rely on the metadata (contentType, access, date) and the rules defined in the Content Type Guide and User Context Field Guide. If no clear information is available, state so rather than guessing."
+)
+
+# 🔁 Increment static examples for uncited document chunks
+more_on_topic_str += (
+    "\n - <citation><document_id>uncitedDoc123</document_id></citation>"
+    + " This live event session covers advanced Angular performance tuning. ⚠️ Not included in your current Basic membership. Consider upgrading to Fullstack to access this content."
+    + "\n - <citation><document_id>uncitedDoc456</document_id></citation>"
+    + " This conference keynote discusses Signals adoption strategies. 📅 This event has passed, but Fullstack members can access recordings for 6 months post-event."
+)
+
+# Add final language disclaimer
+more_on_topic_str += (
+    "\n\nReminder: If any section header was not localized above, translate 'Sources' and 'More on this Topic' into {language} here.""
+)
+
+
+ messages.extend(
+        [
+            {
+                "role": "assistant",
+                "content": full_response,
+            },
+            {
+                "role": "user",
+                "content": more_on_topic_str,
+            },
+        ]
+    )
