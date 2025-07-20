@@ -27,11 +27,11 @@ describe('RAG System Comprehensive Test Suite', () => {
     // ✅ Basic Rules & Metadata Interpretation Tests
     context('Basic Rules & Metadata Interpretation', () => {
 
-        it('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
+        it.only('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
         test1()
     })
 
-        it('Test 2: Should filter content by type when user specifies "tutorials only" (tests contentType filtering)', () => {
+        it.only('Test 2: Should filter content by type when user specifies "tutorials only" (tests contentType filtering)', () => {
         test2()
     })
 

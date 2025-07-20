@@ -1,0 +1,57 @@
+Question (EN),Question (DE),Exact Prompt Rule,What to Test
+What are the main features of Angular Signals in version 17?,Was sind die Hauptfunktionen von Angular Signals in Version 17?,"When answering, carefully analyze version numbers in both the query and in the text or slidetext of the document chunks.
+Only use document chunks where the feature, method, or solution requested in the user query is explicitly mentioned in the chunk text.
+Do not assume relevance based on the software version in the user query, the title, or date metadata alone.
+If the feature or method or solution was introduced in an older version and not re-mentioned in newer version document chunks, use the older document chunks and indicate it applies to version {query_version} unless explicitly deprecated.","Check that RAG selects chunks that mention Angular Signals and Angular 17 explicitly.
+If not mentioned in v17 chunks, fallback to older chunk is allowed with clear version explanation.
+Ensure no assumptions based on title, version metadata or document date.
+Response must reflect that Angular Signals exist and whether they are new or updated in v17."
+Tell me about React useEffect from tutorials only.,"Erkläre mir React useEffect, aber nur anhand von Tutorials.","If the user specifies a content type (like article, tutorial, or event), only use document chunks of that contentType.
+Do not cite from document chunks of other content types — even if the information appears relevant.","Ensure only chunks with contentType == 'TUTORIAL' are used.
+Ignore all other chunk types like ARTICLE or EVENT, even if they mention useEffect.
+Check that citations only come from tutorial chunks."
+Can you summarize recent events on DevOps from articles?,Kannst du aktuelle Ereignisse zu DevOps aus Artikeln zusammenfassen?,"If the user specifies a content type (like article, tutorial, or event), only use document chunks of that contentType.
+Do not cite from document chunks of other content types — even if the information appears relevant.","Ensure only chunks with contentType == 'ARTICLE' are used.
+No event or tutorial chunks should be cited or used in the response."
+What are some common mistakes in Dockerfile configuration?,Was sind typische Fehler bei der Konfiguration von Dockerfiles?,"Use only relevant document chunks for output generation. Prefer chunks that provide a more detailed and complete treatment of the feature, method, or solution requested in the user query over those that mention it only briefly.","Ensure RAG uses the most detailed and complete chunk(s) about Dockerfile mistakes, ignoring shallow mentions."
+What’s up?,Was geht?,"If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.
+Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",RAG should detect the query is vague and request clarification instead of generating an answer.
+Angular better?,Angular besser?,"If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.
+Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.","System should not answer. Instead, ask the user to clarify or suggest relevant Angular-related topics."
+Give me something cool about tech.,Zeig mir was Cooles aus der Tech-Welt.,"If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.
+Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",System should ask for clarification or suggest concrete topics based on user metadata like tags or communityExperience.
+How do I use Signals in Angular 13?,Wie verwende ich Signals in Angular 13?,"If the feature or method or solution is only available in a newer version than the one mentioned in the query, cite the newer document chunk and clearly state that the feature or method or solution was introduced after the queried version.","RAG must detect that Angular Signals were introduced after version 13.
+It should cite the newer chunk and clearly inform the user that Signals were introduced after v13."
+What changed in Angular 17 Signals?,Was hat sich bei Angular 17 Signals geändert?,"Your goal is to find the document chunks where the feature or method or solution was first introduced or updated.
+Only use document chunks where the feature, method, or solution requested in the user query is explicitly mentioned in the chunk text.","Ensure RAG retrieves chunks that explicitly mention Angular Signals and an update or new info in v17.
+Ignore any chunk that only mentions Angular Signals without version context or update."
+How do I use Signals in Angular?,Wie verwendet man Signals in Angular?,"When no version is specified in the query, use the document chunks covering the highest version where the problem is solved, feature or method is introduced.","Ensure RAG uses the most recent version chunk where Angular Signals are described.
+Response should reflect the highest known version containing info about the feature."
+Explain Observables in Angular 15.,Erkläre Observables in Angular 15.,"Only use document chunks where the feature, method, or solution requested in the user query is explicitly mentioned in the chunk text.
+Do not assume relevance based on the software version in the user query, the title, or date metadata alone.","Ensure RAG does not return chunks that mention RxJS or similar terms without explicitly mentioning Observables.
+Ensure Angular 15 is mentioned in the chunk.
+No inferred relevance should be accepted based on metadata or topic similarity."
+How does Angular handle routing?,Wie funktioniert das Routing in Angular?,"Use only relevant document chunks for output generation. Prefer chunks that provide a more detailed and complete treatment of the feature, method, or solution requested in the user query over those that mention it only briefly.","Ensure RAG prioritizes complete explanations of Angular routing over brief mentions.
+Do not use shallow or passing references when deeper explanations are available."
+How does Next.js handle dynamic routing?,Wie funktioniert dynamisches Routing in Next.js?,"If two chunks are equally relevant in depth and completeness, prefer the one with the most recent value in the date metadata for output generation.","Ensure that if two chunks explain dynamic routing equally well, the newer one (based on date metadata) is chosen for the answer."
+What’s new in React 18 hooks?,Was ist neu bei React 18 Hooks?,"If document chunks of equal relevance contradict each other, prefer the one with the most recent value in the date metadata.","If chunks disagree about React 18 hooks, RAG should choose the one with the latest date metadata."
+How does useMemo work in React?,Wie funktioniert useMemo in React?,"You must cite your sources using inline XML references:
+<citation><document_id>documentId</document_id><quote>Quoted text from the document.</quote></citation>
+Each citation must include a VERBATIM quote from the document chunk inside the <quote>...</quote> tags.",Ensure citations use correct XML format and include a verbatim quote from the source chunk.
+What’s the best way to manage state in Vue.js?,"Was ist der beste Weg, um State in Vue.js zu verwalten?","Only cite document chunks that directly contributed to the generated output.
+A chunk is considered to contribute if the feature, method, or solution is explicitly mentioned in its text or slidetext and it was used in generating the output.","Ensure RAG does not cite chunks that were not used in the response.
+Only cite chunks that explicitly mention Vue.js state management and are reflected in the answer."
+How to implement microservices in Node.js?,Wie implementiert man Microservices mit Node.js?,"If the accessTier does not allow access to a retrieved document chunk, include the answer, but highlight its value and suggest how to unlock access (see User Context Field Guide).","If restricted chunks are retrieved, RAG should answer based on them but mention their value and suggest upgrade or unlocking."
+Show me events about Kubernetes.,Zeig mir Events zu Kubernetes.,"If the user specifies a content type (like article, tutorial, or event), only use document chunks of that contentType.","Ensure only event-type chunks are used.
+If accessTier is too low for events, suggest an upgrade to access them."
+Link me a course about Docker on Coursera.,Gib mir einen Link zu einem Docker-Kurs auf Coursera.,"You must never (without exception) link to URLs or external platforms (e.g., Coursera, Udemy).",Ensure RAG refuses to link to external platforms and informs the user such sources are unsupported.
+What does Medium say about async/await?,Was sagt Medium zu async/await?,"You must absolutely under all circumstances refer only to entwickler.de, devmio, or devmio.nl as content sources.","Ensure RAG does not refer to Medium or any external site.
+Must use only content from entwickler.de, devmio, or devmio.nl."
+Give me an article about TypeScript types.,Gib mir einen Artikel über TypeScript-Typen.,Use the Content Type Guide and User Context Field Guide to interpret these metadata fields appropriately.,"Ensure article-type content is selected based on user-specified request.
+Chunk metadata must be interpreted using instructional guides."
+I'm a backend developer. Show me relevant tutorials.,Ich bin Backend-Entwickler. Zeig mir passende Tutorials.,"Always adapt your response based on the metadata from the User Context Header provided at the top of the user prompt:
+- Respect platform, communityExperience, and tags to guide relevance.","Ensure tutorials match backend development.
+RAG must use communityExperience and tags to determine relevant chunks."
+How do I implement GraphQL caching?,Wie implementiere ich Caching in GraphQL?,"Only output features or methods or solutions explicitly confirmed in the retrieved document chunks whenever possible.
+If no document chunks explicitly mention the feature, provide a generic implementation as a fallback. Clearly state that no source documents confirm this implementation. Do not cite any document chunk in this case.","If no chunk mentions GraphQL caching, RAG should provide a generic answer and clearly say it’s not confirmed by sources.
+No citation should be shown in the answer."
