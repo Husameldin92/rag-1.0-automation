@@ -55,13 +55,9 @@ function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = fa
   }
 
   // Wait for response
-  cy.wait('@discoveryQuery', { timeout: 45000 })
-  cy.wait(40000) // Wait for AI response to load
+  cy.wait('@discoveryQuery', { timeout: 50000 })
+  cy.wait(50000) // Wait for AI response to load
   
-  // Extra wait for explore-text endpoint
-  if (endpoint_name.includes('explore_text')) {
-    cy.wait(15000)
-  }
 
   // Capture main answer - try both selectors
   cy.get('body').then(($body) => {

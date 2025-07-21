@@ -32,15 +32,15 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
 
     context('Basic Rules & Metadata Interpretation', () => {
 
-        it.only('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
+        it('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
         test1()
     })
 
-        it.only('Test 2: Should filter content by type when user specifies "tutorials only" (tests contentType filtering)', () => {
+        it('Test 2: Should filter content by type when user specifies "tutorials only" (tests contentType filtering)', () => {
         test2()
     })
 
-        it('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
+        it.only('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
         test3()
     })
 
