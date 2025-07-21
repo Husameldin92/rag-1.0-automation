@@ -21,7 +21,7 @@ import { test20 } from './tests/mainPrompt/test_20'
 import { test21 } from './tests/mainPrompt/test_21'
 import { test22 } from './tests/mainPrompt/test_22'
 import { test23 } from './tests/mainPrompt/test_23'
-import { test_test } from './tests/mainPrompt/test_test'
+import { test_test } from './tests/mainPrompt/test_test'//only for testing
 
 describe('RAG System Comprehensive Test Suite for main prompt', () => {
 

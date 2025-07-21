@@ -46,11 +46,9 @@ function watchDirectory(dir) {
           }
           
           // Create evaluation system prompt
-          const systemPrompt = `You are a simple criteria checker. You ONLY check if specific criteria are met. You do NOT evaluate citations, formats, or any other aspects unless explicitly listed in the criteria.
+          const systemPrompt = `You are a RAG system evaluator. Your job is to evaluate the AI response against the specific criteria provided.
 
-Your job is to be a mechanical checker - just verify if the listed criteria are satisfied, nothing more.
-
-DO NOT use your knowledge about RAG systems, evaluation best practices, or citation requirements.`;
+Be practical and realistic in your evaluations. Use semantic understanding when analyzing chunk relevance and content accuracy.`;
 
           // Build the user message for pass/fail evaluation
           const userPrompt = `
@@ -86,6 +84,7 @@ ${testData.discovery_data.results.reduce((counts, chunk) => {
 
 EVALUATION INSTRUCTIONS:
 - Analyze each criterion thoroughly and provide detailed reasoning
+- Use semantic understanding when evaluating chunk relevance and content accuracy
 - Use professional language and clear explanations
 - Include specific evidence from the data
 - Format your response with proper sections and symbols

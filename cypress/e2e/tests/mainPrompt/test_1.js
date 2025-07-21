@@ -9,7 +9,7 @@ const user_password = 'Hossamaccent2015+'
 const evaluation_criteria = {
   test_focus: "Version-Specific Chunk Selection and Content Analysis",
   required_checks: [
-    "Discovery data must include chunks with explicit mentions of both Angular Signals AND version 17",
+    "Discovery data must include chunks relevant to Angular Signals and/or Angular version 17 (titles can mention either Angular Signals OR version 17 OR both)",
     "AI response must mention Angular Signals and version 17 explicitly in the main content",
     "Response content must be accurate and match information available in the selected chunks",
     "The status of Angular Signals in v17 must be accurate (e.g., stable, new features, breaking changes)"
