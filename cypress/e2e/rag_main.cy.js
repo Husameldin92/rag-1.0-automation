@@ -52,11 +52,11 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // ❗ Ambiguous / Vague / Malformed Queries Tests
     context('Ambiguous, Vague, and Malformed Query Handling', () => {
         
-        it.only('Test 5: Should handle extremely vague queries like "What\'s up?" appropriately (tests vague query detection)', () => {
+        it('Test 5: Should handle extremely vague queries like "What\'s up?" appropriately (tests vague query detection)', () => {
             test5()
         })
 
-        it('Test 6: Should handle incomplete/ambiguous queries like "Angular better?" (tests malformed query handling)', () => {
+        it.only('Test 6: Should handle incomplete/ambiguous queries like "Angular better?" (tests malformed query handling)', () => {
             test6()
         })
 
