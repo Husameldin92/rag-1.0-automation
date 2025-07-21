@@ -9,8 +9,8 @@ const user_password = 'Hossamaccent2015+'
 const evaluation_criteria = {
   test_focus: "Content Type Filtering - Tutorials Only",
   required_checks: [
-    "Discovery data must include only chunks with parentGenre 'TUTORIAL' when user specifies 'tutorials only'",
-    "Discovery data must NOT include chunks with other parentGenre values (RHEINGOLD, null, etc.)",
+    "Discovery data must include only chunks with contentType 'tutorial' when user specifies 'tutorials only'",
+    "Discovery data must NOT include chunks with other contentTypes (article, event, etc.)",
     "AI response must be based only on tutorial content and mention it's from tutorials",
     "No citations or references to non-tutorial content types should appear in the response"
   ]
@@ -89,8 +89,8 @@ function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = fa
       actualResponse = $content.text().trim()
     }
     
-    cy.writeFile(`rag-ai-evaluator/all_tests/test_2/test_2_${file_suffix}.json`, {
-      test_id: `test_002_${file_suffix}`,
+    cy.writeFile(`rag-ai-evaluator/all_tests/test_test/test_test_${file_suffix}.json`, {
+      test_id: `test_000_${file_suffix}`,
       query: query,
       endpoint: endpoint_name,
       user: {
@@ -105,10 +105,10 @@ function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = fa
   })
 
   // Screenshot
-  cy.screenshot(`test-2-react-useeffect-tutorials-${file_suffix}`)
+ // cy.screenshot(`test-test-react-useeffect-tutorials-${file_suffix}`)
 }
 
-export const test2 = () => {
+export const test_test = () => {
   loginHandel()
   
   // Handle cookie consent

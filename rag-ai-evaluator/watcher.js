@@ -66,9 +66,22 @@ ${processedResponse}
 
 ${testData.discovery_data ? `
 DISCOVERY DATA (Chunks selected by backend):
-${testData.discovery_data.results.map((chunk, i) => 
-`Chunk ${i+1}: ID=${chunk._id}, Title="${chunk.title}"`
+Total chunks: ${testData.discovery_data.results.length}
+
+Sample chunks (showing first 5 and last 5 for evaluation):
+${testData.discovery_data.results.slice(0, 5).map((chunk, i) => 
+`Chunk ${i+1}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}`
 ).join('\n')}
+...
+${testData.discovery_data.results.slice(-5).map((chunk, i) => 
+`Chunk ${testData.discovery_data.results.length-4+i}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}`
+).join('\n')}
+
+COMPLETE PARENTGENRE BREAKDOWN:
+${testData.discovery_data.results.reduce((counts, chunk) => {
+  counts[chunk.parentGenre || 'null'] = (counts[chunk.parentGenre || 'null'] || 0) + 1;
+  return counts;
+}, {})}
 ` : ''}
 
 EVALUATION INSTRUCTIONS:

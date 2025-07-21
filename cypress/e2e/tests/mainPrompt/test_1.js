@@ -16,21 +16,27 @@ const evaluation_criteria = {
   ]
 }
 
-function runTest(query, language, endpoint_name, file_suffix) {
+function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = false) {
   let discoveryData = null
   
   // Intercept the discovery query to capture backend chunk selection
   cy.intercept('POST', '**/graphql', (req) => {
-    if (req.body.query && req.body.query.includes('discovery(question:')) {
+    if (req.body.query && (req.body.query.includes('discovery(question:') || req.body.query.includes('discoveryTest'))) {
       req.continue((res) => {
+        // Handle both query types: regular discovery and discoveryTest
+        const queryVar = req.body.variables.question || req.body.variables.discoveryTest || query
+        const rawResults = res.body.data?.discovery?.results || res.body.data?.discoveryTest?.results || []
+        
+        // Extract only the 3 essential fields for evaluation
+        const cleanResults = rawResults.map(item => ({
+          _id: item._id,
+          title: item.title,
+          parentGenre: item.parentGenre
+        }))
+        
         discoveryData = {
-          query_sent: req.body.variables.question,
-          results: res.body.data.discovery.results.map(result => ({
-            _id: result._id,
-            title: result.title,
-            parentName: result.parentName,
-            designation: result.designation
-          }))
+          query_sent: queryVar,
+          results: cleanResults
         }
       })
     }
@@ -38,17 +44,50 @@ function runTest(query, language, endpoint_name, file_suffix) {
 
   // Ask the question
   cy.get('.rounded-0 > .col-12').clear()
-  cy.get('.rounded-0 > .col-12').type(query + '{enter}')
+  
+  if (useSearchIcon) {
+    // For explore-text endpoint: type query and click search icon
+    cy.get('.rounded-0 > .col-12').type(query)
+    cy.get('.search__bar_g.cursorPointer').click()
+  } else {
+    // For regular endpoint: type query and press enter
+    cy.get('.rounded-0 > .col-12').type(query + '{enter}')
+  }
 
-  // Wait for response - longer wait for full response to load
+  // Wait for response
   cy.wait('@discoveryQuery', { timeout: 45000 })
-  cy.wait(60000) // Increased wait time for full response
+  cy.wait(40000) // Wait for AI response to load
+  
+  // Extra wait for explore-text endpoint
+  if (endpoint_name.includes('explore_text')) {
+    cy.wait(15000)
+  }
 
-  // Capture FULL AI response without truncation
-  cy.get('.markdown-wrapper').invoke('text').then((actualResponse) => {
+  // Capture main answer - try both selectors
+  cy.get('body').then(($body) => {
+    let actualResponse = ''
     
-    // Keep the full response - no truncation
-    let processedResponse = actualResponse.trim()
+    // Find markdown element with fallbacks
+    const $element = $body.find('.markdown-binding').first().length > 0
+      ? $body.find('.markdown-binding').first()
+      : $body.find('.markdown-wrapper').first().length > 0
+      ? $body.find('.markdown-wrapper').first()
+      : $body.find('[class*="markdown"]').first()
+    
+    if ($element.length > 0) {
+      const $content = $element.clone()
+      
+      // Remove sources section
+      if (endpoint_name.includes('explore_text')) {
+        $content.find('h4:contains("Sources"), h4:contains("Quellen")').nextAll().remove()
+        $content.find('h4:contains("Sources"), h4:contains("Quellen")').remove()
+      } else {
+        $content.find('hr').nextAll().remove()
+        $content.find('hr').remove()
+      }
+      
+      actualResponse = $content.text().trim()
+    }
     
     cy.writeFile(`rag-ai-evaluator/all_tests/test_1/test_1_${file_suffix}.json`, {
       test_id: `test_001_${file_suffix}`,
@@ -59,7 +98,7 @@ function runTest(query, language, endpoint_name, file_suffix) {
         language: language
       },
       prompt: 'main',
-      actual_response: processedResponse,
+      actual_response: actualResponse,
       discovery_data: discoveryData,
       evaluation_criteria: evaluation_criteria
     })
@@ -142,9 +181,9 @@ export const test1 = () => {
     }
   })
 
-  // Test 3: English query on explore-text
-  runTest(test_query_en, 'en', 'reader_explore_text', 'explore_en')
+  // Test 3: English query on explore-text (using search icon)
+  runTest(test_query_en, 'en', 'reader_explore_text', 'explore_en', true)
   
-  // Test 4: German query on explore-text
-  runTest(test_query_de, 'de', 'reader_explore_text', 'explore_de')
+  // Test 4: German query on explore-text (using search icon)
+  runTest(test_query_de, 'de', 'reader_explore_text', 'explore_de', true)
 }
