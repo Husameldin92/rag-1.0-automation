@@ -40,7 +40,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
         test2()
     })
 
-        it.only('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
+        it('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
         test3()
     })
 
@@ -52,7 +52,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // ❗ Ambiguous / Vague / Malformed Queries Tests
     context('Ambiguous, Vague, and Malformed Query Handling', () => {
         
-        it('Test 5: Should handle extremely vague queries like "What\'s up?" appropriately (tests vague query detection)', () => {
+        it.only('Test 5: Should handle extremely vague queries like "What\'s up?" appropriately (tests vague query detection)', () => {
             test5()
         })
 
