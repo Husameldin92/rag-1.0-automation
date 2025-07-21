@@ -1,0 +1,75 @@
+{
+  "test_id": "test_006_explore_en",
+  "query": "Angular better?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: Angular better\nBased on the latest insights from the Angular ecosystem, Angular is undergoing significant evolution to better meet modern web development needs, focusing on developer experience, performance, and future-proofing. Here are the key points illustrating how Angular is becoming better:\n\nSignals and Reactive Programming  \n\nAngular introduced Signals as a new reactive primitive, enabling fine-grained, efficient change detection that can replace or complement RxJS in many scenarios. Signals provide a simpler, more intuitive API for reactive state management and enable local change detection, improving performance by updating only affected components rather than the entire component tree.  \nSignals are interoperable with RxJS, allowing developers to combine the strengths of both approaches. Angular’s move towards Signals also supports the goal of making zone.js optional, reducing overhead and complexity in change detection.  \nThe Angular team is actively improving hydration and server-side rendering (SSR) with Signals, enabling faster initial page loads and better SEO.  \nSignals are now stable as of Angular 17, with ongoing enhancements planned.\n\n\nStandalone Components and APIs  \n\nAngular is moving away from the traditional NgModule system towards standalone components and APIs, simplifying application structure and reducing boilerplate.  \nStandalone components declare their own dependencies, making it easier to understand and manage component dependencies without navigating complex module hierarchies.  \nThis shift improves developer experience, accelerates onboarding, and aligns Angular with modern frontend frameworks.  \nMigration tools and schematics are available to help existing projects adopt standalone components incrementally.\n\n\nImproved Server-Side Rendering and Hydration  \n\nAngular fully integrates SSR with the new Application Builder based on esbuild and Vite, offering faster builds and better runtime performance.  \nHydration support reduces flickering and layout shifts by attaching client-side behavior to server-rendered HTML without re-rendering the entire DOM.  \nAngular supports advanced SSR features like event replay to capture user interactions during hydration delays, improving perceived responsiveness.  \nAngular’s SSR is evolving towards hybrid rendering and island architecture concepts, allowing selective hydration of interactive components for better performance.\n\n\nNew Control Flow Syntax and Lazy Loading  \n\nAngular 17 introduces a new declarative control flow syntax (e.g., @if, @for, @switch) that is more readable and expressive than the traditional structural directives.  \nThis syntax supports advanced features like mandatory tracking in loops for optimized rendering and better handling of complex conditional logic.  \nDeferred loading (@defer) enables fine-grained lazy loading of components based on various triggers (interaction, viewport visibility, timers), improving initial load times and user experience.  \nPrefetching capabilities allow components to be loaded in advance under specified conditions, balancing performance and responsiveness.\n\n\nZone.js Optionality and Performance Enhancements  \n\nAngular 18 introduces an experimental mode to run without zone.js, relying on Signals and explicit change detection triggers, reducing overhead and improving performance.  \nThe Angular team is working on making zone.js optional by default in the future, simplifying the change detection mechanism and improving developer control.  \nAngular’s new Application Builder and build system improvements (esbuild, Vite) significantly speed up build times and reduce bundle sizes.\n\n\nImproved Developer Experience and Ecosystem Support  \n\nAngular provides migration tools, updated tutorials, and video courses to help developers adopt new features smoothly.  \nThe Angular CLI now generates standalone applications by default, encouraging modern best practices.  \nAngular Material and other ecosystem libraries are evolving to align with the new Angular paradigms, including standalone components and improved styling approaches.\n\n\nInteroperability and Future-Proofing  \n\nAngular embraces interoperability with other reactive libraries like RxJS and supports modern web standards (e.g., Web Components, Service Workers).  \nThe framework is designed to evolve incrementally, maintaining backward compatibility while introducing powerful new features.  \nAngular’s roadmap includes further improvements in hydration, resumability, and microfrontend support via Module Federation.\n\n\n\nSummaryAngular is becoming better by embracing modern reactive primitives (Signals), simplifying application architecture (standalone components), enhancing performance (SSR, hydration, zone.js optionality), and improving developer experience (new syntax, tooling, migration support). These changes position Angular to build the next generation of web applications that are faster, more maintainable, and aligned with evolving web platform capabilities.\nIf you want to explore these improvements hands-on, Angular 17 and 18 offer stable and experimental features respectively, with comprehensive tooling and community support to guide your migration and adoption journey.\n983677009Signals are now stable as of Angular 17, with ongoing enhancements planned... Angular’s move towards Signals also supports the goal of making zone.js optional, reducing overhead and complexity in change detection.de0df539Angular is moving away from the traditional NgModule system towards standalone components and APIs, simplifying application structure and reducing boilerplate... Migration tools and schematics are available to help existing projects adopt standalone components incrementally.1e3dde565Angular fully integrates SSR with the new Application Builder based on esbuild and Vite, offering faster builds and better runtime performance... Hydration support reduces flickering and layout shifts by attaching client-side behavior to server-rendered HTML without re-rendering the entire DOM.de0df539Angular 17 introduces a new declarative control flow syntax (e.g., @if, @for, @switch) that is more readable and expressive than the traditional structural directives... Deferred loading (@defer) enables fine-grained lazy loading of components based on various triggers (interaction, viewport visibility, timers), improving initial load times and user experience.60bb03daAngular 18 introduces an experimental mode to run without zone.js, relying on Signals and explicit change detection triggers, reducing overhead and improving performance... The Angular team is working on making zone.js optional by default in the future.yeDqYHwAngular provides migration tools, updated tutorials, and video courses to help developers adopt new features smoothly... The Angular CLI now generates standalone applications by default, encouraging modern best practices.de0df539Angular embraces interoperability with other reactive libraries like RxJS and supports modern web standards... The framework is designed to evolve incrementally, maintaining backward compatibility while introducing powerful new features.",
+  "discovery_data": {
+    "query_sent": "Angular better?",
+    "results": [
+      {
+        "_id": "1e3dde565bad5109fbd7aef8",
+        "title": "Return to Server-Side Rendering with Angular",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "9836770500f149a58b7769f9",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "60bb03da4058fe9d0cca3a3e",
+        "title": "Was ist neu in Angular 18?",
+        "parentGenre": null
+      },
+      {
+        "_id": "8b35e3d0070110b78d6c9434",
+        "title": "Angular: Signals, Standalone, SSR",
+        "parentGenre": null
+      },
+      {
+        "_id": "04721391f3f7580f0631b9d3",
+        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
+        "parentGenre": null
+      },
+      {
+        "_id": "yeDqYHwX2d2dnZvTR",
+        "title": "Build the Next Generation of Web Apps With Angular",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f105c3b533645c5e79e6dcb2",
+        "title": "Forms With Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "751b88e1aceba1740578c266",
+        "title": "Performance is high up on the list of architectural goals for Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "14cc5ed4a89dffe508d6e605",
+        "title": "Progressive Web Apps auf Knopfdruck?",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Vague Query Handling - Clarification Request for Angular",
+    "required_checks": [
+      "If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+      "Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",
+      "AI response must NOT generate a concrete answer unless the intent is clear.",
+      "The assistant should apply the vague query fallback logic defined in the prompt."
+    ]
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "test_id": "test_006_explore_de",
+  "query": "Angular besser?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: Angular besser\nAngular hat mit der Version 17 bedeutende Verbesserungen und Neuerungen erhalten, die das Framework moderner, performanter und entwicklerfreundlicher machen. Hier sind die wichtigsten Aspekte, die Angular „besser“ machen, basierend auf den aktuellen Entwicklungen und Features:\n\nSignals als stabile Kernfunktion  \n\nAngular 17 markiert die seit Angular 16 eingeführten Signals als stabil. Signals ermöglichen eine fein granulare, lokale Change Detection, die nur die tatsächlich betroffenen Komponenten aktualisiert.  \nDies führt zu deutlich besserer Performance, da nicht mehr der gesamte Komponentenbaum bei jeder Änderung geprüft werden muss.  \nEntwickler können mit Signals reaktive Datenmodelle erstellen, die effizient und übersichtlich sind.  \nDie Verwendung von Signals erfordert allerdings, dass Daten als immutable Strukturen behandelt werden, was zu besser wartbarem Code führt.  \nAngular bietet neue Lifecycle-Hooks (z.B. afterRender und afterNextRender), die mit Signals harmonieren und neue Möglichkeiten der Komponentensteuerung eröffnen.\n\n\nNeue Control-Flow-Syntax  \n\nDie bisherige Template-Syntax mit *ngIf, *ngFor und ngSwitch wird durch eine moderne, JavaScript-ähnliche Syntax ersetzt (z.B. @if, @for, @switch).  \nDiese Syntax ist klarer, flexibler und ermöglicht komplexere Bedingungen (z.B. if-elseif-else) eleganter abzubilden.  \nDie neue Syntax unterstützt verpflichtende track-Optionen bei Schleifen, was die Performance bei der DOM-Aktualisierung verbessert.  \nZudem ermöglicht sie neue Features wie Deferred Views (@defer), mit denen Komponenten gezielt lazy geladen werden können, z.B. bei Nutzerinteraktion oder wenn ein Element in den Viewport kommt.\n\n\nVerbesserte Lazy Loading und Performance-Optimierungen  \n\nAnimationen können nun lazy geladen werden, was die initiale Bundle-Größe reduziert und die Startzeit der Anwendung verbessert.  \nDie Integration der neuen View Transitions DOM API ermöglicht flüssige, native Übergangsanimationen bei Routenwechseln.  \nDie Kombination aus Signals und optimierter Change Detection (z.B. OnPush-Strategie) sorgt für eine spürbar bessere Laufzeitperformance.\n\n\nModernisierung des Frameworks und Tooling  \n\nAngular 17 setzt auf moderne Build-Tools wie esbuild und vite, was schnellere Builds und bessere Entwicklererfahrung bringt.  \nDie Angular CLI generiert nun standardmäßig standalone Komponenten ohne NgModule, was den Einstieg erleichtert und die Modularität verbessert.  \nHTTP-Interceptor werden bevorzugt als funktionale statt klassenbasierte Implementierungen erzeugt.  \nDie Integration von TypeScript 5.2 bringt neue Sprachfeatures und verbessert die Entwicklerproduktivität.\n\n\nVerbesserte Entwicklererfahrung und Wartbarkeit  \n\nDie strikte Behandlung von Signals als immutable Datenstrukturen fördert sauberen, vorhersagbaren Code.  \nNeue APIs und Lifecycle-Hooks erlauben präzise Steuerung der Komponentenlebenszyklen.  \nDie neue Control-Flow-Syntax und Lazy Loading Features ermöglichen klarere Templates und bessere UX.  \nDie Migration zu Angular 17 erfordert zwar Anpassungen, bietet aber langfristig eine modernere und leistungsfähigere Basis.\n\n\nWeitere wichtige Änderungen  \n\nEntfernung von veralteten APIs (z.B. signal.mutate()) und Router-Properties zugunsten klarerer Konfigurationen.  \nAngular Material 17 entfernt Legacy-Komponenten und setzt auf moderne MDC-basierte Komponenten, was zu konsistenterem UI-Design führt.  \nVerbesserte Validierung und Typisierung in Formularen durch neue Angular- und TypeScript-Features.\n\n\n\nFazit:Angular wird mit Version 17 deutlich moderner, performanter und flexibler. Die Einführung und Stabilisierung von Signals als Kernmechanismus für Change Detection, die neue Control-Flow-Syntax, verbesserte Lazy Loading Möglichkeiten und moderne Tooling-Verbesserungen machen Angular zukunftssicherer und attraktiver für Entwickler. Gleichzeitig erfordert die Umstellung ein Umdenken und Anpassungen, bietet aber langfristig eine bessere Entwicklererfahrung und wartbare Anwendungen.\nDiese Einschätzung basiert auf den aktuellen Artikeln und Tutorials zu Angular 17 und den begleitenden Framework-Änderungen, die im Rahmen der Entwicklerplattformen von entwickler.de veröffentlicht wurden04721391Angular 17 markiert die seit Angular 16 eingeführten Signals als stabil. Signals ermöglichen eine fein granulare, lokale Change Detection, die nur die tatsächlich betroffenen Komponenten aktualisiert... Die bisherige Template-Syntax mit *ngIf, *ngFor und ngSwitch wird durch eine moderne, JavaScript-ähnliche Syntax ersetzt (z.B. @if, @for, @switch)... Animationen können nun lazy geladen werden, was die initiale Bundle-Größe reduziert und die Startzeit der Anwendung verbessert... Angular 17 setzt auf moderne Build-Tools wie esbuild und vite, was schnellere Builds und bessere Entwicklererfahrung bringt... Angular 17 wird deutlich moderner, performanter und flexibler... Die Migration zu Angular 17 erfordert zwar Anpassungen, bietet aber langfristig eine modernere und leistungsfähigere Basis..\nBei Interesse kann ich auch gezielt auf einzelne Themen wie Signals, die neue Control-Flow-Syntax oder Lazy Loading eingehen.",
+  "discovery_data": {
+    "query_sent": "Angular besser?",
+    "results": [
+      {
+        "_id": "ec9c9cad403e04ffdec0e2fb",
+        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "69ab8ba6bfa5d1a198f998c3",
+        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 30.11.2025",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "39c9ac7b977cdd279124c732",
+        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "50024113ac0748c41f96b513",
+        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "87b56808e72a040d1b285fca",
+        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 02.03.2025",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "BkNkZqA36gh25fLgE",
+        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 21.07.2024",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "04721391f3f7580f0631b9d3",
+        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
+        "parentGenre": null
+      },
+      {
+        "_id": "b0ea417104478bb628fc9b82",
+        "title": "Software Design Patterns in Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "f105c3b533645c5e79e6dcb2",
+        "title": "Forms With Angular",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Vague Query Handling - Clarification Request for Angular",
+    "required_checks": [
+      "If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+      "Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",
+      "AI response must NOT generate a concrete answer unless the intent is clear.",
+      "The assistant should apply the vague query fallback logic defined in the prompt."
+    ]
+  }
+}
