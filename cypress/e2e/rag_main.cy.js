@@ -44,7 +44,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
         test3()
     })
 
-        it.only('Test 4: Should provide Dockerfile best practices and common mistakes (tests technical guidance responses)', () => {
+        it('Test 4: Should provide Dockerfile best practices and common mistakes (tests technical guidance responses)', () => {
             test4()
         })
     })
@@ -68,7 +68,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🎯 Version-Specific Behavior Tests
     context('Version-Specific Content Handling', () => {
         
-        it('Test 8: Should handle requests for features not available in specified version (Angular 13 Signals)', () => {
+        it.only('Test 8: Should handle requests for features not available in specified version (Angular 13 Signals)', () => {
             test8()
         })
 

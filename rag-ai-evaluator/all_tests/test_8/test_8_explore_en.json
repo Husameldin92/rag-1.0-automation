@@ -1,0 +1,81 @@
+{
+  "test_id": "test_008_explore_en",
+  "query": "How do I use Signals in Angular 13?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "en",
+    "communityExperience": [
+      "JAX",
+      "Java Magazin",
+      "Extreme Java Camp"
+    ]
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: Signals Angular 13 12 11\nThe Angular Signals feature, introduced starting with Angular 16 and evolving through Angular 17 and 18, provides a new reactive primitive for managing state and change detection in Angular applications. However, Signals are not available in Angular 13, as they were introduced much later (from Angular 16 onwards). Therefore, using Signals directly in Angular 13 is not possible.\nFor Angular 13, the standard reactive programming approach is to use RxJS Observables combined with Angular's existing change detection mechanism (which relies on Zone.js). State management libraries like NgRx are commonly used to handle complex state and reactive data flows.\nIf you want to use Signals, you would need to upgrade your Angular project to at least Angular 16, where Signals were introduced as a developer preview, or better to Angular 17 or 18 for more stable and advanced Signal APIs.\nHere is a brief overview of how Signals are used in Angular 16+ (for your future reference when upgrading):\n\nCreating a Signal: Use the signal() function to create a reactive value container that holds a value and notifies dependents when it changes.\nimport { signal } from '@angular/core';\n\nconst count = signal(0);\n\n\nReading a Signal: Access the current value by calling the signal as a function.\nconsole.log(count()); // outputs current value\n\n\nUpdating a Signal: Use .set() to replace the value or .update() to update based on the current value.\ncount.set(5);\ncount.update(current => current + 1);\n\n\nComputed Signals: Use computed() to create derived signals that automatically update when their dependencies change.\nimport { computed } from '@angular/core';\n\nconst doubleCount = computed(() => count() * 2);\n\n\nEffects: Use effect() to run side effects in response to signal changes.\nimport { effect } from '@angular/core';\n\neffect(() => {\n  console.log('Count changed:', count());\n});\n\n\nIntegration with Templates: In Angular templates, signals are accessed by calling them as functions, e.g., {{ count() }}.\n\nMigration and Interop: Signals can interoperate with RxJS Observables via helper functions like toSignal() and toObservable().\n\nState Management: Angular's new Signal Store (introduced in later versions) offers a lightweight, functional approach to state management using signals.\n\n\nSince Signals are not part of Angular 13, you should continue using RxJS and existing Angular reactive patterns for that version. When you upgrade to Angular 16 or later, you can start adopting Signals incrementally, for example by creating new components or services using Signals, while maintaining existing RxJS-based code.\nIf you want to explore Signals now, consider upgrading your Angular version and reviewing the latest Angular documentation and tutorials on Signals and the Signal Store.\noaGpszBqbMPSignals were introduced starting with Angular 16 as a developer preview and have evolved in Angular 17 and 18 with stable APIs and advanced features. They are not available in Angular 13.\n983677BSignals are reactive primitives that hold a value and notify dependents when the value changes. They are accessed by calling the signal as a function and updated via set or update methods.\n64aceBAngular 16 introduced Signals as a new reactive primitive, with computed signals and effects to handle derived state and side effects. Signals integrate with Angular's change detection for fine-grained updates.\nqREnBSignals provide a new way to implement reactivity in Angular, allowing for more precise change detection and avoiding the overhead of Zone.js. They are designed to coexist with RxJS and gradually replace some of its use cases.\nThe Angular Signals feature was introduced starting with Angular 16 and is not available in Angular 13. Therefore, you cannot use Signals directly in Angular 13. To use Signals, you would need to upgrade your project to at least Angular 16 or later, where Signals are available as a reactive primitive for state management and change detection.\nIn Angular 13, the standard approach for reactive programming involves using RxJS Observables combined with Angular's existing change detection mechanism (which relies on Zone.js). State management libraries like NgRx are commonly used to handle complex state and reactive data flows.\nIf you plan to adopt Signals, consider upgrading your Angular version to 16 or higher, and then you can start using Signals incrementally alongside existing RxJS code.",
+  "discovery_data": {
+    "query_sent": "How do I use Signals in Angular 13?",
+    "results": [
+      {
+        "_id": "b3dccbe48006a54c8a14b9c8",
+        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "9836770500f149a58b7769f9",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "62f599587e3fd28de76c2756",
+        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "parentGenre": null
+      },
+      {
+        "_id": "1c2d0d1ddbcc6e6469e58943",
+        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "parentGenre": null
+      },
+      {
+        "_id": "04721391f3f7580f0631b9d3",
+        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
+        "parentGenre": null
+      },
+      {
+        "_id": "7169f2b6391a0d9490ef4b35",
+        "title": "Angular Turns 18 - Grown Up But Dynamic",
+        "parentGenre": null
+      },
+      {
+        "_id": "oaGpszBqb9pMPpjD7",
+        "title": "Angular Signals im Vergleich mit RxJS Observables: Ein Blick auf Ereignisbehandlung und asynchrone Datenströme",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "qREnL94qsTwnQH8ic",
+        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "64ace3828d8056484c3534ab",
+        "title": "Angular 16 released",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Version Awareness – Angular Signals vs. Version 13",
+    "required_checks": [
+      "The AI must detect that Signals were not available in Angular 13.",
+      "The AI must clearly communicate that Signals were introduced in a later version (e.g., Angular 16 or later).",
+      "The response must avoid implying that Signals can be used in Angular 13.",
+      "If relevant documents (chunks) about Signals exist, they must be cited and their version context must be mentioned.",
+      "If no matching chunk about Angular 13 and Signals exists, RAG should clarify this and provide helpful, accurate guidance for newer versions instead."
+    ]
+  }
+}
