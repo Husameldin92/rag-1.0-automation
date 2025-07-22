@@ -7,12 +7,12 @@ const user_password = 'Hossamaccent2015+'
 
 // Test 5 Evaluation Criteria 
 const evaluation_criteria = {
-  test_focus: "Vague Query Handling - Clarification Request",
+  test_focus: "Vague Question handling - Clarification request",
   required_checks: [
-    "If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-    "Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",
+    "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+    "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
     "AI response must NOT generate a concrete answer unless the intent is clear.",
-    "The assistant should apply the vague query fallback logic defined in the prompt."
+    "The assistant should apply the vague Question fallback logic defined in the prompt."
   ]
 }
 

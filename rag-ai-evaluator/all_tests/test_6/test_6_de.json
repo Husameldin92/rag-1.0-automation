@@ -4,10 +4,15 @@
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
-    "language": "de"
+    "language": "de",
+    "communityExperience": [
+      "JAX",
+      "Java Magazin",
+      "Extreme Java Camp"
+    ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Angular besser\nAngular besser zu machen, bedeutet vor allem, die neuen Features und Konzepte der aktuellen Versionen zu verstehen und effektiv einzusetzen. Hier sind die wichtigsten Aspekte, die Angular moderner, performanter und entwicklerfreundlicher machen:\n\nNeue reaktive Programmiermodelle mit Angular Signals  \n\nAngular führt das Konzept der Signals ein, ein reaktives Modell, das präzise erkennt, welche Komponenten sich ändern müssen, und so die Change Detection effizienter macht.  \nSignals ermöglichen eine feinere Granularität bei der Aktualisierung der UI, was Performancevorteile bringt und unnötige Überprüfungen vermeidet.  \nDies ist ein großer Fortschritt gegenüber der bisherigen, grobgranularen Change Detection, die oft zu viel Arbeit macht.  \nAngular wird dadurch zukunftssicherer und kann mit moderneren Frameworks mithalten, die ähnliche reaktive Konzepte nutzen.\n\n\nMigration zu funktionalen APIs und Standalone-Komponenten  \n\nAngular 17 und 18 setzen verstärkt auf funktionale Schnittstellen und Standalone-Komponenten, die ohne klassische @NgModule()-Deklarationen auskommen.  \nDies vereinfacht die Struktur von Anwendungen und reduziert kognitiven Ballast.  \nDie neuen Kontrollfluss-Syntaxen (@switch, @case, @default) und Direktiven wie @defer erleichtern das Template-Management.\n\n\nPerformance-Optimierungen und moderner Build-Prozess  \n\nAngular CLI nutzt moderne Tools wie esbuild für schnellere Builds und kleinere Bundles.  \nHot Module Replacement (HMR) funktioniert auch für Styles, was die Entwicklererfahrung verbessert.  \nServer-Side Rendering (SSR) ist zentraler Bestandteil geworden, mit vereinfachter Integration und Hydration, was die SEO und Ladezeiten verbessert.\n\n\nBewältigung der Komplexität durch klare Konzepte  \n\nAngular wird durch die Einführung neuer APIs komplexer, da alte und neue Konzepte parallel existieren.  \nEs bleibt eine Herausforderung, die Balance zwischen Rückwärtskompatibilität und innovativen, optionalen Konzepten zu halten.  \nZiel ist es, dass Angular trotz der neuen Features ein „Opinionated Framework“ bleibt, das klare Konzepte bietet und nicht zu viele unterschiedliche Wege zulässt.\n\n\nFortgeschrittene Konzepte und Best Practices  \n\nNutzung von Design Patterns wie Mediator, Dependency Injection und Facade Pattern verbessert die Wartbarkeit.  \nEffektiver Einsatz von Subkomponenten, Datenbindung, Formularen und Validierung (Template-driven und Reactive Forms) ist essenziell.  \nDie OnPush-Strategie in Kombination mit Signals beschleunigt die Change Detection weiter.\n\n\nEmpfohlene Lernressourcen und Trainings  \n\nFlexible Online-Camps und Workshops zu Angular Basics, Pipes, NgModules, Subkomponenten und Formularen helfen, Angular besser zu verstehen und anzuwenden.  \nPraxisorientierte Trainings mit Fokus auf moderne Angular-Konzepte und Performance-Optimierung sind sehr hilfreich.\n\n\n\nFazit: Angular wird besser durch die Einführung von Signals für eine präzisere und performantere Change Detection, die Umstellung auf funktionale und standalone Komponenten, moderne Build- und SSR-Technologien sowie durch klare Konzepte, die Komplexität beherrschbar machen. Entwickler sollten sich mit diesen Neuerungen vertraut machen und die empfohlenen Trainings nutzen, um Angular effizienter und zukunftssicher einzusetzenxrng8DfDqckoEKvMrSignals breiten sich Stück für Stück im Framework aus, sodass reaktive Programmierung immer wichtiger wird. Standalone-Komponenten und -APIs sind längst zum Standard geworden und die neue Kontrollfluss-Syntax vereinfacht häufige Anwendungsfälle im Template erheblich.hiwmMJy6F5TyrrZFYAngular Signals: Gamechanger für reaktive Entwicklung ... Yannick Baron von Thinktecture und Google Developer Expert für Angular beantwortet alle Fragen rund um die neuen Angular-Signals.xrng8DfDqckoEKvMrAngular 18: Neue Features optimal nutzen und Bestandsprojekte effizient migrieren ... Angular ist jetzt eine Google-Technologie ... Angular 17 hat Angular die Angular Renaissance eingeleitet ... Es gibt etliche neue Entwicklungen ...289cab1ef800cbd306a62af3Mit Angular 18 steht Entwickler:innen eine Vielzahl neuer Features und Verbesserungen zur Verfügung ... Entwickler müssen somit alte und neue Konzepte parallel beherrschen ... Wie das Angular-Team mit dem Spannungsfeld Rückwärtskompatibilität und optionalen neuen Konzepten umgehen wird.69ab8ba6bfa5d1a198f998c3Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte ... Hier erfahren Sie Wissenswertes über die Entwicklung weiterer Komponenten, die über Datenbindung miteinander kommunizieren ... Bonus: Signals",
+  "actual_response": "gpt-4.1-mini keyword: Angular besser\nAngular wird mit den neuesten Versionen, insbesondere Angular 18, kontinuierlich verbessert und bietet Entwicklern eine Vielzahl neuer Features und Optimierungen, die die Entwicklung moderner Webanwendungen effizienter und performanter machen. Hier sind die wichtigsten Aspekte, die Angular 'besser' machen:\n\nModernisierung und Performance-Optimierung  \n\nAngular 18 bringt zahlreiche Performanceverbesserungen, z.B. schnellere Builds durch den Einsatz von ESBuild im Angular CLI, was kleinere Bundles und schnellere Kompilierung ermöglicht.  \nDie Change Detection wird durch das neue Signals-Konzept feingranularer und effizienter, da Angular genau erkennt, welche Komponenten aktualisiert werden müssen, anstatt den gesamten Komponentenbaum zu prüfen.  \nServer-Side Rendering (SSR) ist nun zentraler Bestandteil, mit vereinfachter Integration und verbessertem Hydration-Mechanismus, was zu schnellerem Seitenaufbau und besserer SEO führt.\n\n\nReaktive Programmierung mit Signals  \n\nAngular führt das Signals-Konzept ein, das von anderen Frameworks bekannt ist und die reaktive Entwicklung vereinfacht.  \nSignals ermöglichen eine präzise Benachrichtigung bei Datenänderungen, was die Performance steigert und die Change Detection optimiert.  \nDies reduziert unnötige Updates und macht Anwendungen reaktiver und ressourcenschonender.\n\n\nFortschrittliche API-Entwicklung und funktionale Schnittstellen  \n\nAngular setzt zunehmend auf funktionale APIs und ersetzt alte objektorientierte Muster sowie TypeScript-Dekoratoren.  \nStandalone-Komponenten und -APIs sind Standard, was die Modularität und Wiederverwendbarkeit verbessert.  \nNeue Kontrollfluss-Syntax im Template erleichtert häufige Anwendungsfälle und macht den Code klarer und wartbarer.\n\n\nVerbesserte Entwicklererfahrung  \n\nAngular CLI unterstützt jetzt standardmäßig den Angular Router und generiert Anwendungen als Standalone ohne @NgModule().  \nFunktionale HTTP-Interceptor sind Standard, was den Code schlanker und moderner macht.  \nDie kontinuierliche Weiterentwicklung sorgt für eine robuste, zukunftssichere Plattform, die sich an moderne Webentwicklung anpasst.\n\n\nHerausforderungen und Lernkurve  \n\nDurch die Vielzahl neuer APIs und Konzepte wird Angular komplexer und schwerer zu erlernen, da Entwickler alte und neue Konzepte parallel beherrschen müssen.  \nDas Angular-Team bemüht sich, die Balance zwischen Rückwärtskompatibilität und innovativen Features zu halten, um den kognitiven Ballast zu minimieren.\n\n\nPraxisnahe Schulungen und Trainingsangebote  \n\nEs gibt umfangreiche Trainings, Camps und Tutorials, die Entwicklern helfen, Angular besser zu verstehen und effektiv einzusetzen, z.B. zu Themen wie Subkomponenten, Datenbindung, Formularen, Validierung und dem neuen Signals-Konzept.\n\n\n\nZusammenfassend lässt sich sagen, dass Angular durch kontinuierliche Innovationen, Performance-Verbesserungen und moderne Programmiermodelle wie Signals deutlich besser wird. Gleichzeitig steigt die Komplexität, weshalb gezielte Weiterbildung und der Einsatz moderner Tools empfohlen werden, um das volle Potenzial von Angular auszuschöpfen289cab1ef800cbd306a62af3Mit Angular 18 steht Entwickler:innen eine Vielzahl neuer Features und Verbesserungen zur Verfügung, die die Entwicklung moderner Webanwendungen weiter optimieren. Angular 18 baut auf die Fortschritte der Vorgängerversionen auf und führt zahlreiche Performanceoptimierungen sowie neue APIs ein, die die Arbeit mit dem Framework noch effizienter gestalten.xrng8DfDqckoEKvMrSeit Angular 16 hat Google umfassende Änderungen an seinem SPA-Framework vorgenommen, um es in das nächste Jahrzehnt der Webentwicklung zu führen. ... Signals breiten sich Stück für Stück im Framework aus, sodass reaktive Programmierung immer wichtiger wird. Standalone-Komponenten und -APIs sind längst zum Standard geworden und die neue Kontrollfluss-Syntax vereinfacht häufige Anwendungsfälle im Template erheblich. Nicht zuletzt ist auch Server-Side Rendering nun zentraler Bestandteil des Frameworks geworden ...hiwmMJy6F5TyrrZFYDas Angular-Team stellt sein reaktives Modell auf den Prüfstand und schlägt als neuen Ansatz die von anderen Frameworks bekannten Signals vor. ... Signals entscheidende Vorteile gegenüber dem bestehenden Modell. ... Yannick Baron von Thinktecture und Google Developer Expert für Angular beantwortet alle Fragen rund um die neuen Angular-Signals.bc0bef25841c96486c56f58fAngular sagt sich, theoretisch kann dieser Event-Handler alles verändert haben, was angezeigt wird. Und deswegen muss dann Angular zur Sicherheit die Property Bindings durchführen, was im schlimmsten Fall bedeutet, alle Komponenten werden einmal überprüft, aber eben nur einmal und nicht mehr mehrfach so wie früher. ... Die Signals, die haben wir jetzt da seit ein paar wenigen Angular-Versionen und die werden in Zukunft dazu beitragen, genauer herauszufinden, wo Angular hinschauen muss aufgrund der Datenänderungen.04721391f3f7580f0631b9d3Angular 17: Neues Release des Web-Frameworks ... Neue Anwendungen initialisieren den Angular-Router standardmäßig und erzeugen Anwendungen als Standalone ohne @NgModule(). Funktionale HTTP Interceptors werden in Angular CLI 17 bevorzugt, klassenbasierte sind optional.",
   "discovery_data": {
     "query_sent": "Angular besser?",
     "results": [
@@ -267,12 +272,12 @@
         "parentGenre": null
       },
       {
-        "_id": "8a9330221cf947d4a20f5f5c",
+        "_id": "09295d39c3b1f8240614846f",
         "title": "Mehr erreichen mit weniger Code",
         "parentGenre": null
       },
       {
-        "_id": "09295d39c3b1f8240614846f",
+        "_id": "8a9330221cf947d4a20f5f5c",
         "title": "Mehr erreichen mit weniger Code",
         "parentGenre": null
       },
@@ -357,22 +362,22 @@
         "parentGenre": null
       },
       {
-        "_id": "3caa038a2f16278ab3c6040a",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "716e141fb1acae69460b0dd2",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
         "_id": "289cab1ef800cbd306a62af3",
         "title": "Angular 18 – erwachsen, aber aktiv",
         "parentGenre": null
       },
       {
         "_id": "52ef1d82560c140fe2ed1886",
+        "title": "Angular 18 – erwachsen, aber aktiv",
+        "parentGenre": null
+      },
+      {
+        "_id": "3caa038a2f16278ab3c6040a",
+        "title": "Angular 18 – erwachsen, aber aktiv",
+        "parentGenre": null
+      },
+      {
+        "_id": "716e141fb1acae69460b0dd2",
         "title": "Angular 18 – erwachsen, aber aktiv",
         "parentGenre": null
       },
@@ -447,17 +452,17 @@
         "parentGenre": null
       },
       {
-        "_id": "9ce1548208b991d24a8e5264",
-        "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
-        "parentGenre": null
-      },
-      {
         "_id": "1f8d32096eac438e149087fa",
         "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
         "parentGenre": null
       },
       {
         "_id": "89dffa5139c919cc01fac4b6",
+        "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "9ce1548208b991d24a8e5264",
         "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
         "parentGenre": null
       },
@@ -472,12 +477,12 @@
         "parentGenre": null
       },
       {
-        "_id": "9c63aeca06d527c424beba76",
+        "_id": "3e895e342fffb427bf26c9a9",
         "title": "Hydration, Server Components, Metaframeworks und Resumability",
         "parentGenre": null
       },
       {
-        "_id": "3e895e342fffb427bf26c9a9",
+        "_id": "9c63aeca06d527c424beba76",
         "title": "Hydration, Server Components, Metaframeworks und Resumability",
         "parentGenre": null
       },
@@ -487,24 +492,24 @@
         "parentGenre": null
       },
       {
-        "_id": "cf5d012d748fba2ec1f43243",
+        "_id": "d5cd28205516424cbf93b58a",
         "title": "Angular 9 and Friends",
         "parentGenre": null
       },
       {
-        "_id": "d5cd28205516424cbf93b58a",
+        "_id": "cf5d012d748fba2ec1f43243",
         "title": "Angular 9 and Friends",
         "parentGenre": null
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Vague Query Handling - Clarification Request for Angular",
+    "test_focus": "Vague Question handling - Clarification request for Angular",
     "required_checks": [
-      "If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-      "Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",
-      "AI response must NOT generate a concrete answer unless the intent is clear.",
-      "The assistant should apply the vague query fallback logic defined in the prompt."
+      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
+      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
+      "The assistant should apply the vague Question fallback logic defined in the prompt."
     ]
   }
 }

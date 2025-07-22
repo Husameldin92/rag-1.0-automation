@@ -1,0 +1,280 @@
+{
+  "test_id": "test_002_en",
+  "query": "Tell me about React useEffect from tutorials only.",
+  "endpoint": "reader_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: React useEffect tutorials 2025 2024\nCertainly! Here is an overview of React's useEffect hook based on tutorial content:\n\nPurpose of useEffect:The useEffect hook in React is used to perform side effects in function components. It runs after the component renders and can be used for tasks like data fetching, subscriptions, or manually changing the DOM.\n\nExecution Timing:The function passed to useEffect executes when the component is mounted (added to the DOM) and whenever any of its dependencies change. It runs on the client side, not on the server.\n\nCleanup Function:useEffect can return a cleanup function. React calls this cleanup function before the component unmounts or before the effect runs again, which is useful for cleaning up subscriptions or timers.\n\nDependency Array:The second argument to useEffect is an array of dependencies. The effect runs only when one of these dependencies changes. If the array is empty, the effect runs only once after the initial render.\n\nCommon Use Cases:  \n\nSetting up intervals or timeouts with proper cleanup  \nFetching data asynchronously and managing loading/error states  \nManaging event listeners and subscriptions  \nRunning business logic or side effects in response to state or prop changes\n\n\nExample:  \nimport { useEffect, useState } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(s => s + 1);\n    }, 1000);\n\n    return () => clearInterval(interval); // Cleanup on unmount\n  }, []);\n\n  return <p>Seconds: {seconds}</p>;\n}\n\n\nImportant Notes:  \n\nuseEffect runs after rendering, so it does not block the browser from updating the screen.  \nIt should not be used for synchronous code that affects rendering directly.  \nAvoid putting calculations or derived state inside useEffect if they can be done during rendering to prevent unnecessary re-renders.\n\n\n\nThis summary is drawn from React tutorials that explain the fundamentals and practical usage of useEffect in function components, helping developers manage side effects cleanly and efficiently in React applicationsa2b267918162e49ed09668f1useEffect import { useEffect, useState } from 'react'; function Timer() { const [seconds, setSeconds] = useState(0); useEffect(() => { const interval = setInterval(() => { setSeconds((s) => s + 1); }, 1_000); return () => clearInterval(interval); // Cleanup }, []); return Seconds: {seconds}; } Remember useEffect runs on the client, not the server. The function passed to useEffect executes when the component is added to the DOM or when any of its dependencies (the second argument, an array) change. Additionally, an optional cleanup function can be defined, which React will run when the component is removed from the DOM.11aa4ab6eae82f7b6df75323useEffect import { useEffect, useState } from 'react'; function Timer() { const [seconds, setSeconds] = useState(0); useEffect(() => { const interval = setInterval(() => { setSeconds((s) => s + 1); }, 1_000); return () => clearInterval(interval); // Cleanup }, []); return Seconds: {seconds}; } Remember useEffect runs on the client, not the server. The function passed to useEffect executes when the component is added to the DOM or when any of its dependencies (the second argument, an array) change. Additionally, an optional cleanup function can be defined, which React will run when the component is removed from the DOM.",
+  "discovery_data": {
+    "query_sent": "Tell me about React useEffect from tutorials only.",
+    "results": [
+      {
+        "_id": "aa3c41758c254f2c90216dd0",
+        "title": "Einstieg in React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "554842349c829ccc79d45375",
+        "title": "Testen und Frontendarchitektur",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "535b45361ad6c9e12a423cbc",
+        "title": "Das ist .NET MAUI",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "f84097699062ea49829a9ba7",
+        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "ff4Dt9s49xPhkHtMv",
+        "title": "Einstieg in Next.js",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e8e5ad075ba0a3ff7a0c6faf",
+        "title": "Navigation und Web Components",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "3b7e565f2d4ec78c908b0498",
+        "title": "Zustand und Logik",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "a1ccc2e901e8a644e6a5623f",
+        "title": "Dark-Mode-Selektor-Komponente",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e1d26dbff09906066b1da018",
+        "title": "Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "a9fa089a6fa3b5b2b1e1a08a",
+        "title": "Mastering Side Effects in React with Effect-TS: A Functional Approach to UI Logic",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "e4df1bfaf4a7116388bbe768",
+        "title": "Captain Hooks",
+        "parentGenre": null
+      },
+      {
+        "_id": "P2CqS5mYymSYBGKiv",
+        "title": "Workshop: React Beyond the Basics [onsite only]",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "d310d0a99a189bbaac1881e5",
+        "title": "React: Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "Rh656zu79iKeqreMp",
+        "title": "Modern React",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "016438ac16b0b45630a19592",
+        "title": "Captain Hooks",
+        "parentGenre": null
+      },
+      {
+        "_id": "2cb57ebc5b97ae8034692277",
+        "title": "Captain Hooks",
+        "parentGenre": null
+      },
+      {
+        "_id": "PEbGTiWH4zgEDpgui",
+        "title": "Future of React - Now!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "11aa4ab6eae82f7b6df75323",
+        "title": "Essential React Tips: A Developer's Cheat Sheet",
+        "parentGenre": null
+      },
+      {
+        "_id": "a2b267918162e49ed09668f1",
+        "title": "Essential React Tips: A Developer's Cheat Sheet",
+        "parentGenre": null
+      },
+      {
+        "_id": "cf05ea58ab4b977db015adeb",
+        "title": "React: Library Basics",
+        "parentGenre": null
+      },
+      {
+        "_id": "beeb8ce088ed8313329dd56e",
+        "title": "Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "9784459f1e4b30167e3b56c1",
+        "title": "Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "a55459d4dc9578f07830e806",
+        "title": "React Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "Rb8sefyuQMJnh3nFQ",
+        "title": "React State, Hooks & What’s next in managing State?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "cd0820b2bef014c9fab965c8",
+        "title": "The big JavaScript expert check",
+        "parentGenre": null
+      },
+      {
+        "_id": "XL4isCW4oXwJXegQ8",
+        "title": "React Inside Out: Advanced",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "iRKcXRJMXT39vQ5zc",
+        "title": "Let's Build React's Context API From Scratch in JS",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "W4cpLQqCfkdGT8Jnu",
+        "title": "Angular Architectures with NgRx Stores & Effects",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f89c42ba7d73257923dcde6a",
+        "title": "React 16: What’s new?",
+        "parentGenre": null
+      },
+      {
+        "_id": "kHdHjoZh3hMS65a92",
+        "title": "React beyond the Basics",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "F8Wp5NXL9i29iZS4N",
+        "title": "React beyond the Basics",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "S7ke6tMAyRcNoTx7C",
+        "title": "Is Next.js the new React.js",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3037f49cf54db0d1a84de977",
+        "title": "React Best Practices",
+        "parentGenre": null
+      },
+      {
+        "_id": "9074e9e17b67ccc28924ea9b",
+        "title": "React Best Practices",
+        "parentGenre": null
+      },
+      {
+        "_id": "0f3baae6d598a43805ede246",
+        "title": "React SPAs with TanStack Workshop: A Practical Deep Dive",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "979ZvyTMnzwfJCx4p",
+        "title": "Building Intelligent User Interfaces with React and AI",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "XDoKpgG4JnLsZRp9n",
+        "title": "Hooked on Hooks in React",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "6SeHvQLRa85ti2YLc",
+        "title": "Unleash Full-Stack Development With next.js - In Practice",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "daac0eb408650e3fba990431",
+        "title": "Das React Cheat Sheet",
+        "parentGenre": null
+      },
+      {
+        "_id": "8d58d75e74b6ef3e97d80344",
+        "title": "React: Forms and UI Libraries",
+        "parentGenre": null
+      },
+      {
+        "_id": "f76e4150e6445386c3b45410",
+        "title": "React Hooks - React wird funktionaler",
+        "parentGenre": null
+      },
+      {
+        "_id": "JJdGhi9Kk9dgaEiXD",
+        "title": "Workshop: Hands-on React Server Components, Server Actions, and Forms in the Next.js App Router",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "B9W23ATWHjLAXqibg",
+        "title": "Unleash Full-Stack Development With Next.js - In Practice",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "905bad9795ffdee2e2dc3318",
+        "title": "Datenhaltung, Routing und Tests",
+        "parentGenre": null
+      },
+      {
+        "_id": "dce2e7fce63ba63cdf7ee57a",
+        "title": "Mastering React: 5 Antipatterns and How to Fix Them",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "16518fb0a2375f8c306f8979",
+        "title": "Einführung in React: Das große Tutorial zum Mitmachen",
+        "parentGenre": null
+      },
+      {
+        "_id": "qRWXjfJPkFiacWQkL",
+        "title": "Journey from procedural to reactive JavaScript with stops",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "c4fb37876313d1aedb20a8e0",
+        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr - Teil 1",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1afc9b7c648711b8f9bea5bc",
+        "title": "Scaling and Optimizing React Applications: Advanced Techniques for Large-Scale Projects",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "pPYMrzCiTznFHbfj7",
+        "title": "Hooked on Hooks in React",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "50bd42115054aca65a659753",
+        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr - Teil 2",
+        "parentGenre": "RHEINGOLD"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Tutorials Only",
+    "required_checks": [
+      "Discovery data must include only chunks with parentGenre 'TUTORIAL' when user specifies 'tutorials only'",
+      "Discovery data must NOT include chunks with other parentGenre values (RHEINGOLD, null, etc.)",
+      "AI response must be based only on tutorial content and mention it's from tutorials",
+      "No citations or references to non-tutorial content types should appear in the response"
+    ]
+  }
+}

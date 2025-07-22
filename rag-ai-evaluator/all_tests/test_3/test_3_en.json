@@ -1,0 +1,450 @@
+{
+  "test_id": "test_003_en",
+  "query": "Can you summarize recent events on DevOps from articles?",
+  "endpoint": "reader_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: DevOps events articles 2025 2024\nCertainly! Here is a summary of recent events and insights on DevOps from the curated articles:\n\nDevOps in Highly Regulated Environments  \n\nScaling CI/CD pipelines in financial services and other regulated industries requires embedding compliance early in the design and automation of pipelines.  \nKey practices include automating and standardizing processes, integrating security as DevSecOps, empowering developers with guardrails, and measuring success with metrics that satisfy both internal teams and external auditors.  \nThese approaches help transform compliance from a bottleneck into a competitive advantage.  \n(Source: DevOpsCon San Diego 2025 sessions by Gautam Solaimalai)\n\n\nChallenges and Myths in Continuous Delivery  \n\nResistance to adopting continuous delivery often stems from cultural and technical challenges.  \nExperienced practitioners emphasize that continuous delivery is achievable even in highly regulated environments by addressing these challenges with practical recipes and mindset shifts.  \n(Source: DevOpsCon San Diego 2025 talks by Kris Buytaert)\n\n\nReal-World DevOps Security Incidents  \n\nRecent keynote presentations have analyzed headline-making DevOps breaches, showing how attackers exploit automation pipelines by targeting build scripts, workflow actions, and infrastructure templates.  \nRecommendations include adopting short-lived tokens, pinning workflow actions, reducing permissions, enabling reproducible builds, and using staged progressive deployments like canaries.  \nRegular game days and threat modeling are advised to prepare teams for incidents.  \n(Source: DevOpsCon Berlin 2025 keynotes by Christian Schneider)\n\n\nDevSecOps Evolution with Generative AI and ClickOps  \n\nDevSecOps faces skill gaps and complex environments; Generative AI (GenAI) and ClickOps (low-code/no-code platforms) are emerging as transformative technologies.  \nGenAI can automate code generation and improve productivity, while ClickOps empowers non-developers to build and manage infrastructure and automation workflows.  \nThese trends democratize security practices and are expected to become industry norms in 2024, provided organizations manage trust, transparency, and change effectively.  \n(Source: Articles by Prashanth Nanjundappa in DevOps Magazine and MLCon Magazin)\n\n\nDevOps Culture and Organizational Transformation  \n\nDevOps is more than tools; it is a sociotechnical system requiring alignment of culture, processes, and technology.  \nMany organizations struggle with sustaining collaboration and realizing value despite investments in DevOps tools and practices.  \nFrameworks and coaching approaches help teams analyze work flow, identify bottlenecks, and iteratively improve.  \nThe evolution from traditional sysadmin roles to DevOps, SRE, and platform engineering reflects a shift toward strategic enablement and product thinking.  \n(Source: Various conference talks and articles by Andrew Clay Shafer, Sasha Rosenbaum, Jon Dodkins, and others)\n\n\nDevOps as a Must-Have Skill Across Teams  \n\nModern organizations benefit from embedding DevOps knowledge across all technical teams to improve collaboration, delivery speed, and cost efficiency.  \nThe philosophy of “You build it, you run it” emphasizes full ownership and accountability.  \n(Source: DevOpsCon Singapore 2024 talk by Weiyuan Liu)\n\n\nDevOps Failures and Lessons Learned  \n\nHistorical and ongoing challenges in DevOps adoption often stem from neglecting the interplay between social and technical factors.  \nSociotechnical system theory highlights that optimal performance requires integrated teams aligned with technology investments.  \nContinuous learning and adaptation are necessary to avoid repeating past failures.  \n(Source: Keynotes and talks by Andrew Clay Shafer at DevOpsCon New York and Berlin)\n\n\n\nConclusion:Recent DevOps events and articles emphasize that successful DevOps adoption requires a holistic approach combining automation, security integration (DevSecOps), cultural transformation, and continuous learning. Emerging technologies like Generative AI and ClickOps are poised to accelerate DevSecOps capabilities and democratize infrastructure management. Meanwhile, real-world security incidents highlight the need for robust pipeline protections and proactive threat modeling. Organizations in regulated industries are finding ways to embed compliance seamlessly into their DevOps workflows, turning challenges into competitive advantages.\nThis synthesis reflects the latest expert insights and practical guidance from leading DevOps conferences and publications in 2024 and early 2025.d431cff9e5e1f4b3ae142cadBuilding and scaling CI/CD pipelines in financial services involves addressing a wide spectrum of challenges regarding regulatory compliance, remote system security, and scalability. This session showcases a practical framework for implementing DevOps in highly regulated industries, ensuring compliance while considering performance and efficiency. This session presents best practices for DevOps leaders around real-world experience in fintech cloud modernization so that compliance can be seen as not a hindrance but a competitive advantage.9a2fdeea745d38cc851eab7eSo as we wrap up here, um, here are the key takeaways and, uh, on how to go from zero to DevOps. Zero. And, uh, so first is embed complaints early from day zero. Incorporate those requirements into your design and pipelines via automation. Use automation lik, and if you do this, uh, compliance becomes byproduct of the, your process instead of firefight. Uh, the release stand second is automate, uh, and standardize everything. Uh, I know this probably might take, uh, some time, but I'm pretty sure, uh, I think the consistency is king of complaints, right? So by using infrastructure as code or GitHub, uh, and shared pipeline framework, you eliminate variation and human error. Um, third is never compromise on security. So, uh, when, when it comes to security, it's better to go hand in hand. Um, so also, uh, recognize the integrating security with, uh, DevOps and make it DevSecOps instead. And for this, empower your developers with guardrails. Give them fast lanes so that they can get onboarded pretty quickly rather than having build, having them build this IAC or CAC components. Um, fourth this. So finally measure everything, right? So it's, uh, I mean data their lives. So track metrics, and it's important to have data show both your internal and ex external teams have succeeded. So, which includes regulators and auditors as well.f32e63a157be099bdab4a76cReal‑World DevOps Attacks: Breaches from Push to Prod Your automation pipeline safeguards the crown jewels of the business—source code, secrets, release keys—yet the very workflows meant to accelerate delivery can be leveraged against you. Attackers now aim for build scripts, workflow actions, container tags, and infrastructure templates to slip tainted components straight into production without tripping a single test. This keynote is a guided walk‑through of several real‑world, headline‑making DevOps incidents. We’ll trace how each break‑in unfolded, pinpoint the pipeline stages that provided the attacker’s leverage, and unpack the common blind spots that let them succeed. Then we flip the perspective to show what teams did next and what mindsets keep pipelines safe without throttling velocity. You’ll leave with a clear picture of the modern DevOps attack surface—from commit to deploy—and a concise set of questions to ask your own pipeline on Monday morning: Where are my crown jewels stored? How hard are they to reach? Whether you build, test, or operate, this talk arms you to ship fast and safe.d64628d5c08e7decd491c8ceDevSecOps struggles with skill gaps and complex environments. This article explores two game-changers: Generative AI (GenAI) and ClickOps. GenAI boosts productivity with automated code, while ClickOps empowers non-developers through low-code platforms. Together, they democratize security and accelerate DevSecOps in 2024. ... The ClickOps trend will likely become an industry norm in 2024. But while ClickOps offers the opportunity to enable enhanced delivery, security and scalability across critical systems, organisations that choose to implement it must be ready to make trust, transparency and change management happen for the best outcome. For those looking to embrace the innovation of ClickOps and GenAI, 2024 is the year for a major gear shift in development practices.383cc2d9165bde1494104e33devmio: Many companies, especially large corporations, have highly regulated, rigid structures that make it difficult to implement company-wide cultural changes. Can the framework also be applied in such situations? Andrew Clay Shafer: Highly regulated environments benefit the most because part of the problem they have with change is the lack of ubiquitous language to explicitly align new behaviors. Infrastructure and platform, together with improved social practices, ultimately improve the ability to deliver without compromising regulatory compliance.46c3a4214ae09e672d1afc48DevOps: A Must-Have Skill for Every Team “You build it, you run it” — is a very apt quote from Werner Vogels, CTO of AWS, especially in our cloud-saturated world today. In recent years, we’ve seen the concept of “Sysadmins” evolve into “DevOps”, then “SRE”. But more than just the evolution of roles in our workplace, for a modern organisation to move fast and succeed, there’s an absolute need to adopt DevOps knowledge on each team. In this talk, we’ll look at the benefits of applying this expertise in different tech domain teams, such as improved collaboration, faster delivery times, and cost efficiency. I’ll share examples of how my history as a Full Stack Engineer has been deeply embroiled into DevOps, and how that has become an advantage for my organisation and career growth.NCL9LBHdXJnGaGfkDThe Long History of DevOps FailuresThe Long History of DevOps Failures Sociotechnical system theory emerged in the 1950s studying the impact of rapid changes in technology and social organization on British coal mining. The theory considers the interdependence of social and technical factors in the work and proposes that optimal organizational performance can only be achieved by systems that account for both. The research showed that considerable investments in automation did not necessarily result in increased productivity and often decreased both safety and morale. The empirical results showed that cross functional teams integrated and aligned with technology investments were more productive, more safe and more happy. And then what happened? This presentation will present a whimsical chronicle of research and anecdotes from British coal in the 50s to Serverless platforms of today highlighting how generations relearn and forget the same basic lessons. The audience should gain an increased understanding of the impact of work design on organizational performance with a focus on the complex and dynamic challenges of delivering software in the modern workplace.",
+  "discovery_data": {
+    "query_sent": "Can you summarize recent events on DevOps from articles?",
+    "results": [
+      {
+        "_id": "dd4096071cc62fc09263301a",
+        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
+        "parentGenre": null
+      },
+      {
+        "_id": "60b1315f2a750f20b91a97f5",
+        "title": "Der .NET-Upgrade-Assistent",
+        "parentGenre": null
+      },
+      {
+        "_id": "d64628d5c08e7decd491c8ce",
+        "title": "How Generative AI and ClickOps will Transform DevSecOps in 2024",
+        "parentGenre": null
+      },
+      {
+        "_id": "59a3ca449c3b930b5f2432c6",
+        "title": "JavaScript Trends to Watch: Who’s Taking the Lead?",
+        "parentGenre": null
+      },
+      {
+        "_id": "57868ce7d247728d832ce6d6",
+        "title": "Der große .NET-Jahresrückblick 2024",
+        "parentGenre": null
+      },
+      {
+        "_id": "706951e0a3b546ccbb006301",
+        "title": "State of PHP: Highlights, Trends, Prognosen",
+        "parentGenre": null
+      },
+      {
+        "_id": "2a0f3ecad8f30c4a31cd83ae",
+        "title": "Neues in React",
+        "parentGenre": null
+      },
+      {
+        "_id": "e3e688caa9ae1564fe427b3a",
+        "title": "GenAI und Low Code: Brückenschlag in DevSecOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "03836460e8a948e77789e989",
+        "title": "Windows Server 2025 for IoT",
+        "parentGenre": null
+      },
+      {
+        "_id": "e5be18d7df939feb57f29e90",
+        "title": "Das Jahr in .NET und JavaScript",
+        "parentGenre": null
+      },
+      {
+        "_id": "7f349002ed7db73f80d06e04",
+        "title": "Gültigkeit von Websitezertifikaten prüfen",
+        "parentGenre": null
+      },
+      {
+        "_id": "fc36777caa7d201dde8fb058",
+        "title": "Das Jahr in JavaScript – Rückblick und Vorschau",
+        "parentGenre": null
+      },
+      {
+        "_id": "c7aed8a7a2b3e6c0e3ea326c",
+        "title": "Neuerungen in .NET 10.0 Preview 1 und 2",
+        "parentGenre": null
+      },
+      {
+        "_id": "fae582b18950466eac9c5147",
+        "title": "Systems Thinking: Schnell von der Anforderung zum Anwender",
+        "parentGenre": null
+      },
+      {
+        "_id": "fc8a69238c23bff4b4b5298a",
+        "title": "JavaScript-Trends 2024: Highlights, Flops und Geheimtipps",
+        "parentGenre": null
+      },
+      {
+        "_id": "4bbcffc756f74573b8118231",
+        "title": "Charting the Way Forward for AI-Native Software Organizations",
+        "parentGenre": null
+      },
+      {
+        "_id": "a3e8e952e5a98f47c7294d85",
+        "title": "XRechnungen mit .NET: Hintergrund und Umsetzung",
+        "parentGenre": null
+      },
+      {
+        "_id": "0d4978a9971caa6a3a8e9f5e",
+        "title": "Terraform and Azure DevOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "c6e4724bc0ba6b02918d2ce7",
+        "title": "Neuerungen in .NET 9.0 Preview 5 bis 7 – Teil 1",
+        "parentGenre": null
+      },
+      {
+        "_id": "9e8fd692f55786ff0ce8995f",
+        "title": "Social Learning und kontinuierliches Lernen als Teil einer zukunftsfähigen Unternehmenskultur",
+        "parentGenre": null
+      },
+      {
+        "_id": "ed9508913b14c3049436c385",
+        "title": "Svelte 4 Under the Hood",
+        "parentGenre": null
+      },
+      {
+        "_id": "1d157596566e7ab7af98f057",
+        "title": "Agiles Arbeiten zwischen Obsoleszenz und Unverzichtbarkeit",
+        "parentGenre": null
+      },
+      {
+        "_id": "a75c3970c6a00495ac8b59d6",
+        "title": "Quereinstieg in der Praxis – lohnt es sich?",
+        "parentGenre": null
+      },
+      {
+        "_id": "3e12e5b65144bde1b98db2c6",
+        "title": "Kolumne: Grünfläche",
+        "parentGenre": null
+      },
+      {
+        "_id": "55e444c8514beebaf2c83f68",
+        "title": "Was tut sich in der Java-Welt?",
+        "parentGenre": null
+      },
+      {
+        "_id": "6fdc59521133389909a5848a",
+        "title": "Runtime-Security als vernachlässigter Teil der Anwendungssicherheit",
+        "parentGenre": null
+      },
+      {
+        "_id": "6b8904c1c23685967725b0a7",
+        "title": "Entwickler Pulse 2025 – Der Reality Check für die IT-Branche",
+        "parentGenre": null
+      },
+      {
+        "_id": "7cde861962f43c4f8d2210b8",
+        "title": "Das Geheimnis der Soft Skills für den IT-Erfolg",
+        "parentGenre": null
+      },
+      {
+        "_id": "24b47e882e364bc09c3bbb82",
+        "title": "Security und Privacy: das Internet of Things, Smart Devices und KI",
+        "parentGenre": null
+      },
+      {
+        "_id": "9f71a8992c3db364414f5f72",
+        "title": "Ensuring Security in Container Adoption",
+        "parentGenre": null
+      },
+      {
+        "_id": "39709c765940be92f7476a2b",
+        "title": "Checkliste KI-Verordnung – wer muss was wann wie beachten?",
+        "parentGenre": null
+      },
+      {
+        "_id": "00c9b0014c6a2c9a4da4abf9",
+        "title": "DevOps Plus: More Open Source, AI-Enabled, Next Generation Services",
+        "parentGenre": null
+      },
+      {
+        "_id": "09390f3f9b1f977237bef4d8",
+        "title": ".NET 9.0 Preview 3 und 4",
+        "parentGenre": null
+      },
+      {
+        "_id": "063970c811a7557678d66d3a",
+        "title": "Java 24 – großes Release zum 30. Geburtstag",
+        "parentGenre": null
+      },
+      {
+        "_id": "85b3ae4a253158cc4314f517",
+        "title": "Green AI: Making Future Technologies Sustainable",
+        "parentGenre": null
+      },
+      {
+        "_id": "66308bea60fb2a20d5360c75",
+        "title": "From Zero to DevOps Hero: Lessons from Scaling CI/CD Pipelines in Highly Regulated Environments",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "d431cff9e5e1f4b3ae142cad",
+        "title": "From Zero to DevOps Hero: Lessons from Scaling CI/CD Pipelines in Highly Regulated Environments",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a4f9e2921e179687f89987af",
+        "title": "From Zero to DevOps Hero: Lessons from Scaling CI/CD Pipelines in Highly Regulated Environments",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "59746af2606e6ef067852b8d",
+        "title": "Top 10 DevOps topics to look for in 2019",
+        "parentGenre": null
+      },
+      {
+        "_id": "ad9bc924baf65876b3a47f06",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      },
+      {
+        "_id": "shikmNoieP7JPKpeA",
+        "title": "DevOps transformation – the good, the bad and the ugly",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "RMP4MpbD6sdjGKbgo",
+        "title": "Architecture, Infrastructure, DevOps, Oh My!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "d71fd997da05d5adfb477cb5",
+        "title": "Die DevOps-Bewegung",
+        "parentGenre": null
+      },
+      {
+        "_id": "RJFhGcZybrCxdkcoj",
+        "title": "Making DevOps Valuable",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "09ebadcadf02a6a8b5542826",
+        "title": "The road to serverless maturity: Running away from “NoOps” or toward it?",
+        "parentGenre": null
+      },
+      {
+        "_id": "c296fede31d236a63eda1239",
+        "title": "DevOps Check",
+        "parentGenre": null
+      },
+      {
+        "_id": "aXfeSyoFg58JQ8N2j",
+        "title": "Devops, DevSecOps, GitOps and AppOps, an engineer guide to 21st century",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "w6wkhWKh4PHPyzDEA",
+        "title": "Safe to fail DevSecOps culture",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "oMQzvqibhFneaoWaF",
+        "title": "Opening of the DevOps Transformation Day // Session: Transformation Hacks - Setting up an agile culture in a non-agile environment",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "Yzk3sCJcApJXcuihD",
+        "title": "Gamify it until you make it: Improving Agile Development and Operations with Gamification",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "EkqFkk2GE6H7JRDcE",
+        "title": "Beyond Checkboxes: Embedding True Cyber Resilience",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "KbbDwbus8BbiwrLQQ",
+        "title": "Zero-Trust DevOps - The devil is in the details",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "RiMxJmimAaQsqfSNu",
+        "title": "How I used GitOps and CDevents to achieve automated compliance in a FinServ context",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "FqZvWzDQMR2E7u4Ab",
+        "title": "Welcome and opening of the DevOpsCon – Munich 2022 // Keynote:The Things I've Seen, How DevOps is Evolving in Practice",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "m2bcEt4MBx4qCTfxB",
+        "title": "Getting People Engaged into Agile with Self-Assessments",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "GRbeDQTq8aEQTTiqn",
+        "title": "Opening of the DevOps Transformation Day",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "WhfKQSYCMdvMqRa2n",
+        "title": "Welcome and opening of the DevOpsCon Berlin 2023 // Keynote:The Long History of DevOps Failures",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "46c3a4214ae09e672d1afc48",
+        "title": "DevOps: A Must-Have Skill for Every Team",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "TcoyWqgjqKbrF5E2n",
+        "title": "Adapting DevOps in a World of Growing Software Supply Chain Attacks",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "mTsZS6TeoXEbKYJd6",
+        "title": "Finding the Sweet Spots in your Agile journey",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "hJtpzoX6AcjTdmfgM",
+        "title": "DevOps Test Data Management - The future is here",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3830f9f5131700e1fb078655",
+        "title": "DevOps in an immutable world",
+        "parentGenre": null
+      },
+      {
+        "_id": "66e8a808aa23e804870173ad",
+        "title": "DevOps trends and limitations forecasted for 2018",
+        "parentGenre": null
+      },
+      {
+        "_id": "383cc2d9165bde1494104e33",
+        "title": "Domain Driven DevOps Demystified",
+        "parentGenre": null
+      },
+      {
+        "_id": "665e85583cb88f0d6ca782f9",
+        "title": "Real‑World DevOps Attacks: Breaches from Push to Prod",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a506357e4ace803d88892d57",
+        "title": "Real‑World DevOps Attacks: Breaches from Push to Prod",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "bd930e45a5e68291eca36314",
+        "title": "Das Leben nach dem Release, Machine Learning visualisiert und Herangehensweisen an DevOps – unsere Top-Themen der Woche",
+        "parentGenre": null
+      },
+      {
+        "_id": "0f9ca3622cf46bdbd8ecfa67",
+        "title": "Zehn Releases am Tag",
+        "parentGenre": null
+      },
+      {
+        "_id": "domJyvPwRNmBdSNYo",
+        "title": "DevOps is dead, long live DevOps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "NCL9LBHdXJnGaGfkD",
+        "title": "The Long History of DevOps FailuresThe Long History of DevOps Failures",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "9a2fdeea745d38cc851eab7e",
+        "title": "10 reasons why we can't do Continuous Delivery",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "a7a2bc9ff491b84e95e0c998",
+        "title": "DevOps becomes BizDevOps: 4 steps to add more value to your work",
+        "parentGenre": null
+      },
+      {
+        "_id": "f32e63a157be099bdab4a76c",
+        "title": "10 reasons why we can't do Continuous Delivery",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "bSLAN7XuqjBRXvdLq",
+        "title": "DevOps is dead, long live DevOps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "afc9ac159a5693cd2200afb7",
+        "title": "Why Your DevOps Transformation Failed: A Deep Dive into Common Pitfalls",
+        "parentGenre": null
+      },
+      {
+        "_id": "fcq4WmCYsqAwEpN5q",
+        "title": "Retrospective: Where DevOps nearly caused havoc",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "aoyu3WJZ3obcEL8xR",
+        "title": "Seven years and counting – The DevOps journey at Hermes Germany",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "BWiLLA2M2PWcNwv23",
+        "title": "Evolution of Software Architecture Trends",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "ed6d512010141817147054c1",
+        "title": "5 Ways for Enterprise Teams to Secure Their DevOps Pipelines in 2023",
+        "parentGenre": null
+      },
+      {
+        "_id": "EZn4K2K4KbA4uk2g9",
+        "title": "Domain Driven DevOps Demystified",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "c7cee9d2c8d02e7c0e87eaed",
+        "title": "Collaboration or survival of the fittest: Who runs the DevOps world?",
+        "parentGenre": null
+      },
+      {
+        "_id": "A7cJnb6mrnhr8mLv4",
+        "title": "Wait a Sec... how do we implement DevSecOps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "d6540b8aeebc00ab54a5c229",
+        "title": "Streamline Your DevOps: Managing and Shipping Infrastructure and Services in a Single Git Flow",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "YMMn82WLC7fpuRBRv",
+        "title": "How to build an effective DevOps Org",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "7d4df4973e9b6a7a79d2096a",
+        "title": "Tackling DevEx Imposter Syndrome or how to evolve your DevOps through Platform Engineering",
+        "parentGenre": "RHEINGOLD"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Articles Only",
+    "required_checks": [
+      "Discovery data must include only chunks with parentGenre 'null' (indicating ARTICLE content type)",
+      "Discovery data must NOT include chunks with parentGenre values like 'TUTORIAL', 'RHEINGOLD', 'COURSE', 'FLEX_CAMP', etc.",
+      "AI response must be based only on article content",
+      "No citations or references to tutorial, event, or course content should appear in the response"
+    ]
+  }
+}

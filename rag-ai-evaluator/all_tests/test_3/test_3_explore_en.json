@@ -1,0 +1,75 @@
+{
+  "test_id": "test_003_explore_en",
+  "query": "Can you summarize recent events on DevOps from articles?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: DevOps events articles 2025 2024\nCertainly! Here is a summary of recent developments and insights on DevOps from the latest articles:\n\nDevOps Philosophy and Flow Optimization  \n\nDevOps, coined in 2009, aims to break down silos between development and operations, promoting a holistic view of the software delivery value stream.  \nThe '3 Ways' of DevOps (from Gene Kim's The Phoenix Project) emphasize:  \nFirst Way: Optimize flow from business requirement to end-user deployment, focusing on reducing time to market and improving throughput by identifying and addressing bottlenecks.  \nSecond Way: Amplify feedback loops for faster, data-driven decision-making.  \nThird Way: Foster a culture of continual experimentation and learning.\n\n\nKey strategies include limiting Work in Progress (WIP), reducing batch sizes, visualizing work (e.g., Kanban boards), reducing handoffs, and embracing automation to make deployments a 'nonevent.'  \nThe approach requires organizational changes, such as forming interdisciplinary vertical teams responsible end-to-end for product areas.  \nThe goal is faster, more reliable delivery with higher business value and earlier feedback cycles.DevOps 3 Ways ... First Way – Flow/Systems Thinking: ... The first way describes the effort to get quickly, smoothly, and reliably from a business requirement to active use by the user ... The goal is to drastically shorten time to market while increasing quality and reliability ... Automation ... Deployment as a None-Event ...\n\n\nEmerging Concept: DevOps Plus  \n\nDevOps is evolving to 'DevOps Plus,' integrating more open source, AI-enabled capabilities, quantum readiness, and next-generation software and services.  \nOpen source fosters collaboration and reduces vendor lock-in; AI integration is transforming CI/CD pipelines and workflows with AI-powered design patterns and agents.  \nQuantum computing integration is emerging, with initiatives like Microsoft's Quantum Ready program and IBM's Qiskit.  \nNew tools and practices such as OpenTelemetry, OpenSLO, and observability-driven development are shaping the future DevOps ecosystem.  \nDevOps Plus aims to expand choices, upskill teams, and integrate with emerging technologies for sustained innovation.<00c9b0014c6a2c9a4da4abf9>DevOps Plus ... adding more open source to DevOps for quick feedback turnaround time, enhancing DevOps with AI, enabling security posture with quantum-ready capabilities ... Next Generation DevOps Software and Services ...</00c9b0014c6a2c9a4abf9>\n\n\nDevSecOps Transformation with Generative AI and ClickOps  \n\nDevSecOps has become essential for integrating security into agile development, but skill gaps and complex cloud environments remain challenges.  \nGenerative AI (GenAI) tools like GitHub Copilot accelerate secure code delivery by automating code and documentation generation, improving productivity and reducing costs.  \nClickOps platforms (low-code/no-code) empower non-developers to build and manage infrastructure and automation, democratizing DevSecOps capabilities beyond specialized teams.  \nGartner predicts that by 2026, over 80% of organizations will adopt GenAI capabilities or applications powered by GenAI.  \nSuccessful adoption requires trust, transparency, and change management to ensure security and scalability.Two key areas that will empower development teams to enhance DevSecOps in 2024 are Generative AI and Click Ops ... GenAI tools can offer dev teams the much sought after triple benefit of faster delivery, reduced costs and built-in security ... ClickOps platforms ... empower non-developer professionals ... democratising the DevSecOps capabilities beyond specialised coding teams ...GenAI-Tools bieten Entwicklungsteams den begehrten dreifachen Vorteil einer schnellen Bereitstellung, niedriger Kosten und integrierter Sicherheit ... ClickOps-Lösungen bieten eine wichtige Brücke für UI-basierte Workflows und Automatisierungsvorlagen ...\n\n\nInfrastructure as Code (IaC) Automation with Terraform and Azure DevOps  \n\nAutomation pipelines in Azure DevOps enable reliable, repeatable Terraform infrastructure deployments integrated into CI/CD workflows.  \nKey practices include remote state file management (e.g., Azure Storage with Azure AD authentication), security scanning (e.g., Checkov), and approval gates for destructive changes.  \nPipelines can use managed or self-hosted agents, with security best practices such as least privilege for service principals and secret management via Azure Key Vault.  \nTesting infrastructure with tools like Terratest is possible but has limited practical adoption so far.  \nThe approach reduces manual steps, increases deployment reliability, and supports multi-environment workflows.<0d4978a9971caa6a3a8e9f5e>Azure DevOps pipelines offer a sophisticated way to automate the provision of infrastructure with Terraform ... The pipeline contains ... terraform init and apply ... security scanner Checkov ... approval gate for manual validation of destructive changes ...</0d4978a9971caa6a3a8e9f5e>\n\n\nCommunity and Ecosystem Trends  \n\nDevOpsCon Magazin and DevOps community continue to focus on trends like Kubernetes, cloud computing, automation, and lean business practices.  \nThe integration of AI and open source in DevOps tools is a major theme for 2024 and beyond.  \nOrganizational culture and team structures remain critical for successful DevOps adoption.Das DevOpsCon Magazin ist das Fachmagazin für alle, die sich über die neuesten Trends rund um DevOps, Cloud Computing, Kubernetes und Lean Business informieren möchten ...\n\n\n\nConclusion:Recent DevOps content highlights a maturing philosophy focused on optimizing flow and collaboration, evolving into 'DevOps Plus' with AI, open source, and quantum readiness. DevSecOps is being transformed by generative AI and ClickOps low-code platforms, democratizing security practices. Automation of infrastructure with Terraform in Azure DevOps pipelines exemplifies practical DevOps implementation. The community continues to emphasize culture, tooling, and emerging technologies to sustain innovation and business value.\nIf you want more detailed guidance or examples on any of these topics, feel free to ask!",
+  "discovery_data": {
+    "query_sent": "Can you summarize recent events on DevOps from articles?",
+    "results": [
+      {
+        "_id": "fae582b18950466eac9c5147",
+        "title": "Systems Thinking: Schnell von der Anforderung zum Anwender",
+        "parentGenre": null
+      },
+      {
+        "_id": "00c9b0014c6a2c9a4da4abf9",
+        "title": "DevOps Plus: More Open Source, AI-Enabled, Next Generation Services",
+        "parentGenre": null
+      },
+      {
+        "_id": "59a3ca449c3b930b5f2432c6",
+        "title": "JavaScript Trends to Watch: Who’s Taking the Lead?",
+        "parentGenre": null
+      },
+      {
+        "_id": "57868ce7d247728d832ce6d6",
+        "title": "Der große .NET-Jahresrückblick 2024",
+        "parentGenre": null
+      },
+      {
+        "_id": "706951e0a3b546ccbb006301",
+        "title": "State of PHP: Highlights, Trends, Prognosen",
+        "parentGenre": null
+      },
+      {
+        "_id": "dd4096071cc62fc09263301a",
+        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
+        "parentGenre": null
+      },
+      {
+        "_id": "e3e688caa9ae1564fe427b3a",
+        "title": "GenAI und Low Code: Brückenschlag in DevSecOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "0d4978a9971caa6a3a8e9f5e",
+        "title": "Terraform and Azure DevOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "d64628d5c08e7decd491c8ce",
+        "title": "How Generative AI and ClickOps will Transform DevSecOps in 2024",
+        "parentGenre": null
+      },
+      {
+        "_id": "2a0f3ecad8f30c4a31cd83ae",
+        "title": "Neues in React",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Articles Only",
+    "required_checks": [
+      "Discovery data must include only chunks with parentGenre 'null' (indicating ARTICLE content type)",
+      "Discovery data must NOT include chunks with parentGenre values like 'TUTORIAL', 'RHEINGOLD', 'COURSE', 'FLEX_CAMP', etc.",
+      "AI response must be based only on article content",
+      "No citations or references to tutorial, event, or course content should appear in the response"
+    ]
+  }
+}

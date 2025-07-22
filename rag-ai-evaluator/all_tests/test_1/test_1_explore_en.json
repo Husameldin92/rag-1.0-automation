@@ -1,0 +1,75 @@
+{
+  "test_id": "test_001_explore_en",
+  "query": "What are the main features of Angular Signals in version 17?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: Angular Signals 17 16 15 features\nThe main features of Angular Signals in version 17 are as follows:\n\nStable Signals API: Signals, introduced earlier as a preview, have been marked stable in Angular 17. They provide a new reactive primitive that allows fine-grained, synchronous reactivity in Angular applications, enabling more efficient change detection by tracking dependencies and notifying only affected components to update.\n\nImmutable Signal Handling: The signal.mutate() method has been removed in Angular 17. Signals are now treated as immutable data structures, and updates should be done via the update() method or by replacing the entire value, promoting safer and more predictable state management.\n\nIntegration with Angular Components: Signals can be used as component state, and Angular provides new APIs for inputs and outputs using signals instead of traditional decorators. For example, input() and output() functions replace @Input and @Output decorators, supporting a more functional and reactive style.\n\nNew Lifecycle Hooks Related to Signals: Angular 17 introduces new lifecycle hooks such as afterRender() and afterNextRender(), which are callback-based and can be used to run code after component rendering, complementing the reactive nature of signals.\n\nImproved Change Detection: Signals enable a more granular change detection mechanism, where only components depending on changed signals are checked, reducing unnecessary checks compared to traditional Angular change detection strategies.\n\nSignal-Based Control Flow Syntax: Angular 17 introduces a new control flow syntax (e.g., @if, @for, @switch, @defer) that works seamlessly with signals, allowing for more expressive and performant template logic, including lazy loading and deferred rendering.\n\nInterop with RxJS: While signals provide synchronous reactivity, Angular 17 maintains interoperability with RxJS for asynchronous streams and side effects. The @angular/rxjs-interop package offers utilities like toSignal() and toObservable() to convert between signals and observables.\n\nLinked Signals: Angular 17 supports linked signals, which are writable computed signals useful for scenarios like form bindings, where a local editable copy of a signal's value is maintained and synchronized with the source.\n\nSignal Store Enhancements: The NgRx team introduced the NgRx Signal Store, a lightweight, functional state management solution built on signals, reducing boilerplate by replacing actions and reducers with direct method calls and patching state.\n\nSignal Effects: Effects in the context of signals are functions that run when dependent signals change, used for side effects but designed to avoid cycles by disallowing signal writes inside effects.\n\nRemoval of Zone.js Dependency (Future Direction): Signals are a step towards optionally removing Zone.js from Angular applications, enabling more efficient and predictable change detection.\n\nMandatory Use of Signals in New APIs: Angular 17 encourages the use of signals in new APIs, including inputs, outputs, and queries, moving away from traditional decorators and towards a more reactive and functional programming model.\n\n\nThese features collectively represent a significant evolution in Angular's reactive programming model, aiming to improve performance, developer experience, and code maintainability by leveraging signals as a core primitive for state and change detection management.\n<9836770099>Signals are stable in Angular 17. The signal.mutate() method has been removed; signals are now treated as immutable data structures, and updates should be done via update() or replacement. Angular 17 introduces new lifecycle hooks like afterRender() and afterNextRender(). Signals enable more granular change detection, checking only components depending on changed signals. New control flow syntax (@if, @for, @switch, @defer) works with signals for expressive templates. Signals interoperate with RxJS via toSignal() and toObservable(). Linked signals provide writable computed signals for form bindings. NgRx Signal Store offers a lightweight state management built on signals, replacing actions and reducers with direct method calls. Effects run on signal changes but disallow signal writes to avoid cycles. Signals are a step towards optionally removing Zone.js. Angular 17 encourages signals in inputs, outputs, and queries, moving away from decorators.</9836770099>",
+  "discovery_data": {
+    "query_sent": "What are the main features of Angular Signals in version 17?",
+    "results": [
+      {
+        "_id": "b3dccbe48006a54c8a14b9c8",
+        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "9836770500f149a58b7769f9",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "1c2d0d1ddbcc6e6469e58943",
+        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "parentGenre": null
+      },
+      {
+        "_id": "62f599587e3fd28de76c2756",
+        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "parentGenre": null
+      },
+      {
+        "_id": "04721391f3f7580f0631b9d3",
+        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
+        "parentGenre": null
+      },
+      {
+        "_id": "7169f2b6391a0d9490ef4b35",
+        "title": "Angular Turns 18 - Grown Up But Dynamic",
+        "parentGenre": null
+      },
+      {
+        "_id": "oaGpszBqb9pMPpjD7",
+        "title": "Angular Signals im Vergleich mit RxJS Observables: Ein Blick auf Ereignisbehandlung und asynchrone Datenströme",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "64ace3828d8056484c3534ab",
+        "title": "Angular 16 released",
+        "parentGenre": null
+      },
+      {
+        "_id": "5ecf87915aa99dfe10bb64dd",
+        "title": "Is Angular 16 Starting a (R)evolution?",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Version-Specific Chunk Selection and Content Analysis",
+    "required_checks": [
+      "Discovery data must include chunks relevant to Angular Signals and/or Angular version 17 (titles can mention either Angular Signals OR version 17 OR both)",
+      "AI response must mention Angular Signals and version 17 explicitly in the main content",
+      "Response content must be accurate and match information available in the selected chunks",
+      "The status of Angular Signals in v17 must be accurate (e.g., stable, new features, breaking changes)"
+    ]
+  }
+}

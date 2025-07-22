@@ -1,0 +1,80 @@
+{
+  "test_id": "test_007_explore_de",
+  "query": "Zeig mir was Cooles aus der Tech-Welt.",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "de",
+    "communityExperience": [
+      "JAX",
+      "Java Magazin",
+      "Extreme Java Camp"
+    ]
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: Tech-Welt\nIn der Tech-Welt gibt es viele spannende Entwicklungen und inspirierende Persönlichkeiten, die zeigen, wie vielfältig und innovativ die Branche ist. Hier einige Highlights und interessante Einblicke:\n\nTech Leads als Architekten des ErfolgsTech Leads sind nicht nur erfahrene Entwickler, sondern auch Visionäre und People-Manager, die technische Qualität und Teamdynamik steuern. Sie sind entscheidend für den Erfolg von Softwareprojekten und müssen komplexe Herausforderungen meistern, wie z.B. die Koordination von Microservices-Teams und die Sicherstellung von Codequalität in dynamischen UmgebungenTech Leads sind mehr als nur erfahrene Softwareentwickler; sie sind die Architekten der technischen Vision und die Garanten für den Erfolg von Entwicklerteams..\n\nFrauen in der Tech-Branche – inspirierende Porträts und HerausforderungenImmer mehr Frauen erobern die Tech-Branche und bringen frischen Wind und neue Perspektiven. Interviews mit Frauen wie Lena Smart (Chief Security Officer bei MongoDB), Sheeka Patak (Senior Software Engineer bei Zendesk) und Jennifer Albertson (Senior Managerin bei Red Hat) zeigen, wie wichtig Vielfalt, Mentoring und eine unterstützende Unternehmenskultur sind. Sie betonen, dass technische Kompetenz und Teamvielfalt Innovation fördern und die Branche nachhaltig verändern können<8cde6145244b5ec32c971a71>Die Tech-Industrie wird von Männern dominiert – so weit, so schlecht. Doch langsam, aber sicher bekommt der sogenannte Boys Club Gesellschaft von begabten Frauen.</8cde6145244b5ec32c971a71><9748a1dad5835c80d75c3662>Die Tech-Industrie wird von Männern dominiert – so weit, so schlecht. Doch langsam, aber sicher bekommt der sogenannte Boys Club Gesellschaft von begabten Frauen.</9748a1dad5835c80d75c3662><78ac40dbb2ad40ecc804daf4>Ich freue mich darauf zu sehen, wie sich unsere Welt verändert, wenn mehr Frauen in MINT-Rollen aufsteigen. Ich glaube, dass sich die Art und Weise, wie wir arbeiten, produzieren und wie wir miteinander interagieren, ändern wird, wenn mehr Meinungen und diversere Ideen vertreten sind.</78ac40dbb2ad40ecc804daf4>.\n\nModerne Deployment-Strategien mit Git und CloudDie klassischen 3-Stufen-Modelle für Deployment (Dev, Testing, Staging, Prod) werden zunehmend durch nichtlineare, containerbasierte Umgebungen ersetzt. Mit Git-Branch-basierten Containern und Cloud-Hosting lassen sich parallele, identische Umgebungen aufbauen, die schneller, flexibler und sicherer sind. So können Features, Hotfixes und Updates unabhängig voneinander und mit Produktionsdaten getestet werden. Das ist ein großer Fortschritt gegenüber traditionellen linearen Pipelines und erhöht die Qualität und Geschwindigkeit der Softwareentwicklung erheblichDas Git-and-Cloud-Modell hat eine Reihe von Vorteilen gegenüber dem 3-Schichten-Modell: Es ist nichtlinear. Eine Änderung kann eine andere nicht blockieren, denn alle Änderungen haben ihre eigene unabhängige Pipeline..\n\nBlazor und WebAssembly – neue Wege für Webentwicklung mit .NETWebAssembly ermöglicht es, Code mit nahezu nativer Performance im Browser auszuführen, nicht nur in JavaScript, sondern auch in Sprachen wie C#, C++ oder Rust. Blazor ist ein .NET-Webframework, das WebAssembly nutzt, um C#-Code direkt im Browser laufen zu lassen. Es erlaubt Entwicklern, bestehende C#-Logik wiederzuverwenden und mit JavaScript zu interagieren. Obwohl noch in der Preview-Phase, eröffnet Blazor spannende Möglichkeiten für die Webentwicklung und könnte die Art, wie Web-Apps gebaut werden, nachhaltig verändernBlazor ist also ein Aufsatz auf der Mono Runtime für WebAssembly. Es arbeitet mit der Razor-Template-Sprache, daher auch der Name, und packt sie in den Browser: Browser plus Razor ist Blazor..\n\nDiversity und Inklusion als InnovationsmotorStudien und Berichte zeigen, dass diverse Teams bessere Ergebnisse liefern. Herausforderungen für People of Color und Frauen in der Tech-Branche sind u.a. mangelnde Mentoren, Vorurteile im Recruiting und fehlende Karrierechancen. Unternehmen, die Diversity ernst nehmen und fördern, profitieren von mehr Innovation, besserer Mitarbeiterzufriedenheit und nachhaltigem Erfolg. Initiativen wie Persian Women In Tech oder Programme zur Förderung von Mädchen in MINT-Fächern sind wichtige Bausteine für eine gerechtere und leistungsfähigere Tech-Welt<5c6bd4fcc3cfb37b58b1e823>Research shows that diverse teams produce better results. In business, the proof is in the pudding, but we need to seed more diverse projects in order to see those results across the industry.</5c6bd4fcc3cfb37b58b1e823>Many companies lack several key components, namely infrastructure to support female employees, mentorship programs, career growth opportunities, and sponsors..\n\n\nDiese Themen zeigen, wie spannend und vielfältig die Tech-Welt heute ist – von innovativen Technologien über moderne Arbeitsweisen bis hin zu gesellschaftlichen Veränderungen, die die Branche prägen.\nWenn du mehr zu einem dieser Themen möchtest, kann ich dir gerne weitere Details oder Artikel empfehlen!",
+  "discovery_data": {
+    "query_sent": "Zeig mir was Cooles aus der Tech-Welt.",
+    "results": [
+      {
+        "_id": "zW9Jtwufr2kwSGeth",
+        "title": "Tech Leads: die Architekten des Erfolgs in der Softwarewelt",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8cde6145244b5ec32c971a71",
+        "title": "Women in Tech: Lena Smart im Porträt",
+        "parentGenre": null
+      },
+      {
+        "_id": "9748a1dad5835c80d75c3662",
+        "title": "Im Porträt: Sheeka Patak",
+        "parentGenre": null
+      },
+      {
+        "_id": "78ac40dbb2ad40ecc804daf4",
+        "title": "Women in Tech: \"Ich bin gespannt, wie sich unsere Welt verändern wird mit mehr Frauen in der Tech-Branche\"",
+        "parentGenre": null
+      },
+      {
+        "_id": "5c6bd4fcc3cfb37b58b1e823",
+        "title": "2020 PoC in Tech Report: “Diverse teams produce better results”",
+        "parentGenre": null
+      },
+      {
+        "_id": "fd8f8b03103de789d58a7c03",
+        "title": "Nichts bleibt, wie es war",
+        "parentGenre": null
+      },
+      {
+        "_id": "cf2daa558387a273df3c0b62",
+        "title": "„Blazor ist das, was Nerds wie ich lieben!“",
+        "parentGenre": null
+      },
+      {
+        "_id": "f87bb95ae2a3577cc176d292",
+        "title": "“Many companies lack the infrastructure & career growth opportunities to support female employees”",
+        "parentGenre": null
+      },
+      {
+        "_id": "acc8f356bc54a8a16e6b57e0",
+        "title": "Women in Tech: „Im richtigen Unternehmen ist es großartig“",
+        "parentGenre": null
+      },
+      {
+        "_id": "5b0a087296495d7dcb1ce111",
+        "title": "Die schlimmsten Tech-Enttäuschungen des Jahres",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Vague Question handling - Clarification request with Brand Experience",
+    "required_checks": [
+      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
+      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
+      "The assistant should apply the vague Question fallback logic defined in the prompt."
+    ]
+  }
+}

@@ -44,7 +44,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
         test3()
     })
 
-        it('Test 4: Should provide Dockerfile best practices and common mistakes (tests technical guidance responses)', () => {
+        it.only('Test 4: Should provide Dockerfile best practices and common mistakes (tests technical guidance responses)', () => {
             test4()
         })
     })
@@ -56,7 +56,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
             test5()
         })
 
-        it.only('Test 6: Should handle incomplete/ambiguous queries like "Angular better?" (tests malformed query handling)', () => {
+        it('Test 6: Should handle incomplete/ambiguous queries like "Angular better?" (tests malformed query handling)', () => {
             test6()
         })
 

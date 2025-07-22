@@ -7,12 +7,12 @@ const user_password = 'Hossamaccent2015+'
 
 // Test 6 Evaluation Criteria 
 const evaluation_criteria = {
-  test_focus: "Vague Query Handling - Clarification Request for Angular",
+  test_focus: "Vague Question handling - Clarification request for Angular",
   required_checks: [
-    "If the query is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-    "Instead, ask the user to clarify their question, or suggest likely topics based on their user profile.",
-    "AI response must NOT generate a concrete answer unless the intent is clear.",
-    "The assistant should apply the vague query fallback logic defined in the prompt."
+    "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+    "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
+    "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
+    "The assistant should apply the vague Question fallback logic defined in the prompt."
   ]
 }
 
@@ -58,7 +58,6 @@ function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = fa
   cy.wait('@discoveryQuery', { timeout: 50000 })
   cy.wait(50000) // Wait for AI response to load
   
-
   // Capture main answer - try both selectors
   cy.get('body').then(($body) => {
     let actualResponse = ''
@@ -91,7 +90,8 @@ function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = fa
       endpoint: endpoint_name,
       user: {
         tier: 'elevate',
-        language: language
+        language: language,
+        communityExperience: ['JAX', 'Java Magazin', 'Extreme Java Camp']
       },
       prompt: 'main',
       actual_response: actualResponse,

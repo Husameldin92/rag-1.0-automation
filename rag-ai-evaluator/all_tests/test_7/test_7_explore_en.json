@@ -1,0 +1,80 @@
+{
+  "test_id": "test_007_explore_en",
+  "query": "Give me something cool about tech.",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "en",
+    "communityExperience": [
+      "JAX",
+      "Java Magazin",
+      "Extreme Java Camp"
+    ]
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: tech cool\nCertainly! Here are some cool insights about tech drawn from recent expert discussions and profiles of inspiring tech professionals:\n\nTech Blogging as a Learning and Branding ToolWriting tech blogs is not only a way to share knowledge but also a powerful method to deepen your own understanding and build your professional brand. It encourages continuous learning, helps you organize your thoughts, and connects you with the developer community. Overcoming barriers like fear of originality or language imperfections is key, and tools like AI can assist in refining your writing without replacing your unique voice. Starting with small, manageable steps and building a habit can lead to becoming a recognized tech blogger or speaker over time.\n\nDiversity Drives Innovation and Better ResultsStudies and expert interviews highlight that diverse teams produce better outcomes. Increasing representation of women and people of color in tech leads to richer ideas, more creativity, and more inclusive products. However, challenges remain, such as unconscious bias in hiring, lack of mentorship, and workplace culture issues. Many tech leaders emphasize the importance of mentorship, inclusive hiring practices, and creating supportive environments to retain diverse talent.\n\nWomen in Tech: Challenges and TriumphsWomen in tech often face stereotypes, lack of support, and toxic environments, yet many have risen to leadership roles and advocate for change. Profiles of women leaders reveal common themes: the importance of persistence, finding mentors, building supportive communities, and speaking up confidently. Initiatives like women-focused meetups, mentorship programs, and diversity surveys are helping to improve the landscape.\n\nTech Tools and Integration: Choosing WiselyIn the realm of software architecture and integration, the right tool choice is crucial. Whether it’s messaging systems like Kafka or API management platforms, understanding the use case, operational impact, and organizational readiness is essential. Integration is not just about technology but also about governance, data quality, and collaboration between development and operations teams.\n\nJava’s jshell and Time Zone HandlingOn a more technical note, Java’s jshell tool allows developers to quickly test code snippets interactively, which is great for experimenting with complex topics like time zones and date-time APIs. Handling time zones correctly is critical, as shown by the historical Y2K problem and the upcoming 2038 issue related to integer overflow in time representations. Java’s built-in time zone database, updated regularly, helps manage these complexities effectively.\n\n\nIn summary, tech is not just about code and tools; it’s a vibrant ecosystem where continuous learning, diversity, thoughtful tool selection, and community engagement play vital roles in driving innovation and personal growth.\nIf you want, I can share more specific insights or stories from any of these areas!",
+  "discovery_data": {
+    "query_sent": "Give me something cool about tech.",
+    "results": [
+      {
+        "_id": "61704cf00894999654f2a32d",
+        "title": "Channeling your Inner Tech Blogger",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "07d1c03928eb1c9b7a5db5b5",
+        "title": "Ein Tool für jede Zeitenwende",
+        "parentGenre": null
+      },
+      {
+        "_id": "uDEHMoqxwZAF9Gz55",
+        "title": "A fool with a tool is still a fool - wenn Integration, dann aber richtig!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5c6bd4fcc3cfb37b58b1e823",
+        "title": "2020 PoC in Tech Report: “Diverse teams produce better results”",
+        "parentGenre": null
+      },
+      {
+        "_id": "98dc65fbb5958bce0638c270",
+        "title": "How to succeed in tech: CloudBees’ Isabel Muñoz Vilacides shares her tips & tricks",
+        "parentGenre": null
+      },
+      {
+        "_id": "f87bb95ae2a3577cc176d292",
+        "title": "“Many companies lack the infrastructure & career growth opportunities to support female employees”",
+        "parentGenre": null
+      },
+      {
+        "_id": "e328c39c74352411c9396b0a",
+        "title": "How to succeed in tech: Agnès Crepet gives her tips",
+        "parentGenre": null
+      },
+      {
+        "_id": "a593f47beafc81e28b473ce7",
+        "title": "There is too much allowance for tolerating toxic people in tech",
+        "parentGenre": null
+      },
+      {
+        "_id": "f0cdbd19e08444d1bf7d3710",
+        "title": "“Diversity ensures continuous innovation”",
+        "parentGenre": null
+      },
+      {
+        "_id": "5a7f4cd5f0bcb06d93c0192a",
+        "title": "Transitioning into a tech career? Silicon Valley culture is one of the biggest initial obstacles",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Vague Question handling - Clarification request with Brand Experience",
+    "required_checks": [
+      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
+      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
+      "The assistant should apply the vague Question fallback logic defined in the prompt."
+    ]
+  }
+}

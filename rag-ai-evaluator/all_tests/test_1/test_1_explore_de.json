@@ -1,0 +1,75 @@
+{
+  "test_id": "test_001_explore_de",
+  "query": "Was sind die Hauptfunktionen von Angular Signals in Version 17?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: Angular Signals 17 16 15 Hauptfunktionen\nAngular Signals in Version 17 bieten eine neue, reaktive Basis für die Zustandsverwaltung und Change Detection in Angular-Anwendungen. Die Hauptfunktionen und Eigenschaften von Angular Signals lassen sich wie folgt zusammenfassen:\n\nReaktive Datenhaltung mit Signalen  \n\nEin Signal ist ein Wrapper um einen Wert, der Änderungen synchron meldet.  \nSignale sind immer synchron und besitzen einen aktuellen Wert, der per Funktionsaufruf gelesen wird (z.B. count()).  \nSie ermöglichen eine feingranulare und effiziente Change Detection, da Angular nur Komponenten aktualisiert, die von einem Signal betroffen sind.  \nSignale sind immutable: Änderungen erfolgen durch Ersetzen oder Aktualisieren des Wertes, nicht durch Mutation (z.B. signal.update() statt signal.mutate() in Angular 17).\n\n\nBerechnete Signale (Computed Signals)  \n\nComputed Signals leiten ihren Wert aus anderen Signalen ab und werden automatisch neu berechnet, wenn sich abhängige Signale ändern.  \nSie sind read-only und bieten eine effiziente Möglichkeit, abgeleitete Zustände zu modellieren.\n\n\nEffekte (Effects)  \n\nEffekte sind Funktionen, die bei Änderungen von Signalen ausgeführt werden, um Nebenwirkungen zu realisieren (z.B. Logging).  \nSie sind synchron und vermeiden Endlosschleifen, indem sie nur lesen, nicht schreiben.\n\n\nIntegration in Komponenten und Services  \n\nSignale können in Komponenten, Services und Stores verwendet werden, um Zustände und deren Reaktivität zu verwalten.  \nIn Komponenten werden Signale als reaktive Datenquelle genutzt, wobei die Template-Bindung über Funktionsaufruf erfolgt.\n\n\nInterop mit RxJS  \n\nSignale sind interoperabel mit RxJS: Es gibt Funktionen zum Umwandeln von Observables in Signale (toSignal) und umgekehrt (toObservable).  \nDies ermöglicht die Kombination der einfachen Signale mit der mächtigen asynchronen Verarbeitung von RxJS.\n\n\nVerbesserte Change Detection  \n\nSignale ermöglichen eine lokalere Change Detection, die nur die tatsächlich betroffenen Komponenten aktualisiert, was die Performance steigert.  \nAngular plant, die bisherige Zone.js-basierte Change Detection durch Signale zu ersetzen oder optional zu machen.\n\n\nNeue API für Inputs, Outputs und Queries  \n\nIn Signal-basierten Komponenten werden Inputs, Outputs und Queries über spezielle Signal-Funktionen (input(), output(), computed()) definiert, anstelle der bisherigen Decorators.\n\n\nLifecycle-Hooks für Signale  \n\nNeue Lifecycle-Hooks wie afterRender und afterNextRender ermöglichen das Ausführen von Funktionen nach DOM-Updates, passend zum Signal-basierten Modell.\n\n\nVermeidung von unnötigen Updates (Glitch-Free)  \n\nSignale sind so konzipiert, dass sie nur die letzte Änderung in einer Reihe von schnellen Updates melden, was unnötige UI-Updates vermeidet.\n\n\nZukunftsvision  \n\nAngular Signals sind der erste Schritt zu einer moderneren, performanteren und einfacheren Angular-Entwicklung.  \nIn Angular 17 sind Signale stabil, und die Integration in das Framework wird weiter vorangetrieben.\n\n\n\nDiese Funktionen machen Angular Signals zu einem zentralen Baustein für die zukünftige Entwicklung von Angular-Anwendungen, indem sie eine einfachere, performantere und besser verständliche Reaktivität ermöglichen, ohne die Komplexität von RxJS vollständig zu ersetzen, sondern sinnvoll zu ergänzen.\nQuellen:  \n\n„Angular: Hauptfunktionen von Signals, Computed, Effects, Interop mit RxJS, Change Detection“ aus de0df5390…de0df5390…Angular Signals in Version 17 bieten eine neue, reaktive Basis für die Zustandsverwaltung und Change Detection in Angular-Anwendungen. Die Hauptfunktionen und Eigenschaften von Angular Signals lassen sich wie folgt zusammenfassen: … Signale sind immutable: Änderungen erfolgen durch Ersetzen oder Aktualisieren des Wertes, nicht durch Mutation (z.B. signal.update() statt signal.mutate() in Angular 17). … Computed Signals leiten ihren Wert aus anderen Signalen ab und werden automatisch neu berechnet, wenn sich abhängige Signale ändern. … Effekte sind Funktionen, die bei Änderungen von Signalen ausgeführt werden, um Nebenwirkungen zu realisieren (z.B. Logging). … Signale sind interoperabel mit RxJS: Es gibt Funktionen zum Umwandeln von Observables in Signale (toSignal) und umgekehrt (toObservable). … Signale ermöglichen eine lokalere Change Detection, die nur die tatsächlich betroffenen Komponenten aktualisiert, was die Performance steigert. … In Signal-basierten Komponenten werden Inputs, Outputs und Queries über spezielle Signal-Funktionen (input(), output(), computed()) definiert, anstelle der bisherigen Decorators. … Angular Signals sind der erste Schritt zu einer moderneren, performanteren und einfacheren Angular-Entwicklung. … In Angular 17 sind Signale stabil, und die Integration in das Framework wird weiter vorangetrieben.  \n„Angular 17: Überblick zu neuen Features und Breaking Changes“ aus 983677…983677…Angular Signals sind immutable: Änderungen erfolgen durch Ersetzen oder Aktualisieren des Wertes, nicht durch Mutation (z.B. signal.update() statt signal.mutate() in Angular 17). Computed Signals sind read-only und werden automatisch neu berechnet, wenn sich abhängige Signale ändern. Effekte sind Funktionen, die bei Änderungen von Signalen ausgeführt werden, um Nebenwirkungen zu realisieren. Signale sind interoperabel mit RxJS: Es gibt Funktionen zum Umwandeln von Observables in Signale (toSignal) und umgekehrt (toObservable). Signale ermöglichen eine lokalere Change Detection, die nur die tatsächlich betroffenen Komponenten aktualisiert, was die Performance steigert. In Signal-basierten Komponenten werden Inputs, Outputs und Queries über spezielle Signal-Funktionen (input(), output(), computed()) definiert. Angular Signals sind der erste Schritt zu einer moderneren, performanteren und einfacheren Angular-Entwicklung. In Angular 17 sind Signale stabil.  \n„Angular: Signals im Vergleich mit RxJS“ aus oaGpsz…oaGpsz…Angular Signals sind ein Wrapper um einen Wert, der Änderungen synchron meldet. Computed Signals leiten ihren Wert aus anderen Signalen ab und werden automatisch neu berechnet. Effekte sind Funktionen, die bei Änderungen von Signalen ausgeführt werden, um Nebenwirkungen zu realisieren. Signale sind interoperabel mit RxJS: Es gibt Funktionen zum Umwandeln von Observables in Signale (toSignal) und umgekehrt (toObservable). Signale ermöglichen eine feingranulare Change Detection. Angular plant, die bisherige Zone.js-basierte Change Detection durch Signale zu ersetzen oder optional zu machen. In Signal-basierten Komponenten werden Inputs, Outputs und Queries über spezielle Signal-Funktionen definiert. Signale sind immutable: Änderungen erfolgen durch Ersetzen oder Aktualisieren des Wertes, nicht durch Mutation.\n\nAngular Signals in Version 17 bieten eine moderne, reaktive Grundlage für die Zustandsverwaltung und Change Detection in Angular-Anwendungen. Die Hauptfunktionen umfassen:\n\nReaktive Datenhaltung mit Signalen  \n\nSignale sind Wrapper um Werte, die Änderungen synchron melden und per Funktionsaufruf gelesen werden (z. B. count()).  \nSie sind immutable: Änderungen erfolgen durch Ersetzen oder Aktualisieren des Wertes, nicht durch Mutation (z. B. update() statt mutate()).  \nSignale ermöglichen eine feingranulare Change Detection, bei der nur betroffene Komponenten aktualisiert werden.\n\n\nBerechnete Signale (Computed Signals)  \n\nComputed Signals leiten ihren Wert aus anderen Signalen ab und werden automatisch neu berechnet, wenn sich abhängige Signale ändern.  \nSie sind read-only und bieten effiziente Möglichkeiten zur Modellierung abgeleiteter Zustände.\n\n\nEffekte (Effects)  \n\nEffekte sind Funktionen, die bei Änderungen von Signalen ausgeführt werden, um Nebenwirkungen zu realisieren (z. B. Logging).  \nSie sind synchron und vermeiden Endlosschleifen, indem sie nur lesen, nicht schreiben.\n\n\nIntegration in Komponenten und Services  \n\nSignale können in Komponenten, Services und Stores verwendet werden, um Zustände und deren Reaktivität zu verwalten.  \nIn Komponenten erfolgt die Bindung im Template über Funktionsaufruf.\n\n\nInterop mit RxJS  \n\nSignale sind interoperabel mit RxJS: Es gibt Funktionen zum Umwandeln von Observables in Signale (toSignal) und umgekehrt (toObservable).  \nDies ermöglicht die Kombination der einfachen Signale mit der mächtigen asynchronen Verarbeitung von RxJS.\n\n\nVerbesserte Change Detection  \n\nSignale ermöglichen eine lokalere Change Detection, die nur die tatsächlich betroffenen Komponenten aktualisiert, was die Performance steigert.  \nAngular plant, die bisherige Zone.js-basierte Change Detection durch Signale zu ersetzen oder optional zu machen.\n\n\nNeue API für Inputs, Outputs und Queries  \n\nIn Signal-basierten Komponenten werden Inputs, Outputs und Queries über spezielle Signal-Funktionen (input(), output(), computed()) definiert, anstelle der bisherigen Decorators.\n\n\nLifecycle-Hooks für Signale  \n\nNeue Lifecycle-Hooks wie afterRender und afterNextRender ermöglichen das Ausführen von Funktionen nach DOM-Updates, passend zum Signal-basierten Modell.\n\n\nGlitch-Free Eigenschaft  \n\nSignale melden nur die letzte Änderung bei schnellen aufeinanderfolgenden Updates, was unnötige UI-Updates vermeidet.\n\n\nZukunftsvision  \n\nAngular Signals sind der erste Schritt zu einer moderneren, performanteren und einfacheren Angular-Entwicklung.  \nIn Angular 17 sind Signale stabil und werden weiter in das Framework integriert.",
+  "discovery_data": {
+    "query_sent": "Was sind die Hauptfunktionen von Angular Signals in Version 17?",
+    "results": [
+      {
+        "_id": "b3dccbe48006a54c8a14b9c8",
+        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "9836770500f149a58b7769f9",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "62f599587e3fd28de76c2756",
+        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "parentGenre": null
+      },
+      {
+        "_id": "1c2d0d1ddbcc6e6469e58943",
+        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "parentGenre": null
+      },
+      {
+        "_id": "8b35e3d0070110b78d6c9434",
+        "title": "Angular: Signals, Standalone, SSR",
+        "parentGenre": null
+      },
+      {
+        "_id": "04721391f3f7580f0631b9d3",
+        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
+        "parentGenre": null
+      },
+      {
+        "_id": "oaGpszBqb9pMPpjD7",
+        "title": "Angular Signals im Vergleich mit RxJS Observables: Ein Blick auf Ereignisbehandlung und asynchrone Datenströme",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "64ace3828d8056484c3534ab",
+        "title": "Angular 16 released",
+        "parentGenre": null
+      },
+      {
+        "_id": "5ecf87915aa99dfe10bb64dd",
+        "title": "Is Angular 16 Starting a (R)evolution?",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Version-Specific Chunk Selection and Content Analysis",
+    "required_checks": [
+      "Discovery data must include chunks relevant to Angular Signals and/or Angular version 17 (titles can mention either Angular Signals OR version 17 OR both)",
+      "AI response must mention Angular Signals and version 17 explicitly in the main content",
+      "Response content must be accurate and match information available in the selected chunks",
+      "The status of Angular Signals in v17 must be accurate (e.g., stable, new features, breaking changes)"
+    ]
+  }
+}

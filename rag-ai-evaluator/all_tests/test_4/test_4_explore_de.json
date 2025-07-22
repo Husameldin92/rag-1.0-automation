@@ -1,0 +1,75 @@
+{
+  "test_id": "test_004_explore_de",
+  "query": "Was sind typische Fehler bei der Konfiguration von Dockerfiles?",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: typische Fehler Konfiguration Dockerfiles\nIn den vorliegenden Dokumenten gibt es keine explizite Erwähnung oder Behandlung von typischen Fehlern bei der Konfiguration von Dockerfiles. Die Dokumente behandeln vor allem Themen rund um Konfigurationsmanagement in Java- und Cloud-Umgebungen, Spring Boot Konfiguration, sichere Speicherung von Konfigurationsdaten, Testmethodik und Fehlerbehandlung, aber nicht spezifisch Dockerfiles oder deren Fehlerquellen.\nDaher kann ich keine dokumentgestützte Liste typischer Fehler bei Dockerfile-Konfigurationen liefern. Als allgemeine Hinweise aus dem Entwicklerumfeld (ohne direkte Quellenangabe) lassen sich jedoch folgende häufige Fehler nennen:\n\nFehlende oder falsche Basis-Image-Angabe (FROM)\nNicht optimierte Layer-Struktur, die zu großen Images führt\nFehlende Angabe von Arbeitsverzeichnissen (WORKDIR)\nNicht deklarierte Umgebungsvariablen (ENV) oder falsche Nutzung\nFehlende oder falsche Expose-Anweisungen für Ports\nNicht ausreichende Berechtigungen für Dateien oder Verzeichnisse\nNicht optimierte Nutzung von Cache durch COPY und RUN Befehle\nFehlende Healthchecks oder Startbefehle (CMD/ENTRYPOINT)\nNicht berücksichtigte Sicherheitseinstellungen (z.B. Nutzerwechsel)\nFehlende Dokumentation oder Kommentare im Dockerfile\n\nFür eine fundierte und detaillierte Analyse empfehle ich, gezielt nach Artikeln oder Tutorials zu Dockerfile Best Practices und Fehlern zu suchen.\nSollten Sie Interesse an verwandten Themen wie Konfigurationsmanagement in Cloud-Umgebungen, Spring Boot oder sicherer Verwaltung von Konfigurationsdaten haben, kann ich Ihnen gerne entsprechende Inhalte aus den vorliegenden Dokumenten zusammenfassen.",
+  "discovery_data": {
+    "query_sent": "Was sind typische Fehler bei der Konfiguration von Dockerfiles?",
+    "results": [
+      {
+        "_id": "1e4f9bc1434d8b13e70edee0",
+        "title": "Meine größten Angular-Fehler ... und wie du sie vermeiden kannst",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "um5JzcLvvQZdqw5A7",
+        "title": "Spring Boot Configuration",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "3eedafc1107e1e63ee046602",
+        "title": "Alle Zügel in einer Hand",
+        "parentGenre": null
+      },
+      {
+        "_id": "93fb890929759329fc119e00",
+        "title": "Externalized Configuration",
+        "parentGenre": null
+      },
+      {
+        "_id": "23fb6f99024b895178dfa19c",
+        "title": "Konfiguration schützen",
+        "parentGenre": null
+      },
+      {
+        "_id": "107928163d1cbc1874ef935d",
+        "title": "Auf Fehler ist Verlass",
+        "parentGenre": null
+      },
+      {
+        "_id": "6220c7b2d58a34dd9f99926e",
+        "title": "Mobile-UX-Design",
+        "parentGenre": null
+      },
+      {
+        "_id": "22f71730c127c38d51651ef0",
+        "title": "Konfiguration in Java",
+        "parentGenre": null
+      },
+      {
+        "_id": "24cb7ee0a539fbec411970ff",
+        "title": "Auch Umgebungen fallen vom Himmel",
+        "parentGenre": null
+      },
+      {
+        "_id": "840a539a1a7ae6ee99662d59",
+        "title": "Die Top Ten methodischer Fehler",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Detailed Chunk Prioritization - Dockerfile Mistakes",
+    "required_checks": [
+      "Discovery data must prioritize chunks that give a complete and detailed explanation of common Dockerfile mistakes",
+      "Chunks that only mention Dockerfiles or errors briefly must not be selected if deeper ones exist",
+      "AI response must focus on real and relevant mistakes (e.g., large images, excessive layers, missing .dockerignore, root user, etc.)",
+      "Prompt applied: Use only relevant document chunks for output generation. Prefer chunks that provide a more detailed and complete treatment of the feature, method, or solution requested in the user query over those that mention it only briefly."
+    ]
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "test_id": "test_003_de",
+  "query": "Kannst du aktuelle Ereignisse zu DevOps aus Artikeln zusammenfassen?",
+  "endpoint": "reader_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: DevOps Artikel 2025 2024\nAktuelle Ereignisse und Trends zu DevOps aus den Artikeln lassen sich wie folgt zusammenfassen:\n\nDevOps als Philosophie und KulturwandelDevOps wird zunehmend als eine Philosophie verstanden, die die klassischen Silos zwischen Entwicklung (Dev) und Betrieb (Ops) aufbricht. Der Fokus liegt auf enger Zusammenarbeit, Kommunikation und geteilten Verantwortlichkeiten, um schnellere und qualitativ hochwertige Softwarebereitstellungen zu ermöglichen. Die Kultur des Vertrauens und der Augenhöhe ist dabei zentral, um Teams zu empowern und Konflikte zu vermeiden. DevOps ist kein fest definierter Zielzustand, sondern ein kontinuierlicher Verbesserungsprozess, der auf den Status quo aufbaut und sich an den jeweiligen Kontext anpasst.(Belege: Artikel „Schlüsselkompetenzen für DevOps-Experten“, „Kolumne: DevOps Stories“, „Systems Thinking: Schnell von der Anforderung zum Anwender“)b026fc926f0aec1cfd31a80cHofmann: DevOps ist für mich ganz klar eine Philosophie oder ein Prozess, die bzw. der die klassischen Übergabemauern zwischen Dev und Ops zum Einsturz bringen soll. Nur wenn sich Kollegen aus den Dev- und Ops-Bereichen gemeinsam um die Installation und später um den Betrieb der Anwendungen kümmern, kann man das Beste aus beiden Welten erzielen.ad9bc924baf65876b3a47f06Die Autoren des „2018 State of DevOps Report“ haben allerdings beobachtet, dass sich die DevOps-Reise in bestimmten Schritten vollzieht. So verschieden die Unternehmen sind, so unterschiedlich ist auch ihre DevOps-Reise. Musterlösungen gibt es nicht.fae582b18950466eac9c5147Eine DevOps-Transformation beschreibt somit nicht einen definierten Zielzustand. Vielmehr startet sie immer mit dem Status quo. Von dort ausgehend gilt es, kontinuierlich nach Optimierungspotenzialen zu suchen und sie umzusetzen.\n\nTechnologische Entwicklungen und ToolsDie Toollandschaft ist vielfältig und stark abhängig von den eingesetzten Plattformen. Kubernetes, Helm, Kustomize, ArgoCD, Git und CI/CD-Pipelines sind wichtige Werkzeuge, die DevOps-Teams unterstützen. Die Automatisierung von Infrastruktur und Deployment ist ein zentrales Element. Gleichzeitig wird betont, dass Tools allein nicht ausreichen – das Verständnis der zugrundeliegenden Technologien und Prozesse ist entscheidend.(Belege: Artikel „Schlüsselkompetenzen für DevOps-Experten“, „DevOps mit Kubernetes – alles einfach!?“)b026fc926f0aec1cfd31a80cHofmann: Der Toolszoo ist hier leider ganz massiv von den eingesetzten Plattformen abhängig. Bei mir ist es hauptsächlich: Helm/Kustomize und damit verbunden Kubernetes Manifests.D5uB85mfN3d3aNyDFAls Werkzeuge kommen kubectl, kustomize, Helm, ArgoCD und natürlich ein Build-Server sowie git zum Zuge. Dieser praxisnahe Vortrag versetzt jeden Teilnehmer in die Lage, eine typische Java-Spring-Boot-Anwendung automatisiert in Kubernetes zu betreiben.\n\nIntegration von DevSecOps und neuen TechnologienDevSecOps gewinnt an Bedeutung, wobei Sicherheit als gemeinsame Verantwortung aller Teams gesehen wird. Neue Technologien wie Generative AI (GenAI) und ClickOps (Low-Code/No-Code-Plattformen) werden als wichtige Innovationen für 2024 genannt, die die Produktivität steigern und DevSecOps demokratisieren können. GenAI unterstützt Entwickler durch automatisierte Codegenerierung, während ClickOps auch Nicht-Entwickler befähigt, IT-Prozesse zu automatisieren. Diese Trends werden die Geschwindigkeit und Qualität der Softwareentwicklung weiter verbessern.(Belege: Artikel „How Generative AI and ClickOps will Transform DevSecOps in 2024“, „GenAI und Low Code: Brückenschlag in DevSecOps“)d64628d5c08e7decd491c8ceGenAI boosts productivity with automated code, while ClickOps empowers non-developers through low-code platforms. Together, they democratize security and accelerate DevSecOps in 2024.e3e688caa9ae1564fe427b3aGenAI und die codefreien ClickOps-Lösungen haben ein enormes Potenzial, DevSecOps-Fähigkeiten zu entwickeln und zu verbreiten. Es ist wichtig zu beachten, dass GenAI nicht als Ersatz für Entwickler:innen angesehen werden sollte, sondern als eine Technologie, die die Produktivität von Teams verbessern kann.\n\nHerausforderungen und SchlüsselkompetenzenDevOps erfordert neben technischem Know-how auch Soft Skills wie Kommunikation, Offenheit für Neues und die Fähigkeit, Verantwortung zu teilen. Die Rolle des DevOps Engineers ist vielfältig und kann je nach Unternehmen stark variieren. Die Zusammenarbeit zwischen Entwicklung und Betrieb ist essenziell, wobei viele Unternehmen noch am Anfang dieser kulturellen Transformation stehen.(Belege: Artikel „Schlüsselkompetenzen für DevOps-Experten“, „Silos überwinden: Tipps & Tricks für die erfolgreiche Umsetzung von DevOps“)9cc5f09f5ee3a6693516becaWer im DevOps-Umfeld tätig ist, weiß, dass der Erfolg nicht nur von technischen Fähigkeiten abhängt, sondern auch von einer engen, interdisziplinären Zusammenarbeit.b7100c6efdcf89ae1d715bc3Nur wenn die beiden ehemaligen „Silos“, die Software-Entwicklerteams und IT-Operations, eng zusammenarbeiten, werden sie für ihre Kunden die bestmögliche Lösung entwickeln.\n\nAgile Methoden und DevOps in der PraxisAgile Entwicklungsmethoden wie Scrum und Kanban ergänzen DevOps und ermöglichen eine flexible Anpassung an sich ändernde Anforderungen. Die Praxis zeigt, dass der Erfolg von DevOps stark von konsequenter Anwendung und Erfahrung abhängt. Regelmäßige Kommunikation, Retrospektiven und enge Zusammenarbeit mit Kunden sind wichtige Erfolgsfaktoren.(Belege: Artikel „Grau ist alle Theorie …Teil 2: Agile Entwicklung und DevOps in der Praxis“, „Gegner oder Freunde? Teil 1: Agile und DevOps - Ansätze im Überblick“)599bd5ebb4128d69740bd6c1Agile Projektdurchführung und DevOps sind nicht nur theoretische Konzepte, sondern heute in der Praxis angekommen. Erfahrungen zeigen, dass es dabei darum geht, veränderte Vorgehensweisen wirklich umzusetzen und es nicht bei Worthülsen zu belassen.5572c77e620b5abd8314fa28Aus Sicht der Autoren passen die agile Arbeitsweise und DevOps wunderbar zusammen. DevOps bietet gewissermaßen den Rahmen für die Zusammenarbeit innerhalb der IT.\n\nDevOps als kontinuierlicher VerbesserungsprozessDevOps ist keine einmalige Umstellung, sondern ein fortlaufender Prozess, der auf Transparenz, Identifikation von Engpässen und kontinuierlicher Optimierung basiert. Die Einführung von DevOps erfordert eine Neustrukturierung von Teams und Prozessen, die je nach Organisation unterschiedlich aussehen kann.(Belege: Artikel „Systems Thinking: Schnell von der Anforderung zum Anwender“, „Die erste Etappe einer langen Reise ...Was in zehn Jahren DevOps-Bewegung alles passiert ist“)fae582b18950466eac9c5147Eine Organisation ist bereits dann auf einem guten Weg, den ersten Weg von DevOps zu meistern, wenn der Arbeitsfluss im System transparent gemacht wird, um so die aktuellen Engpässe zu identifizieren und Maßnahmen zu ergreifen, diese abzubauen.c28488e053ca1ddc70fd0f07Technologisch haben sich viele Firmen bereits auf die DevOps-Reise begeben und erste Fortschritte gemacht, in kultureller Hinsicht gibt es aber etliche, die noch am Anfang der Reise stehen.\n\n\nFazit:DevOps ist heute ein zentraler Ansatz in der Softwareentwicklung, der Kulturwandel, technische Automatisierung und agile Methoden vereint. Die Integration von Sicherheit (DevSecOps) und neuen Technologien wie Generative AI und ClickOps wird 2024 die Produktivität und Qualität weiter steigern. Erfolgreiche DevOps-Teams zeichnen sich durch enge Zusammenarbeit, kontinuierliche Verbesserung und ein ausgewogenes Zusammenspiel von Menschen, Prozessen und Tools aus. Die Reise zu DevOps ist individuell und erfordert Geduld, Offenheit und Anpassungsfähigkeit.\nGern kann ich bei Bedarf auch spezifischere Aspekte oder einzelne Artikel vertiefen.",
+  "discovery_data": {
+    "query_sent": "Kannst du aktuelle Ereignisse zu DevOps aus Artikeln zusammenfassen?",
+    "results": [
+      {
+        "_id": "60b1315f2a750f20b91a97f5",
+        "title": "Der .NET-Upgrade-Assistent",
+        "parentGenre": null
+      },
+      {
+        "_id": "dd4096071cc62fc09263301a",
+        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
+        "parentGenre": null
+      },
+      {
+        "_id": "59a3ca449c3b930b5f2432c6",
+        "title": "JavaScript Trends to Watch: Who’s Taking the Lead?",
+        "parentGenre": null
+      },
+      {
+        "_id": "57868ce7d247728d832ce6d6",
+        "title": "Der große .NET-Jahresrückblick 2024",
+        "parentGenre": null
+      },
+      {
+        "_id": "d64628d5c08e7decd491c8ce",
+        "title": "How Generative AI and ClickOps will Transform DevSecOps in 2024",
+        "parentGenre": null
+      },
+      {
+        "_id": "706951e0a3b546ccbb006301",
+        "title": "State of PHP: Highlights, Trends, Prognosen",
+        "parentGenre": null
+      },
+      {
+        "_id": "03836460e8a948e77789e989",
+        "title": "Windows Server 2025 for IoT",
+        "parentGenre": null
+      },
+      {
+        "_id": "2a0f3ecad8f30c4a31cd83ae",
+        "title": "Neues in React",
+        "parentGenre": null
+      },
+      {
+        "_id": "e3e688caa9ae1564fe427b3a",
+        "title": "GenAI und Low Code: Brückenschlag in DevSecOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "e5be18d7df939feb57f29e90",
+        "title": "Das Jahr in .NET und JavaScript",
+        "parentGenre": null
+      },
+      {
+        "_id": "7f349002ed7db73f80d06e04",
+        "title": "Gültigkeit von Websitezertifikaten prüfen",
+        "parentGenre": null
+      },
+      {
+        "_id": "c7aed8a7a2b3e6c0e3ea326c",
+        "title": "Neuerungen in .NET 10.0 Preview 1 und 2",
+        "parentGenre": null
+      },
+      {
+        "_id": "fc36777caa7d201dde8fb058",
+        "title": "Das Jahr in JavaScript – Rückblick und Vorschau",
+        "parentGenre": null
+      },
+      {
+        "_id": "fae582b18950466eac9c5147",
+        "title": "Systems Thinking: Schnell von der Anforderung zum Anwender",
+        "parentGenre": null
+      },
+      {
+        "_id": "fc8a69238c23bff4b4b5298a",
+        "title": "JavaScript-Trends 2024: Highlights, Flops und Geheimtipps",
+        "parentGenre": null
+      },
+      {
+        "_id": "a75c3970c6a00495ac8b59d6",
+        "title": "Quereinstieg in der Praxis – lohnt es sich?",
+        "parentGenre": null
+      },
+      {
+        "_id": "a3e8e952e5a98f47c7294d85",
+        "title": "XRechnungen mit .NET: Hintergrund und Umsetzung",
+        "parentGenre": null
+      },
+      {
+        "_id": "c6e4724bc0ba6b02918d2ce7",
+        "title": "Neuerungen in .NET 9.0 Preview 5 bis 7 – Teil 1",
+        "parentGenre": null
+      },
+      {
+        "_id": "9e8fd692f55786ff0ce8995f",
+        "title": "Social Learning und kontinuierliches Lernen als Teil einer zukunftsfähigen Unternehmenskultur",
+        "parentGenre": null
+      },
+      {
+        "_id": "3e12e5b65144bde1b98db2c6",
+        "title": "Kolumne: Grünfläche",
+        "parentGenre": null
+      },
+      {
+        "_id": "55e444c8514beebaf2c83f68",
+        "title": "Was tut sich in der Java-Welt?",
+        "parentGenre": null
+      },
+      {
+        "_id": "6b8904c1c23685967725b0a7",
+        "title": "Entwickler Pulse 2025 – Der Reality Check für die IT-Branche",
+        "parentGenre": null
+      },
+      {
+        "_id": "7cde861962f43c4f8d2210b8",
+        "title": "Das Geheimnis der Soft Skills für den IT-Erfolg",
+        "parentGenre": null
+      },
+      {
+        "_id": "920e567fe7873e588795e732",
+        "title": "Green AI: Zukunftstechnologien nachhaltig machen",
+        "parentGenre": null
+      },
+      {
+        "_id": "39709c765940be92f7476a2b",
+        "title": "Checkliste KI-Verordnung – wer muss was wann wie beachten?",
+        "parentGenre": null
+      },
+      {
+        "_id": "70af29c4be31830fe4b6c62c",
+        "title": "Camunda 7 ist tot, lang lebe Operaton!",
+        "parentGenre": null
+      },
+      {
+        "_id": "9f71a8992c3db364414f5f72",
+        "title": "Ensuring Security in Container Adoption",
+        "parentGenre": null
+      },
+      {
+        "_id": "c25fc6f008cb9dc067b7a4ee",
+        "title": "Softwarearchitektur: Muss das sein?",
+        "parentGenre": null
+      },
+      {
+        "_id": "00c9b0014c6a2c9a4da4abf9",
+        "title": "DevOps Plus: More Open Source, AI-Enabled, Next Generation Services",
+        "parentGenre": null
+      },
+      {
+        "_id": "063970c811a7557678d66d3a",
+        "title": "Java 24 – großes Release zum 30. Geburtstag",
+        "parentGenre": null
+      },
+      {
+        "_id": "580a871743662813eecee1e5",
+        "title": "Architektur für Menschen – nicht für Software",
+        "parentGenre": null
+      },
+      {
+        "_id": "09390f3f9b1f977237bef4d8",
+        "title": ".NET 9.0 Preview 3 und 4",
+        "parentGenre": null
+      },
+      {
+        "_id": "8c90c65253573c25be238832",
+        "title": "DevOps trifft SRE: Der Weg zu einer resilienten IT-Organisation",
+        "parentGenre": null
+      },
+      {
+        "_id": "b6c31f2883c6c21666efcdfb",
+        "title": "Menschen und Teams designen – Softwaredesignkonzepte anwenden?",
+        "parentGenre": null
+      },
+      {
+        "_id": "d71fd997da05d5adfb477cb5",
+        "title": "Die DevOps-Bewegung",
+        "parentGenre": null
+      },
+      {
+        "_id": "292353342bd524010d1eee14",
+        "title": "Was wir von Lean-Start-ups lernen können",
+        "parentGenre": null
+      },
+      {
+        "_id": "8592ccbf892b81c529f82e12",
+        "title": "Die beste IDE, DevOps in der Praxis und Java EE 8 – unsere Top-Themen der Woche",
+        "parentGenre": null
+      },
+      {
+        "_id": "f15a0601d55fb9b4f62674ee",
+        "title": "Kolumne: Stropek as a Service",
+        "parentGenre": null
+      },
+      {
+        "_id": "85727326e73cb427ff49d978",
+        "title": "DevOps Industry Report Card: Die Technologiebranche ist Spitzenreiter bei der DevOps-Integration",
+        "parentGenre": null
+      },
+      {
+        "_id": "78ca4e82fc5c8353e14502a1",
+        "title": "Mit DevOps zu besserer Software",
+        "parentGenre": null
+      },
+      {
+        "_id": "d02d6578a321418c49c4bde1",
+        "title": "1 DevOps und Business Agility",
+        "parentGenre": null
+      },
+      {
+        "_id": "1bc0d153f3ef293f11ba3628",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      },
+      {
+        "_id": "cedf302ed237c1a812ac99ae",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      },
+      {
+        "_id": "bd930e45a5e68291eca36314",
+        "title": "Das Leben nach dem Release, Machine Learning visualisiert und Herangehensweisen an DevOps – unsere Top-Themen der Woche",
+        "parentGenre": null
+      },
+      {
+        "_id": "11a90c265e195fbeb84848bd",
+        "title": "7 DevOps - ein Erfahrungsbericht",
+        "parentGenre": null
+      },
+      {
+        "_id": "4f39e0dd5608d0cfd79bccd2",
+        "title": "Tägliche Releases in Agile: vom Traum zur Wirklichkeit",
+        "parentGenre": null
+      },
+      {
+        "_id": "10d6fdc1d62d7f6a3d0c3084",
+        "title": "DevOps: Mehr als nur Dev plus Ops",
+        "parentGenre": null
+      },
+      {
+        "_id": "b026fc926f0aec1cfd31a80c",
+        "title": "Schlüsselkompetenzen für DevOps-Experten",
+        "parentGenre": null
+      },
+      {
+        "_id": "9115e07d6de5050db06bd1a5",
+        "title": "Die DevOps-Reise im Selbstversuch",
+        "parentGenre": null
+      },
+      {
+        "_id": "9cc5f09f5ee3a6693516beca",
+        "title": "Schlüsselkompetenzen für DevOps-Experten",
+        "parentGenre": null
+      },
+      {
+        "_id": "c3032f9a0b23598d4bbbd519",
+        "title": "Keep Calm and CI/CD: Das neue DevOps Magazine kostenlos downloaden!",
+        "parentGenre": null
+      },
+      {
+        "_id": "iXY4v9oKxeZvaRS4S",
+        "title": "Softwareentwickler:innen im DevOps-Kontext",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0f9ca3622cf46bdbd8ecfa67",
+        "title": "Zehn Releases am Tag",
+        "parentGenre": null
+      },
+      {
+        "_id": "b2f46a6f30e3584af4f64cc3",
+        "title": "Start-up-Szene - Innovation für Enterprises",
+        "parentGenre": null
+      },
+      {
+        "_id": "baea9f29854ef702a0afdd2b",
+        "title": "Flow-Umsetzung in Azure DevOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "ad9bc924baf65876b3a47f06",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      },
+      {
+        "_id": "32a1eaaed3e1c286a3c0c035",
+        "title": "DevOps mal ganz praktisch: Kollaborative Zusammenarbeit ist nur in einem Umfeld möglich, das Fehler erlaubt",
+        "parentGenre": null
+      },
+      {
+        "_id": "0cc15c2503046b0e15167c74",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      },
+      {
+        "_id": "3f75f48cf29efa7f3f937659",
+        "title": "Das war die W-JAX 2018",
+        "parentGenre": null
+      },
+      {
+        "_id": "f3c51fe560955c62f14aac61",
+        "title": "Markteinführung mit DevOps schneller und besser",
+        "parentGenre": null
+      },
+      {
+        "_id": "96b7540176b917481698b92d",
+        "title": "Markteinführung mit DevOps schneller und besser",
+        "parentGenre": null
+      },
+      {
+        "_id": "802784760ec8fca357e6c85e",
+        "title": "DevOps Unleashed: Cracking the Code to Success with Culture, Structure, and Technology",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "e42a94df4bc46621c3a7dd41",
+        "title": "Ready for DevOps? DevOps ist mehr als Technik, es ist ein Organisationsprinzip",
+        "parentGenre": null
+      },
+      {
+        "_id": "c2deda21f1f1f91a16220afd",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      },
+      {
+        "_id": "43ca52dc45a71721fcfb44cb",
+        "title": "Ein Hindernislauf in vier Akten",
+        "parentGenre": null
+      },
+      {
+        "_id": "1b0db6c119440fd6058eec84",
+        "title": "„Bei Continuous Delivery geht es nicht darum, immer schneller Schrott abzuliefern“",
+        "parentGenre": null
+      },
+      {
+        "_id": "5c0bc1a636dad14a3c07bcb7",
+        "title": "DevOps mal ganz praktisch: Cooperation, Initiative, Responsibility, Respect & Craftsmanship",
+        "parentGenre": null
+      },
+      {
+        "_id": "BrpARKjynCyHro2Hk",
+        "title": "The Inspiring Synergy between Software Developers and Emerging Technologies",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "fdc70866cbe0dd809c80c1b7",
+        "title": "DevOps mal ganz praktisch: Was die Mitarbeiterzufriedenheit am meisten fördert ist Wertschätzung",
+        "parentGenre": null
+      },
+      {
+        "_id": "d18e1218fc07f679cc8d67f1",
+        "title": "Was wir aus Obamacare lernen können",
+        "parentGenre": null
+      },
+      {
+        "_id": "37ddb537ebe0e3cad27ac335",
+        "title": "Grau ist alle Theorie …",
+        "parentGenre": null
+      },
+      {
+        "_id": "623da71bec605fecd5ad9fb9",
+        "title": "Kubernetes Security: Ein Leitfaden zur Absicherung von Containernetzwerken",
+        "parentGenre": null
+      },
+      {
+        "_id": "5572c77e620b5abd8314fa28",
+        "title": "Gegner oder Freunde?",
+        "parentGenre": null
+      },
+      {
+        "_id": "32ebcfa92c915589cb74c2d6",
+        "title": "Was wir aus Obamacare lernen können",
+        "parentGenre": null
+      },
+      {
+        "_id": "c28488e053ca1ddc70fd0f07",
+        "title": "Die erste Etappe einer langen Reise ...",
+        "parentGenre": null
+      },
+      {
+        "_id": "12e5df0baa7926a73aef7880",
+        "title": "DevOps im Test",
+        "parentGenre": null
+      },
+      {
+        "_id": "b7100c6efdcf89ae1d715bc3",
+        "title": "Silos überwinden: Tipps & Tricks für die erfolgreiche Umsetzung von DevOps",
+        "parentGenre": null
+      },
+      {
+        "_id": "599bd5ebb4128d69740bd6c1",
+        "title": "Grau ist alle Theorie …",
+        "parentGenre": null
+      },
+      {
+        "_id": "a424b543702843d89e366923",
+        "title": "Grau ist alle Theorie …",
+        "parentGenre": null
+      },
+      {
+        "_id": "D5uB85mfN3d3aNyDF",
+        "title": "DevOps mit Kubernetes – alles einfach!?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "61ae1ee289916d6229aed7f1",
+        "title": "AWS-Services und -Tools für Entwickler",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Articles Only",
+    "required_checks": [
+      "Discovery data must include only chunks with parentGenre 'null' (indicating ARTICLE content type)",
+      "Discovery data must NOT include chunks with parentGenre values like 'TUTORIAL', 'RHEINGOLD', 'COURSE', 'FLEX_CAMP', etc.",
+      "AI response must be based only on article content",
+      "No citations or references to tutorial, event, or course content should appear in the response"
+    ]
+  }
+}

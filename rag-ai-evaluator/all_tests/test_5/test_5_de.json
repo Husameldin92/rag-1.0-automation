@@ -1,0 +1,260 @@
+{
+  "test_id": "test_005_de",
+  "query": "Was geht?",
+  "endpoint": "reader_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: \nHallo! Wie kann ich Ihnen heute weiterhelfen? Wenn Sie Fragen zu Softwareentwicklung, Architektur, DevOps, Java oder einem anderen technischen Thema haben, stehe ich Ihnen gerne zur Verfügung. Was interessiert Sie gerade?",
+  "discovery_data": {
+    "query_sent": "Was geht?",
+    "results": [
+      {
+        "_id": "fb211ec8cade5997d287dff4",
+        "title": "2 Streams: Data in, Data out",
+        "parentGenre": null
+      },
+      {
+        "_id": "ZuZNu7AiyAjtnA7rX",
+        "title": "Begrüßung Agile Day 2022",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "jtoj3JfB2HeFkWJTn",
+        "title": "Hands-on Kubernetes Secrets",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "vPoi2b2nPPsSyNaE7",
+        "title": "BERLIN & ONLINE | AMA (Ask Me Anything) Session",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "90f2f72314fce1600c4b89f1",
+        "title": "Die Mensastrategie",
+        "parentGenre": null
+      },
+      {
+        "_id": "oZXZCvjT5waQHDwXb",
+        "title": "Einführung",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "c465053c5fc37e6d8c677a08",
+        "title": "Rein ins KI-Abenteuer: Vom Prompt zum Assistenten",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5d0b72612677a51217f729ae",
+        "title": "Gesund und effizient schrumpfen: „Addition durch Subtraktion“ im Alltag etablieren",
+        "parentGenre": null
+      },
+      {
+        "_id": "PXNmRJAQNNHWxSFcz",
+        "title": "Under Construction: Top-down rocks!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "iA7n7xzuGeX3aDzfK",
+        "title": "Dynamisches Reagieren auf L7-Angriffe",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5ExX27S5BSvRakERW",
+        "title": "Gehälter festlegen auf Augenhöhe",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0450aed1d19f73fbd83a2721",
+        "title": "Dynamische Teams: Erfolgsfaktoren und Herausforderungen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "Hx6E3bCHELeMA6Mkm",
+        "title": "Lagebewusstsein schaffen mit Wardley Maps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3d4f4e0d84e1ffebc787adca",
+        "title": "Conversational UI mit der MS Teams AI Library entwickeln",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "bKffGbh2qWitzFExY",
+        "title": "Dynamische Credentials - Passwortrotation und mehr",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a7b6fa1c53af99abbfc4ceeb",
+        "title": "1 Meetingchaos und E-Mail-Flut meistern",
+        "parentGenre": null
+      },
+      {
+        "_id": "CGuYzMMNcMqRJ43Qo",
+        "title": "Interne Component-Libraries: Ein Erfahrungsbericht",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "CjNK4AS67dWeq28WD",
+        "title": "You build it, but you ain’t gonna run it… – DevOps-Praktiken für IT-Dienstleister (und deren Kunden)",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "BTampD3E4q3nLA8RM",
+        "title": "Mit Kanban Flight Levels und OKR zu mehr Business Agility",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "uKqeQqjDGaiDxpAsA",
+        "title": "Wie gut sind deine APIs wirklich? Ein paar Fragen zum Nachdenken",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "7hJKXpJ8ASen7mgw8",
+        "title": "Top 10 Best-Practices für YAML-Pipelines in Azure DevOps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a407c40c215d9d3e35a8dbed",
+        "title": "Softwarearchitektur: Muss das sein?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "d9c4838d2971b87db2f34137",
+        "title": "Zwischen Zirkus-Manege und Maschinerie: Freiheit, Kontrolle und die Kunst skalierbarer Plattformen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "e7088363079f26ca313c81bc",
+        "title": "WPF-Anwendungen mit Blazor Hybrid modernisieren",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "728b7c7b3ea2a9ba2bcccdae",
+        "title": "Vom strategischen Design zur designten Strategie",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "m7hH25y8Ysa4SS74R",
+        "title": "Lean Coffee Session - Deine Erfahrung zählt!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "NrpbJSzckhko92fXb",
+        "title": "Orchestrierung mit Nomad",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "SFL7Gjnp2uNHXYshR",
+        "title": "Schätzungen – das Enfant terrible der Softwareentwicklung",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "tq9R24HttP6earZHY",
+        "title": "Von Ärzten, Piloten und Flugzeugen: Was kann Softwareentwicklung von anderen Berufen lernen?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "acnMh74gWMwnTfYKG",
+        "title": "Die dritte Welle der Agilität - eine kritische Betrachtung: Schwerpunkt „Professionalisierung agiler Teams“",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "FLHJfM6vDZzEMEDYy",
+        "title": "Agiles Recruitment und enttäuschte Erwartungshaltungen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "7bZEmpXNgAzD9zAfr",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0ef7a24e78303028988b7558",
+        "title": "Lernen und Verstehen",
+        "parentGenre": null
+      },
+      {
+        "_id": "9b2b52fee6d8c53769cb8c90",
+        "title": "Dynamische Organisationen: Erfolgsfaktoren und Herausforderungen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "fwxtvdbrybm2LXDwR",
+        "title": "Flagger: (Weitere) Deploymentstrategien für Kuberntes Hand-on",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3d076d9b744e61f8a9fef01e",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "qCDxvvDFvDJujmMQD",
+        "title": "Vom Cockpit zur Command Line: von Piloten und Ärzten für stabilere Software lernen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "RaFz5mJwnPHQbpfvk",
+        "title": "Agile Architekten: klassische Dirigenten oder Bandmitglieder?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "95fd0cb49519b94e0296e56a",
+        "title": "Qualität neu denken: Goodbye, QA-Umgebung",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0d0e92e6040fe70d61394f1b",
+        "title": "Schrödingers Agile",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "s6k292fs9W6znbrFd",
+        "title": "Moderne Softwareentwicklung am Beispiel",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "847b9abaedf04dce2aae62f1",
+        "title": "Gemeinsam statt einsam: Rezepte für bessere Zusammenarbeit in Entwicklungsteams",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "WcKmQPFzRLFQGoKy8",
+        "title": "Barrierefreiheit 2.0 - was kommt ab 2025 und was kann ich jetzt schon tun?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "c2FEWAYZGha7cfgZF",
+        "title": "Application Modernization – Ein Weg ohne Fallen gibt es nicht",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "Ns5HBp5EcdXCxAp2E",
+        "title": "Jax für die JAX: Deep Neural Networks from Scratch",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "677ec93982b4e2b89e41883c",
+        "title": "Wie man sich auch in schwierigen Zeiten motiviert",
+        "parentGenre": null
+      },
+      {
+        "_id": "ANAs5XqEkLv4Mi3ww",
+        "title": "Event-driven Microservices-Tests – wie die CD Pipeline mit CDC und BDD die E2E-Tests ablöst",
+        "parentGenre": "RHEINGOLD"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Vague Question handling - Clarification request",
+    "required_checks": [
+      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
+      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
+      "AI response must NOT generate a concrete answer unless the intent is clear.",
+      "The assistant should apply the vague Question fallback logic defined in the prompt."
+    ]
+  }
+}

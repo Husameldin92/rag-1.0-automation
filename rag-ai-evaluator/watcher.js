@@ -66,6 +66,11 @@ ${testData.discovery_data ? `
 DISCOVERY DATA (Chunks selected by backend):
 Total chunks: ${testData.discovery_data.results.length}
 
+${testData.user?.communityExperience?.length ? `
+USER COMMUNITY EXPERIENCE:
+${testData.user.communityExperience.join(', ')}
+` : ''}
+
 Sample chunks (showing first 5 and last 5 for evaluation):
 ${testData.discovery_data.results.slice(0, 5).map((chunk, i) => 
 `Chunk ${i+1}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}`

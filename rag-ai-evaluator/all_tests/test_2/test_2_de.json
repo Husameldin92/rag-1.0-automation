@@ -1,0 +1,265 @@
+{
+  "test_id": "test_002_de",
+  "query": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
+  "endpoint": "reader_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: React useEffect Tutorials\nReact useEffect ist ein Hook, der in React-Tutorials häufig verwendet wird, um Seiteneffekte in Funktionskomponenten zu handhaben. Hier die wichtigsten Konzepte und Erklärungen aus den Tutorials:\n\nGrundidee von useEffectuseEffect ermöglicht es, Operationen auszuführen, die nicht direkt mit dem Rendern der Komponente zusammenhängen, wie z.B. das Setzen von Timern, das Laden von Daten vom Server oder das Abonnieren von Events. Diese Operationen nennt man Seiteneffekte (Side Effects). React trennt dabei die Render-Phase von der Commit-Phase, um Seiteneffekte kontrolliert und genau einmal auszuführen.\n\nLebenszyklusphasen und useEffect  \n\nMount: useEffect mit einem leeren Abhängigkeitsarray ([]) wird genau einmal nach dem ersten Rendern der Komponente ausgeführt. Dies entspricht dem ComponentDidMount in Klassenkomponenten. Hier lädt man typischerweise Daten vom Server.  \nUpdate: useEffect kann auch auf Änderungen bestimmter Werte reagieren, wenn diese im Abhängigkeitsarray angegeben sind. Dann wird der Effekt bei jeder Änderung dieser Werte erneut ausgeführt.  \nCleanup: useEffect kann eine Rückgabefunktion liefern, die vor dem nächsten Ausführen des Effekts oder beim Unmounten der Komponente aufgerufen wird, um z.B. Timer zu löschen oder Event-Listener zu entfernen.\n\n\nSyntax und Verwendung  \nuseEffect(() => {\n  // Effekt-Code, z.B. Daten laden, Timer setzen\n  return () => {\n    // Cleanup-Code, z.B. Timer löschen\n  };\n}, [abhängigkeiten]);\n\n\nDas zweite Argument ist ein Array von Abhängigkeiten, das steuert, wann der Effekt erneut ausgeführt wird.  \nWird kein zweites Argument angegeben, läuft der Effekt nach jedem Rendern.  \nEin leeres Array bedeutet, der Effekt läuft nur einmal nach dem Mount.\n\n\nBeispiele aus Tutorials  \n\nLaden von Daten vom Server mit fetch im useEffect, um die Daten in den State zu schreiben und die Komponente neu zu rendern.  \nVerwendung von Cleanup-Funktionen, um z.B. Timer oder Event-Listener zu entfernen, um Speicherlecks zu vermeiden.  \nErklärung, warum Seiteneffekte nicht direkt im Renderprozess ausgeführt werden sollten, da React das Rendern unterbrechen oder neu starten kann, was zu mehrfachen Ausführungen führen würde.\n\n\nBesonderheiten  \n\nReact 18 führt in der Entwicklungsumgebung eine doppelte Ausführung von Effekten ein, um unerwünschte Seiteneffekte zu erkennen. Dies ist kein Fehler, sondern ein bewusstes Verhalten.  \nuseEffect ersetzt in Funktionskomponenten die klassischen Lifecycle-Methoden der Klassenkomponenten (componentDidMount, componentDidUpdate, componentWillUnmount).\n\n\n\nZusammenfassung: useEffect ist der zentrale Hook in React-Tutorials, um den Lebenszyklus von Komponenten zu steuern und Seiteneffekte sicher und performant zu handhaben. Er trennt die Render-Logik von Nebenwirkungen und bietet mit dem Abhängigkeitsarray eine feingranulare Steuerung, wann Effekte ausgeführt werden sollen. Cleanup-Funktionen sorgen für sauberes Aufräumen beim Unmount oder vor erneuter Ausführung des Effekts9784459f1e4b30167e3b56c1Operationen für die Commit-Phase planen Sie mit Hilfe des Effect Hooks. Dieser unterstützt drei Abschnitte im Lebenszyklus einer Komponente: - Mount: Das Mounten einer Komponente bezeichnet den Prozess der Integration der Komponente in den Komponentenbaum Ihrer Applikation. Mit dem Mount beginnt der Lebenszyklus einer Komponente. Das bedeutet, dass dieses Ereignis nur ein Mal pro Komponenteninstanz eintritt. An dieser Stelle laden Sie in der Regel die Daten, die eine Komponente zur Anzeige benötigt, vom Server. Einen Mount Hook erstellen Sie, indem Sie useEffect mit einem leeren Array als zweites Argument aufrufen. Das zweite Argument steht für die Abhängigkeiten des Hooks. Geben Sie explizit keine Abhängigkeiten an, führt React die Effect-Funktion, also die Callback-Funktion, die Sie als erstes Argument übergeben, nur ein Mal aus. - Update: Neben dem Einhängen der Komponente in den Baum können Sie mit dem Effect Hook auch auf Aktualisierungen der Komponente reagieren. Beispiele für solche Aktualisierungen3b7e565f2d4ec78c908b0498Zustand und Logik In der 3.Lesson geht es um: -Zustand und Effects -Geschäftslogik auslagern -Conditionals und Listen ::. --> ::. was man beachten muss und in diesem nächsten Teil soll es wenn man jetzt nicht gerade unbedingt einen Eventl-Händler Komponenten werden in React neu gerendert, die Komponentenfunktion wird aufgerufen und dann wird dieses dann, machen, aber manchmal gibt es dafür in Eventl-Händlern gehen und dann kann man in um einen ReRender auszulösen und solange sich kein Zustand UseEffect angelegt und UseEffect bekommt einen oder zwei den man im Rahmen des Effekts ausführen will, kann diese Funktion noch mal eine Funktion als wenn dieser Effekt wieder aufgeräumt werden soll. Return Value zurückgibt, dann wird, wenn aufgeräumt wird, der kann wenn er vorhanden ist, das genau bedeutet, kommt jetzt gleich, dann wird dieser Effekt bei jedem zwar am besten in der PlayerName Komponente, Funktion, die bekommt Return, eine Funktion, also ConsoleLog ist auf jeden Fall ein Seiteneffekt für Warum kommt Effekt zweimal? aufzudecken. haben wir wieder CleaningUp, Wenn ich jetzt nicht will, der Effekt nur ausgeführt, Wenn ich jetzt gar keine Dependencies in das Array nicht gibt, jemals ändern. der Effekt sollte der eigentlich nur einmalig lösche jetzt mal die Konsole und lade neu und er wird aber danach, wenn sich der Zustand ändert, dass man Dependencies angibt und zwar ich kann hier angeben, wenn ich Enter drücke und jetzt wird dieser Effekt nur Ich lade hier nochmal neu und jetzt solange ich hier wird er ausgeführt und vorher natürlich aufgeräumt. wenn wir den Effekt ausführen wollen. dann kann man die da reinschreiben in dieses Array und dann Wenn ich hier zum Beispiel ein Property dann muss sich die auch hier angeben als eigentlich wird das von React validiert, verschiedene Funktionalitäten verwenden, zum Beispiel, nachzuladen, wenn die Komponente zum Beispiel zum ersten Mal der Businesslogik machen in einem Effekt, Da kommen wir erst später drauf. sondern in einem Effekt oder einem Event-Handler Also im Prinzip alles was nicht direkt mit dem Rendering der Effekt oder einem anderen sogenannten Hook Also wir können",
+  "discovery_data": {
+    "query_sent": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
+    "results": [
+      {
+        "_id": "aa3c41758c254f2c90216dd0",
+        "title": "Einstieg in React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "RHCyFcwYbMjqqYgkS",
+        "title": "PWA mit React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "554842349c829ccc79d45375",
+        "title": "Testen und Frontendarchitektur",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "f84097699062ea49829a9ba7",
+        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e8e5ad075ba0a3ff7a0c6faf",
+        "title": "Navigation und Web Components",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "ff4Dt9s49xPhkHtMv",
+        "title": "Einstieg in Next.js",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "3b7e565f2d4ec78c908b0498",
+        "title": "Zustand und Logik",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "W9H9MKNhnkmaDJHCf",
+        "title": "Ausblick/Fazit",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "a1ccc2e901e8a644e6a5623f",
+        "title": "Dark-Mode-Selektor-Komponente",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "r4NMSW8BWMtF2RnBq",
+        "title": "Teil 4: Angular",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e1d26dbff09906066b1da018",
+        "title": "Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "a5dcfc84b51456a6b4b27fce",
+        "title": "Die Welt der Web Components",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "016438ac16b0b45630a19592",
+        "title": "Captain Hooks",
+        "parentGenre": null
+      },
+      {
+        "_id": "2cb57ebc5b97ae8034692277",
+        "title": "Captain Hooks",
+        "parentGenre": null
+      },
+      {
+        "_id": "kHdHjoZh3hMS65a92",
+        "title": "React beyond the Basics",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "F8Wp5NXL9i29iZS4N",
+        "title": "React beyond the Basics",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a55459d4dc9578f07830e806",
+        "title": "React Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "beeb8ce088ed8313329dd56e",
+        "title": "Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "9784459f1e4b30167e3b56c1",
+        "title": "Advanced Concepts",
+        "parentGenre": null
+      },
+      {
+        "_id": "16518fb0a2375f8c306f8979",
+        "title": "Einführung in React: Das große Tutorial zum Mitmachen",
+        "parentGenre": null
+      },
+      {
+        "_id": "b66b44ace70e949c14f79e34",
+        "title": "Die Basics der JavaScript Library",
+        "parentGenre": null
+      },
+      {
+        "_id": "22bec6523eb18d12efe62b78",
+        "title": "Das große React-Tutorial",
+        "parentGenre": null
+      },
+      {
+        "_id": "f76e4150e6445386c3b45410",
+        "title": "React Hooks - React wird funktionaler",
+        "parentGenre": null
+      },
+      {
+        "_id": "c4fb37876313d1aedb20a8e0",
+        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr - Teil 1",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "50bd42115054aca65a659753",
+        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr - Teil 2",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "XRN7ubJksapX9KKuS",
+        "title": "Neues aus der React-Welt - React 19 und mehr",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "9d05a1547278a700fbae1f54",
+        "title": "Styling in React",
+        "parentGenre": null
+      },
+      {
+        "_id": "1eed7659c187283042e70e2a",
+        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "xfHqbbFDzqZtAjjDv",
+        "title": "React Update 2023",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f0ad7f7aa00c25af168bcbd7",
+        "title": "Filtern und Sortieren – auf dem Client oder Server?",
+        "parentGenre": null
+      },
+      {
+        "_id": "905bad9795ffdee2e2dc3318",
+        "title": "Datenhaltung, Routing und Tests",
+        "parentGenre": null
+      },
+      {
+        "_id": "5dAbrLZZLLPttLAF2",
+        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen - Teil 1",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "JRffp96XCKXRkDWHe",
+        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen - Teil 2",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3641942ee30fa1c8005e0ae5",
+        "title": "Styling in React",
+        "parentGenre": null
+      },
+      {
+        "_id": "643589f719382724fde96eb2",
+        "title": "React Server Components in Action: Von der Theorie zur Praxis",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "63630464d064047ca7173645",
+        "title": "React 16 im Überblick",
+        "parentGenre": null
+      },
+      {
+        "_id": "kNAYpgBmvsYqXusMC",
+        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen - Teil 1",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "ec2e8a531542f50fb58027b3",
+        "title": "Höher, schneller, weiter",
+        "parentGenre": null
+      },
+      {
+        "_id": "pRAJwvarr4rpbqXeu",
+        "title": "React – des Kaisers immer neuere Kleider",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3a8592b50b969ebcd5821ef7",
+        "title": "TanStack Query",
+        "parentGenre": null
+      },
+      {
+        "_id": "7f3899f18afea5f38dbb53a4",
+        "title": "TanStack Query",
+        "parentGenre": null
+      },
+      {
+        "_id": "c5be387e5d7a25bdc72f4758",
+        "title": "Zentrales State Management in React",
+        "parentGenre": null
+      },
+      {
+        "_id": "zcD6t3LfmNAxh882C",
+        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen -  Teil 2",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "AAiv8JizeTg38AuKS",
+        "title": "Neues in React - React Update in 2022",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "22db4c56448b6111f5cd4ca3",
+        "title": "React 18 unter der Lupe: Concurrent Rendering und weitere Neuigkeiten",
+        "parentGenre": null
+      },
+      {
+        "_id": "579a7cb75305552d0204ca89",
+        "title": "Bookmarks selbst gemacht",
+        "parentGenre": null
+      },
+      {
+        "_id": "q4q3W4BHrY6ZxJKGc",
+        "title": "React: Ein Blick zurück und nach vorne",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "821904c4cbf0e3046468b127",
+        "title": "Olis bunte Welt der IT",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Tutorials Only",
+    "required_checks": [
+      "Discovery data must include only chunks with parentGenre 'TUTORIAL' when user specifies 'tutorials only'",
+      "Discovery data must NOT include chunks with other parentGenre values (RHEINGOLD, null, etc.)",
+      "AI response must be based only on tutorial content and mention it's from tutorials",
+      "No citations or references to non-tutorial content types should appear in the response"
+    ]
+  }
+}

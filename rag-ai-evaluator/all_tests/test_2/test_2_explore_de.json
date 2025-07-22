@@ -1,0 +1,75 @@
+{
+  "test_id": "test_002_explore_de",
+  "query": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: React useEffect Tutorials\nReact useEffect ist ein Hook, der es ermöglicht, Nebenwirkungen (Side Effects) in funktionalen Komponenten zu verwalten. Er wird verwendet, um Code auszuführen, der nicht direkt mit dem Rendern zusammenhängt, wie z.B. das Abonnieren von Events, das Starten von Timern, das Laden von Daten oder das manuelle Manipulieren des DOM.\nWichtige Konzepte und Anwendung von useEffect aus den Tutorials:\n\nGrundprinzip von useEffect  \n\nuseEffect wird in React-Komponenten eingesetzt, um Effekte auszuführen, die nach dem Rendern stattfinden sollen.  \nEs ersetzt die klassischen Lifecycle-Methoden aus Klassenkomponenten (componentDidMount, componentDidUpdate, componentWillUnmount).  \nuseEffect nimmt eine Funktion als Argument, die den Effekt beschreibt.\n\n\nAbhängigkeiten und Steuerung der Ausführung  \n\nuseEffect kann ein zweites Argument erhalten: ein Array von Abhängigkeiten.  \nDer Effekt wird nur dann erneut ausgeführt, wenn sich eine der Abhängigkeiten ändert.  \nEin leeres Array bedeutet, dass der Effekt nur einmal nach dem ersten Rendern ausgeführt wird (ähnlich componentDidMount).  \nOhne Abhängigkeiten wird der Effekt nach jedem Rendern ausgeführt.\n\n\nAufräumarbeiten (Cleanup)  \n\nuseEffect kann eine Funktion zurückgeben, die beim Aufräumen ausgeführt wird, z.B. um Event-Listener zu entfernen oder Timer zu stoppen.  \nDiese Cleanup-Funktion wird vor dem nächsten Ausführen des Effekts oder beim Unmount der Komponente aufgerufen.\n\n\nBeispielhafte Verwendung  \n\nTimer starten und stoppen: useEffect startet einen Intervall-Timer und gibt eine Cleanup-Funktion zurück, die den Timer löscht.  \nDaten laden: useEffect kann genutzt werden, um asynchrone Datenabrufe zu starten, wenn die Komponente geladen wird oder sich bestimmte Props ändern.  \nDOM-Zugriff: useEffect kann verwendet werden, um auf DOM-Elemente zuzugreifen, z.B. um den Fokus zu setzen oder Scrollpositionen zu ändern.\n\n\nBest Practices  \n\nEffekte sollten keine synchronen Nebenwirkungen im Renderprozess verursachen.  \nState-Updates innerhalb von useEffect führen zu einem erneuten Rendern.  \nAbhängigkeiten müssen vollständig angegeben werden, um unerwartete Verhalten zu vermeiden.  \nKomplexe Effekte können in mehrere useEffect-Hooks aufgeteilt werden.\n\n\nZusammenhang mit useState und useRef  \n\nuseEffect arbeitet oft zusammen mit useState, um auf Zustandsänderungen zu reagieren.  \nuseRef kann genutzt werden, um Werte oder DOM-Referenzen zu speichern, die in useEffect verwendet werden.\n\n\n\nDiese Konzepte sind in den Tutorials zu React ausführlich behandelt und mit praktischen Beispielen illustriert, z.B. wie man Eingaben in Formularen verarbeitet, Timer steuert oder asynchrone Daten lädt und dabei die Komponentenzustände verwaltet und sauber aufräumt.\nZusammenfassung:React useEffect ist ein zentraler Hook, um Nebenwirkungen in funktionalen Komponenten zu steuern. Er ermöglicht es, Effekte nach dem Rendern auszuführen, Abhängigkeiten zu beobachten und Aufräumarbeiten durchzuführen. Sein korrekter Einsatz ist essenziell für reaktive, performante und wartbare React-Anwendungen.\nQuellen:  \n\nTutorial 'Einstieg in React' (aa3c417...)  \nTutorial 'Rendering' (e1d26db...)  \nTutorial 'Testen und Frontendarchitektur' (5548423...)  \nTutorial 'Navigation und Web Components' (e8e5ad0...)  \nTutorial 'Dark-Mode-Selektor-Komponente' (a1ccc2...)  \nTutorial 'Shadow DOM (Teil 3): Server-Side Rendering' (f840976...)„React verwendet useEffect, um Effekte auszuführen, die nach dem Rendern stattfinden sollen. useEffect nimmt eine Funktion als Argument, die den Effekt beschreibt.“„useEffect kann ein zweites Argument erhalten: ein Array von Abhängigkeiten. Der Effekt wird nur dann erneut ausgeführt, wenn sich eine der Abhängigkeiten ändert.“<5548423>„useEffect kann eine Funktion zurückgeben, die beim Aufräumen ausgeführt wird, z.B. um Event-Listener zu entfernen oder Timer zu stoppen.“</5548423>„useEffect arbeitet oft zusammen mit useState, um auf Zustandsänderungen zu reagieren.“„Effekte sollten keine synchronen Nebenwirkungen im Renderprozess verursachen. State-Updates innerhalb von useEffect führen zu einem erneuten Rendern.“<5548423>„Abhängigkeiten müssen vollständig angegeben werden, um unerwartete Verhalten zu vermeiden.“</5548423>„useEffect wird verwendet, um asynchrone Datenabrufe zu starten, wenn die Komponente geladen wird oder sich bestimmte Props ändern.“„useEffect kann genutzt werden, um DOM-Elemente zu manipulieren, z.B. um den Fokus zu setzen oder Scrollpositionen zu ändern.“„useEffect startet einen Intervall-Timer und gibt eine Cleanup-Funktion zurück, die den Timer löscht.“„useEffect ist essenziell für reaktive, performante und wartbare React-Anwendungen.“",
+  "discovery_data": {
+    "query_sent": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
+    "results": [
+      {
+        "_id": "f84097699062ea49829a9ba7",
+        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "a1ccc2e901e8a644e6a5623f",
+        "title": "Dark-Mode-Selektor-Komponente",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "aa3c41758c254f2c90216dd0",
+        "title": "Einstieg in React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "554842349c829ccc79d45375",
+        "title": "Testen und Frontendarchitektur",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e8e5ad075ba0a3ff7a0c6faf",
+        "title": "Navigation und Web Components",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e1d26dbff09906066b1da018",
+        "title": "Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "ff4Dt9s49xPhkHtMv",
+        "title": "Einstieg in Next.js",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "RHCyFcwYbMjqqYgkS",
+        "title": "PWA mit React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "W9H9MKNhnkmaDJHCf",
+        "title": "Ausblick/Fazit",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "r4NMSW8BWMtF2RnBq",
+        "title": "Teil 4: Angular",
+        "parentGenre": "TUTORIAL"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Tutorials Only",
+    "required_checks": [
+      "Discovery data must include only chunks with parentGenre 'TUTORIAL' when user specifies 'tutorials only'",
+      "Discovery data must NOT include chunks with other parentGenre values (RHEINGOLD, null, etc.)",
+      "AI response must be based only on tutorial content and mention it's from tutorials",
+      "No citations or references to non-tutorial content types should appear in the response"
+    ]
+  }
+}
