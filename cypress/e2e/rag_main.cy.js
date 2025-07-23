@@ -40,7 +40,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
         test2()
     })
 
-        it('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
+        it.only('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
         test3()
     })
 
@@ -68,7 +68,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🎯 Version-Specific Behavior Tests
     context('Version-Specific Content Handling', () => {
         
-        it.only('Test 8: Should handle requests for features not available in specified version (Angular 13 Signals)', () => {
+        it('Test 8: Should handle requests for features not available in specified version (Angular 13 Signals)', () => {
             test8()
         })
 

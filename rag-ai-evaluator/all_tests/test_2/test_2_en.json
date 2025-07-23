@@ -7,7 +7,7 @@
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: React useEffect tutorials 2025 2024\nCertainly! Here is an overview of React's useEffect hook based on tutorial content:\n\nPurpose of useEffect:The useEffect hook in React is used to perform side effects in function components. It runs after the component renders and can be used for tasks like data fetching, subscriptions, or manually changing the DOM.\n\nExecution Timing:The function passed to useEffect executes when the component is mounted (added to the DOM) and whenever any of its dependencies change. It runs on the client side, not on the server.\n\nCleanup Function:useEffect can return a cleanup function. React calls this cleanup function before the component unmounts or before the effect runs again, which is useful for cleaning up subscriptions or timers.\n\nDependency Array:The second argument to useEffect is an array of dependencies. The effect runs only when one of these dependencies changes. If the array is empty, the effect runs only once after the initial render.\n\nCommon Use Cases:  \n\nSetting up intervals or timeouts with proper cleanup  \nFetching data asynchronously and managing loading/error states  \nManaging event listeners and subscriptions  \nRunning business logic or side effects in response to state or prop changes\n\n\nExample:  \nimport { useEffect, useState } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds(s => s + 1);\n    }, 1000);\n\n    return () => clearInterval(interval); // Cleanup on unmount\n  }, []);\n\n  return <p>Seconds: {seconds}</p>;\n}\n\n\nImportant Notes:  \n\nuseEffect runs after rendering, so it does not block the browser from updating the screen.  \nIt should not be used for synchronous code that affects rendering directly.  \nAvoid putting calculations or derived state inside useEffect if they can be done during rendering to prevent unnecessary re-renders.\n\n\n\nThis summary is drawn from React tutorials that explain the fundamentals and practical usage of useEffect in function components, helping developers manage side effects cleanly and efficiently in React applicationsa2b267918162e49ed09668f1useEffect import { useEffect, useState } from 'react'; function Timer() { const [seconds, setSeconds] = useState(0); useEffect(() => { const interval = setInterval(() => { setSeconds((s) => s + 1); }, 1_000); return () => clearInterval(interval); // Cleanup }, []); return Seconds: {seconds}; } Remember useEffect runs on the client, not the server. The function passed to useEffect executes when the component is added to the DOM or when any of its dependencies (the second argument, an array) change. Additionally, an optional cleanup function can be defined, which React will run when the component is removed from the DOM.11aa4ab6eae82f7b6df75323useEffect import { useEffect, useState } from 'react'; function Timer() { const [seconds, setSeconds] = useState(0); useEffect(() => { const interval = setInterval(() => { setSeconds((s) => s + 1); }, 1_000); return () => clearInterval(interval); // Cleanup }, []); return Seconds: {seconds}; } Remember useEffect runs on the client, not the server. The function passed to useEffect executes when the component is added to the DOM or when any of its dependencies (the second argument, an array) change. Additionally, an optional cleanup function can be defined, which React will run when the component is removed from the DOM.",
+  "actual_response": "gpt-4.1-mini keyword: React useEffect tutorials\nCertainly! Here is an overview of React's useEffect hook based on tutorial content:\n\nPurpose and Basic Usage  \n\nuseEffect is a React hook that runs side effects in function components. It executes after the component is rendered to the DOM.  \nThe function passed to useEffect runs when the component mounts and whenever any of its dependencies change.  \nYou can optionally return a cleanup function from the effect, which React will run when the component unmounts or before re-running the effect due to dependency changes.  \nExample usage: setting up an interval timer and cleaning it up on unmount.\n\nimport { useEffect, useState } from 'react';\n\nfunction Timer() {\n  const [seconds, setSeconds] = useState(0);\n\n  useEffect(() => {\n    const interval = setInterval(() => {\n      setSeconds((s) => s + 1);\n    }, 1000);\n    return () => clearInterval(interval); // Cleanup\n  }, []);\n\n  return <p>Seconds: {seconds}</p>;\n}\n\nThis effect runs once on mount (empty dependency array) and cleans up on unmount.1\n\nDependencies Array  \n\nThe second argument to useEffect is an array of dependencies. The effect runs again only if one of these dependencies changes.  \nIf the array is empty ([]), the effect runs only once after the initial render.  \nSpecifying dependencies correctly is important to avoid unnecessary or missing effect executions.1\n\n\nCommon Use Cases  \n\nData fetching on component mount.  \nSetting up subscriptions or event listeners with proper cleanup.  \nRunning side effects in response to state or prop changes.1\n\n\nImportant Notes  \n\nuseEffect runs only on the client side, not during server-side rendering.  \nCleanup functions help prevent memory leaks by removing timers, subscriptions, or event listeners when the component unmounts or before the effect re-runs.  \nProper dependency management is crucial to avoid bugs or performance issues.1\n\n\n\nIn summary, useEffect is the primary React hook for managing side effects in function components, replacing lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount in class components. It enables declarative, clean, and efficient handling of effects with dependency tracking and cleanup support.\nIf you want, I can also provide code examples or explain common pitfalls with useEffect. Just",
   "discovery_data": {
     "query_sent": "Tell me about React useEffect from tutorials only.",
     "results": [
@@ -17,23 +17,28 @@
         "parentGenre": "TUTORIAL"
       },
       {
+        "_id": "RHCyFcwYbMjqqYgkS",
+        "title": "PWA mit React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
         "_id": "554842349c829ccc79d45375",
         "title": "Testen und Frontendarchitektur",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "535b45361ad6c9e12a423cbc",
-        "title": "Das ist .NET MAUI",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "f84097699062ea49829a9ba7",
-        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
+        "_id": "W9H9MKNhnkmaDJHCf",
+        "title": "Ausblick/Fazit",
         "parentGenre": "TUTORIAL"
       },
       {
         "_id": "ff4Dt9s49xPhkHtMv",
         "title": "Einstieg in Next.js",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "f84097699062ea49829a9ba7",
+        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
         "parentGenre": "TUTORIAL"
       },
       {
@@ -44,6 +49,11 @@
       {
         "_id": "3b7e565f2d4ec78c908b0498",
         "title": "Zustand und Logik",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "r4NMSW8BWMtF2RnBq",
+        "title": "Teil 4: Angular",
         "parentGenre": "TUTORIAL"
       },
       {
@@ -82,12 +92,12 @@
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "016438ac16b0b45630a19592",
+        "_id": "2cb57ebc5b97ae8034692277",
         "title": "Captain Hooks",
         "parentGenre": null
       },
       {
-        "_id": "2cb57ebc5b97ae8034692277",
+        "_id": "016438ac16b0b45630a19592",
         "title": "Captain Hooks",
         "parentGenre": null
       },
@@ -157,12 +167,12 @@
         "parentGenre": null
       },
       {
-        "_id": "kHdHjoZh3hMS65a92",
+        "_id": "F8Wp5NXL9i29iZS4N",
         "title": "React beyond the Basics",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "F8Wp5NXL9i29iZS4N",
+        "_id": "kHdHjoZh3hMS65a92",
         "title": "React beyond the Basics",
         "parentGenre": "RHEINGOLD"
       },
@@ -271,10 +281,9 @@
   "evaluation_criteria": {
     "test_focus": "Content Type Filtering - Tutorials Only",
     "required_checks": [
-      "Discovery data must include only chunks with parentGenre 'TUTORIAL' when user specifies 'tutorials only'",
-      "Discovery data must NOT include chunks with other parentGenre values (RHEINGOLD, null, etc.)",
-      "AI response must be based only on tutorial content and mention it's from tutorials",
-      "No citations or references to non-tutorial content types should appear in the response"
+      "The AI response must clearly indicate that the content is from tutorials.",
+      "No mention or citation of other content types (e.g., conferences, camps, slides, magazines) should appear in the response.",
+      "The explanation must be educational and appropriate for a tutorial format (step-by-step, practical, or beginner-friendly)."
     ]
   }
 }

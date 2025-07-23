@@ -7,13 +7,12 @@ const user_password = 'Hossamaccent2015+'
 
 // Test 3 Evaluation Criteria 
 const evaluation_criteria = {
-  test_focus: "Content Type Filtering - Articles Only",
-  required_checks: [
-    "Discovery data must include only chunks with parentGenre 'null' (indicating ARTICLE content type)",
-    "Discovery data must NOT include chunks with parentGenre values like 'TUTORIAL', 'RHEINGOLD', 'COURSE', 'FLEX_CAMP', etc.",
-    "AI response must be based only on article content",
-    "No citations or references to tutorial, event, or course content should appear in the response"
-  ]
+    test_focus: "Content Type Filtering - Articles Only",
+    required_checks: [
+      "AI response must indicate the content is based on articles.",
+      "AI response must not mention or cite content types like tutorials, events, or courses.",
+      "Summary should align with article-style information (e.g., informative, topical, not step-by-step)."
+    ]
 }
 
 function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = false) {

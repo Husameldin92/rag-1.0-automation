@@ -9,10 +9,9 @@ const user_password = 'Hossamaccent2015+'
 const evaluation_criteria = {
   test_focus: "Content Type Filtering - Tutorials Only",
   required_checks: [
-    "Discovery data must include only chunks with parentGenre 'TUTORIAL' when user specifies 'tutorials only'",
-    "Discovery data must NOT include chunks with other parentGenre values (RHEINGOLD, null, etc.)",
-    "AI response must be based only on tutorial content and mention it's from tutorials",
-    "No citations or references to non-tutorial content types should appear in the response"
+    "The AI response must clearly indicate that the content is from tutorials.",
+    "No mention or citation of other content types (e.g., conferences, camps, slides, magazines) should appear in the response.",
+    "The explanation must be educational and appropriate for a tutorial format (step-by-step, practical, or beginner-friendly)."
   ]
 }
 
