@@ -1,10 +1,10 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const user_login_elevate = 'hosman+1@jax.de'
+const user_login_elevate = 'hosman+devmionl@jax.de'
 const user_password = 'Hossamaccent2015+'
 
 
 
-it('Test 1: Stress Testing_1', () => {
+it('Test 18: Stress Testing_18', () => {
         loginHandel()
         // Handle cookie consent
   cy.get('body').then(($body) => {
@@ -36,7 +36,7 @@ it('Test 1: Stress Testing_1', () => {
   })
   visitWithAuth('https://staging.entwickler.de/reader/explore')
   cy.get('.rounded-0 > .col-12').clear()
-  cy.get('.rounded-0 > .col-12').type('What are the main features of Angular Signals in version 17?{enter}')
+  cy.get('.rounded-0 > .col-12').type('what is the best way to learn haskell?{enter}')
   cy.wait(50000)
-  cy.screenshot('backend-stress-testing-test1')
+  cy.screenshot('backend-stress-testing-test18')
     })

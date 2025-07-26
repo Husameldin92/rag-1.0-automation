@@ -32,6 +32,7 @@ jobs:
           spec: cypress/e2e/tests/backend-stress-testing/test${{ matrix.test_number }}.cy.js
           browser: chrome
           headed: false
+          record: false  # Don't record videos
         env:
           # Add any environment variables your tests need
           CYPRESS_baseUrl: https://staging.entwickler.de
@@ -43,26 +44,36 @@ jobs:
           name: stress-test-${{ matrix.test_number }}-screenshots
           path: cypress/screenshots/
           retention-days: 7
-          
-      - name: 📹 Upload Videos
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: stress-test-${{ matrix.test_number }}-videos
-          path: cypress/videos/
-          retention-days: 7
 
-  # Summary job that runs after all tests complete
+  # Summary job that runs after all tests complete - ONLY if all tests pass
   stress-test-summary:
     name: 📊 Backend Stress Test Summary
     runs-on: ubuntu-latest
     needs: stress-test
-    if: always()
+    if: success()  # Only run if ALL tests pass
     
     steps:
       - name: 📋 Test Results Summary
         run: |
           echo "🎯 Backend Stress Test Complete!"
-          echo "📊 All 23 tests were executed"
-          echo "💪 Your backend was tested with 23 queries"
-          echo "📁 Check the 'Actions' artifacts for screenshots and videos" 
+          echo "✅ All 23 tests PASSED successfully"
+          echo "💪 Your backend handled 23 concurrent queries"
+          echo "📁 Check the 'Actions' artifacts for screenshots"
+
+  # Failure summary job that runs if any test fails
+  stress-test-failure:
+    name: ❌ Backend Stress Test Failed
+    runs-on: ubuntu-latest
+    needs: stress-test
+    if: failure()  # Only run if any test fails
+    
+    steps:
+      - name: 📋 Failure Summary
+        run: |
+          echo "❌ Backend Stress Test Failed!"
+          echo "🔍 Some tests did not pass - check individual test results"
+          echo "📁 Check the 'Actions' artifacts for screenshots and logs"
+          echo "💡 This might be due to:"
+          echo "   - Multiple users using same login simultaneously"
+          echo "   - Backend overload"
+          echo "   - Network timeouts" 
