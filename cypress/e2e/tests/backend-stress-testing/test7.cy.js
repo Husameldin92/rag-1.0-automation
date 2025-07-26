@@ -1,7 +1,6 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const user_login_elevate = 'hosman+rag6@jax.de'
+const user_login_elevate = 'hosman+rag6@basta.net'
 const user_password = 'Hossamaccent2015+'
-
 
 
 it('Test 7: Stress Testing_7', () => {
