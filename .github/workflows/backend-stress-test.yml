@@ -32,7 +32,7 @@ jobs:
           spec: cypress/e2e/tests/backend-stress-testing/test${{ matrix.test_number }}.cy.js
           browser: chrome
           headed: false
-          record: false  # Don't record videos
+          record: false 
         env:
           # Add any environment variables your tests need
           CYPRESS_baseUrl: https://staging.entwickler.de
