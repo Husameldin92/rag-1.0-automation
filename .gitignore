@@ -11,6 +11,7 @@ node_modules/
 
 # IDE/Editor files
 .specstory/
+.cursorindexingignore
 
 # Generated files
 cypress/screenshots/

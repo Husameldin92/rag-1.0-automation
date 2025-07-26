@@ -7,10 +7,15 @@
     "language": "de"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: React useEffect Tutorials\nGerne erkläre ich dir das React-Hook useEffect anhand der Inhalte aus den React-Tutorials, die in den Kontextdokumenten verfügbar sind.\nReact useEffect in Tutorials – Erklärung und Anwendung\n\nGrundidee von useEffectDas useEffect-Hook dient dazu, Seiteneffekte in Funktionskomponenten zu handhaben. Seiteneffekte sind Operationen, die außerhalb des reinen Renderings stattfinden, z. B. das Laden von Daten, das Setzen von Timern oder das Abonnieren von Events.React trennt dabei zwei Phasen im Lebenszyklus einer Komponente:  \n\nRender-Phase: Hier wird die UI berechnet und das DOM vorbereitet. Diese Phase kann von React unterbrochen oder wiederholt werden.  \nCommit-Phase: Hier werden die Seiteneffekte ausgeführt, die garantiert nur einmal pro Update ausgeführt werden.useEffect wird verwendet, um Operationen in der Commit-Phase zu planen, damit Seiteneffekte nicht mehrfach oder unerwartet ausgeführt werden.(Quelle: Tutorial „Advanced ConceptsDas große React-Tutorial – Teil 2“)1\n\n\nMount, Update und Unmount mit useEffect  \n\nMount: Der Effekt wird einmalig nach dem ersten Rendern der Komponente ausgeführt. Dies wird erreicht, indem man useEffect mit einem leeren Abhängigkeitsarray [] aufruft.  \nUpdate: Der Effekt wird bei Änderungen der angegebenen Abhängigkeiten erneut ausgeführt.  \nUnmount: useEffect kann eine Aufräumfunktion zurückgeben, die vor dem nächsten Effektlauf oder beim Entfernen der Komponente ausgeführt wird.(Quelle: Tutorial „Zustand und Logik“)2\n\n\nBeispiel für Datenladen mit useEffectEin typisches Anwendungsbeispiel ist das Laden von Daten vom Server. Im Tutorial wird gezeigt, wie man mit useEffect und fetch Daten lädt und im State speichert.Dabei wird useEffect mit leerem Abhängigkeitsarray verwendet, um die Daten nur einmal beim Mounten zu laden.  \nuseEffect(() => {\n  fetch('/api/data')\n    .then(res => res.json())\n    .then(data => setData(data));\n}, []);\n\n(Quelle: Tutorial „TanStack QueryAsynchrones State Management, frameworkübergreifend“ und „Advanced ConceptsDas große React-Tutorial – Teil 2“)13\n\nWichtig: Abhängigkeiten richtig setzenDas zweite Argument von useEffect ist ein Array von Abhängigkeiten. React vergleicht diese bei jedem Render und entscheidet, ob der Effekt erneut ausgeführt werden muss.  \n\nWird kein zweites Argument angegeben, läuft der Effekt nach jedem Render.  \nEin leeres Array sorgt für einmaliges Ausführen (Mount).  \nEin Array mit Variablen sorgt für Ausführen bei deren Änderung (Update).(Quelle: Tutorial „Zustand und Logik“)2\n\n\nAufräumarbeiten mit useEffectWenn ein Effekt Ressourcen wie Timer oder Event-Listener anlegt, sollte er eine Aufräumfunktion zurückgeben, die diese Ressourcen beim Unmount oder vor dem nächsten Effektlauf entfernt.Beispiel:  \nuseEffect(() => {\n  const timer = setInterval(() => { /* ... */ }, 1000);\n  return () => clearInterval(timer);\n}, []);\n\n(Quelle: Tutorial „Zustand und Logik“)2\n\n\nZusammenfassung\n\nuseEffect ist das zentrale Hook für Seiteneffekte in React-Funktionskomponenten.  \nEs steuert Ausführung von Effekten in den Phasen Mount, Update und Unmount.  \nDas zweite Argument (Abhängigkeitsarray) bestimmt, wann der Effekt ausgeführt wird.  \nTypische Anwendungsfälle sind Datenladen, Timer, Event-Listener und Aufräumarbeiten.  \nRichtiges Setzen der Abhängigkeiten ist entscheidend, um unnötige Effektausführungen zu vermeiden.\n\nDiese Erklärungen und Beispiele stammen aus den React-Tutorials auf entwickler.de, die praxisnah und verständlich die Nutzung von useEffect vermitteln.Falls du möchtest, kann ich dir auch Beispielcode aus den Tutorials bereitstellen.  \nIch hoffe, diese Zusammenfassung hilft dir beim Verständnis von useEffect!123",
+  "actual_response": "gpt-4.1-mini keyword: React useEffect Tutorials\nReact useEffect ist ein Hook, der in React-Komponenten verwendet wird, um Nebenwirkungen (Side Effects) zu handhaben, die nicht direkt mit dem Rendern zusammenhängen. Aus den Tutorials lassen sich folgende wesentliche Punkte zu useEffect zusammenfassen:\n\nZweck von useEffectuseEffect wird genutzt, um Effekte auszuführen, die nach dem Rendern einer Komponente stattfinden sollen, wie z.B. das Laden von Daten, das Abonnieren von Events oder das manuelle Manipulieren des DOMs. Es hilft dabei, Seiteneffekte sauber von der reinen Render-Logik zu trennen.[1.]\n\nFunktionsweise und AusführunguseEffect nimmt eine Callback-Funktion entgegen, die nach dem Rendern ausgeführt wird. Optional kann diese Callback eine Aufräumfunktion zurückgeben, die vor dem nächsten Effekt oder beim Unmounten der Komponente ausgeführt wird. So lassen sich z.B. Event-Listener sauber entfernen.[1.]\n\nAbhängigkeiten-Array (Dependency Array)useEffect kann ein zweites Argument erhalten, ein Array von Abhängigkeiten. Der Effekt wird nur dann erneut ausgeführt, wenn sich eine dieser Abhängigkeiten ändert. Ein leeres Array bewirkt, dass der Effekt nur einmal nach dem ersten Rendern ausgeführt wird.[1.]\n\nBeispielhafte AnwendungIn einem Beispiel wird ein Timer gezeigt, der mit useEffect gesteuert wird. Der Effekt startet den Timer und räumt ihn bei Änderungen oder beim Verlassen der Komponente wieder auf, um Speicherlecks zu vermeiden.[1.]\n\nTrennung von Logik und RenderinguseEffect ermöglicht es, Geschäftslogik und Nebenwirkungen aus der Renderfunktion auszulagern, was die Komponenten sauberer und wartbarer macht.[1.]\n\n\nZusammenfassend ist useEffect ein essenzieller Hook in React, um kontrolliert und effizient Nebenwirkungen zu verwalten, die nicht direkt mit dem Rendern zusammenhängen. Er sorgt für sauberen Code durch klare Trennung von Rendering und Effekten sowie durch Aufräummechanismen.\nFalls Sie tiefer in die Thematik einsteigen möchten, empfehle ich die Tutorials „Zustand und Logik“ von David Tanzer auf entwickler.de, die diese Konzepte praxisnah und verständlich vermitteln.[1.]",
   "discovery_data": {
     "query_sent": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
     "results": [
+      {
+        "_id": "a5dcfc84b51456a6b4b27fce",
+        "title": "Die Welt der Web Components",
+        "parentGenre": "TUTORIAL"
+      },
       {
         "_id": "aa3c41758c254f2c90216dd0",
         "title": "Einstieg in React",
@@ -67,189 +72,39 @@
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "a5dcfc84b51456a6b4b27fce",
-        "title": "Die Welt der Web Components",
+        "_id": "fa2059cdcde5a39f69818b69",
+        "title": "Die Welt der Web Components (Teil 2)",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "2cb57ebc5b97ae8034692277",
-        "title": "Captain Hooks",
-        "parentGenre": null
+        "_id": "208b945facef57470b50eaf8",
+        "title": "Toolbox für Web Components",
+        "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "016438ac16b0b45630a19592",
-        "title": "Captain Hooks",
-        "parentGenre": null
+        "_id": "66b3c693b10a0911cff5995b",
+        "title": "Events und Lifecycle",
+        "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "F8Wp5NXL9i29iZS4N",
-        "title": "React beyond the Basics",
-        "parentGenre": "RHEINGOLD"
+        "_id": "e041b16a103e515fb3ff7fa7",
+        "title": "Zugriff auf lokale Datenbanken",
+        "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "kHdHjoZh3hMS65a92",
-        "title": "React beyond the Basics",
-        "parentGenre": "RHEINGOLD"
+        "_id": "DCC4BrWquTbrB5qnR",
+        "title": "Qualität und Sicherheit in einer Next.js-Applikation",
+        "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "a55459d4dc9578f07830e806",
-        "title": "React Advanced Concepts",
-        "parentGenre": null
+        "_id": "sL4RBMFEkkZJPGdtF",
+        "title": "Erweiterte Konzepte und Bereitstellung",
+        "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "beeb8ce088ed8313329dd56e",
-        "title": "Advanced Concepts",
-        "parentGenre": null
-      },
-      {
-        "_id": "9784459f1e4b30167e3b56c1",
-        "title": "Advanced Concepts",
-        "parentGenre": null
-      },
-      {
-        "_id": "16518fb0a2375f8c306f8979",
-        "title": "Einführung in React: Das große Tutorial zum Mitmachen",
-        "parentGenre": null
-      },
-      {
-        "_id": "b66b44ace70e949c14f79e34",
-        "title": "Die Basics der JavaScript Library",
-        "parentGenre": null
-      },
-      {
-        "_id": "22bec6523eb18d12efe62b78",
-        "title": "Das große React-Tutorial",
-        "parentGenre": null
-      },
-      {
-        "_id": "f76e4150e6445386c3b45410",
-        "title": "React Hooks - React wird funktionaler",
-        "parentGenre": null
-      },
-      {
-        "_id": "c4fb37876313d1aedb20a8e0",
-        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr - Teil 1",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "50bd42115054aca65a659753",
-        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr - Teil 2",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "XRN7ubJksapX9KKuS",
-        "title": "Neues aus der React-Welt - React 19 und mehr",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "9d05a1547278a700fbae1f54",
-        "title": "Styling in React",
-        "parentGenre": null
-      },
-      {
-        "_id": "1eed7659c187283042e70e2a",
-        "title": "Das React-Ökosystem: ein Tag mit dem TanStack, React Router und vielem mehr",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "xfHqbbFDzqZtAjjDv",
-        "title": "React Update 2023",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "f0ad7f7aa00c25af168bcbd7",
-        "title": "Filtern und Sortieren – auf dem Client oder Server?",
-        "parentGenre": null
-      },
-      {
-        "_id": "905bad9795ffdee2e2dc3318",
-        "title": "Datenhaltung, Routing und Tests",
-        "parentGenre": null
-      },
-      {
-        "_id": "5dAbrLZZLLPttLAF2",
-        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen - Teil 1",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "JRffp96XCKXRkDWHe",
-        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen - Teil 2",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3641942ee30fa1c8005e0ae5",
-        "title": "Styling in React",
-        "parentGenre": null
-      },
-      {
-        "_id": "643589f719382724fde96eb2",
-        "title": "React Server Components in Action: Von der Theorie zur Praxis",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "63630464d064047ca7173645",
-        "title": "React 16 im Überblick",
-        "parentGenre": null
-      },
-      {
-        "_id": "kNAYpgBmvsYqXusMC",
-        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen - Teil 1",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "ec2e8a531542f50fb58027b3",
-        "title": "Höher, schneller, weiter",
-        "parentGenre": null
-      },
-      {
-        "_id": "pRAJwvarr4rpbqXeu",
-        "title": "React – des Kaisers immer neuere Kleider",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3a8592b50b969ebcd5821ef7",
-        "title": "TanStack Query",
-        "parentGenre": null
-      },
-      {
-        "_id": "7f3899f18afea5f38dbb53a4",
-        "title": "TanStack Query",
-        "parentGenre": null
-      },
-      {
-        "_id": "c5be387e5d7a25bdc72f4758",
-        "title": "Zentrales State Management in React",
-        "parentGenre": null
-      },
-      {
-        "_id": "zcD6t3LfmNAxh882C",
-        "title": "Einstieg in React: Ein interaktiver Workshop für WebentwicklerInnen -  Teil 2",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "AAiv8JizeTg38AuKS",
-        "title": "Neues in React - React Update in 2022",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "22db4c56448b6111f5cd4ca3",
-        "title": "React 18 unter der Lupe: Concurrent Rendering und weitere Neuigkeiten",
-        "parentGenre": null
-      },
-      {
-        "_id": "579a7cb75305552d0204ca89",
-        "title": "Bookmarks selbst gemacht",
-        "parentGenre": null
-      },
-      {
-        "_id": "q4q3W4BHrY6ZxJKGc",
-        "title": "React: Ein Blick zurück und nach vorne",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "821904c4cbf0e3046468b127",
-        "title": "Olis bunte Welt der IT",
-        "parentGenre": null
+        "_id": "27migMB7Nwi92F3Fi",
+        "title": "Rendern und Datenmanagement",
+        "parentGenre": "TUTORIAL"
       }
     ]
   },

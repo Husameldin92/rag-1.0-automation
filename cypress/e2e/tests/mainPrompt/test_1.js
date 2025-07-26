@@ -57,7 +57,6 @@ function runTest(query, language, endpoint_name, file_suffix, useSearchIcon = fa
   // Wait for response
   cy.wait('@discoveryQuery', { timeout: 50000 })
   cy.wait(50000) // Wait for AI response to load
-  
 
   // Capture main answer - try both selectors
   cy.get('body').then(($body) => {

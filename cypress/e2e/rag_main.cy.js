@@ -40,7 +40,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
         test2()
     })
 
-        it.only('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
+        it('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
         test3()
     })
 

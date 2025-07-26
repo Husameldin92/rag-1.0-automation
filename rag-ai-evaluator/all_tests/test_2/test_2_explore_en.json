@@ -1,0 +1,74 @@
+{
+  "test_id": "test_002_explore_en",
+  "query": "Tell me about React useEffect from tutorials only.",
+  "endpoint": "reader_explore_text",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "gpt-4.1-mini keyword: React useEffect tutorials\nReact's useEffect hook is a fundamental feature for managing side effects in functional components. It allows you to perform operations such as data fetching, subscriptions, or manually changing the DOM after React has updated the UI. Here are the key concepts and usage patterns of useEffect based on the tutorials:\n\nPurpose of useEffect:useEffect is used to handle side effects in React components. Side effects include operations that affect something outside the scope of the function component, like network requests, timers, or interacting with browser APIs. It helps keep the component logic clean and declarative by separating side effects from rendering logic.[1.]\n\nBasic Usage:You call useEffect inside your component to run a function after the component renders. This function can optionally return a cleanup function to run when the component unmounts or before the effect runs again.[1.]\n\nDependency Array:useEffect accepts a second argument, an array of dependencies. The effect runs after the first render and after any render where one of the dependencies has changed. If you pass an empty array, the effect runs only once after the initial render, similar to componentDidMount in class components.[1.]\n\nCleanup Function:If your effect creates subscriptions or timers, you can return a cleanup function from the effect to clean up before the component unmounts or before the effect runs again. This prevents memory leaks and unwanted behavior.[1.]\n\nExample: Timer with useEffect:A common example is setting up a timer inside useEffect and clearing it in the cleanup function to avoid multiple timers running simultaneously or timers running after the component is unmounted.[1.]\n\nAvoiding Common Pitfalls:  \n\nAlways specify dependencies correctly to avoid unnecessary re-renders or missing updates.  \nAvoid side effects directly in the render phase; use useEffect instead.  \nBe mindful of stale closures by including all necessary dependencies or using refs.[1.]\n\n\nIntegration with State and Props:useEffect works closely with component state and props. When state or props change, effects can run to respond to those changes, such as fetching new data or updating the DOM.[1.]\n\n\nIn summary, useEffect is the React hook designed to handle side effects in functional components, replacing lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components. It provides a declarative way to manage effects with control over when they run and how to clean them up, ensuring efficient and predictable component behavior.\nIf you want to dive deeper, the tutorials on React development cover practical examples of useEffect usage, including managing timers, data fetching, and integrating with component state and props for dynamic UI updates.[1.]\nReact's useEffect hook is a fundamental feature for managing side effects in functional components. It allows you to perform operations such as data fetching, subscriptions, or manually changing the DOM after React has updated the UI. Here are the key concepts and usage patterns of useEffect based on the tutorials:\n\nPurpose of useEffect:useEffect is used to handle side effects in React components. Side effects include operations that affect something outside the scope of the function component, like network requests, timers, or interacting with browser APIs. It helps keep the component logic clean and declarative by separating side effects from rendering logic.1. Rendering\n\nBasic Usage:You call useEffect inside your component to run a function after the component renders. This function can optionally return a cleanup function to run when the component unmounts or before the effect runs again.1. Rendering\n\nDependency Array:useEffect accepts a second argument, an array of dependencies. The effect runs after the first render and after any render where one of the dependencies has changed. If you pass an empty array, the effect runs only once after the initial render, similar to componentDidMount in class components.1. Rendering\n\nCleanup Function:If your effect creates subscriptions or timers, you can return a cleanup function from the effect to clean up before the component unmounts or before the effect runs again. This prevents memory leaks and unwanted behavior.1. Rendering\n\nExample: Timer with useEffect:A common example is setting up a timer inside useEffect and clearing it in the cleanup function to avoid multiple timers running simultaneously or timers running after the component is unmounted.1. Rendering\n\nAvoiding Common Pitfalls:  \n\nAlways specify dependencies correctly to avoid unnecessary re-renders or missing updates.  \nAvoid side effects directly in the render phase; use useEffect instead.  \nBe mindful of stale closures by including all necessary dependencies or using refs.1. Rendering\n\n\nIntegration with State and Props:useEffect works closely with component state and props. When state or props change, effects can run to respond to those changes, such as fetching new data or updating the DOM.1. Rendering\n\n\nIn summary, useEffect is the React hook designed to handle side effects in functional components, replacing lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components. It provides a declarative way to manage effects with control over when they run and how to clean them up, ensuring efficient and predictable component behavior.\nIf you want to dive deeper, the tutorials on React development cover practical examples of useEffect usage, including managing timers, data fetching, and integrating with component state and props for dynamic UI updates.1. Rendering",
+  "discovery_data": {
+    "query_sent": "Tell me about React useEffect from tutorials only.",
+    "results": [
+      {
+        "_id": "f84097699062ea49829a9ba7",
+        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "aa3c41758c254f2c90216dd0",
+        "title": "Einstieg in React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "554842349c829ccc79d45375",
+        "title": "Testen und Frontendarchitektur",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e8e5ad075ba0a3ff7a0c6faf",
+        "title": "Navigation und Web Components",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "e1d26dbff09906066b1da018",
+        "title": "Rendering",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "ff4Dt9s49xPhkHtMv",
+        "title": "Einstieg in Next.js",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "eGRsyb7HRAKGBB9k6",
+        "title": "Routing und Navigation",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "RHCyFcwYbMjqqYgkS",
+        "title": "PWA mit React",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "W9H9MKNhnkmaDJHCf",
+        "title": "Ausblick/Fazit",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "r4NMSW8BWMtF2RnBq",
+        "title": "Teil 4: Angular",
+        "parentGenre": "TUTORIAL"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Content Type Filtering - Tutorials Only",
+    "required_checks": [
+      "The AI response must clearly indicate that the content is from tutorials.",
+      "No mention or citation of other content types (e.g., conferences, camps, slides, magazines) should appear in the response.",
+      "The explanation must be educational and appropriate for a tutorial format (step-by-step, practical, or beginner-friendly)."
+    ]
+  }
+}
