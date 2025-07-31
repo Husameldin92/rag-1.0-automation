@@ -1,9 +1,7 @@
 const https = require('https');
-const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-// Test questions for stress testing
 const questions = [
   'What are the main features of Angular Signals in version 17?',
   'Tell me about React useEffect from tutorials only.',
@@ -14,7 +12,6 @@ const questions = [
   'Give me something cool about tech.',
   'How do I use Signals in Angular 13?',
   'What changed in Angular 17 Signals?',
-  'How do I use Signals in Angular?',
   'Explain Observables in Angular 15.',
   'How does Angular handle routing?',
   'How does Next.js handle dynamic routing?',
@@ -30,10 +27,9 @@ const questions = [
   'How do I implement GraphQL caching?'
 ];
 
-// Function to make API request
+// API request
 function makeAPIRequest(query, testNumber) {
   return new Promise((resolve, reject) => {
-    // GraphQL query - simplified for stress testing
     const graphqlQuery = {
       query: `query ($question: String!) {
         discovery(question: $question) {
@@ -79,12 +75,12 @@ function makeAPIRequest(query, testNumber) {
       res.on('end', () => {
         const duration = Date.now() - startTime;
         
-        // Parse JSON response if possible
+        // Parse JSON response 
         let parsedResponse = null;
         try {
           parsedResponse = JSON.parse(responseData);
         } catch (e) {
-          // Keep raw response if JSON parsing fails
+          
         }
         
         resolve({
@@ -132,19 +128,17 @@ async function runStressTest(numberOfTests = 100) {
   }
   fs.mkdirSync(resultsDir);
   
-  console.log(`📁 Results will be saved to: ${resultsDir}\n`);
-
   const promises = [];
   
   // Create test requests
   for (let i = 1; i <= numberOfTests; i++) {
-    const question = questions[(i - 1) % questions.length]; // Cycle through questions
+    const question = questions[(i - 1) % questions.length]; 
     promises.push(makeAPIRequest(question, i));
   }
 
   const startTime = Date.now();
   
-  // Execute all requests simultaneously
+  // Execute all requests
   try {
     const results = await Promise.all(promises);
     const totalDuration = Date.now() - startTime;
@@ -169,8 +163,6 @@ async function runStressTest(numberOfTests = 100) {
       
       fs.writeFileSync(filepath, JSON.stringify(resultData, null, 2));
     });
-    
-
     
     // Analyze results
     const successful = results.filter(r => r.success).length;
