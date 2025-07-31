@@ -115,9 +115,7 @@ function makeAPIRequest(query, testNumber) {
 
 // Main stress test function
 async function runStressTest(numberOfTests = 100) {
-  console.log(`🚀 Starting backend stress test with ${numberOfTests} concurrent requests...`);
-  console.log(`📊 Each request will hit your backend API directly`);
-  console.log(`⚡ No browsers, just pure API load testing\n`);
+  console.log(`🚀 Starting backend stress test with ${numberOfTests} requests...`);
 
   // Create results directory with timestamp
   const timestamp = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').split('.')[0];
@@ -128,19 +126,29 @@ async function runStressTest(numberOfTests = 100) {
   }
   fs.mkdirSync(resultsDir);
   
-  const promises = [];
-  
-  // Create test requests
-  for (let i = 1; i <= numberOfTests; i++) {
-    const question = questions[(i - 1) % questions.length]; 
-    promises.push(makeAPIRequest(question, i));
-  }
-
+  const results = [];
   const startTime = Date.now();
   
-  // Execute all requests
+  
   try {
-    const results = await Promise.all(promises);
+    for (let i = 1; i <= numberOfTests; i++) {
+      const question = questions[(i - 1) % questions.length];
+      
+     // console.log(`🚀 Sending request ${i}/${numberOfTests}: "${question.substring(0, 100)}..."`);
+      
+      // Make the API request
+      const requestTimestamp = new Date().toISOString();
+      const result = await makeAPIRequest(question, i);
+      result.requestTimestamp = requestTimestamp;
+      results.push(result);
+      
+      /* Add gap between requests 
+      if (i < numberOfTests) {
+        await new Promise(resolve => setTimeout(resolve, 100)); 
+      }
+      */
+    }
+    
     const totalDuration = Date.now() - startTime;
     
     // Save individual result files
@@ -156,7 +164,7 @@ async function runStressTest(numberOfTests = 100) {
         success: result.success,
         duration: result.duration,
         responseSize: result.responseSize,
-        timestamp: new Date().toISOString(),
+        timestamp: result.requestTimestamp,
         response: result.response,
         error: result.error || null
       };
@@ -180,7 +188,6 @@ async function runStressTest(numberOfTests = 100) {
     console.log(`⏱️  Total Time: ${totalDuration}ms`);
     console.log(`🔥 Fastest: ${minDuration}ms`);
     console.log(`🐌 Slowest: ${maxDuration}ms`);
-    console.log(`💪 Requests/Second: ${(numberOfTests / (totalDuration / 1000)).toFixed(1)}`);
     
     console.log(`\n💾 FILES SAVED:`);
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
@@ -202,8 +209,8 @@ async function runStressTest(numberOfTests = 100) {
       console.log(`   • Network timeouts`);
     }
     
-  } catch (error) {
-    console.error('❌ Stress test failed:', error);
+  } catch (error) { 
+    console.error('❌ Stress test failed:', error); 
   }
 }
 
