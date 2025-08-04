@@ -5,7 +5,21 @@ require("dotenv").config();
 
 const TESTS_DIR = path.join(__dirname, "all_tests");
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// Azure OpenAI configuration
+const apiKey = process.env.AZURE_OPENAI_API_KEY;
+const apiVersion = "2024-04-01-preview";
+const endpoint = "https://swedishopenaibook.openai.azure.com/";
+const modelName = "gpt-4o-mini";
+const deployment = "gpt-4o-mini";
+
+const openai = new OpenAI({
+  apiKey: apiKey,
+  baseURL: `${endpoint}openai/deployments/${deployment}`,
+  defaultQuery: { 'api-version': apiVersion },
+  defaultHeaders: {
+    'api-key': apiKey,
+  },
+});
 
 // Ensure all_tests directory exists
 if (!fs.existsSync(TESTS_DIR)) {
@@ -110,9 +124,9 @@ RESPONSE FORMAT:
 Be thorough but ensure your evaluation is based strictly on the provided criteria.
 `;
 
-          // Call OpenAI
+          // Call Azure OpenAI
           const result = await openai.chat.completions.create({
-            model: "gpt-4o",
+            model: deployment,
             messages: [
               { role: "system", content: systemPrompt },
               { role: "user", content: userPrompt },
