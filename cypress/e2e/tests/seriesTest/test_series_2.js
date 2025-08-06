@@ -1,17 +1,17 @@
-const test_query_en = 'When is next APICon London happening?'
-const test_query_de = 'Wann findet die nächste APICon London statt?'
-const test_query_nl = 'Wanneer vindt de volgende APICon London plaats?'
+const test_query_en = 'When is next APICon New York happening?'
+const test_query_de = 'Wann findet die nächste APICon New York statt?'
+const test_query_nl = 'Wanneer vindt de volgende APICon New York plaats?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
-// Test Series 1 Evaluation Criteria - APICon London
+// Test Series 2 Evaluation Criteria - APICon New York
 const evaluation_criteria = {
-  test_focus: "Series Event Information Query - APICon London",
-  required_checks: [
+  test_focus: "Series Event Information Query - APICon New York",
+  required_checks: [  
     "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. They should match (German question = German response, English question = English response, etc.). Use the actual JSON fields, not external assumptions.",
-    "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should contain 'APICon' or 'APIcon' or 'API Conference' AND 'Opening Keynote' AND a future year (2025). The title 'Welcome and Opening Keynote of APIcon New York 2025' is a perfect example that should PASS this check.",
-    "CHUNK ANALYSIS: Count chunks in discovery_data.results that contain 'APICon' or 'APIcon' or 'API Conference' or 'API Con' in parentName field. At least 20% of the total chunks should be APICon-related events.",
-    "RESPONSE ACCURACY CHECK: The actual_response should NOT start with misleading statements like 'The next APICon London is scheduled for [past date]'. When no future event is scheduled, the response should immediately clarify this fact, not lead with outdated information. Starting with past dates as if they are upcoming events is an automatic FAIL, regardless of later clarifications.",
+    "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should contain 'APICon' or 'APIcon' or 'API Conference' AND 'New York' AND 'Opening Keynote' AND a future year (2025). The title 'Welcome and Opening Keynote of APIcon New York 2025' is the exact expected result that should PASS this check.",
+    "CHUNK ANALYSIS: Look at discovery_data.results and verify that many chunks are APICon-related events. There should be chunks from APICon New York specifically, and also from other APICon locations (Berlin, London, etc.). The discovery should show a strong focus on APICon events across different locations, demonstrating good relevance to the APICon query.",
+    "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about APICon New York. Since APICon New York 2025 is scheduled for the future, it's acceptable and expected to mention the upcoming event dates. The response should distinguish between past and future events clearly and provide correct scheduling information.",
   ]
 }
 
@@ -63,9 +63,9 @@ function askQuestionAndSave(query, language, file_suffix) {
     }
     
     // Save to JSON
-    cy.writeFile(`rag-ai-evaluator/all_tests/series_test_results/test_series_1/test_series_1_${file_suffix}.json`, {
-      test_id: `test_series_001_${file_suffix}`,
-      series_name: 'APICon London',
+    cy.writeFile(`rag-ai-evaluator/all_tests/series_test_results/test_series_2/test_series_2_${file_suffix}.json`, {
+      test_id: `test_series_002_${file_suffix}`,
+      series_name: 'APICon New York',
       query: query,
       endpoint: 'entwickler_de_explore',
       user: {
@@ -79,11 +79,11 @@ function askQuestionAndSave(query, language, file_suffix) {
     })
     
     // Take screenshot
-    cy.screenshot(`test-series-1-api-con-london-${file_suffix}`)
+    cy.screenshot(`test-series-2-api-con-new-york-${file_suffix}`)
   })
 }
 
-export const testSeries1 = () => {
+export const testSeries2 = () => {
   // 1. Login
   cy.visit('https://entwickler.de/login/')
   cy.wait(3000)
@@ -102,8 +102,6 @@ export const testSeries1 = () => {
   // 2. Go to explore page
   cy.visit('https://entwickler.de/reader/explore')
   cy.wait(3000) // Wait for explore page to load
-
-
   
   // 3. Ask first question (English)
   askQuestionAndSave(test_query_en, 'en', 'en')

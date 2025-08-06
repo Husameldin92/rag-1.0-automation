@@ -1,0 +1,27 @@
+## 🔍 EVALUATION ANALYSIS
+
+### Criterion Assessment:
+
+1. **LANGUAGE CHECK**: 
+   - The `discovery_data.query_sent` is not explicitly provided, but based on the actual response, it is in German. The `actual_response` is also in German. Therefore, they match in language.
+   - **Result**: ✅ PASSED
+
+2. **FIRST CHUNK CHECK**: 
+   - The first chunk title is "Welcome and Opening Keynote of APIcon New York 2025". This title contains 'APICon', 'New York', 'Opening Keynote', and a future year (2025). 
+   - **Result**: ✅ PASSED
+
+3. **CHUNK ANALYSIS**: 
+   - The provided sample chunks include one from APICon New York 2025 and several from APICon Berlin 2025 and API Conference London 2025. However, the total number of chunks related to APICon events is limited, with only one chunk explicitly mentioning APICon New York.
+   - While there are chunks from other APICon locations, the focus on APICon New York is weak, as there is only one relevant chunk.
+   - **Result**: ❌ FAILED
+
+4. **RESPONSE ACCURACY CHECK**: 
+   - The actual response accurately states that APICon New York is scheduled for September 27 to 30, 2025, which is indeed a future event. It also mentions details about the event format and early bird offers, which are relevant and accurate.
+   - The response clearly distinguishes between past and future events and provides correct scheduling information.
+   - **Result**: ✅ PASSED
+
+### 📊 OVERALL RESULT:
+**❌ FAILED** - The evaluation failed primarily due to the lack of sufficient APICon-related chunks, specifically from APICon New York.
+
+### 💡 SUMMARY:
+The response demonstrates strong language consistency and provides accurate details about the upcoming APICon New York 2025 event. However, it falls short in the chunk analysis criterion, as there is insufficient representation of APICon-related events, particularly from the New York location. To improve, the response could include more relevant chunks from APICon New York and enhance the overall relevance to the query.

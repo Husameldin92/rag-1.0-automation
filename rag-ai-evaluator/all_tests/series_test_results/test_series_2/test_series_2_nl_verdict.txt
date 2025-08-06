@@ -1,0 +1,28 @@
+## 🔍 EVALUATION ANALYSIS
+
+### Criterion Assessment:
+
+1. **LANGUAGE CHECK**: 
+   - The language of `discovery_data.query_sent` is not explicitly provided in the data, but the `actual_response` is in Dutch. Assuming the query was in Dutch, the response matches the language. 
+   - **Assessment**: ✅ PASSED
+
+2. **FIRST CHUNK CHECK**: 
+   - The title of the first chunk is "Welcome and Opening Keynote of APIcon New York 2025". This title contains 'APICon', 'New York', 'Opening Keynote', and a future year (2025). 
+   - **Assessment**: ✅ PASSED
+
+3. **CHUNK ANALYSIS**: 
+   - The discovery data contains a total of 36 chunks. Among these, there are multiple references to APICon events, including "Welcome and Opening Remarks APICon Berlin 2025" and "Welcome and Opening Keynote of APIcon New York 2025". 
+   - Additionally, there are chunks from other APICon locations, such as Berlin, indicating a strong focus on APICon events across different locations. 
+   - **Assessment**: ✅ PASSED
+
+4. **RESPONSE ACCURACY CHECK**: 
+   - The `actual_response` states that the next APICon New York will take place on September 30, 2025, and correctly identifies it as the date for the opening keynote. Given that today's date is August 6, 2025, this event is indeed in the future. The response also distinguishes between past and future events, as it mentions that previous events are no longer bookable. 
+   - **Assessment**: ✅ PASSED
+
+### 📊 OVERALL RESULT:
+**✅ PASSED** 
+
+The evaluation shows that all criteria have been met satisfactorily. The response is accurate, relevant, and well-aligned with the query regarding APICon New York 2025.
+
+### 💡 SUMMARY:
+The strengths of the response include its accurate information regarding the upcoming APICon New York event, the appropriate language usage, and a strong focus on APICon-related content across various locations. There are no significant areas for improvement noted in this evaluation, as all criteria were thoroughly satisfied.

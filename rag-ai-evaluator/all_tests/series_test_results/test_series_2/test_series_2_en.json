@@ -1,0 +1,242 @@
+{
+  "test_id": "test_series_002_en",
+  "series_name": "APICon New York",
+  "query": "When is next APICon New York happening?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "The next APICon New York is scheduled for September 30, 2025. This is confirmed by the document titled 'Welcome and Opening Keynote of APIcon New York 2025' which states the event date as 2025-09-30T07:00:00.000Z [1.].\nAdditionally, there are other talks and sessions from APICon New York 2025 scheduled around this date, confirming the event timing in late September 2025 [2.].\nIn conclusion, the next APICon New York will take place on September 30, 2025.\n\nSources\n\nWelcome and Opening Keynote of APIcon New York 2025 This talk is the Welcome and Opening Keynote of APIcon New York 2025 by the Program Chair Sebastian Meyen, marking the start of the event scheduled for September 30, 2025. ℹ️ This talk of APIcon New York 2025 was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nWelcome and Opening IJS New York 2024 This is the Welcome and Opening session of International JavaScript New York 2024 by Program Chair Sebastian Meyen, held on October 8, 2024, introducing the conference and its hybrid format. ℹ️ This talk of International JavaScript New York 2024 was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\n\n\nMore on this Topic\n\nWelcome and Opening DevOpsCon and JAX New York 2024 Opening of DevOpsCon and JAX New York 2024 with an introduction by Leeanna Seidler, highlighting the conference schedule, hybrid format, and networking opportunities including an expo reception with free beer. ℹ️ This talk of DevOpsCon New York 2024 was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nLeading the future, AI and APIs, a powerful duo This session discusses the powerful combination of AI and APIs, showing how AI-infused API management solutions can drive business agility and innovation, presented at API Con Berlin 2024. ℹ️ This talk of API Con Berlin 2024 was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nLight weight API Governance: The key component to enable platform engineering in 2024 A presentation on lightweight API governance as a key enabler for platform engineering in 2024, sharing learnings from implementations in business and international organizations, from API Conference London 2024. ℹ️ This talk of API Conference London 2024 was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nSet technology trends with API experts (and podcasters) Tim & David at API Con A live event featuring API experts David Martinez and Tim Biedenkapp discussing technology trends and API topics, with references to API Con Berlin in October. ℹ️ Access details for this content could not be determined from your current profile.",
+  "discovery_data": {
+    "query_sent": "When is next APICon New York happening?",
+    "results": [
+      {
+        "_id": "23134b4a74b51e039ba1384c",
+        "title": "Welcome and Opening Keynote of APIcon New York 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APIcon New York 2025"
+      },
+      {
+        "_id": "f86a7b5e76d218d9b80a0365",
+        "title": "Welcome and Opening Keynote of JAX 2026",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2026"
+      },
+      {
+        "_id": "5837aa6440335f26fe8ea25f",
+        "title": "Sichere Webanwendungen: Die OWASP Top Ten 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2025"
+      },
+      {
+        "_id": "091f0f3498b4903b8e110e3e",
+        "title": "Begrüßung und Eröffnung der W-JAX 2025 in München",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2025"
+      },
+      {
+        "_id": "a0e5eaefc01d1e4e87a28bbe",
+        "title": "Welcome and Opening Remarks APICon Berlin 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "451da858439ad9dc1838e9ad",
+        "title": "A Brief History of Engineering, 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "6bcc9cf345418f0bd01d7a60",
+        "title": "Begrüßung und Eröffnung zum MAD Summit 2025 in Berlin",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "MAD Summit Berlin 2025"
+      },
+      {
+        "_id": "bfd0075394e4f30296228881",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "459821ffb3fc33bd97922778",
+        "title": "Welcome and Opening JAX London 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX London"
+      },
+      {
+        "_id": "a019e930853842d9dd56ea82",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "b67a7363e2d28680b4b2660e",
+        "title": "Journeying Through Data Spaces -  A New Path to Interoperability?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "c79ffdbc9ce342cb7869c7d7",
+        "title": "KI-Entwicklung 2025: Tools, Trends und Modelle für die Zukunft der Softwareentwicklung",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2025"
+      },
+      {
+        "_id": "a8c883bbce65004c55d35b63",
+        "title": "Platform Engineering for Software Developers and Architects",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "2ae76924ffa96f18d92e4ade",
+        "title": "Journeying Through Data Spaces - New Path to Interoperability?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "2aa2de7d87efab74d62b460a",
+        "title": "Practical API Security: Attack and Defense",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "8a64e375982e7d308aac64ee",
+        "title": "Postman can do that? Discover the end-to-end API platform hiding in plain sight",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "fc68e259eb1e1be4214ce377",
+        "title": "Workshop: Build, Secure, and Optimize Your API Product through Lean Inception and Gamification [Monday October 20th]",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "2370252ef0702489c0c74fa5",
+        "title": "Welcome and Opening Keynote of International JavaScript New York 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "International JavaScript New York 2025"
+      },
+      {
+        "_id": "5fb19c43ac790a1459fabba3",
+        "title": "Scaling APIs Like a City That Never Sleeps: Building Resilient APIs in Azure",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APIcon New York 2025"
+      },
+      {
+        "_id": "9451743a76a51bc8a6c7629a",
+        "title": "Kubernetes: One Size Fits All – the Platform for Everything  (even Containers)",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Berlin 2025"
+      },
+      {
+        "_id": "R5cumAyTcS8vX8rpm",
+        "title": "Architecture isn’t Kubernetes",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon New York 2024"
+      },
+      {
+        "_id": "cc5ccfb94a36933ded7497a4",
+        "title": "Architecture isn’t Kubernetes",
+        "parentGenre": "COURSE",
+        "parentName": "Set Sail and Build Fast With Kubernetes"
+      },
+      {
+        "_id": "b343cc8fe7083c4e91a877aa",
+        "title": "Introduction and Opening of DevOpsCon Singapore 2024 /International Javascript Conference Singapore 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Singapore 2024"
+      },
+      {
+        "_id": "13ef7f13b1dad54df524c828",
+        "title": "You Can't Do AI without Quality APIs",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "aef715f37a22dd922331f290",
+        "title": "Welcome and Opening DevOpsCon and JAX New York 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon New York 2024"
+      },
+      {
+        "_id": "921790f698a8a3b9a1cd7bab",
+        "title": "Code, Sleep, Repeat: Breaking the Burnout Cycle in Tech",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Berlin 2025"
+      },
+      {
+        "_id": "ed49eba97cc16b7dbac5cd8c",
+        "title": "Vertical AI Agents in API-Based Integrations",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "TWobLoJKvK7X8ddHW",
+        "title": "Mastering Serverless and API-Centric Designs",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Con Berlin 2024"
+      },
+      {
+        "_id": "4093f3aa1fd7678b4b902226",
+        "title": "Welcome and Opening IJS New York 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "International JavaScript New York 2024"
+      },
+      {
+        "_id": "8c7793b0f78858ffab69f581",
+        "title": "Leading the future, AI and APIs, a powerful duo",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Con Berlin 2024"
+      },
+      {
+        "_id": "8d5024cf652e36e29887d1ee",
+        "title": "Set technology trends with API experts (and podcasters) Tim & David at API Con",
+        "parentGenre": "COURSE",
+        "parentName": "Effizientes API-Design"
+      },
+      {
+        "_id": "e2d523f6b1c8feb2e7eb24e1",
+        "title": "Welcome and Opening MLcon New York 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "ML Con New York 2024"
+      },
+      {
+        "_id": "24KTTjGkWxstYugfP",
+        "title": "Moonshot - Using Continuous Learning to Unlock Breakthrough Innovation",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon San Diego 2024"
+      },
+      {
+        "_id": "btuJXwqiLnizT4tjk",
+        "title": "Light weight API Governance: The key component to enable platform engineering in 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2024"
+      },
+      {
+        "_id": "qSEgd5EotoSHMN3Dk",
+        "title": "Welcome to ML Con 2024 in Munich & opening keynote: 90% Human (a new relationship between ML and UX design)",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "ML Con Munich 2024"
+      },
+      {
+        "_id": "3vktZZJrLA6QKcars",
+        "title": "AMA (ask me anything) Session with the ML Experts",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "ML Con Munich 2024"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - APICon New York",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. They should match (German question = German response, English question = English response, etc.). Use the actual JSON fields, not external assumptions.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should contain 'APICon' or 'APIcon' or 'API Conference' AND 'New York' AND 'Opening Keynote' AND a future year (2025). The title 'Welcome and Opening Keynote of APIcon New York 2025' is the exact expected result that should PASS this check.",
+      "CHUNK ANALYSIS: Look at discovery_data.results and verify that many chunks are APICon-related events. There should be chunks from APICon New York specifically, and also from other APICon locations (Berlin, London, etc.). The discovery should show a strong focus on APICon events across different locations, demonstrating good relevance to the APICon query.",
+      "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about APICon New York. Since APICon New York 2025 is scheduled for the future, it's acceptable and expected to mention the upcoming event dates. The response should distinguish between past and future events clearly and provide correct scheduling information."
+    ]
+  }
+}
