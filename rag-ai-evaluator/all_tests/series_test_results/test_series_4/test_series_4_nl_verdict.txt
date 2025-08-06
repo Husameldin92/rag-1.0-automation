@@ -1,0 +1,31 @@
+## 🔍 EVALUATION ANALYSIS
+
+### Criterion Assessment:
+
+1. **LANGUAGE CHECK**: 
+   - The query sent is in Dutch: "Wanneer vindt de volgende BASTA! Spring plaats?" 
+   - The actual response is also in Dutch: "De volgende BASTA! Spring vindt plaats in 2026 in Frankfurt."
+   - **Result**: ✅ PASSED
+
+2. **FIRST CHUNK CHECK**: 
+   - The expected title at position 0 is "Begrüßung zur BASTA! Spring 2026 in Frankfurt."
+   - In the provided discovery data, this title is indeed found at position 0.
+   - **Result**: ✅ PASSED
+
+3. **CHUNK ANALYSIS**: 
+   - The discovery data includes multiple chunks related to BASTA events, including "Begrüßung zur BASTA! Spring 2026 in Frankfurt" and several chunks from BASTA! Spring 2025 and BASTA! Herbst 2025.
+   - The presence of these chunks demonstrates a reasonable focus on BASTA events, fulfilling the relevance requirement for the query.
+   - **Result**: ✅ PASSED
+
+4. **RESPONSE ACCURACY CHECK**: 
+   - The actual response accurately states that the next BASTA! Spring will take place in 2026 in Frankfurt, which is a future event considering today's date (August 6, 2025).
+   - It provides relevant information about the event's programming and highlights, distinguishing between past and future events appropriately.
+   - **Result**: ✅ PASSED
+
+### 📊 OVERALL RESULT:
+**✅ PASSED** 
+
+All criteria have been thoroughly evaluated and met. The response is coherent, relevant, and accurate concerning the query about the next BASTA! Spring event.
+
+### 💡 SUMMARY:
+The AI response effectively addresses the user's query in the appropriate language, provides accurate and relevant information about the upcoming BASTA! Spring 2026, and includes a strong focus on related BASTA events. There are no significant areas for improvement noted in this evaluation.

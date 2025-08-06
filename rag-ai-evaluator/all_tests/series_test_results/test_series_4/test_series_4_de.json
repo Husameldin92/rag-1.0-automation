@@ -1,0 +1,158 @@
+{
+  "test_id": "test_series_004_de",
+  "series_name": "BASTA! Spring",
+  "query": "Wann findet die nächste BASTA! Spring statt?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "Die nächste BASTA! Spring findet im Jahr 2026 statt. Genauer gesagt beginnt die BASTA! Spring 2026 in Frankfurt am 1. März 2026 mit einem vollen Programm über mehrere Tracks. An diesem Tag werden wichtige Informationen über den Ablauf der Konferenz geteilt und ein Blick auf die Highlights der kommenden Tage geworfen. [1.]\n\nQuellen\n\nBegrüßung zur BASTA! Spring 2026 in Frankfurt Diese Begrüßung zur BASTA! Spring 2026 in Frankfurt informiert über den Start der Konferenz mit einem vollen Programm auf mehreren Tracks und gibt wichtige Hinweise zum Ablauf sowie einen Ausblick auf die Highlights der Veranstaltung. ⚠️ Dieser Vortrag der BASTA! Spring 2026 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\n\nMehr zu diesem Thema\n\nMitmachen und gewinnen - Wer wird BASTALLIONÄR? Diese Session zur BASTA! Spring 2024 bietet die Quizshow „Wer wird BASTALLIONÄR?“ zum Mitmachen und Gewinnen, die als unterhaltsames Event während der Konferenz stattfand. ℹ️ Dieser Vortrag der BASTA! Spring 2024 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\nBegrüßung zur BASTA! Spring 2023 in Frankfurt und Eröffnungs-Keynote: WebAssembly: Past, Present, Future Die Begrüßung zur BASTA! Spring 2023 in Frankfurt mit Eröffnungs-Keynote zu WebAssembly gibt einen Überblick über den Konferenzstart und thematisiert das Potenzial von WebAssembly über den Browser hinaus. ℹ️ Dieser Vortrag der BASTA! Spring war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\nBegrüßung zur BASTA! Spring 2025 in Frankfurt Die Begrüßung zur BASTA! Spring 2025 in Frankfurt stellt das volle Programm der Konferenz vor, informiert über den Ablauf und gibt einen Ausblick auf die Highlights der Veranstaltung. ℹ️ Dieser Vortrag der BASTA! Spring 2025 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\nBegrüßung zur BASTA! Herbst 2024 in Mainz und Eröffnungskeynote: KI im Softwareentwicklungsprozess Die Begrüßung zur BASTA! Herbst 2024 in Mainz mit Eröffnungskeynote behandelt die Auswirkungen von KI auf den Softwareentwicklungsprozess und stellt Tools vor, die Programmierung mit künstlicher Intelligenz erleichtern. ℹ️ Dieser Vortrag der BASTA! Herbst 2024 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.",
+  "discovery_data": {
+    "query_sent": "Wann findet die nächste BASTA! Spring statt?",
+    "results": [
+      {
+        "_id": "f8e5f0d54d50beb7df120873",
+        "title": "Begrüßung zur BASTA! Spring 2026 in Frankfurt",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2026"
+      },
+      {
+        "_id": "fbae00c0d2d3997691725c61",
+        "title": "Begrüßung und Eröffnung zur BASTA! Herbst 2025 in Mainz",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "877a7d3855387a2fb0d5eb4b",
+        "title": "Begrüßung zur BASTA! Spring 2025 in Frankfurt",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "c858cfa45617df625c80103a",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "3833c67a20607d6f942e606c",
+        "title": "DDD bitte ohne OOP!",
+        "parentGenre": null,
+        "parentName": "Windows Developer 9.2025"
+      },
+      {
+        "_id": "6e8725e36ae76bf9b8b2bc27",
+        "title": "30 Jahre Lernen, Innovation und Community",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "c6ab5aee54e3704145cf8729",
+        "title": "Von Transient zu Singleton: die Geheimnisse der .NET Dependency Injection",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "fabf45f578abc29280f28113",
+        "title": "Die Hürden moderner Kommunikation",
+        "parentGenre": null,
+        "parentName": "Windows Developer 12.2024"
+      },
+      {
+        "_id": "9e7cc1bb718a8b9bac1c9aa8",
+        "title": "C# 13: Neue Funktionen und Ausblick auf C# 14",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "dce7ae663edaa8e06a2be0e9",
+        "title": "Eröffnungskeynote zu Web-Security 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "7bZEmpXNgAzD9zAfr",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "dd3f978e2bf9dcd0e288eea7",
+        "title": "Begrüßung zur BASTA! Herbst 2024 in Mainz und Eröffnungskeynote: KI im Softwareentwicklungsprozess",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "QgCrBPKxFnRAgXB7b",
+        "title": "Von Anfang an sicher: GitHub Advanced Security mit GitHub und Azure DevOps",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "e9iRYrGBqyRm6pkzT",
+        "title": "Mitmachen und gewinnen - Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2024"
+      },
+      {
+        "_id": "psQTeobGtqqPNEeD4",
+        "title": "Aus alt mach neu: Windows-Anwendungen in webbasierte Lösungen mit Wisej.NET verwandeln",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "ybQF9eZvSip3tvK9o",
+        "title": "Begrüßung zur BASTA! Herbst 2023 in Mainz und Eröffnungskeynote: Zurück in die Zukunft: AI-driven Software Development",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "4TgpBEciYhmN3CBcZ",
+        "title": "Mitmachen und gewinnen - Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "dMmqHWbQiSt6fhhfH",
+        "title": "Creating Source Code mit Source Generators",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "HLymm6WZ3JxoyXqxx",
+        "title": "Letzte Hoffnung Browser: Sicherheitsfeatures in modernen Clients",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "QcpcP6Gu3v34ZdH7y",
+        "title": "Collections beyond List<T>",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "4025336cbb327774e275f9a3",
+        "title": "Best Practices, ganz einfach",
+        "parentGenre": null,
+        "parentName": "Windows Developer 9.2023"
+      },
+      {
+        "_id": "jYYNnSmkfNAZGjs7E",
+        "title": "Begrüßung zur BASTA! Spring 2023 in Frankfurt und Eröffnungs-Keynote: WebAssembly: Past, Present, Future",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA Spring"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - BASTA! Spring",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. For this test: if query_sent is 'When is next BASTA! Spring happening?' (English), then actual_response should be in English. If query_sent is 'Wann findet die nächste BASTA! Spring statt?' (German), then actual_response should be in German. If query_sent is 'Wanneer vindt de volgende BASTA! Spring plaats?' (Dutch), then actual_response should be in Dutch. Ignore the language of discovery chunk titles - only compare query_sent vs actual_response languages.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should be exactly 'Begrüßung zur BASTA! Spring 2026 in Frankfurt'. This MUST be the first result (position 0). If this exact title is not in position 0, search through all results and report which position it appears in. If it's not in position 0, this check should FAIL but mention where the correct title was found.",
+      "CHUNK ANALYSIS: Look at discovery_data.results and verify that there are BASTA-related events. Since there may be no other specific sessions for BASTA! Spring 2026, it's acceptable to see chunks from other BASTA events (Herbst, previous Spring events, etc.). The discovery should show a reasonable focus on BASTA events in general, demonstrating relevance to the BASTA query.",
+      "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about BASTA! Spring. Since BASTA! Spring 2026 is scheduled for the future, it's acceptable and expected to mention the upcoming event dates. The response should distinguish between past and future events clearly and provide correct scheduling information."
+    ]
+  }
+}

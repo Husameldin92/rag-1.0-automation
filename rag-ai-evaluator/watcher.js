@@ -85,8 +85,8 @@ USER COMMUNITY EXPERIENCE:
 ${testData.user.communityExperience.join(', ')}
 ` : ''}
 
-Sample chunks (showing first 5 and last 5 for evaluation):
-${testData.discovery_data.results.slice(0, 5).map((chunk, i) => 
+Sample chunks (showing first 10 and last 5 for evaluation):
+${testData.discovery_data.results.slice(0, 10).map((chunk, i) => 
 `Chunk ${i+1}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}, ParentName=${chunk.parentName}`
 ).join('\n')}
 ...

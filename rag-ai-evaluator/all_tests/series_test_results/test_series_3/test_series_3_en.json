@@ -1,0 +1,248 @@
+{
+  "test_id": "test_series_003_en",
+  "series_name": "BASTA! Herbst",
+  "query": "When is next BASTA! Herbst happening?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "The next BASTA! Herbst conference is scheduled to take place in September 2025 in Mainz. Specific dates mentioned for the event include:\n\nThe 'Programmierer und Architekten Workshop: Strategien 2025' on Monday, September 22, 2025.\nThe 'Begrüßung und Eröffnung zur BASTA! Herbst 2025 in Mainz' (Welcome and Opening) on September 23, 2025.\nVarious sessions and workshops are planned throughout the week, including a live-coding workshop on September 26, 2025.\nThe quiz show 'Wer wird BASTALLIONÄR?' is scheduled for Wednesday evening, September 24, 2025.\n\nThus, the BASTA! Herbst 2025 conference spans several days in late September 2025, with the main event starting around September 22 and continuing through the week in Mainz. [1.] [2.] [3.] [4.]\n\nSources\n\nBegrüßung und Eröffnung zur BASTA! Herbst 2025 in Mainz This talk is the welcome and opening session for BASTA! Herbst 2025 in Mainz, providing important information about the conference schedule and highlights over multiple tracks. ⚠️ This talk of BASTA! Herbst 2025 is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nProgrammierer und Architekten Workshop: Strategien 2025 [Montag, 22.09.2025] This is an interactive workshop titled 'Programmierer und Architekten Workshop: Strategien 2025' held on Monday, 22.09.2025 at BASTA! Herbst 2025, focusing on current architecture and software development questions including Microservices, Kubernetes, Serverless, WebAssembly, AI, and LLMs. ⚠️ This talk of BASTA! Herbst 2025 is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nMitmachen und gewinnen – Wer wird BASTALLIONÄR? This talk is the quiz show 'Wer wird BASTALLIONÄR?' at BASTA! Herbst 2025, an interactive event for participants to join and win prizes. ⚠️ This talk of BASTA! Herbst 2025 is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nLive-Coding-Workshop EF Core 10.0: Moderne Datenzugriffsarchitekturen mit Entity Framework Core 10.0 für Ein- und Umsteiger [Freitag, 26.09.2025] This is a live-coding workshop on EF Core 10.0 at BASTA! Herbst 2025, providing a practical introduction to modern data access architectures with Entity Framework Core 10.0 for beginners and those switching from older versions. ⚠️ This talk of BASTA! Herbst 2025 is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\n\n\nMore on this Topic\n\nBegrüßung zur BASTA! Herbst 2024 in Mainz und Eröffnungskeynote: KI im Softwareentwicklungsprozess This talk is the welcome and opening keynote for BASTA! Herbst 2024 in Mainz, focusing on AI in the software development process and presenting tools that facilitate programming with artificial intelligence. ℹ️ This talk of BASTA! Herbst 2024 was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nBegrüßung zur BASTA! Herbst 2023 in Mainz und Eröffnungskeynote: Zurück in die Zukunft: AI-driven Software Development This is the welcome and opening keynote for BASTA! Herbst 2023 in Mainz, highlighting the conference program, the increase in participants, and the extensive session offerings over multiple tracks. ℹ️ This talk of BASTA! 23 Herbst was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nMitmachen und gewinnen - Wer wird BASTALLIONÄR? This talk presents the quiz show 'Wer wird BASTALLIONÄR?' at BASTA! Herbst 2023, a fun interactive event with questions and prizes for participants. ℹ️ This talk of BASTA! 23 Herbst was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nCreating Source Code mit Source Generators This session covers Source Generators in .NET, explaining how code can be generated incrementally during typing in the editor, with practical examples from logging, JSON serialization, and more, presented at BASTA! Herbst 2023. ℹ️ This talk of BASTA! 23 Herbst was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.",
+  "discovery_data": {
+    "query_sent": "When is next BASTA! Herbst happening?",
+    "results": [
+      {
+        "_id": "f8e5f0d54d50beb7df120873",
+        "title": "Begrüßung zur BASTA! Spring 2026 in Frankfurt",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2026"
+      },
+      {
+        "_id": "c858cfa45617df625c80103a",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "2f3bbdaf0e5dcc15935792a2",
+        "title": "OWASP Top Ten 2025: Hat sich das Warten gelohnt?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "1148389204c6f7a8fa11fcf8",
+        "title": "SQL Server 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "9c708c100006666ae0b72882",
+        "title": "Modern Architecture in the Cloud of 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "a21d308f802c3351a48ff127",
+        "title": "Neuigkeiten in .NET 10.0",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "fbae00c0d2d3997691725c61",
+        "title": "Begrüßung und Eröffnung zur BASTA! Herbst 2025 in Mainz",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "3d076d9b744e61f8a9fef01e",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "6e8725e36ae76bf9b8b2bc27",
+        "title": "30 Jahre Lernen, Innovation und Community",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "877a7d3855387a2fb0d5eb4b",
+        "title": "Begrüßung zur BASTA! Spring 2025 in Frankfurt",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "f57889e6ec03c9bb890f3366",
+        "title": "Workshop: Programmierer und Architekten – Strategien 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "4b0f01a27691f515dfa16fc9",
+        "title": "Live-Coding-Workshop EF Core 10.0: Moderne Datenzugriffsarchitekturen mit Entity Framework Core 10.0 für Ein- und Umsteiger [Freitag, 26.09.2025]",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "bc01e8b05e661b32bc346d26",
+        "title": "APIs, aber sicher: Die OWASP API Security Top Ten",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "0039baa6d65338711fcc70e0",
+        "title": "Neuigkeiten in Entity Framework Core 10.0",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "a5ff3d5267904c2cd003f848",
+        "title": "Programmierer und Architekten Workshop: Strategien 2025 [Montag, 22.09.2025]",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "381e2ef31e8e67c4a470fc37",
+        "title": "Oli Sturms Best Practices: Real-World App System Live",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "dce7ae663edaa8e06a2be0e9",
+        "title": "Eröffnungskeynote zu Web-Security 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "438ef946b0f6e29701898e00",
+        "title": "NHibernate – eine Alternative zu EF Core?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "5379c49927087621c3970a4a",
+        "title": "Post-Quantum Cryptography for .NET Developers",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "6219a7a2ce2666332c87d426",
+        "title": "Neuigkeiten für .NET-Webentwickler in ASP.NET Core 10.0 und Blazor 10.0",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2025"
+      },
+      {
+        "_id": "e591b14aecc9b5f00156ecf2",
+        "title": "Die Zukunft der Webentwicklung 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "3833c67a20607d6f942e606c",
+        "title": "DDD bitte ohne OOP!",
+        "parentGenre": null,
+        "parentName": "Windows Developer 9.2025"
+      },
+      {
+        "_id": "fabf45f578abc29280f28113",
+        "title": "Die Hürden moderner Kommunikation",
+        "parentGenre": null,
+        "parentName": "Windows Developer 12.2024"
+      },
+      {
+        "_id": "dd3f978e2bf9dcd0e288eea7",
+        "title": "Begrüßung zur BASTA! Herbst 2024 in Mainz und Eröffnungskeynote: KI im Softwareentwicklungsprozess",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "7bZEmpXNgAzD9zAfr",
+        "title": "Mitmachen und gewinnen – Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "c6ab5aee54e3704145cf8729",
+        "title": "Von Transient zu Singleton: die Geheimnisse der .NET Dependency Injection",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "ybQF9eZvSip3tvK9o",
+        "title": "Begrüßung zur BASTA! Herbst 2023 in Mainz und Eröffnungskeynote: Zurück in die Zukunft: AI-driven Software Development",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "e9iRYrGBqyRm6pkzT",
+        "title": "Mitmachen und gewinnen - Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2024"
+      },
+      {
+        "_id": "psQTeobGtqqPNEeD4",
+        "title": "Aus alt mach neu: Windows-Anwendungen in webbasierte Lösungen mit Wisej.NET verwandeln",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst 2024"
+      },
+      {
+        "_id": "HLymm6WZ3JxoyXqxx",
+        "title": "Letzte Hoffnung Browser: Sicherheitsfeatures in modernen Clients",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "4TgpBEciYhmN3CBcZ",
+        "title": "Mitmachen und gewinnen - Wer wird BASTALLIONÄR?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "CdSYDehwuXZfQKjwt",
+        "title": "Begrüßung zur BASTA! Herbst 2022 in Mainz und Eröffnungs-Keynote: Die Zukunft der Web-Entwicklung",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Herbst Website 2022"
+      },
+      {
+        "_id": "QcpcP6Gu3v34ZdH7y",
+        "title": "Collections beyond List<T>",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "iw5aFGDDu9efYpoWj",
+        "title": "Vintage-Style oder Kernsanierung? Technical Debt in komplexen Software-Projekten",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "dMmqHWbQiSt6fhhfH",
+        "title": "Creating Source Code mit Source Generators",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! 23 Herbst"
+      },
+      {
+        "_id": "4025336cbb327774e275f9a3",
+        "title": "Best Practices, ganz einfach",
+        "parentGenre": null,
+        "parentName": "Windows Developer 9.2023"
+      },
+      {
+        "_id": "jYYNnSmkfNAZGjs7E",
+        "title": "Begrüßung zur BASTA! Spring 2023 in Frankfurt und Eröffnungs-Keynote: WebAssembly: Past, Present, Future",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA Spring"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - BASTA! Herbst",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. For this test: if query_sent is 'When is next BASTA! Herbst happening?' (English), then actual_response should be in English. If query_sent is 'Wann findet die nächste BASTA! Herbst statt?' (German), then actual_response should be in German. If query_sent is 'Wanneer vindt de volgende BASTA! Herbst plaats?' (Dutch), then actual_response should be in Dutch. Ignore the language of discovery chunk titles - only compare query_sent vs actual_response languages.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should be exactly 'Begrüßung und Eröffnung zur BASTA! Herbst 2025 in Mainz' or very similar. If this exact title is not in position 0, search through all results and report which position it appears in. If it's not in position 0, this check should FAIL but mention where the correct title was found.",
+      "CHUNK ANALYSIS: Look at discovery_data.results and verify that many chunks are BASTA-related events. There should be chunks from BASTA! Herbst 2025 specifically, and also from other BASTA events (Spring, etc.). The discovery should show a strong focus on BASTA events, demonstrating good relevance to the BASTA query.",
+      "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about BASTA! Herbst. The response should distinguish between past and future events clearly and provide correct scheduling information for upcoming BASTA! Herbst events."
+    ]
+  }
+}
