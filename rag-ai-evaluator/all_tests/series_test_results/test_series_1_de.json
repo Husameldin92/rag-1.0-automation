@@ -1,0 +1,236 @@
+{
+  "test_id": "test_series_001_de",
+  "series_name": "APICon London",
+  "query": "Wann findet die nächste APICon London statt?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "de"
+  },
+  "prompt": "main",
+  "actual_response": "Die nächste APICon London findet im Jahr 2025 statt. Die genauen Termine sind vom 13. bis 15. Mai 2025. Die Veranstaltung ist eine Konferenz für Web APIs, API Design und Management, bei der Experten und Entwickler zusammenkommen, um aktuelle Themen und Trends zu diskutieren. \nBitte beachten Sie, dass die Inhalte der APICon London 2025 als Premium-Add-on angeboten werden und separat gebucht werden müssen. Als Elevate-Mitglied erhalten Sie dabei einen Rabatt von 10 %, der automatisch bei der Buchung über Ihr Elevate-Dashboard auf entwickler.de angewendet wird. Zusätzlich gibt es einen weiteren Rabatt von 3 %, wenn Sie eine Vorauszahlungsmethode nutzen. [1.]\n\nQuellen\n\nBullet-Proof APIs: The OWASP API Security Top Ten Dieser Vortrag behandelt die OWASP API Security Top Ten, eine Liste der größten Sicherheitsrisiken für APIs, und erläutert, wie diese Risiken entstanden sind, welche besonders relevant sind und wie man Gegenmaßnahmen ergreifen kann. Die Session war Teil der API Conference London 2025. ℹ️ Dieser Vortrag der API Conference London 2025 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\n\nMehr zu diesem Thema\n\nPlatform Engineering for Software Developers and Architects In diesem Vortrag wird das Thema Platform Engineering aus Sicht von Softwareentwicklern und Architekten beleuchtet. Es werden Prinzipien, Architektur und Metriken vorgestellt, die für den Aufbau erfolgreicher Plattformen wichtig sind. Die Session war Teil der API Conference London 2025. ℹ️ Dieser Vortrag der API Conference London 2025 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\nPlatform Engineering: Trends and Challenges in 2025 Dieser Vortrag gibt einen Überblick über aktuelle Trends im Platform Engineering, darunter Teamaufbau, gemeinsame Ressourcen, Standards, CI/CD-Pipelines, API-Governance und KI-Einsatz. Er zeigt, wie sich Platform Engineering-Praktiken 2025 weiterentwickeln. Teil der API Conference London 2025. ℹ️ Dieser Vortrag der API Conference London 2025 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\nA Brief History of Engineering, 2025 Dieser Vortrag zeichnet die Geschichte des Software Engineerings nach, von den Anfängen bis zu aktuellen Entwicklungen wie KI und Cloud. Er beleuchtet technologische und kulturelle Veränderungen und gibt einen Ausblick auf die Zukunft. Teil der API Conference London 2025. ℹ️ Dieser Vortrag der API Conference London 2025 war Teil einer vergangenen Veranstaltung. Eine Buchung ist nicht mehr möglich, aber Sie können die aktuelle Ausgabe hier auf der Plattform entdecken.\n\nPractical API Security: Attack and Defense In dieser Session geht es um praktische Aspekte der API-Sicherheit, inklusive Angriffs- und Verteidigungsstrategien. Es werden die OWASP API Security Top 10 Risiken erläutert und gezeigt, wie man APIs mit Gateways und OpenAPI-Dokumenten absichert. Teil der APICon Berlin 2025. ⚠️ Dieser Vortrag der APICon Berlin 2025 ist ein Premium-Add-on. Für die Teilnahme ist ein separater Kauf erforderlich. Als Elevate-Mitglied wird Ihr Rabatt von 10 % automatisch bei der Buchung über Ihr Elevate-Dashboard hier auf entwickler.de angewendet. Zusätzlich gelten 3 % Rabatt bei Vorauszahlung.",
+  "discovery_data": {
+    "query_sent": "Wann findet die nächste APICon London statt?",
+    "results": [
+      {
+        "_id": "6b1413b7981e8d7de85efec5",
+        "title": "Vom 10x zum 100x Developer? Zwei Jahre Programmieren mit KI",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2025"
+      },
+      {
+        "_id": "f86a7b5e76d218d9b80a0365",
+        "title": "Welcome and Opening Keynote of JAX 2026",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2026"
+      },
+      {
+        "_id": "091f0f3498b4903b8e110e3e",
+        "title": "Begrüßung und Eröffnung der W-JAX 2025 in München",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2025"
+      },
+      {
+        "_id": "a0e5eaefc01d1e4e87a28bbe",
+        "title": "Welcome and Opening Remarks APICon Berlin 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "459821ffb3fc33bd97922778",
+        "title": "Welcome and Opening JAX London 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX London"
+      },
+      {
+        "_id": "451da858439ad9dc1838e9ad",
+        "title": "A Brief History of Engineering, 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "a019e930853842d9dd56ea82",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "6bcc9cf345418f0bd01d7a60",
+        "title": "Begrüßung und Eröffnung zum MAD Summit 2025 in Berlin",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "MAD Summit Berlin 2025"
+      },
+      {
+        "_id": "5837aa6440335f26fe8ea25f",
+        "title": "Sichere Webanwendungen: Die OWASP Top Ten 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2025"
+      },
+      {
+        "_id": "bfd0075394e4f30296228881",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "dc7d6e0841436c4f07ae2e1f",
+        "title": "Bullet-Proof APIs: The OWASP API Security Top Ten",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "c79ffdbc9ce342cb7869c7d7",
+        "title": "KI-Entwicklung 2025: Tools, Trends und Modelle für die Zukunft der Softwareentwicklung",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2025"
+      },
+      {
+        "_id": "2aa2de7d87efab74d62b460a",
+        "title": "Practical API Security: Attack and Defense",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "a8c883bbce65004c55d35b63",
+        "title": "Platform Engineering for Software Developers and Architects",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "f576ea96c363ca90dd57b896",
+        "title": "Entwickler Summit 2025 – dieses Programm erwartet euch",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 4.2025"
+      },
+      {
+        "_id": "c0074a314c73cc89754f7a1d",
+        "title": "entwickler Summit 2025 – großes Programm-Update!",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 6.2025"
+      },
+      {
+        "_id": "2c1d773444dba4334e330080",
+        "title": "Deine Architektur als Tatort? Forensische Analyse als Basis für langlebige Lösungen",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "BASTA! Spring 2025"
+      },
+      {
+        "_id": "DXKBNt7LC3Tb5cPfy",
+        "title": "Hyper, Hyper! Bootiful RESTful Hypermedia APIs mit Spring",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2024"
+      },
+      {
+        "_id": "4bf41e6580bf4f50657185dc",
+        "title": "Super Scalable Frontends: Evolution der Enterprise Frontend Architektur im Bankenumfeld",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2024"
+      },
+      {
+        "_id": "1ff293581deb08ab0324be38",
+        "title": "„Der Job wird nie langweilig und kein Tag ist wie der andere.“",
+        "parentGenre": null,
+        "parentName": "Windows Developer 11.2023"
+      },
+      {
+        "_id": "0cb07716d51ac08cdc5c07f8",
+        "title": "International JavaScript Conference und International PHP Conference 2021: Bis 19.8. buchen & Early-Bird-Angebote sichern!",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 8.2021"
+      },
+      {
+        "_id": "c8adff1f5b06ccdc741b0460",
+        "title": "DevOpsCon 2021 London: Erste Infos zum Programm & Frühbucherspecials",
+        "parentGenre": null,
+        "parentName": "JAXenter 2.2021"
+      },
+      {
+        "_id": "80c8ac85bd3c7a7195ea0eb8",
+        "title": "DevOpsCon 2021 London: Programminfos & Frühbucherspecials",
+        "parentGenre": null,
+        "parentName": "JAXenter 3.2021"
+      },
+      {
+        "_id": "b0a5c665d6b19e2e724ba41d",
+        "title": "iJS New York – the Online Conference: Bis 26.8. anmelden und sparen",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 8.2021"
+      },
+      {
+        "_id": "f4e9ed7a32d54f2c1cd2ad05",
+        "title": "ML Conference & Voice Conference: Noch bis zum 19. August Early-Bird-Angebote sichern",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 8.2021"
+      },
+      {
+        "_id": "f27481709c05a90b40518671",
+        "title": "DevOpsCon Berlin 2021 – Hybrid Edition: C64 Mini oder Raspberry Pi und exklusive Rabatte",
+        "parentGenre": null,
+        "parentName": "JAXenter 3.2021"
+      },
+      {
+        "_id": "992558d54243028b67699fd4",
+        "title": "ML & IoT Conference 2021: Frühbucher-Aktion noch bis Donnerstag, 15. April",
+        "parentGenre": null,
+        "parentName": "JAXenter 4.2021"
+      },
+      {
+        "_id": "8830fba078601a4d90a4f581",
+        "title": "Kostenloses Webinar: Erstellen von Event-driven APIs",
+        "parentGenre": null,
+        "parentName": "JAXenter 5.2021"
+      },
+      {
+        "_id": "8408e2e4a6ff09b74440fc82",
+        "title": "JAX 2021: Frühbucher-Tickets noch bis Donnerstag, 11.2.",
+        "parentGenre": null,
+        "parentName": "JAXenter 2.2021"
+      },
+      {
+        "_id": "1481a207a352ae74ca97e762",
+        "title": "DevOpsCon 2020 London: Erste Infos zum Programm & C64 Mini oder Raspberry Pi",
+        "parentGenre": null,
+        "parentName": "JAXenter 1.2020"
+      },
+      {
+        "_id": "eb35add3627a73c6798d51de",
+        "title": "DevOpsCon München 2020 – Hybrid Edition: Programmvorschau & Team-Specials",
+        "parentGenre": null,
+        "parentName": "JAXenter 10.2020"
+      },
+      {
+        "_id": "e0bc8c08e3f1dcac58aeee85",
+        "title": "Virtuelle Konferenzen: iJS und DevOpsCon ONLINE finden vom 20. bis 21. April statt",
+        "parentGenre": null,
+        "parentName": "JAXenter 4.2020"
+      },
+      {
+        "_id": "c1f0348a562074dc24e8b004",
+        "title": "DevOpsCon Berlin 2020 – Hybrid Edition: C64 Mini oder Raspberry Pi und exklusive Rabatte",
+        "parentGenre": null,
+        "parentName": "JAXenter 8.2020"
+      },
+      {
+        "_id": "c4b60a1edabb9a8c7fd26f87",
+        "title": "Gebündeltes Expertenwissen von unseren Konferenzen",
+        "parentGenre": null,
+        "parentName": "Entwickler Magazin 5.2019"
+      },
+      {
+        "_id": "f53a7db10cddd99132694c0d",
+        "title": "W-JAX 2020: Vergünstigte Early-Bird-Tickets noch bis Donnerstag, 13. August",
+        "parentGenre": null,
+        "parentName": "JAXenter 8.2020"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - APICon London",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. They should match (German question = German response, English question = English response, etc.). Use the actual JSON fields, not external assumptions.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should contain 'APICon' or 'APIcon' or 'API Conference' AND 'Opening Keynote' AND a future year (2025). The title 'Welcome and Opening Keynote of APIcon New York 2025' is a perfect example that should PASS this check.",
+      "CHUNK ANALYSIS: Count chunks in discovery_data.results that contain 'APICon' or 'APIcon' or 'API Conference' or 'API Con' in EITHER the title OR parentName field. At least 20% of the total chunks should be APICon-related events.",
+      "RESPONSE ACCURACY CHECK: The actual_response should NOT start with misleading statements like 'The next APICon London is scheduled for [past date]'. When no future event is scheduled, the response should immediately clarify this fact, not lead with outdated information. Starting with past dates as if they are upcoming events is an automatic FAIL, regardless of later clarifications."
+    ]
+  }
+}

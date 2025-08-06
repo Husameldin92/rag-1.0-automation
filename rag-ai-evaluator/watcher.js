@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const OpenAI = require("openai");
-require("dotenv").config();
+require("dotenv").config({ path: path.join(__dirname, '..', '.env') });
 
 const TESTS_DIR = path.join(__dirname, "all_tests");
 
@@ -87,19 +87,34 @@ ${testData.user.communityExperience.join(', ')}
 
 Sample chunks (showing first 5 and last 5 for evaluation):
 ${testData.discovery_data.results.slice(0, 5).map((chunk, i) => 
-`Chunk ${i+1}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}`
+`Chunk ${i+1}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}, ParentName=${chunk.parentName}`
 ).join('\n')}
 ...
 ${testData.discovery_data.results.slice(-5).map((chunk, i) => 
-`Chunk ${testData.discovery_data.results.length-4+i}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}`
+`Chunk ${testData.discovery_data.results.length-4+i}: ID=${chunk._id}, Title="${chunk.title}", ParentGenre=${chunk.parentGenre}, ParentName=${chunk.parentName}`
 ).join('\n')}
 
 COMPLETE PARENTGENRE BREAKDOWN:
-${testData.discovery_data.results.reduce((counts, chunk) => {
+${JSON.stringify(testData.discovery_data.results.reduce((counts, chunk) => {
   counts[chunk.parentGenre || 'null'] = (counts[chunk.parentGenre || 'null'] || 0) + 1;
   return counts;
-}, {})}
+}, {}), null, 2)}
+
+COMPLETE PARENTNAME BREAKDOWN:
+${JSON.stringify(testData.discovery_data.results.reduce((counts, chunk) => {
+  counts[chunk.parentName || 'null'] = (counts[chunk.parentName || 'null'] || 0) + 1;
+  return counts;
+}, {}), null, 2)}
 ` : ''}
+
+CURRENT DATE CONTEXT:
+Today's date: ${new Date().toLocaleDateString('en-US', { 
+  year: 'numeric', 
+  month: 'long', 
+  day: 'numeric' 
+})}
+
+Use this date to evaluate if events mentioned in the response are actually in the future or past.
 
 EVALUATION INSTRUCTIONS:
 - Analyze each criterion thoroughly and provide detailed reasoning
@@ -108,6 +123,7 @@ EVALUATION INSTRUCTIONS:
 - Include specific evidence from the data
 - Format your response with proper sections and symbols
 - Be accurate but also comprehensive in your assessment
+- Consider the current date when evaluating if event information is accurate
 
 RESPONSE FORMAT:
 ## 🔍 EVALUATION ANALYSIS

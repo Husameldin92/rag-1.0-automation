@@ -1,0 +1,242 @@
+{
+  "test_id": "test_series_001_nl",
+  "series_name": "APICon London",
+  "query": "Wanneer vindt de volgende APICon London plaats?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "nl"
+  },
+  "prompt": "main",
+  "actual_response": "De volgende APICon London vindt plaats in 2025. Das genaue Datum ist nicht explizit im Text genannt, aber es gibt eine Veranstaltung namens 'API Conference London 2025' mit mehreren Sessions und Keynotes, die im Mai 2025 stattfinden. Die relevanten Vorträge und Workshops sind für den Zeitraum um den 13. bis 14. Mai 2025 datiert, was auf die Konferenzzeit hinweist.\nZusätzlich gibt es Hinweise auf die API Conference London 2025 als eine Veranstaltung mit Fokus auf Web APIs, API Design und Management, die im Mai 2025 stattfindet.\nDaher können Sie davon ausgehen, dass die APICon London 2025 im Mai 2025 stattfindet, mit mehreren Sessions und Keynotes an verschiedenen Tagen in diesem Zeitraum [1.] [2.]\n\nBronnen\n\nPlatform Engineering: Trends and Challenges in 2025 Deze keynote bespreekt trends en uitdagingen in platform engineering in 2025, waaronder het creëren van platformteams, standaarden, API-governance en AI-impact, en geeft een overzicht van de evolutie van platform engineering praktijken. ℹ️ Deze presentatie van API Conference London 2025 maakte deel uit van een eerder evenement. Boeken is niet meer mogelijk, maar je kunt de huidige editie hier op het platform ontdekken.\n\nLight weight API Governance: The key component to enable platform engineering in 2024 Deze presentatie behandelt het belang van lichte API-governance als sleutelcomponent om platform engineering in 2024 mogelijk te maken, met inzichten uit praktijkervaringen bij bedrijven en internationale organisaties. ℹ️ Deze presentatie van API Conference London 2024 maakte deel uit van een eerder evenement. Boeken is niet meer mogelijk, maar je kunt de huidige editie hier op het platform ontdekken.\n\n\n\nMeer over dit onderwerp\n\nLight weight API Governance: The key component to enable platform engineering in 2024 Deze presentatie behandelt het belang van lichte API-governance als sleutelcomponent om platform engineering in 2024 mogelijk te maken, met inzichten uit praktijkervaringen bij bedrijven en internationale organisaties. ℹ️ Deze presentatie van API Conference London 2024 maakte deel uit van een eerder evenement. Boeken is niet meer mogelijk, maar je kunt de huidige editie hier op het platform ontdekken.\n\nPlatform Engineering: Trends and Challenges in 2025 Deze keynote bespreekt trends en uitdagingen in platform engineering in 2025, waaronder het creëren van platformteams, standaarden, API-governance en AI-impact, en geeft een overzicht van de evolutie van platform engineering praktijken. ℹ️ Deze presentatie van API Conference London 2025 maakte deel uit van een eerder evenement. Boeken is niet meer mogelijk, maar je kunt de huidige editie hier op het platform ontdekken.\n\nDevOpsCon 2021 London: Programminfos & Frühbucherspecials - Early Bird Dit artikel geeft informatie over de DevOpsCon 2021 in Londen, inclusief het programma en vroegboekkortingen, en beschrijft het hybride concept van de conferentie gericht op DevOps en gerelateerde technologieën. ✅ Deze inhoud is inbegrepen bij je elevate-lidmaatschap.\n\nDevOpsCon 2021 London: Erste Infos zum Programm & Frühbucherspecials - London in the (almost) Summertime Dit artikel biedt eerste informatie over het programma en vroegboekspecials van de DevOpsCon 2021 in Londen, met details over het hybride concept en de inhoudelijke focus op DevOps-gerelateerde onderwerpen. ✅ Deze inhoud is inbegrepen bij je elevate-lidmaatschap.",
+  "discovery_data": {
+    "query_sent": "Wanneer vindt de volgende APICon London plaats?",
+    "results": [
+      {
+        "_id": "a0e5eaefc01d1e4e87a28bbe",
+        "title": "Welcome and Opening Remarks APICon Berlin 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "f86a7b5e76d218d9b80a0365",
+        "title": "Welcome and Opening Keynote of JAX 2026",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2026"
+      },
+      {
+        "_id": "091f0f3498b4903b8e110e3e",
+        "title": "Begrüßung und Eröffnung der W-JAX 2025 in München",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2025"
+      },
+      {
+        "_id": "459821ffb3fc33bd97922778",
+        "title": "Welcome and Opening JAX London 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX London"
+      },
+      {
+        "_id": "451da858439ad9dc1838e9ad",
+        "title": "A Brief History of Engineering, 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "a019e930853842d9dd56ea82",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "6bcc9cf345418f0bd01d7a60",
+        "title": "Begrüßung und Eröffnung zum MAD Summit 2025 in Berlin",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "MAD Summit Berlin 2025"
+      },
+      {
+        "_id": "5837aa6440335f26fe8ea25f",
+        "title": "Sichere Webanwendungen: Die OWASP Top Ten 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "W-JAX 2025"
+      },
+      {
+        "_id": "bfd0075394e4f30296228881",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "dc7d6e0841436c4f07ae2e1f",
+        "title": "Bullet-Proof APIs: The OWASP API Security Top Ten",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "c79ffdbc9ce342cb7869c7d7",
+        "title": "KI-Entwicklung 2025: Tools, Trends und Modelle für die Zukunft der Softwareentwicklung",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX 2025"
+      },
+      {
+        "_id": "2aa2de7d87efab74d62b460a",
+        "title": "Practical API Security: Attack and Defense",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "a8c883bbce65004c55d35b63",
+        "title": "Platform Engineering for Software Developers and Architects",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "23134b4a74b51e039ba1384c",
+        "title": "Welcome and Opening Keynote of APIcon New York 2025",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APIcon New York 2025"
+      },
+      {
+        "_id": "fc68e259eb1e1be4214ce377",
+        "title": "Workshop: Build, Secure, and Optimize Your API Product through Lean Inception and Gamification [Monday October 20th]",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "APICon Berlin 2025"
+      },
+      {
+        "_id": "9451743a76a51bc8a6c7629a",
+        "title": "Kubernetes: One Size Fits All – the Platform for Everything  (even Containers)",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Berlin 2025"
+      },
+      {
+        "_id": "13ef7f13b1dad54df524c828",
+        "title": "You Can't Do AI without Quality APIs",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2025"
+      },
+      {
+        "_id": "b343cc8fe7083c4e91a877aa",
+        "title": "Introduction and Opening of DevOpsCon Singapore 2024 /International Javascript Conference Singapore 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Singapore 2024"
+      },
+      {
+        "_id": "f576ea96c363ca90dd57b896",
+        "title": "Entwickler Summit 2025 – dieses Programm erwartet euch",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 4.2025"
+      },
+      {
+        "_id": "2a906113ecae55d75ef2591b",
+        "title": "Forms++: Generating forms that match actual requirements",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "International JavaScript Conference Munich 2024"
+      },
+      {
+        "_id": "82R7N2cRvjRJ56Q2p",
+        "title": "Welcome to ML Con 2023 in Berlin",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "ML Conference Berlin 2023"
+      },
+      {
+        "_id": "cc5ccfb94a36933ded7497a4",
+        "title": "Architecture isn’t Kubernetes",
+        "parentGenre": "COURSE",
+        "parentName": "Set Sail and Build Fast With Kubernetes"
+      },
+      {
+        "_id": "8d5024cf652e36e29887d1ee",
+        "title": "Set technology trends with API experts (and podcasters) Tim & David at API Con",
+        "parentGenre": "COURSE",
+        "parentName": "Effizientes API-Design"
+      },
+      {
+        "_id": "btuJXwqiLnizT4tjk",
+        "title": "Light weight API Governance: The key component to enable platform engineering in 2024",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2024"
+      },
+      {
+        "_id": "WpqNHx2XQiXGFQknN",
+        "title": "Revolutionizing DevOps: Harnessing AI for Unprecedented Efficiency",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Munich 2023"
+      },
+      {
+        "_id": "KWRj9Z6gQmEcSXKsC",
+        "title": "WELCOME AND OPENING OF THE API CON Berlin 2023 // KEYNOTE: API Development Unveiled: Balancing Code and Design for Success",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Con Berlin 2023"
+      },
+      {
+        "_id": "WhfKQSYCMdvMqRa2n",
+        "title": "Welcome and opening of the DevOpsCon Berlin 2023 // Keynote:The Long History of DevOps Failures",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "DevOpsCon Berlin 2023"
+      },
+      {
+        "_id": "2sTbunvK6J2EwQKAA",
+        "title": "Welcome and Opening of API London 2023 // Keynote: The Myth of API Monetization - and How Companies Really Create Business Value With APIs",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference London 2023"
+      },
+      {
+        "_id": "doRkrwZNP6ApFDykF",
+        "title": "Welcome and opening of the API Con & Serverless Architecture Con – Berlin 2022 // Keynote: Governance - who has time for that?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Conference - Berlin 2022"
+      },
+      {
+        "_id": "xj5PbMCAZzPsWqEgS",
+        "title": "Welcome an opening of JAX London 2022 // Keynote: The Zen of Programming - A personal journey towards writing beautiful code",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "JAX London 2022"
+      },
+      {
+        "_id": "Byqj42n8EwKp89wo6",
+        "title": "Welcome and opening of the API Con / Serverless Architecture Con –  The Hague 2022 // Keynote: Mapping the Multi-protocol Landscape",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Con - The Hague 2022"
+      },
+      {
+        "_id": "omfcx4xwop9RtCTtm",
+        "title": "Opening of the 2nd Day of API Con / Serverless Architecture Con – The Hague 2022 // Keynote: Is Application Security an Illusion?",
+        "parentGenre": "RHEINGOLD",
+        "parentName": "API Con - The Hague 2022"
+      },
+      {
+        "_id": "c8adff1f5b06ccdc741b0460",
+        "title": "DevOpsCon 2021 London: Erste Infos zum Programm & Frühbucherspecials",
+        "parentGenre": null,
+        "parentName": "JAXenter 2.2021"
+      },
+      {
+        "_id": "0cb07716d51ac08cdc5c07f8",
+        "title": "International JavaScript Conference und International PHP Conference 2021: Bis 19.8. buchen & Early-Bird-Angebote sichern!",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 8.2021"
+      },
+      {
+        "_id": "80c8ac85bd3c7a7195ea0eb8",
+        "title": "DevOpsCon 2021 London: Programminfos & Frühbucherspecials",
+        "parentGenre": null,
+        "parentName": "JAXenter 3.2021"
+      },
+      {
+        "_id": "b0a5c665d6b19e2e724ba41d",
+        "title": "iJS New York – the Online Conference: Bis 26.8. anmelden und sparen",
+        "parentGenre": null,
+        "parentName": "entwickler.de Blog 8.2021"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - APICon London",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. They should match (German question = German response, English question = English response, etc.). Use the actual JSON fields, not external assumptions.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - it should contain 'APICon' or 'APIcon' or 'API Conference' AND 'Opening Keynote' AND a future year (2025). The title 'Welcome and Opening Keynote of APIcon New York 2025' is a perfect example that should PASS this check.",
+      "CHUNK ANALYSIS: Count chunks in discovery_data.results that contain 'APICon' or 'APIcon' or 'API Conference' or 'API Con' in EITHER the title OR parentName field. At least 20% of the total chunks should be APICon-related events.",
+      "RESPONSE ACCURACY CHECK: The actual_response should NOT start with misleading statements like 'The next APICon London is scheduled for [past date]'. When no future event is scheduled, the response should immediately clarify this fact, not lead with outdated information. Starting with past dates as if they are upcoming events is an automatic FAIL, regardless of later clarifications."
+    ]
+  }
+}
