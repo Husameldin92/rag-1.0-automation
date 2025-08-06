@@ -1,0 +1,296 @@
+{
+  "test_id": "test_series_006_nl",
+  "series_name": "DevOps Training Docker",
+  "query": "Wanneer vindt de volgende DevOps Training Docker plaats?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "nl"
+  },
+  "prompt": "main",
+  "actual_response": "De contextdocumenten bevatten geen specifieke informatie over een aankomende DevOps Training Docker. Er zijn wel meerdere vermeldingen van DevOps Kubernetes Camps en andere DevOps-gerelateerde trainingen, maar geen directe verwijzing naar een Docker Training of de datum daarvan.\nSamenvattend:\n\nEr zijn diverse DevOps Kubernetes Camps gepland en beschreven, met data tot en met december 2025, maar deze richten zich specifiek op Kubernetes en aanverwante technologieën.\nEr is geen expliciete vermelding van een DevOps Training Docker in de beschikbare documenten.\nDe beschikbare informatie betreft vooral Kubernetes, CI/CD, Containerbeheer, Helm, Operator Lifecycle Manager, ArgoCD, en DevSecOps, maar niet specifiek Docker als apart trainingsonderwerp.\n\nDaarom kan ik op basis van de beschikbare informatie geen datum geven voor een volgende DevOps Training Docker.\nAls u wilt, kan ik u wel informatie geven over de aankomende DevOps Kubernetes Camps of andere gerelateerde trainingen die binnenkort plaatsvinden. Laat het me weten!",
+  "discovery_data": {
+    "query_sent": "Wanneer vindt de volgende DevOps Training Docker plaats?",
+    "results": [
+      {
+        "_id": "b66fd5d69679587ce5e3b7de",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2025 | Berlin"
+      },
+      {
+        "_id": "95e7d11e189f3033990dbefd",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2025 | Berlin"
+      },
+      {
+        "_id": "2f28db7c035d8a016799b084",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2025 | Berlin"
+      },
+      {
+        "_id": "fc85102b2b1d04b523cc7125",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München"
+      },
+      {
+        "_id": "fed3491d8aaf72d5e9761842",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München"
+      },
+      {
+        "_id": "11a8a5b89d2480ec8535019c",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic September 2025 | München"
+      },
+      {
+        "_id": "a3b9c83541f4bce423571679",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Juli 2025 | Berlin"
+      },
+      {
+        "_id": "ad9bb7280464713f92c5b2fa",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic Juni 2025 | Berlin"
+      },
+      {
+        "_id": "3f7c1dbd6767e76cc4ad92f1",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic Juni 2025 | Berlin"
+      },
+      {
+        "_id": "8b309e2a149bcb4fe7a72dfb",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced März 2025 | München"
+      },
+      {
+        "_id": "46cd404e9a86242586122b5d",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced März 2025 | München"
+      },
+      {
+        "_id": "8f3e090de417d531659b5363",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic März 2025 | München"
+      },
+      {
+        "_id": "1ec3be2f2120743e823f2a26",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2025 | Berlin"
+      },
+      {
+        "_id": "dfe49b552361e65747c2486a",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2025 | Berlin"
+      },
+      {
+        "_id": "c1247bf550c6088bfd78a6f6",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2025 | Berlin"
+      },
+      {
+        "_id": "da6817bb6ddd318d8f9304bc",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München"
+      },
+      {
+        "_id": "3f9ccb70f76c914f1a54ba56",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic September 2025 | München"
+      },
+      {
+        "_id": "82f1ff47cb88f42c3d355572",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic September 2025 | München"
+      },
+      {
+        "_id": "77d464c9d0e79af22b59f18a",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Juli 2025 | Berlin"
+      },
+      {
+        "_id": "11e23e9a2844903957418067",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Juli 2025 | Berlin"
+      },
+      {
+        "_id": "8f86908a4aff54fa966accbe",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic Juni 2025 | Berlin"
+      },
+      {
+        "_id": "906f9f786f61b52aa1899418",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced März 2025 | München"
+      },
+      {
+        "_id": "544a6ddad8289c64cec9a69a",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic März 2025 | München"
+      },
+      {
+        "_id": "dcc73509c2b24c9a470de70e",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic März 2025 | München"
+      },
+      {
+        "_id": "b29dfa7b456dce39b1e1696f",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Dezember 2025 | Online"
+      },
+      {
+        "_id": "0c5fdfdcbc4e98bcd4976f52",
+        "title": "Tag 1: Wege zur Realisierung dynamischer Cloud-Native-Architekturen, Container Application Design u.v.m.",
+        "parentGenre": "CAMP",
+        "parentName": "Modul CLOUDINFRA November 2025 | München"
+      },
+      {
+        "_id": "e0bee26a7dd0cdc142ab0af7",
+        "title": "Tag 3: Deployment und DevOps; Konzeptentwicklung zur Fehleranalyse mit praktischer Anwendung",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Juni 2025 | Berlin"
+      },
+      {
+        "_id": "abf14ccf11953105d2478d4a",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau & Konzeptentwicklung zur Fehleranalyse",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX März 2025 | München"
+      },
+      {
+        "_id": "e8d5d98f9c2ff22aa5bc9b85",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Februar 2025 | Online"
+      },
+      {
+        "_id": "qqLcRaytBhSrF7W5X",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Dezember 2024 | München"
+      },
+      {
+        "_id": "7096b8a3e6fa424947220095",
+        "title": "Tag 3: Vollautomatische Sicherheit mit DevSecOps und CI/CD-Pipelines",
+        "parentGenre": "CAMP",
+        "parentName": "IT Security Camp März 2025 | München und online"
+      },
+      {
+        "_id": "ZJDhoug6GC7JQkAoG",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2024 | München"
+      },
+      {
+        "_id": "0d9d86dfe8dae6899d9c1b8b",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau & Konzeptentwicklung zur Fehleranalyse",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX September 2024 | Berlin"
+      },
+      {
+        "_id": "47ab3ee4a0a412a9211eb1d7",
+        "title": "Tag 1",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2024 | Online"
+      },
+      {
+        "_id": "7a8fb65953019ab295a3c937",
+        "title": "Tag 3",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2024 | Online"
+      },
+      {
+        "_id": "E8id8TCx8ETyabfLJ",
+        "title": "Vollautomatische Sicherheit mit DevSecOps und CI/CD-Pipelines",
+        "parentGenre": "CAMP",
+        "parentName": "IT Security Camp November 2024 | Online"
+      },
+      {
+        "_id": "hNzRpTdWyEPLE7dbS",
+        "title": "Vollautomatische Sicherheit mit DevSecOps und CI/CD-Pipelines",
+        "parentGenre": "CAMP",
+        "parentName": "IT Security Camp Oktober 2024 | München und online"
+      },
+      {
+        "_id": "rhCFRufeKxTv56y9K",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Juni 2024 | Berlin"
+      },
+      {
+        "_id": "7dbc1124b3072e6363636c35",
+        "title": "Tag 1: Wege zur Realisierung dynamischer Cloud-Native-Architekturen, Container Application Design u.v.m.",
+        "parentGenre": "CAMP",
+        "parentName": "Modul CLOUDINFRA Dezember 2024 | Online"
+      },
+      {
+        "_id": "6fYH4a4SXaqjhMEDG",
+        "title": "Vollautomatische Sicherheit mit DevSecOps und CI/CD-Pipelines",
+        "parentGenre": "CAMP",
+        "parentName": "IT Security Camp September 2024 | Berlin und online"
+      },
+      {
+        "_id": "imTkZzB4zep8Fv5qL",
+        "title": "Tag 1",
+        "parentGenre": "CAMP",
+        "parentName": "DevOps Kubernetes Camp Juli 2024 | München"
+      },
+      {
+        "_id": "6EjuyNzHbvtHN4r6H",
+        "title": "Tag 1",
+        "parentGenre": "CAMP",
+        "parentName": "DevOps Kubernetes Camp Mai 2024 | Berlin"
+      },
+      {
+        "_id": "TdgkaNiQ57wXakMYk",
+        "title": "Tag 1",
+        "parentGenre": "CAMP",
+        "parentName": "DevOps Kubernetes Camp - Advanced Juni 2024 | Berlin"
+      },
+      {
+        "_id": "rRmrLcAebQ6iS4Evw",
+        "title": "Tag 3",
+        "parentGenre": "CAMP",
+        "parentName": "DevOps Kubernetes Camp - Advanced Juni 2024 | Berlin"
+      },
+      {
+        "_id": "4w4ATAZ4KDgHcijwA",
+        "title": "Tag 1",
+        "parentGenre": "CAMP",
+        "parentName": "DevOps Kubernetes Camp März 2024 | München"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - DevOps Training Docker",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. For this test: if query_sent is 'When is next DevOps Training Docker happening?' (English), then actual_response should be in English. If query_sent is 'Wann findet die nächste DevOps Training Docker statt?' (German), then actual_response should be in German. If query_sent is 'Wanneer vindt de volgende DevOps Training Docker plaats?' (Dutch), then actual_response should be in Dutch. Ignore the language of discovery chunk titles - only compare query_sent vs actual_response languages.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0] - since the last DevOps Training Docker was in 2024 and is now in the past, and no future DevOps Training Docker is scheduled, the first chunk should be from ANY future training or camp (any technology, any training type). Check both title and parentName for future dates (2025 or later). A chunk like 'Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau' with parentName 'Modul FLEX Dezember 2025 | Online' should PASS this check because it's a future DevOps-related training from December 2025.",
+      "CHUNK ANALYSIS: Look at discovery_data.results and verify that many chunks are from DevOps Training sessions. Since DevOps Training Docker is in the past, chunks from past Docker trainings are acceptable. Other DevOps training content (Kubernetes, monitoring, CI/CD, etc.) is also acceptable, but Docker training content should be prioritized when available.",
+      "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about DevOps Training Docker. CRITICAL: Check the current date context provided above. Since the last DevOps Training Docker was in 2024 and we're now past that, if the response states this training is 'upcoming' or 'in the future' when it's actually past, this check should FAIL. The response should acknowledge the correct temporal status and that the most recent training was in 2024."
+    ]
+  }
+}

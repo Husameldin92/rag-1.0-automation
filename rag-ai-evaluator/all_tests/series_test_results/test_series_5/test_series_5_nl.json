@@ -1,0 +1,176 @@
+{
+  "test_id": "test_series_005_nl",
+  "series_name": "Delphi Code Camp Duesseldorf",
+  "query": "Wanneer vindt de volgende Delphi Code Camp Düsseldorf plaats?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "nl"
+  },
+  "prompt": "main",
+  "actual_response": "De volgende Delphi Code Camp in Düsseldorf vindt plaats in 2025, met de eerste dag gepland op 30 juni 2025. Dit blijkt uit de geplande data van de Delphi Code Camp 2025, waarvan de eerste dag op 30 juni 2025 begint, gevolgd door de tweede dag op 1 juli 2025 en de derde dag op 2 juli 2025. Hoewel de locatie Düsseldorf niet expliciet genoemd wordt in de beschikbare informatie, is dit de eerstvolgende editie van het Delphi Code Camp in 2025 die op de ontwikkelaarsplatformen wordt vermeld. \nHoud er rekening mee dat de boeking voor deze editie niet meer mogelijk is, aangezien het evenement al is gepasseerd op het moment van vandaag (6 augustus 2025). Voor actuele informatie en toekomstige edities kunt u de platformpagina blijven volgen.\n [1.]\n [2.]\n [3.]\n\nBronnen\n\nTag 1: REST verstehen, vergleichen und gezielt einsetzen Deze seminarles beschrijft de eerste dag van het Delphi Code Camp 2025, waarin de basis van moderne REST-architecturen wordt behandeld, inclusief het gebruik van Delphi REST-clientcomponenten en serverframeworks. ℹ️ Deze lezing van Delphi Code Camp 2025 maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.\n\nTag 2: Eigene REST-API entwickeln & sicher in die Cloud bringen Deze seminarles behandelt de tweede dag van het Delphi Code Camp 2025, waarin deelnemers een productieklare REST-API ontwikkelen en deze veilig in de Azure Cloud implementeren. ℹ️ Deze lezing van Delphi Code Camp 2025 maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.\n\nTag 3: Mobile Apps mit Delphi & REST-Anbindung entwickeln Deze seminarles beschrijft de derde dag van het Delphi Code Camp 2025, gericht op het ontwikkelen van mobiele apps met Delphi en REST-koppelingen, inclusief live-coding sessies en voorbereiding op store-release. ℹ️ Deze lezing van Delphi Code Camp 2025 maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.\n\n\n\nMeer over dit onderwerp\n\nDelphi Language Update Deze seminarles geeft een overzicht van nieuwe taalfeatures in Delphi sinds versie 2007 en laat zien hoe deze effectiever en eleganter kunnen worden toegepast. ℹ️ Deze lezing van Delphi Code Camp 2024 maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.\n\nTag 5: Qualitätsbewertung & Prüfungsvorbereitung iSAQB-Zertifizierung Deze seminarles behandelt de kwaliteitsbeoordeling van softwarearchitectuur en de voorbereiding op de iSAQB-certificering binnen het Software Architecture Camp in juli 2025 in München. ℹ️ Deze lezing van Software Architecture Camp - Foundation Juli 2025 | München maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.\n\nTag 2: Grundlegende Strukturen der Softwarearchitektur Deze seminarles introduceert de fundamentele structuren van softwarearchitectuur en de rol van softwarearchitecten, onderdeel van het Software Architecture Camp in juli 2025 in München. ℹ️ Deze lezing van Software Architecture Camp - Foundation Juli 2025 | München maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.\n\nTag 3: Systematische Entwicklung & Werkzeuge der Softwarearchitektur Deze seminarles richt zich op systematische ontwikkeling en tools voor softwarearchitectuur, met praktische oefeningen, als onderdeel van het Software Architecture Camp in juli 2025 in München. ℹ️ Deze lezing van Software Architecture Camp - Foundation Juli 2025 | München maakte deel uit van een vorig evenement. Boeken is niet meer mogelijk, maar u kunt de huidige editie hier op het platform ontdekken.",
+  "discovery_data": {
+    "query_sent": "Wanneer vindt de volgende Delphi Code Camp Düsseldorf plaats?",
+    "results": [
+      {
+        "_id": "b8326db5b42894007169ee95",
+        "title": "Tag 5: Qualitätsbewertung & Prüfungsvorbereitung iSAQB-Zertifizierung",
+        "parentGenre": "CAMP",
+        "parentName": "Software Architecture Camp - Foundation Juli 2025 | München"
+      },
+      {
+        "_id": "2105a4eaa77027c95f0e2a74",
+        "title": "Tag 3: Mobile Apps mit Delphi & REST-Anbindung entwickeln",
+        "parentGenre": "CAMP",
+        "parentName": "Delphi Code Camp 2025"
+      },
+      {
+        "_id": "9ac5e49d83a4007f48a62f20",
+        "title": "Tag 2: Eigene REST-API entwickeln & sicher in die Cloud bringen",
+        "parentGenre": "CAMP",
+        "parentName": "Delphi Code Camp 2025"
+      },
+      {
+        "_id": "1fceeff3a56fffe52c28b29b",
+        "title": "Tag 1: REST verstehen, vergleichen und gezielt einsetzen",
+        "parentGenre": "CAMP",
+        "parentName": "Delphi Code Camp 2025"
+      },
+      {
+        "_id": "6ae8f622c24effb80ed4ad70",
+        "title": "Tag 4: Entwicklung von Architektursichten & Architekturdokumentation",
+        "parentGenre": "CAMP",
+        "parentName": "Software Architecture Camp - Foundation Juli 2025 | München"
+      },
+      {
+        "_id": "5c7b739a30c3d63146f25b5d",
+        "title": "Tag 3: Systematische Entwicklung & Werkzeuge der Softwarearchitektur",
+        "parentGenre": "CAMP",
+        "parentName": "Software Architecture Camp - Foundation Juli 2025 | München"
+      },
+      {
+        "_id": "defe86069de8a99eed86786c",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP",
+        "parentName": "Software Architecture Camp - Foundation Juli 2025 | München"
+      },
+      {
+        "_id": "41fc2c246eaab0e5cc8056db",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive November 2025 | online"
+      },
+      {
+        "_id": "8d2952af8f3ab5da36319842",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive September 2025 | online"
+      },
+      {
+        "_id": "bebfff400f3739e664585834",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive Juni 2025 | online"
+      },
+      {
+        "_id": "f5b320fc9a2d1b1d235febe3",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive April 2025 | online"
+      },
+      {
+        "_id": "4e4e9b4e6c922c93db6f0fa4",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive März 2025 | online"
+      },
+      {
+        "_id": "359127520ad0d067c368a161",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Basic Camp März 2025 | online"
+      },
+      {
+        "_id": "e4c8f6d096e09ac557c3a331",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive Februar 2025 | online"
+      },
+      {
+        "_id": "7954a9ed5b20c113f43bd36c",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Basic Camp Februar 2025 | online"
+      },
+      {
+        "_id": "kNkYzMYQupXCm7PC2",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive November 2024 | online"
+      },
+      {
+        "_id": "LoXreGxPuDounzry9",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Basic Camp November 2024 | online"
+      },
+      {
+        "_id": "9WXd3t7wWwWcRvXK2",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive September 2024 | online"
+      },
+      {
+        "_id": "yCqyKNFMFFBz69WEX",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Basic Camp September 2024 | online"
+      },
+      {
+        "_id": "LsisM4tEM8yk9PAff",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive Juni 2024 | online"
+      },
+      {
+        "_id": "tfAfSZdrs3brtS8Nt",
+        "title": "Delphi Language Update",
+        "parentGenre": "CAMP",
+        "parentName": "Delphi Code Camp 2024"
+      },
+      {
+        "_id": "iq2orbDHoc6iaTJsZ",
+        "title": "Fragestunde mit Manfred Steyer - 2",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Basic Camp April 2024 | online"
+      },
+      {
+        "_id": "xo7puZLDHcETXGcf9",
+        "title": "Fragestunde mit Manfred Steyer - 2",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Deep Dive April 2024 | online"
+      },
+      {
+        "_id": "8fWcE3d6aScHzDrRD",
+        "title": "Woche 4: Routing und Navigation, Testing mit Jasmine | verfügbar bis 05.05.2024",
+        "parentGenre": "FLEX_CAMP",
+        "parentName": "Angular Camp - Flexible Basic Camp April 2024 | online"
+      },
+      {
+        "_id": "hfWFwtTwaS2x3uhxc",
+        "title": "Tag 4",
+        "parentGenre": "CAMP",
+        "parentName": "Software Architecture Camp - Foundation Juni 2024 | Berlin"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - Delphi Code Camp Duesseldorf",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. For this test: if query_sent is 'When is next Delphi Code Camp Duesseldorf happening?' (English), then actual_response should be in English. If query_sent is 'Wann findet die nächste Delphi Code Camp Düsseldorf statt?' (German), then actual_response should be in German. If query_sent is 'Wanneer vindt de volgende Delphi Code Camp Düsseldorf plaats?' (Dutch), then actual_response should be in Dutch. Ignore the language of discovery chunk titles - only compare query_sent vs actual_response languages.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0].title - since the Delphi Code Camp Duesseldorf is in the past (June 30 - July 2, 2025) and no future Delphi Code Camp is scheduled, the first chunk should be from ANY future camp (any technology, any camp type) since we still don't have a future Delphi camp available. The system should prioritize future camps over past ones.",
+      "CHUNK ANALYSIS: Look at discovery_data.results and verify that many chunks are from Delphi Code Camps. If there are future camps available, chunks should primarily be from those. If only past camps exist, chunks from past camps are acceptable. General Delphi/EKON content is also acceptable but Code Camp content should be prioritized.",
+      "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about Delphi Code Camp Duesseldorf. CRITICAL: Check the current date context provided above. Since the Delphi Code Camp was scheduled for 30.06.2025 - 02.07.2025 (June 30 - July 2, 2025), compare this with today's date. If the current date is after July 2025, this event is already PAST. If the response states this event is 'in the future' or 'upcoming' when it's actually past, this check should FAIL. The response should acknowledge the correct temporal status of the event."
+    ]
+  }
+}

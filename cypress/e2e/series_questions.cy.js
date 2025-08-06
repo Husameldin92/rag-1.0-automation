@@ -2,6 +2,8 @@ import { testSeries1 } from './tests/seriesTest/test_series_1'
 import { testSeries2 } from './tests/seriesTest/test_series_2'
 import { testSeries3 } from './tests/seriesTest/test_series_3'
 import { testSeries4 } from './tests/seriesTest/test_series_4'
+import { testSeries5 } from './tests/seriesTest/test_series_5'
+import { testSeries6 } from './tests/seriesTest/test_series_6'
 
 describe('Series Questions Test Suite', () => {
   it('APICon London', () => {
@@ -16,7 +18,15 @@ describe('Series Questions Test Suite', () => {
     testSeries3();
   });
   
-  it.only('BASTA! Spring', () => {
+  it('BASTA! Spring', () => {
     testSeries4();
+  });
+  
+  it('Delphi Code Camp Duesseldorf', () => {
+    testSeries5();
+  });
+  
+  it.only('DevOps Training Docker', () => {
+    testSeries6();
   });
 });
