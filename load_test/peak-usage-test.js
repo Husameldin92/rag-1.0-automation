@@ -35,7 +35,7 @@ const questions = [
   'Node.js security best practices'
 ];
 
-// API request function (same as before)
+// API request function
 function makeAPIRequest(query, testNumber) {
   return new Promise((resolve, reject) => {
     const graphqlQuery = {
@@ -123,83 +123,98 @@ function makeAPIRequest(query, testNumber) {
   });
 }
 
-// Generate random timing with clumps (not evenly distributed)
-function generateRandomTimings(totalRequests, totalTimeMs) {
+// Generate timing using integer assignment (0-59 seconds)
+function generateIntegerTimings(totalRequests) {
+  const maxPerSecond = 5;
+  const maxPossibleRequests = 60 * maxPerSecond; // 300 max requests
+  
+  // Check if we can fit all requests with the constraint
+  if (totalRequests > maxPossibleRequests) {
+    console.log(`⚠️  WARNING: ${totalRequests} requests cannot fit in 60 seconds with max ${maxPerSecond} per second`);
+    console.log(`   📊 Maximum possible: ${maxPossibleRequests} requests`);
+    console.log(`   🔧 Reducing to ${maxPossibleRequests} requests to maintain constraint`);
+    totalRequests = maxPossibleRequests;
+  }
+  
   const timings = [];
   
-  // Create some clumps of activity
-  const numClumps = Math.floor(totalRequests / 20) + 1; // Roughly 1 clump per 20 requests
-  const clumpTimes = [];
+  // GUARANTEED UNIQUE TIMING APPROACH - No duplicates possible
+  const usedTimings = new Set();
   
-  // Generate random clump start times
-  for (let i = 0; i < numClumps; i++) {
-    clumpTimes.push(Math.random() * totalTimeMs);
-  }
-  clumpTimes.sort((a, b) => a - b);
-  
-  // Assign requests to clumps or random times
-  for (let i = 0; i < totalRequests; i++) {
-    if (Math.random() < 0.6 && clumpTimes.length > 0) {
-      // 60% chance to be in a clump
-      const clumpIndex = Math.floor(Math.random() * clumpTimes.length);
-      const clumpCenter = clumpTimes[clumpIndex];
-      // Spread within ±5 seconds of clump center
-      const offset = (Math.random() - 0.5) * 10000; // ±5 seconds
-      timings.push(Math.max(0, Math.min(totalTimeMs, clumpCenter + offset)));
-    } else {
-      // 40% chance to be randomly distributed
-      timings.push(Math.random() * totalTimeMs);
+  // Fill each second with exactly 5 unique timings
+  for (let second = 0; second < 60; second++) {
+    const requestsForThisSecond = Math.min(5, totalRequests - timings.length);
+    
+    for (let i = 0; i < requestsForThisSecond; i++) {
+      let uniqueTiming;
+      let attempts = 0;
+      
+      // Keep generating until we get a unique timing
+      do {
+        const millisecondOffset = Math.floor(Math.random() * 1000);
+        uniqueTiming = second * 1000 + millisecondOffset;
+        attempts++;
+        
+        // Safety: if too many attempts, use sequential fallback
+        if (attempts > 1000) {
+          for (let fallback = 0; fallback < 1000; fallback++) {
+            uniqueTiming = second * 1000 + fallback;
+            if (!usedTimings.has(uniqueTiming)) break;
+          }
+          break;
+        }
+      } while (usedTimings.has(uniqueTiming));
+      
+      usedTimings.add(uniqueTiming);
+      timings.push(uniqueTiming);
+      
+      // Stop if we've generated enough requests
+      if (timings.length >= totalRequests) break;
     }
+    
+    if (timings.length >= totalRequests) break;
   }
+  
+  // Shuffle to randomize execution order while maintaining unique timings
+  for (let i = timings.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [timings[i], timings[j]] = [timings[j], timings[i]];
+  }
+  
+  // Verify final distribution
+  const distributionCheck = Array(60).fill(0);
+  timings.forEach(timing => {
+    const second = Math.floor(timing / 1000);
+    distributionCheck[second]++;
+  });
+  
+  const maxActual = Math.max(...distributionCheck);
+  const totalGenerated = timings.length;
+  
+  if (maxActual > maxPerSecond) {
+    console.error(`❌ CONSTRAINT VIOLATION: Found ${maxActual} requests in a single second (max allowed: ${maxPerSecond})`);
+    console.error(`   📊 Full distribution: ${distributionCheck}`);
+    throw new Error('Constraint violation detected');
+  }
+  
+  console.log(`✅ Constraint verification: Max per second = ${maxActual}/${maxPerSecond}`);
+  console.log(`✅ Total requests generated: ${totalGenerated}/${totalRequests}`);
+  console.log(`✅ Even distribution: [${distributionCheck.slice(0, 10).join(', ')}...]`);
   
   return timings.sort((a, b) => a - b);
 }
 
-// Concurrency limiter
-class ConcurrencyLimiter {
-  constructor(maxConcurrent) {
-    this.maxConcurrent = maxConcurrent;
-    this.running = 0;
-    this.queue = [];
-  }
-  
-  async execute(asyncFunction) {
-    return new Promise((resolve, reject) => {
-      this.queue.push({ asyncFunction, resolve, reject });
-      this.processQueue();
-    });
-  }
-  
-  async processQueue() {
-    if (this.running >= this.maxConcurrent || this.queue.length === 0) {
-      return;
-    }
-    
-    this.running++;
-    const { asyncFunction, resolve, reject } = this.queue.shift();
-    
-    try {
-      const result = await asyncFunction();
-      resolve(result);
-    } catch (error) {
-      reject(error);
-    } finally {
-      this.running--;
-      this.processQueue();
-    }
-  }
-}
+
 
 // Main peak usage test function
 async function runPeakUsageTest() {
   const totalRequests = 400;
   const totalTimeMs = 60000; // 1 minute
-  const maxConcurrent = 5;
   
   console.log(`🚀 Starting PEAK USAGE test:`);
   console.log(`   📊 ${totalRequests} requests over ${totalTimeMs/1000} seconds`);
-  console.log(`   🔒 Max ${maxConcurrent} simultaneous requests`);
-  console.log(`   🎲 Random distribution with natural clumps`);
+  console.log(`   🎲 Integer assignment (0-59s), max 5 per second`);
+  console.log(`   ⚡ No artificial concurrency limits - real load testing`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
 
   // Create results directory with timestamp
@@ -211,32 +226,38 @@ async function runPeakUsageTest() {
   }
   fs.mkdirSync(resultsDir);
   
-  // Generate random timings
-  const timings = generateRandomTimings(totalRequests, totalTimeMs);
-  console.log(`⏰ Generated ${totalRequests} request timings:`);
+  // Generate integer timings (0-59 seconds)
+  const timings = generateIntegerTimings(totalRequests);
+  const actualRequests = timings.length;
+  console.log(`⏰ Generated ${actualRequests} request timings (integer assignment):`);
   console.log(`   🎯 First request: ${Math.round(timings[0]/1000)}s`);
   console.log(`   🎯 Last request: ${Math.round(timings[timings.length-1]/1000)}s`);
   
-  // Show timing distribution
-  const timeSlots = Array(12).fill(0); // 12 slots of 5 seconds each
+  // Show timing distribution per second (0-59)
+  const secondCounts = Array(60).fill(0);
   timings.forEach(time => {
-    const slot = Math.min(11, Math.floor(time / 5000));
-    timeSlots[slot]++;
+    const second = Math.floor(time / 1000);
+    secondCounts[second]++;
   });
-  console.log(`\n📊 Request distribution (5-second windows):`);
-  timeSlots.forEach((count, i) => {
-    const start = i * 5;
-    const end = (i + 1) * 5;
-    const bar = '█'.repeat(Math.ceil(count / 5));
-    console.log(`   ${start.toString().padStart(2)}s-${end.toString().padStart(2)}s: ${count.toString().padStart(3)} ${bar}`);
+  
+  console.log(`\n📊 Request distribution by second (showing non-zero seconds only):`);
+  secondCounts.forEach((count, second) => {
+    if (count > 0) {
+      const bar = '█'.repeat(count);
+      console.log(`   ${second.toString().padStart(2)}s: ${count.toString().padStart(3)} ${bar}`);
+    }
   });
+  
+  const maxPerSecond = Math.max(...secondCounts);
+  const secondsUsed = secondCounts.filter(count => count > 0).length;
+  console.log(`   📈 Max requests in any second: ${maxPerSecond}`);
+  console.log(`   📊 Total seconds used: ${secondsUsed}/60`);
   console.log('');
 
-  const limiter = new ConcurrencyLimiter(maxConcurrent);
   const results = [];
   const startTime = Date.now();
   
-  // Schedule all requests
+  // Schedule all requests  
   const scheduledRequests = timings.map((timing, index) => {
     const testNumber = index + 1;
     const question = questions[(index) % questions.length];
@@ -244,10 +265,14 @@ async function runPeakUsageTest() {
     return {
       timing,
       testNumber,
-      question,
-      promise: null
+      question
     };
   });
+  
+  // Sort by scheduled timing for proper execution order
+  scheduledRequests.sort((a, b) => a.timing - b.timing);
+  
+  const actualTotalRequests = scheduledRequests.length;
   
   // Start the test
   console.log(`🎬 Starting requests...`);
@@ -255,67 +280,73 @@ async function runPeakUsageTest() {
   
   // Process requests as they become due
   let completedCount = 0;
-  const activeRequests = new Map();
   
-  for (const request of scheduledRequests) {
-    // Wait until it's time for this request
-    const elapsedTime = Date.now() - testStartTime;
-    const waitTime = request.timing - elapsedTime;
+  // Schedule all requests concurrently using setTimeout - NO SEQUENTIAL DELAYS
+  scheduledRequests.forEach(request => {
+    const delay = request.timing; // Direct delay from test start time
     
-    if (waitTime > 0) {
-      await new Promise(resolve => setTimeout(resolve, waitTime));
-    }
-    
-    // Start the request with concurrency limiting
-    const requestPromise = limiter.execute(async () => {
+    setTimeout(async () => {
+      // Start the request at exact scheduled time
       const requestStartTime = new Date().toISOString();
       const actualStartTime = Date.now() - testStartTime;
       
-      console.log(`🔄 [${Math.round(actualStartTime/1000).toString().padStart(2)}s] Request ${request.testNumber}/${totalRequests}: "${request.question.substring(0, 60)}..."`);
+      console.log(`🔄 [${Math.round(actualStartTime/1000).toString().padStart(2)}s] Request ${request.testNumber}/${actualTotalRequests}: "${request.question.substring(0, 60)}..."`);
       
-      const result = await makeAPIRequest(request.question, request.testNumber);
-      result.requestTimestamp = requestStartTime;
-      result.scheduledTime = request.timing;
-      result.actualStartTime = actualStartTime;
-      
-      completedCount++;
-      console.log(`${result.success ? '✅' : '❌'} [${Math.round(actualStartTime/1000).toString().padStart(2)}s] Request ${request.testNumber} ${result.success ? 'completed' : 'failed'} (${result.duration}ms) - ${completedCount}/${totalRequests} done`);
-      
-      return result;
-    });
-    
-    // Don't wait for completion - let it run concurrently
-    requestPromise.then(result => {
-      results.push(result);
-      
-      // Save individual result file immediately
-      const filename = `test_${result.testNumber.toString().padStart(3, '0')}.json`;
-      const filepath = path.join(resultsDir, filename);
-      
-      const resultData = {
-        testNumber: result.testNumber,
-        query: result.fullQuery,
-        statusCode: result.statusCode,
-        success: result.success,
-        duration: result.duration,
-        responseSize: result.responseSize,
-        timestamp: result.requestTimestamp,
-        scheduledTime: result.scheduledTime,
-        actualStartTime: result.actualStartTime,
-        response: result.response,
-        error: result.error || null,
-        is504: result.is504 || false
-      };
-      
-      fs.writeFileSync(filepath, JSON.stringify(resultData, null, 2));
-    }).catch(error => {
-      console.error(`❌ Request ${request.testNumber} error:`, error);
-    });
-  }
+      try {
+        const result = await makeAPIRequest(request.question, request.testNumber);
+        result.requestTimestamp = requestStartTime;
+        result.scheduledTime = request.timing;
+        result.actualStartTime = actualStartTime;
+        
+        completedCount++;
+        console.log(`${result.success ? '✅' : '❌'} [${Math.round(actualStartTime/1000).toString().padStart(2)}s] Request ${request.testNumber} ${result.success ? 'completed' : 'failed'} (${result.duration}ms) - ${completedCount}/${actualTotalRequests} done`);
+        
+        results.push(result);
+        
+        // Save individual result file immediately
+        const filename = `test_${result.testNumber.toString().padStart(3, '0')}.json`;
+        const filepath = path.join(resultsDir, filename);
+        
+        const resultData = {
+          testNumber: result.testNumber,
+          query: result.fullQuery,
+          statusCode: result.statusCode,
+          success: result.success,
+          duration: result.duration,
+          responseSize: result.responseSize,
+          timestamp: result.requestTimestamp,
+          scheduledTime: result.scheduledTime,
+          actualStartTime: result.actualStartTime,
+          response: result.response,
+          error: result.error || null,
+          is504: result.is504 || false
+        };
+        
+        fs.writeFileSync(filepath, JSON.stringify(resultData, null, 2));
+        
+      } catch (error) {
+        completedCount++;
+        console.log(`❌ [${Math.round((Date.now() - testStartTime)/1000).toString().padStart(2)}s] Request ${request.testNumber} failed (${error.message}) - ${completedCount}/${actualTotalRequests} done`);
+        
+        const result = {
+          testNumber: request.testNumber,
+          query: request.question,
+          success: false,
+          error: error.message,
+          duration: 0,
+          requestTimestamp: requestStartTime,
+          scheduledTime: request.timing,
+          actualStartTime: actualStartTime
+        };
+        
+        results.push(result);
+      }
+    }, delay);
+  });
   
   // Wait for all requests to complete
   console.log(`\n⏳ Waiting for all requests to complete...`);
-  while (results.length < totalRequests) {
+  while (results.length < actualTotalRequests) {
     await new Promise(resolve => setTimeout(resolve, 100));
   }
   
@@ -342,9 +373,9 @@ async function runPeakUsageTest() {
   // Print results
   console.log(`\n🎯 PEAK USAGE TEST RESULTS:`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
-  console.log(`📊 Total Requests: ${totalRequests}`);
-  console.log(`✅ Successful: ${successful} (${(successful/totalRequests*100).toFixed(1)}%)`);
-  console.log(`❌ Failed: ${failed} (${(failed/totalRequests*100).toFixed(1)}%)`);
+  console.log(`📊 Total Requests: ${actualTotalRequests}`);
+  console.log(`✅ Successful: ${successful} (${(successful/actualTotalRequests*100).toFixed(1)}%)`);
+  console.log(`❌ Failed: ${failed} (${(failed/actualTotalRequests*100).toFixed(1)}%)`);
   console.log(`   └─ 504 Timeouts: ${timeouts504}`);
   console.log(`   └─ Other Errors: ${otherErrors}`);
   console.log(`⏱️  Total Test Time: ${Math.round(totalDuration/1000)}s`);
@@ -355,7 +386,7 @@ async function runPeakUsageTest() {
   console.log(`\n💾 FILES SAVED:`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
   console.log(`📁 Results directory: ${resultsDir}`);
-  console.log(`📄 Individual files: test_001.json to test_${totalRequests.toString().padStart(3, '0')}.json`);
+  console.log(`📄 Individual files: test_001.json to test_${actualTotalRequests.toString().padStart(3, '0')}.json`);
   console.log(`🔍 Each file contains: query, response, timing, status, 504 flag`);
   
   // Show timing accuracy
@@ -373,7 +404,7 @@ async function runPeakUsageTest() {
   }
   
   // Performance assessment
-  const successRate = (successful / totalRequests) * 100;
+  const successRate = (successful / actualTotalRequests) * 100;
   console.log(`\n📋 PEAK USAGE ASSESSMENT:`);
   if (successRate >= 95) {
     console.log(`   🎉 EXCELLENT: ${successRate.toFixed(1)}% success rate under peak load`);

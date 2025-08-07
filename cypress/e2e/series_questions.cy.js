@@ -4,6 +4,7 @@ import { testSeries3 } from './tests/seriesTest/test_series_3'
 import { testSeries4 } from './tests/seriesTest/test_series_4'
 import { testSeries5 } from './tests/seriesTest/test_series_5'
 import { testSeries6 } from './tests/seriesTest/test_series_6'
+import { testSeries7 } from './tests/seriesTest/test_series_7'
 
 describe('Series Questions Test Suite', () => {
   it('APICon London', () => {
@@ -26,7 +27,11 @@ describe('Series Questions Test Suite', () => {
     testSeries5();
   });
   
-  it.only('DevOps Training Docker', () => {
+  it('DevOps Training Docker', () => {
     testSeries6();
+  });
+  
+  it.only('DevOps Training Kubernetes', () => {
+    testSeries7();
   });
 });
