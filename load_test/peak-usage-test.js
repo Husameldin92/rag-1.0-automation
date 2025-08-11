@@ -6,6 +6,11 @@ const path = require('path');
 // Config
 // =======================
 
+// Rate/configuration
+const REQUESTS_PER_SECOND = 3;       // Global rate cap per active token
+const REQUESTS_PER_TOKEN = 20;       // Each token sends this many requests
+const SLOT_SECONDS_PER_TOKEN = Math.ceil(REQUESTS_PER_TOKEN / REQUESTS_PER_SECOND);
+
 const questions = [
   'What are the main features of Angular Signals in version 17?',
   'Tell me about React useEffect from tutorials only.',
@@ -39,24 +44,24 @@ const questions = [
   'Node.js security best practices'
 ];
 
-// >>> Replace with your real tokens (15 tokens = 300 req)
+
 // One token = one user. Each user sends 20 req in their 4s slot.
 const TOKENS = [
-  'TOKEN_USER_1',
-  'TOKEN_USER_2',
-  'TOKEN_USER_3',
-  'TOKEN_USER_4',
-  'TOKEN_USER_5',
-  'TOKEN_USER_6',
-  'TOKEN_USER_7',
-  'TOKEN_USER_8',
-  'TOKEN_USER_9',
-  'TOKEN_USER_10',
-  'TOKEN_USER_11',
-  'TOKEN_USER_12',
-  'TOKEN_USER_13',
-  'TOKEN_USER_14',
-  'TOKEN_USER_15'
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjAzZjkwMTU2ZjA3MWUzNTVmNGEiLCJpYXQiOjE3NTQzODgwMzEsImV4cCI6MTc1Nzg0NDAzMX0.L_9jzE5_BzisB_fIS0Fd-dU6F2UiDSC-flYo6_lwrNo',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjBmYjkwMTU2ZjA3MWUzNTgxZWYiLCJpYXQiOjE3NTM4MDE0OTAsImV4cCI6MTc1NzI1NzQ5MH0.wUtgAQKEY17AW2Mw7D7atax6VrIpBhLOeODjRs3Eo6U',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjExNjFlMmRjNTA3MmFhODQ4MjciLCJpYXQiOjE3NTQ2MzY0NzgsImV4cCI6MTc1ODA5MjQ3OH0.MKB6X6XhLG_qc3JAWSZO9BrRVDJApkU69O2_Dgt0_IE',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjEyZDFlMmRjNTA3MmFhODRiYzkiLCJpYXQiOjE3NTQzMDA4NjksImV4cCI6MTc1Nzc1Njg2OX0.0M61qah1aunGsv6DxirmuZktURwP85_hFp7KjmdZ8Vw',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjEzZTkwMTU2ZjA3MWUzNThiODYiLCJpYXQiOjE3NTM4MDEzNjgsImV4cCI6MTc1NzI1NzM2OH0.FicnOHXkg4xATARbqJ6MYxl0NmylJpkIP-HYhy48gUI',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjE4MmQwOTM2OTA3NDQ3NDI1YzEiLCJpYXQiOjE3NTM4MDEzNzMsImV4cCI6MTc1NzI1NzM3M30.E6_1kpFEVYEbXFfAMPXK89ETMV58ouqQwNbIKlWUduM',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjE5OTkwMTU2ZjA3MWUzNTk4MGUiLCJpYXQiOjE3NTM4MDEzNzUsImV4cCI6MTc1NzI1NzM3NX0.FfMsjEIm8ajifLaGg2v_FFmNZ-EHETAG28x3iKkN4KE',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjFhY2QwOTM2OTA3NDQ3NDJhZjMiLCJpYXQiOjE3NTM4MDEzNzUsImV4cCI6MTc1NzI1NzM3NX0.H9HkWJ9DyKzylsCnxpWBEMhO0M5f1619fLfL1n1MWy0',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjFjMTkwMTU2ZjA3MWUzNTlkNzgiLCJpYXQiOjE3NTM4MDEzODksImV4cCI6MTc1NzI1NzM4OX0.U0S9TN6xy0D_GbLCIg8IAx2NC5I3_w0E4McS9Gb-CE4',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjFkMzkwMTU2ZjA3MWUzNWEwMzAiLCJpYXQiOjE3NTQyOTM0ODQsImV4cCI6MTc1Nzc0OTQ4NH0._rJRhODW-vY7vTh9er_yU6m0pwYKydgj1ssADPxA4lM',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2N2E5YjNiYTJlZDBmZTA3Mjk3NDg5NjQiLCJpYXQiOjE3NTQ2NjI2ODMsImV4cCI6MTc1ODExODY4M30.EB_lfWtn6vD6KPbuqHNH3HFEiwK1wMvG12nLjCJTi3s',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjAzZjkwMTU2ZjA3MWUzNTVmNGEiLCJpYXQiOjE3NTQzODgwMzEsImV4cCI6MTc1Nzg0NDAzMX0.L_9jzE5_BzisB_fIS0Fd-dU6F2UiDSC-flYo6_lwrNo',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjBmYjkwMTU2ZjA3MWUzNTgxZWYiLCJpYXQiOjE3NTM4MDE0OTAsImV4cCI6MTc1NzI1NzQ5MH0.wUtgAQKEY17AW2Mw7D7atax6VrIpBhLOeODjRs3Eo6U',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjExNjFlMmRjNTA3MmFhODQ4MjciLCJpYXQiOjE3NTQ2MzY0NzgsImV4cCI6MTc1ODA5MjQ3OH0.MKB6X6XhLG_qc3JAWSZO9BrRVDJApkU69O2_Dgt0_IE',
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2ODgwZjEyZDFlMmRjNTA3MmFhODRiYzkiLCJpYXQiOjE3NTQzMDA4NjksImV4cCI6MTc1Nzc1Njg2OX0.0M61qah1aunGsv6DxirmuZktURwP85_hFp7KjmdZ8Vw'
 ];
 
 // HTTPS agent: keep-alive + more sockets
@@ -120,13 +125,14 @@ function makeAPIRequest(query, testNumber, token) {
       });
     });
 
-    // Hard timeout per request (10s)
-    req.setTimeout(10000, () => {
+    // Hard timeout per request (60s)
+    req.setTimeout(60000, () => {
       req.destroy();
+      const elapsed = Date.now() - startTime;
       resolve({
         testNumber,
         statusCode: null,
-        duration: 10000,
+        duration: elapsed,
         success: false,
         error: 'timeout',
         query: query.substring(0, 50) + '...',
@@ -193,18 +199,25 @@ function generateIntegerTimings(totalRequests) {
 // Per-token schedule: each token gets a 4s slot, 5 req/sec => 20 req per token
 function buildPerTokenSchedule(tokens, questions) {
   const items = [];
-  const slots = Math.min(tokens.length, 15); // 15 slots × 4s = 60s
+  const slots = tokens.length; // one slot per token
   let testNumber = 1;
 
   for (let slot = 0; slot < slots; slot++) {
     const token = tokens[slot];
-    const baseSec = slot * 4; // 0,4,8,...,56
+    const baseSec = slot * SLOT_SECONDS_PER_TOKEN;
+    let requestsGeneratedForToken = 0;
 
-    for (let s = 0; s < 4; s++) {
+    for (let s = 0; s < SLOT_SECONDS_PER_TOKEN; s++) {
       const sec = baseSec + s;
-      // 5 unique ms offsets in [0..999]
+      const remainingForToken = REQUESTS_PER_TOKEN - requestsGeneratedForToken;
+      if (remainingForToken <= 0) break;
+
+      // Up to REQUESTS_PER_SECOND requests this second, but not more than remaining
+      const requestsThisSecond = Math.min(REQUESTS_PER_SECOND, remainingForToken);
+
+      // Unique ms offsets in [0..999]
       const used = new Set();
-      while (used.size < 5) used.add(Math.floor(Math.random() * 1000));
+      while (used.size < requestsThisSecond) used.add(Math.floor(Math.random() * 1000));
       for (const msOffset of used) {
         items.push({
           timing: sec * 1000 + msOffset,
@@ -213,6 +226,7 @@ function buildPerTokenSchedule(tokens, questions) {
           testNumber: testNumber++
         });
       }
+      requestsGeneratedForToken += requestsThisSecond;
     }
   }
 
@@ -253,12 +267,14 @@ async function runPeakUsageTest() {
     token: item.token
   }));
   timingsForReport = schedule.map(i => i.timing);
-  console.log(`🧩 Using per-token schedule: ${TOKENS.length} users × 20 req = ${schedule.length} requests (60s window, max 5/sec).`);
+  const totalSeconds = (TOKENS.length * SLOT_SECONDS_PER_TOKEN);
+  console.log(`🧩 Using per-token schedule: ${TOKENS.length} users × ${REQUESTS_PER_TOKEN} req = ${schedule.length} requests (~${totalSeconds}s window, max ${REQUESTS_PER_SECOND}/sec).`);
 
   // Quick distribution report
   console.log(`   🎯 First req at: ${Math.round(timingsForReport[0] / 1000)}s`);
   console.log(`   🎯 Last  req at: ${Math.round(timingsForReport[timingsForReport.length - 1] / 1000)}s`);
-  const secondCounts = Array(60).fill(0);
+  const maxSecond = Math.floor(timingsForReport[timingsForReport.length - 1] / 1000);
+  const secondCounts = Array(maxSecond + 1).fill(0);
   timingsForReport.forEach(t => { const s = Math.floor(t / 1000); if (secondCounts[s] !== undefined) secondCounts[s]++; });
   console.log(`\n📊 Requests per second (non-zero only):`);
   secondCounts.forEach((c, s) => { if (c > 0) console.log(`   ${s.toString().padStart(2)}s: ${c.toString().padStart(3)} ${'█'.repeat(c)}`); });

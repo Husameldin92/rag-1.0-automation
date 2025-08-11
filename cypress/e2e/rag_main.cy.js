@@ -32,7 +32,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
 
     context('Basic Rules & Metadata Interpretation', () => {
 
-        it('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
+        it.only('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
         test1()
     })
 

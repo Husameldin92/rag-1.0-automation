@@ -17,13 +17,18 @@
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
+        "_id": "8b35e3d0070110b78d6c9434",
+        "title": "Angular: Signals, Standalone, SSR",
         "parentGenre": null
       },
       {
         "_id": "04721391f3f7580f0631b9d3",
         "title": "Angular 17: Neues Release des Web-Frameworks",
+        "parentGenre": null
+      },
+      {
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
         "parentGenre": null
       },
       {
@@ -37,8 +42,13 @@
         "parentGenre": "COURSE"
       },
       {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
+        "_id": "62f599587e3fd28de76c2756",
+        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "parentGenre": null
+      },
+      {
+        "_id": "5229d453d1393d2c3d86e145",
+        "title": "Signals und State Management",
         "parentGenre": null
       },
       {
@@ -47,28 +57,13 @@
         "parentGenre": null
       },
       {
-        "_id": "62f599587e3fd28de76c2756",
-        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
-        "parentGenre": null
-      },
-      {
-        "_id": "9836770500f149a58b7769f9",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
-        "parentGenre": null
-      },
-      {
         "_id": "b3dccbe48006a54c8a14b9c8",
         "title": "Mastering State Management in Angular with the NgRx Signal Store",
         "parentGenre": "COURSE"
       },
       {
-        "_id": "5229d453d1393d2c3d86e145",
-        "title": "Signals und State Management",
+        "_id": "1c2d0d1ddbcc6e6469e58943",
+        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
         "parentGenre": null
       },
       {

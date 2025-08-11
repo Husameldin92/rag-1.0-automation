@@ -7,29 +7,14 @@
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "",
+  "actual_response": "gpt-4.1-mini keyword: Angular Signals 17 16 15 features \nAngular Signals in version 17 introduce a new reactive primitive designed to enable fine-grained, glitch-free reactivity and improve change detection performance in Angular applications. The main features and changes related to Angular Signals in version 17 are:\n\nStable Signals API: Signals, introduced as a developer preview in Angular 16, are marked as stable in Angular 17. They provide a new way to inform templates and other parts of the code about data changes, enabling more efficient updates. [1.]\n\nLocal Change Detection: Signals enable 'local change detection,' meaning that only components with changed signal values are checked and updated, rather than the entire component tree or parent components. This leads to improved performance and reduced load on the client system. [1.]\n\nImmutable Signal Updates: The previous signal.mutate() method, which allowed mutating signals directly, has been removed in Angular 17 to avoid inconsistencies. Signals must now be treated as immutable data structures, and updates should be done via the signal.update() method. [2.]\n\nNew Lifecycle Hooks Related to Signals: Angular 17 introduces two new lifecycle hooks, afterRender() and afterNextRender(), which can be used as callbacks after component rendering. These hooks are similar in concept to the computed() function in Signals and help manage side effects related to rendering. [1.]\n\nIntegration with Change Detection Strategy OnPush: Signals work well with Angular's OnPush change detection strategy, allowing components to update efficiently without unnecessary checks. [3.]\n\nSignals as a Replacement for Zone.js: Signals are part of Angular's effort to make zone.js optional by providing a new, signal-based change detection mechanism that is more fine-grained and performant. [1.]\n\nSignals API Usage: Signals are created using the signal() function with an initial value. They can be read by calling them as functions and updated via set() or update() methods. Computed signals and effects are also supported to derive values and react to changes. [3.]\n\n\nIn summary, Angular Signals in version 17 provide a stable, immutable, and fine-grained reactive primitive that enhances change detection by limiting updates to only affected components, supports new lifecycle hooks, and moves Angular closer to a zone.js-free future, all while maintaining backward compatibility and improving performance.\n [1.]",
   "discovery_data": {
     "query_sent": "What are the main features of Angular Signals in version 17?",
     "results": [
       {
-        "_id": "b3dccbe48006a54c8a14b9c8",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "9836770500f149a58b7769f9",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "62f599587e3fd28de76c2756",
-        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
-        "parentGenre": null
+        "_id": "59c6dfa238c69ebd748cc7dc",
+        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
+        "parentGenre": "RHEINGOLD"
       },
       {
         "_id": "04721391f3f7580f0631b9d3",
@@ -42,14 +27,14 @@
         "parentGenre": null
       },
       {
-        "_id": "7169f2b6391a0d9490ef4b35",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
+        "_id": "8b35e3d0070110b78d6c9434",
+        "title": "Angular: Signals, Standalone, SSR",
         "parentGenre": null
       },
       {
-        "_id": "oaGpszBqb9pMPpjD7",
-        "title": "Angular Signals im Vergleich mit RxJS Observables: Ein Blick auf Ereignisbehandlung und asynchrone Datenströme",
-        "parentGenre": "COURSE"
+        "_id": "eba6f5d083b14f4d8d53d87a",
+        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
+        "parentGenre": null
       },
       {
         "_id": "64ace3828d8056484c3534ab",
@@ -57,9 +42,124 @@
         "parentGenre": null
       },
       {
+        "_id": "01a63ca630515849aaa314b1",
+        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1c2d0d1ddbcc6e6469e58943",
+        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "parentGenre": null
+      },
+      {
+        "_id": "68fe3d9fc389515d1d6bea43",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "5229d453d1393d2c3d86e145",
+        "title": "Signals und State Management",
+        "parentGenre": null
+      },
+      {
+        "_id": "b3dccbe48006a54c8a14b9c8",
+        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "parentGenre": "COURSE"
+      },
+      {
         "_id": "5ecf87915aa99dfe10bb64dd",
         "title": "Is Angular 16 Starting a (R)evolution?",
         "parentGenre": null
+      },
+      {
+        "_id": "e9905bc3e1a3780619966899",
+        "title": "Jetzt schlägt’s 15: Was ist neu in Angular 15?",
+        "parentGenre": null
+      },
+      {
+        "_id": "bb97d9e8205e4d23e8d34081",
+        "title": "Angular 15: New Features and Breaking Changes",
+        "parentGenre": null
+      },
+      {
+        "_id": "c57d9896250397cf05488cad",
+        "title": "Modern Angular is easier than React",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "18e1984b93f7b81b65afb3ad",
+        "title": "Rethinking Angular: The Future with Signals and the New Resource API",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "e45840c0b8a784e3b3cf3be3",
+        "title": "RxJS, Signals and Native Observables: What Now?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1fed2c6361980d606789e315",
+        "title": "Manfred Steyer on Angular 20: Signals, Dynamic Components, AI, and What’s Next",
+        "parentGenre": null
+      },
+      {
+        "_id": "a46f583e86ab963aed1784a1",
+        "title": "Master Angular Signals in your existing Codebase",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "9836770500f149a58b7769f9",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": null
+      },
+      {
+        "_id": "73a55b4bbeecf374b233deaf",
+        "title": "Angular’s New Era: Unveiling the Most Exciting Features Yet",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "69a73aaa7784b829b85889ba",
+        "title": "What's New in Angular 17?",
+        "parentGenre": null
+      },
+      {
+        "_id": "7169f2b6391a0d9490ef4b35",
+        "title": "Angular Turns 18 - Grown Up But Dynamic",
+        "parentGenre": null
+      },
+      {
+        "_id": "E8GpqxYcngd3MofGq",
+        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "787b05fae93f992824034695",
+        "title": "3 Effective Rules for Successfully Using Signals in Angular",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "fQ852nxKav9NNZTSG",
+        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "ZM7Cxztnyh7J9Psky",
+        "title": "Signals, Standalone, SSR: So bauen Sie Angular-Apps der Zukunft",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "popnffuzCL87EDLDe",
+        "title": "Modern Angular Workshop",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "heHyAodHSRfj6AG3L",
+        "title": "The Internal Magic of Angular Signals",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "kynatXxTGKucptx8Y",
+        "title": "Signals – A New Way of Fine-Grained Reactivity in Angular",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },

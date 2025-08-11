@@ -7,7 +7,7 @@
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "",
+  "actual_response": "Angular Signals in version 17 introduce a new reactive primitive designed to enable fine-grained, efficient change detection and state management within Angular applications. The main features of Angular Signals in version 17 are:\n\nStable Signals API: Signals, introduced as a developer preview in Angular 16, are marked as stable in Angular 17. They provide a simple reactive building block that holds a value and notifies consumers when the value changes, enabling reactive programming patterns within Angular components and services [1.].\n\nLocal Change Detection: Signals enable a new change detection mechanism called 'local change detection,' where only components with changed signal values are checked and updated, rather than the entire component tree or parent components. This leads to improved performance and more efficient UI updates [1.].\n\nImmutable Signal Updates: The previous signal.mutate() method, which allowed mutating signals directly, was removed in Angular 17 to avoid inconsistencies. Signals must now be treated as immutable data structures, and updates should be performed using the signal.update() method, which returns a new value rather than mutating the existing one [2.].\n\nIntegration with Angular Templates: Signals can be used directly in Angular templates, where binding to a signal automatically triggers change detection when the signal's value changes. This simplifies reactive UI updates without manual subscription management [3.].\n\nNew Lifecycle Hooks Related to Signals: Angular 17 introduces two new component lifecycle hooks, afterRender() and afterNextRender(), which can be used as callbacks after rendering phases. These hooks are related to the reactive model introduced by signals and provide more granular control over component rendering phases [1.].\n\nBackward Compatibility and Zone.js Optionality: Signals are part of Angular's effort to make zone.js optional by providing a new change detection mechanism that is more efficient and fine-grained. This allows Angular applications to potentially run without zone.js in the future, improving performance and simplifying the reactive model [1.].\n\nImproved Performance and Developer Experience: By using signals, Angular reduces the need for broad dirty checking and manual subscription management, making reactive programming simpler and more intuitive, especially for new developers. Signals also support a glitch-free update model, where only the final value change triggers updates, avoiding intermediate unnecessary renders [3.].\n\n\nIn summary, Angular Signals in version 17 provide a stable, immutable, and efficient reactive primitive that enables local change detection, simplifies reactive UI updates, introduces new lifecycle hooks, and moves Angular closer to a zone.js-free future, all contributing to better performance and developer ergonomics.\n [1.]\n [2.]\n [3.]\n [1.]\n [1.]\n [3.]",
   "discovery_data": {
     "query_sent": "What are the main features of Angular Signals in version 17?",
     "results": [
@@ -17,33 +17,13 @@
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
-        "parentGenre": null
-      },
-      {
         "_id": "04721391f3f7580f0631b9d3",
         "title": "Angular 17: Neues Release des Web-Frameworks",
         "parentGenre": null
       },
       {
-        "_id": "64ace3828d8056484c3534ab",
-        "title": "Angular 16 released",
-        "parentGenre": null
-      },
-      {
-        "_id": "eba6f5d083b14f4d8d53d87a",
-        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
-        "parentGenre": null
-      },
-      {
-        "_id": "68fe3d9fc389515d1d6bea43",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "_id": "de0df53930e2e1e582caf57f",
+        "title": "Angular 17: The Web Framework's Newest Release",
         "parentGenre": null
       },
       {
@@ -52,8 +32,13 @@
         "parentGenre": null
       },
       {
-        "_id": "d0a30c39b6f199c25af1b450",
-        "title": "Extensions und Typisierung mit dem NgRx Signal Store",
+        "_id": "eba6f5d083b14f4d8d53d87a",
+        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
+        "parentGenre": null
+      },
+      {
+        "_id": "64ace3828d8056484c3534ab",
+        "title": "Angular 16 released",
         "parentGenre": null
       },
       {
@@ -62,13 +47,33 @@
         "parentGenre": "RHEINGOLD"
       },
       {
+        "_id": "1c2d0d1ddbcc6e6469e58943",
+        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "parentGenre": null
+      },
+      {
+        "_id": "68fe3d9fc389515d1d6bea43",
+        "title": "Professional Tips for Using Signals in Angular",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "5229d453d1393d2c3d86e145",
+        "title": "Signals und State Management",
+        "parentGenre": null
+      },
+      {
         "_id": "b3dccbe48006a54c8a14b9c8",
         "title": "Mastering State Management in Angular with the NgRx Signal Store",
         "parentGenre": "COURSE"
       },
       {
-        "_id": "62f599587e3fd28de76c2756",
-        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "_id": "5ecf87915aa99dfe10bb64dd",
+        "title": "Is Angular 16 Starting a (R)evolution?",
+        "parentGenre": null
+      },
+      {
+        "_id": "e9905bc3e1a3780619966899",
+        "title": "Jetzt schlägt’s 15: Was ist neu in Angular 15?",
         "parentGenre": null
       },
       {
