@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "retrieval:staging_text": "node retrieval-automation/index.js --endpoint discoveryTest --languages en,de,nl",
-    "retrieval:prod": "node retrieval-automation/index.js --endpoint discover --languages en,de,nl"
+    "retrieval:prod": "node retrieval-automation/index.js --endpoint discover --languages en,de,nl",
+    "retrieval:compare": "node retrieval-automation-two/compare.js"
   },
   "keywords": [],
   "author": "",
