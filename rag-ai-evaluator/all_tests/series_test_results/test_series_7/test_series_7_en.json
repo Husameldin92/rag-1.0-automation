@@ -1,0 +1,230 @@
+{
+  "test_id": "test_series_007_en",
+  "series_name": "DevOps Training Kubernetes",
+  "query": "When is next DevOps Training Kubernetes happening?",
+  "endpoint": "entwickler_de_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "The next DevOps training focused on Kubernetes is scheduled as follows:\n\nDevOpsCon Camp Kubernetes Basic September 2025 | Munich  \n\nDates: September 10 to September 12, 2025  \nTopics include practical Kubernetes basics, detailed Kubernetes concepts such as Pods, Deployments, Volume Management, Ingress, and practical Kubernetes usage including Jobs, CronJobs, Monitoring, Logging, and RBAC.  \nThis is a premium add-on event requiring separate purchase. As an Elevate member, you benefit from a 10% discount automatically applied when booking via your Elevate dashboard on entwickler.de, plus an additional 3% discount if using a prepayment method.  \nThe sessions cover:  \nDay 1: Practical introduction to Kubernetes fundamentals and orchestration  \nDay 2: Advanced Kubernetes details including Pods, Health Checks, Deployments, and Ingress  \nDay 3: Kubernetes in practice with Jobs, CronJobs, Monitoring, Logging, Security, and RBAC [1.] [2.] [3.]\n\n\n\n\nDevOpsCon Camp Kubernetes Advanced October 2025 | Munich  \n\nDates: October 13 to October 15, 2025  \nThis advanced camp covers robust Kubernetes cluster configuration, advanced deployment strategies, security policies, and container management optimization.  \nTopics include:  \nCluster setup with 4 nodes, dynamic storage with Ceph/rook.io, monitoring with Prometheus/Loki  \nAdvanced deployments, Pod Priority, Network Policies, Pod Disruption Budget, Pod Security Policy, and Secrets management  \nContainer registry management with Harbor, Helm charts, Operator/Controller development, Operator Lifecycle Manager (OLM), database cluster management, and GitOps with ArgoCD\n\n\nThis is also a premium add-on event with the same discount conditions for Elevate members. [4.] [5.] [6.]\n\n\n\nThese upcoming camps provide comprehensive Kubernetes training from beginner to advanced levels, suitable for DevOps professionals aiming to deepen their Kubernetes expertise.\nIf you are interested, as an Elevate user, you can book these events directly on entwickler.de with your automatic discount applied via your Elevate dashboard. For more details and booking, please check the platform’s event listings.  \nLet me know if you want information on other Kubernetes training or related topics!\n\nSources\n\nTag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte This seminar lesson covers the first day of the Kubernetes Basic Training in September 2025 in Munich, focusing on practical Kubernetes fundamentals such as cluster overview, key concepts like pods, deployments, and services, and initial steps for managing containerized applications. ⚠️ This talk of DevOpsCon Camp Kubernetes Basic September 2025 | München is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nTag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress This seminar lesson presents the second day of the Kubernetes Basic Training in September 2025 in Munich, diving into advanced Kubernetes concepts such as pods, health checks, deployments, volume management, services, DNS, and ingress for controlled application updates. ⚠️ This talk of DevOpsCon Camp Kubernetes Basic September 2025 | München is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nTag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC This seminar lesson covers the third day of the Kubernetes Basic Training in September 2025 in Munich, focusing on practical Kubernetes usage including jobs, cronjobs, monitoring with Prometheus, logging with Elastic Stack, security, and RBAC implementation. ⚠️ This talk of DevOpsCon Camp Kubernetes Basic September 2025 | München is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nTag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes This seminar lesson details the first day of the Kubernetes Advanced Camp in October 2025 in Munich, focusing on configuring a robust Kubernetes cluster with at least 4 nodes, dynamic storage with Ceph/rook.io, and monitoring/logging with Prometheus and Loki. ⚠️ This talk of DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nTag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem This seminar lesson covers the second day of the Kubernetes Advanced Camp in October 2025 in Munich, focusing on advanced deployment strategies including pod priority, network policies, pod disruption budgets, pod security policies, and secure secret management. ⚠️ This talk of DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\nTag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery This seminar lesson presents the third day of the Kubernetes Advanced Camp in October 2025 in Munich, focusing on container management optimization with Harbor, writing and using Helm charts, introduction to operators/controllers, operator lifecycle management, database cluster management, and GitOps with ArgoCD. ⚠️ This talk of DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München is a premium add-on. Purchase separately to participate. As an Elevate member, your discount of 10% is applied automatically when booking via your Elevate dashboard here on entwickler.de. An additional 3% applies if you use a prepayment method.\n\n\n\nMore on this Topic\n\nDay 1: Kubernetes Essentials: Cluster Setup, Image Building, and Application Deployment This seminar lesson covers the third day of the Kubernetes Advanced Camp in March 2025 in Munich, focusing on container registry management with Harbor, vulnerability scanning, Helm charts, operator/controller development, operator lifecycle management, database cluster management, and GitOps with ArgoCD. ℹ️ This talk of DevOpsCon Camp Kubernetes Advanced März 2025 | München was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nDay 2: Kubernetes Deep Dive: Ingress, Deployments, and Persistent Storage This seminar lesson covers the second day of the DevOpsCon Bootcamp December 2024 in Munich, diving deeper into Kubernetes with topics like ingress, deployments, persistent storage, config maps, secrets, and includes a Q&A session. ℹ️ This talk of DevOpsCon Bootcamp December 2024 | Munich was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nDay 1: Kubernetes Essentials: Cluster Setup, Image Building, and Application Deployment This seminar lesson covers the third day of the Kubernetes Advanced Camp in March 2025 in Munich, focusing on container registry management with Harbor, vulnerability scanning, Helm charts, operator/controller development, operator lifecycle management, database cluster management, and GitOps with ArgoCD. ℹ️ This talk of DevOpsCon Camp Kubernetes Advanced März 2025 | München was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.\n\nTag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress This seminar lesson covers the second day of the Kubernetes Basic Camp in March 2025 in Munich, focusing on advanced Kubernetes concepts such as pods, health checks, deployments, volume management, services, DNS, and ingress. ℹ️ This talk of DevOpsCon Camp Kubernetes Basic März 2025 | München was part of a past event. Booking is no longer available, but you can discover the current edition right here on the platform.",
+  "discovery_data": {
+    "query_sent": "When is next DevOps Training Kubernetes happening?",
+    "results": [
+      {
+        "_id": "b29dfa7b456dce39b1e1696f",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Dezember 2025 | Online"
+      },
+      {
+        "_id": "95e7d11e189f3033990dbefd",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2025 | Berlin"
+      },
+      {
+        "_id": "dfe49b552361e65747c2486a",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2025 | Berlin"
+      },
+      {
+        "_id": "2f28db7c035d8a016799b084",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2025 | Berlin"
+      },
+      {
+        "_id": "fed3491d8aaf72d5e9761842",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München"
+      },
+      {
+        "_id": "3f9ccb70f76c914f1a54ba56",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic September 2025 | München"
+      },
+      {
+        "_id": "82f1ff47cb88f42c3d355572",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic September 2025 | München"
+      },
+      {
+        "_id": "a3b9c83541f4bce423571679",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Juli 2025 | Berlin"
+      },
+      {
+        "_id": "ad9bb7280464713f92c5b2fa",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic Juni 2025 | Berlin"
+      },
+      {
+        "_id": "3f7c1dbd6767e76cc4ad92f1",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic Juni 2025 | Berlin"
+      },
+      {
+        "_id": "46cd404e9a86242586122b5d",
+        "title": "Tag 1: Konfiguration eines robusten Kubernetes-Clusters mit 4 Nodes",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced März 2025 | München"
+      },
+      {
+        "_id": "8f3e090de417d531659b5363",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic März 2025 | München"
+      },
+      {
+        "_id": "544a6ddad8289c64cec9a69a",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic März 2025 | München"
+      },
+      {
+        "_id": "b66fd5d69679587ce5e3b7de",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2025 | Berlin"
+      },
+      {
+        "_id": "1ec3be2f2120743e823f2a26",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2025 | Berlin"
+      },
+      {
+        "_id": "c1247bf550c6088bfd78a6f6",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2025 | Berlin"
+      },
+      {
+        "_id": "fc85102b2b1d04b523cc7125",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München"
+      },
+      {
+        "_id": "da6817bb6ddd318d8f9304bc",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Oktober 2025 | München"
+      },
+      {
+        "_id": "11a8a5b89d2480ec8535019c",
+        "title": "Tag 3: Kubernetes in der Praxis - Jobs, Cronjobs, Monitoring, logging, RBAC",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic September 2025 | München"
+      },
+      {
+        "_id": "77d464c9d0e79af22b59f18a",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Juli 2025 | Berlin"
+      },
+      {
+        "_id": "11e23e9a2844903957418067",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Juli 2025 | Berlin"
+      },
+      {
+        "_id": "8f86908a4aff54fa966accbe",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic Juni 2025 | Berlin"
+      },
+      {
+        "_id": "8b309e2a149bcb4fe7a72dfb",
+        "title": "Tag 3: Optimierung der Containerverwaltung mit Habor und Implementierung von Continuous Delivery",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced März 2025 | München"
+      },
+      {
+        "_id": "906f9f786f61b52aa1899418",
+        "title": "Tag 2: Fortgeschrittene Bereitstellungsstrategien im Kubernetes-Ökosystem",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced März 2025 | München"
+      },
+      {
+        "_id": "dcc73509c2b24c9a470de70e",
+        "title": "Tag 1: Praktischer Einstieg in Kubernetes - Overview, Begrifflichkeiten, erste Schritte",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic März 2025 | München"
+      },
+      {
+        "_id": "198c21063247f2d2054ab7f3",
+        "title": "Tag 3",
+        "parentGenre": "CAMP",
+        "parentName": "Service Mesh Camp Oktober 2025 | Online"
+      },
+      {
+        "_id": "e0bee26a7dd0cdc142ab0af7",
+        "title": "Tag 3: Deployment und DevOps; Konzeptentwicklung zur Fehleranalyse mit praktischer Anwendung",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Juni 2025 | Berlin"
+      },
+      {
+        "_id": "abf14ccf11953105d2478d4a",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau & Konzeptentwicklung zur Fehleranalyse",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX März 2025 | München"
+      },
+      {
+        "_id": "e8d5d98f9c2ff22aa5bc9b85",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Februar 2025 | Online"
+      },
+      {
+        "_id": "47ab3ee4a0a412a9211eb1d7",
+        "title": "Tag 1",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Advanced Dezember 2024 | Online"
+      },
+      {
+        "_id": "79f089fb3ac2a2833e394522",
+        "title": "Day 1: Kubernetes Essentials: Cluster Setup, Image Building, and Application Deployment",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Bootcamp December 2024 | Munich"
+      },
+      {
+        "_id": "qqLcRaytBhSrF7W5X",
+        "title": "Tag 3: Deployment und DevOps: Automatisierung und Team-Aufbau",
+        "parentGenre": "CAMP",
+        "parentName": "Modul FLEX Dezember 2024 | München"
+      },
+      {
+        "_id": "4cdea13024366aba4aae4fce",
+        "title": "Tag 2: Kubernetes im Detail - Pods, Deployment, Volume Management Services, Ingress",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Camp Kubernetes Basic November 2024 | Berlin"
+      },
+      {
+        "_id": "d430685379e1a8f7dcddccbc",
+        "title": "Day 2: Kubernetes Deep Dive: Ingress, Deployments, and Persistent Storage",
+        "parentGenre": "CAMP",
+        "parentName": "DevOpsCon Bootcamp December 2024 | Munich"
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "Series Event Information Query - DevOps Training Kubernetes",
+    "required_checks": [
+      "LANGUAGE CHECK: Compare the language of discovery_data.query_sent with the language of actual_response. For this test: if query_sent is 'When is next DevOps Training Kubernetes happening?' (English), then actual_response should be in English. If query_sent is 'Wann findet die nächste DevOps Training Kubernetes statt?' (German), then actual_response should be in German. If query_sent is 'Wanneer vindt de volgende DevOps Training Kubernetes plaats?' (Dutch), then actual_response should be in Dutch. Ignore the language of discovery chunk titles - only compare query_sent vs actual_response languages.",
+      "FIRST CHUNK CHECK: Examine discovery_data.results[0] - since this is a DevOps Training query for Kubernetes, the first chunk should ideally be from any DevOps Training Kubernetes session or module. If no future Kubernetes training is available, the first chunk should be from ANY future training or camp (any technology, any training type). Check both title and parentName for future dates (2025 or later) and Kubernetes-related content.",
+      "CHUNK ANALYSIS: Look at discovery_data.results and verify that many chunks are from DevOps Training sessions, particularly Kubernetes-related content. There should be chunks related to Kubernetes training specifically, and also other DevOps training topics (Docker, monitoring, CI/CD, etc.). The discovery should show a strong focus on DevOps training content with Kubernetes emphasis, demonstrating good relevance to the Kubernetes training query.",
+      "RESPONSE ACCURACY CHECK: The actual_response should provide accurate information about DevOps Training Kubernetes. CRITICAL: Check the current date context provided above. Compare any mentioned training dates with today's date to determine if the training is actually in the future or past. If the response states a training is 'upcoming' when it's actually past according to the current date, this check should FAIL. The response should acknowledge the correct temporal status of the training."
+    ]
+  }
+}

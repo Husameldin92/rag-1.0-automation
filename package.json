@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "retrieval:staging_text": "node retrieval-automation/index.js --endpoint discoveryTest --languages en,de,nl",
+    "retrieval:prod": "node retrieval-automation/index.js --endpoint discover --languages en,de,nl"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,8 @@
   "dependencies": {
     "cypress": "^14.5.1",
     "dotenv": "^17.2.0",
-    "openai": "^5.9.0"
+    "openai": "^5.9.0",
+    "xlsx": "^0.18.5",
+    "csv-parse": "^5.5.6"
   }
 }
