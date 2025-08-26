@@ -28,8 +28,8 @@ const useManual = true;
 // Questions list
 // ------------------------------
 const QUESTIONS_MANUAL = [
-  { id: 'API London', en: 'When is next API London happening?', de: 'Wann findet die nächste API London statt?', nl: 'Wanneer vindt de volgende API London plaats?' },
-  { id: 'API New York', en: 'When is next API New York happening?', de: 'Wann findet die nächste API New York statt?', nl: 'Wanneer vindt de volgende API New York plaats?' },
+  { id: 'API London', en: 'When is next APICon London happening?', de: 'Wann findet die nächste APICon London statt?', nl: 'Wanneer vindt de volgende APICon London plaats?' },
+  { id: 'API New York', en: 'When is next APICon New York happening?', de: 'Wann findet die nächste APICon New York statt?', nl: 'Wanneer vindt de volgende APICon New York plaats?' },
   { id: 'BASTA! Herbst', en: 'When is next BASTA! Herbst happening?', de: 'Wann findet die nächste BASTA! Herbst statt?', nl: 'Wanneer vindt de volgende BASTA! Herbst plaats?' },
   { id: 'BASTA! Spring', en: 'When is next BASTA! Spring happening?', de: 'Wann findet die nächste BASTA! Spring statt?', nl: 'Wanneer vindt die volgende BASTA! Spring plaats?' },
   { id: 'Delphi Code Camp Duesseldorf', en: 'When is next Delphi Code Camp Duesseldorf happening?', de: 'Wann findet die nächste Delphi Code Camp Düsseldorf statt?', nl: 'Wanneer vindt de volgende Delphi Code Camp Duesseldorf plaats?' },
