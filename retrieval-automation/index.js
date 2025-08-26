@@ -13,23 +13,19 @@ function getArg(flag, def) {
   return def;
 }
 
-const csvPath = getArg('--csv', path.join(__dirname, 'questions', 'Series sheet - Sheet1.csv'));
 const endpointOpArg = getArg('--endpoint', 'discoveryTest'); // 'discover' | 'discoveryTest' | 'both'
 const apiUrl = getArg('--url', 'https://concord.sandsmedia.com/graphql');
-const limitRows = parseInt(getArg('--limit', 'all'), 10);
 const languagesArg = getArg('--languages', 'en,de,nl'); // comma-separated: en,de,nl
 const outDir = getArg('--outDir', path.join(__dirname, 'results'));
 const explicitToken = getArg('--token', undefined);
 const DEFAULT_TOKEN = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhcHBVc2VySWQiOiI2N2E5YjNiYTJlZDBmZTA3Mjk3NDg5NjQiLCJpYXQiOjE3NTYxMTkyNzQsImV4cCI6MTc1OTU3NTI3NH0.zk0FU1APcn3n-9pVcsq6p57aJgJm108V04aCDDZzgWg';
-const singleQuestion = getArg('--question', undefined);
-const singleLanguage = getArg('--language', 'en');
-const singleQuestionId = getArg('--questionId', 'Q1');
 const debug = getArg('--debug', 'false') === 'true';
 const saveRaw = getArg('--saveRaw', 'true') === 'true';
-const useManual = getArg('--useManual', 'true') === 'true';
+const verbose = getArg('--verbose', 'true') === 'true';
+const useManual = true; 
 
 // ------------------------------
-// Manual questions list (embedded)
+// Questions list
 // ------------------------------
 const QUESTIONS_MANUAL = [
   { id: 'API London', en: 'When is next API London happening?', de: 'Wann findet die nächste API London statt?', nl: 'Wanneer vindt de volgende API London plaats?' },
@@ -107,11 +103,7 @@ const QUESTIONS_MANUAL = [
   { id: 'Web Security Camp', en: 'When is next Web Security Camp happening?', de: 'Wann findet die nächste Web Security Camp statt?', nl: 'Wanneer vindt die volgende Web Security Camp plaats?' }
 ];
 
-// CSV column names
-const colId = getArg('--colId', 'Series Name');
-const colEn = getArg('--colEn', 'English');
-const colDe = getArg('--colDe', 'Deutsch');
-const colNl = getArg('--colNl', 'Nederlands');
+// CSV mode removed (manual list only)
 
 // Token from CLI or existing environment variable
 const token = explicitToken || process.env.ACCESS_TOKEN || DEFAULT_TOKEN;
@@ -130,17 +122,13 @@ if (!['discover', 'discoveryTest', 'both'].includes(endpointOpArg)) {
 // Helpers
 // ------------------------------
 function readCsvRecords(filePath) {
-  const content = fs.readFileSync(filePath, 'utf8');
-  const records = parse(content, {
-    columns: true,
-    skip_empty_lines: true
-  });
-  return records;
+  // CSV mode removed; keeping stub to avoid references
+  return [];
 }
 
 function buildQuery(op) {
   // Request only fields we need to minimize payload
-  return `query ($question: String!) {\n  ${op}(question: $question) {\n    results {\n      _id\n      title\n      schemaType\n      parentName\n      parentGenre\n      __typename\n    }\n    __typename\n  }\n}`;
+  return `query ($question: String!) {\n  ${op}(question: $question) {\n    results {\n      _id\n      title\n      schemaType\n      parentName\n      parentGenre\n      score\n      __typename\n    }\n    __typename\n  }\n}`;
 }
 
 function postGraphQL({ url, token, query, variables }) {
@@ -181,136 +169,50 @@ function postGraphQL({ url, token, query, variables }) {
 }
 
 async function runForEndpoint(op) {
-  // Ensure outDir
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-
   const languages = languagesArg.split(',').map(s => s.trim()).filter(Boolean);
   const queryString = buildQuery(op);
-
   const rows = [];
-  
-  if (singleQuestion) {
-    // Single-question mode
-    const { status, data } = await postGraphQL({
-      url: apiUrl,
-      token,
-      query: queryString,
-      variables: { question: singleQuestion }
-    });
+  const total = QUESTIONS_MANUAL.length * languages.length;
+  let processed = 0;
 
-    if (status !== 200) {
-      console.warn(`⚠️  HTTP ${status} for ${singleQuestionId} [${singleLanguage}]`);
-    }
+  for (const rec of QUESTIONS_MANUAL) {
+    const questionId = rec.id;
+    for (const lang of languages) {
+      const question = rec[lang];
+      if (!question) continue;
 
-    const container = (data && data.data && data.data[op]) || { results: [] };
-    const results = Array.isArray(container.results) ? container.results : [];
-    for (const item of results) {
-      rows.push({
-        questionId: singleQuestionId,
-        endpoint: op,
-        language: singleLanguage,
-        question: singleQuestion,
-        _id: item._id || '',
-        title: item.title || '',
-        schemaType: item.schemaType || '',
-        parentName: item.parentName || '',
-        parentGenre: item.parentGenre || ''
-      });
-    }
-  } else if (!useManual) {
-    // CSV mode
-    const records = readCsvRecords(csvPath);
-    if (!records.length) {
-      console.error('❌ No rows found in CSV.');
-      process.exit(1);
-    }
-
-    const max = Math.min(records.length, isNaN(limitRows) ? records.length : limitRows);
-    for (let i = 0; i < max; i++) {
-      const rec = records[i];
-      const questionId = rec[colId];
-
-      const langToCol = { en: colEn, de: colDe, nl: colNl };
-      for (const lang of languages) {
-        const col = langToCol[lang];
-        if (!col) continue;
-        const question = rec[col];
-        if (!question) continue;
-
-        const { status, data } = await postGraphQL({
-          url: apiUrl,
-          token,
-          query: queryString,
-          variables: { question }
-        });
-
-        if (status !== 200) {
-          console.warn(`⚠️  HTTP ${status} for ${questionId} [${lang}]`);
-        }
-
-        const container = (data && data.data && data.data[op]) || { results: [] };
-        const results = Array.isArray(container.results) ? container.results : [];
-
-        for (const item of results) {
-          rows.push({
-            questionId,
-            endpoint: op,
-            language: lang,
-            question,
-            _id: item._id || '',
-            title: item.title || '',
-            schemaType: item.schemaType || '',
-            parentName: item.parentName || '',
-            parentGenre: item.parentGenre || ''
-          });
-        }
+      const t0 = Date.now();
+      const { status, data } = await postGraphQL({ url: apiUrl, token, query: queryString, variables: { question } });
+      const ms = Date.now() - t0;
+      processed++;
+      if (getArg('--verbose', 'true') === 'true') {
+        console.log(`${status === 200 ? '✅' : '❌'} ${op} ${processed}/${total} | ${questionId} [${lang}] (${ms}ms)`);
       }
-    }
-  } else {
-    // Manual list mode
-    const max = QUESTIONS_MANUAL.length;
-    const langs = languagesArg.split(',').map(s => s.trim()).filter(Boolean);
-    for (let i = 0; i < max; i++) {
-      const rec = QUESTIONS_MANUAL[i];
-      const questionId = rec.id;
-      for (const lang of langs) {
-        const question = rec[lang];
-        if (!question) continue;
 
-        const { status, data } = await postGraphQL({
-          url: apiUrl,
-          token,
-          query: queryString,
-          variables: { question }
+      const container = (data && data.data && data.data[op]) || { results: [] };
+      const results = Array.isArray(container.results) ? container.results : [];
+      for (const item of results) {
+        rows.push({
+          questionId,
+          endpoint: op,
+          language: lang,
+          question,
+          _id: item._id || '',
+          title: item.title || '',
+          schemaType: item.schemaType || '',
+          parentName: item.parentName || '',
+          parentGenre: item.parentGenre || '',
+          score: typeof item.score === 'number' ? item.score : ''
         });
-
-        if (status !== 200) {
-          console.warn(`⚠️  HTTP ${status} for ${questionId} [${lang}]`);
-        }
-
-        const container = (data && data.data && data.data[op]) || { results: [] };
-        const results = Array.isArray(container.results) ? container.results : [];
-        for (const item of results) {
-          rows.push({
-            questionId,
-            endpoint: op,
-            language: lang,
-            question,
-            _id: item._id || '',
-            title: item.title || '',
-            schemaType: item.schemaType || '',
-            parentName: item.parentName || '',
-            parentGenre: item.parentGenre || ''
-          });
-        }
       }
     }
   }
 
-  // Build workbook
-  if (debug) {
+  if (getArg('--debug', 'false') === 'true') {
     console.log(`ℹ️  Collected rows: ${rows.length}`);
   }
+
   const worksheet = XLSX.utils.json_to_sheet(rows);
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, 'results');
@@ -320,20 +222,12 @@ async function runForEndpoint(op) {
   XLSX.writeFile(workbook, outFile);
   console.log(`✅ Saved: ${outFile}`);
 
-  // Optionally save raw JSON for inspection
-  if (saveRaw) {
+  if (getArg('--saveRaw', 'true') === 'true') {
     const rawDir = path.join(outDir, 'json');
     if (!fs.existsSync(rawDir)) fs.mkdirSync(rawDir, { recursive: true });
     const rawPath = path.join(rawDir, `${op}_${ts}.json`);
-    const payload = {
-      endpoint: op,
-      url: apiUrl,
-      questionMode: singleQuestion ? 'single' : 'csv',
-      languages: singleQuestion ? [singleLanguage] : languages,
-      rows
-    };
-    fs.writeFileSync(rawPath, JSON.stringify(payload, null, 2));
-    if (debug) console.log(`📝 Raw saved: ${rawPath}`);
+    fs.writeFileSync(rawPath, JSON.stringify({ endpoint: op, url: apiUrl, questionMode: 'manual', languages, rows }, null, 2));
+    if (getArg('--debug', 'false') === 'true') console.log(`📝 Raw saved: ${rawPath}`);
   }
 }
 

@@ -52,7 +52,8 @@ function buildEndpointSheetRows(grouped) {
         Title: item.title || '',
         SchemaType: item.schemaType || '',
         ParentName: item.parentName || '',
-        ParentGenre: item.parentGenre || ''
+        ParentGenre: item.parentGenre || '',
+        Score: typeof item.score === 'number' ? item.score : ''
       });
     });
   }
@@ -72,15 +73,19 @@ function buildCompareRows(groupedDiscover, groupedDiscoveryTest) {
     // Index by _id for rank lookup
     const rankDiscoverById = new Map();
     const metaById = new Map();
+    const scoreDiscoverById = new Map();
     listDiscover.forEach((item, idx) => {
       rankDiscoverById.set(item._id, idx);
       metaById.set(item._id, item);
+      scoreDiscoverById.set(item._id, typeof item.score === 'number' ? item.score : '');
     });
 
     const rankDiscoveryTestById = new Map();
+    const scoreDiscoveryTestById = new Map();
     listDiscoveryTest.forEach((item, idx) => {
       rankDiscoveryTestById.set(item._id, idx);
       if (!metaById.has(item._id)) metaById.set(item._id, item);
+      scoreDiscoveryTestById.set(item._id, typeof item.score === 'number' ? item.score : '');
     });
 
     // Union of IDs
@@ -103,7 +108,9 @@ function buildCompareRows(groupedDiscover, groupedDiscoveryTest) {
         ParentName: m.parentName || '',
         ParentGenre: m.parentGenre || '',
         Rank_discover: rankDiscover,
+        Score_discover: scoreDiscoverById.has(id) ? scoreDiscoverById.get(id) : '',
         Rank_discoveryTest: rankDiscoveryTest,
+        Score_discoveryTest: scoreDiscoveryTestById.has(id) ? scoreDiscoveryTestById.get(id) : '',
         Status: status
       });
     }
