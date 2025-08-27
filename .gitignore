@@ -17,6 +17,7 @@ node_modules/
 cypress/screenshots/
 cypress/videos/
 results/
+archive/
 
 # Logs
 *.log

@@ -47,6 +47,7 @@ function buildEndpointSheetRows(grouped) {
       sheetRows.push({
         Series: series,
         Language: language,
+        Question: item.question || '',
         Rank: idx, // 0-based
         _id: item._id || '',
         Title: item.title || '',
@@ -104,6 +105,7 @@ function buildCompareRows(groupedDiscover, groupedDiscoveryTest) {
         Language: language,
         _id: id,
         Title: m.title || '',
+        Question: m.question || '',
         SchemaType: m.schemaType || '',
         ParentName: m.parentName || '',
         ParentGenre: m.parentGenre || '',
@@ -124,10 +126,10 @@ function writeWorkbook({ rowsDiscover, rowsDiscoveryTest, rowsCompare }) {
   const wb = XLSX.utils.book_new();
 
   const wsDiscover = XLSX.utils.json_to_sheet(rowsDiscover);
-  XLSX.utils.book_append_sheet(wb, wsDiscover, 'discover');
+  XLSX.utils.book_append_sheet(wb, wsDiscover, 'PROD');
 
   const wsDiscoveryTest = XLSX.utils.json_to_sheet(rowsDiscoveryTest);
-  XLSX.utils.book_append_sheet(wb, wsDiscoveryTest, 'discoveryTest');
+  XLSX.utils.book_append_sheet(wb, wsDiscoveryTest, 'STAGE');
 
   const wsCompare = XLSX.utils.json_to_sheet(rowsCompare);
   XLSX.utils.book_append_sheet(wb, wsCompare, 'compare');
