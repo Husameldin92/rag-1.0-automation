@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "retrieval:staging_text": "node retrieval-automation/index.js --endpoint discoveryTest --languages en,de,nl",
     "retrieval:prod": "node retrieval-automation/index.js --endpoint discover --languages en,de,nl",
-    "retrieval:compare": "node retrieval-automation-two/compare.js",
+    "retrieval:compare": "node retrieval-automation-compare/compare.js",
     "retrieval:quick": "node retrieval-automation-quick/run.js"
   },
   "keywords": [],
