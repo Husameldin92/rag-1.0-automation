@@ -128,7 +128,10 @@ function readCsvRecords(filePath) {
 
 function buildQuery(op) {
   // Request only fields we need to minimize payload
-  return `query ($question: String!) {\n  ${op}(question: $question) {\n    results {\n      _id\n      title\n      schemaType\n      parentName\n      parentGenre\n      score\n      __typename\n    }\n    __typename\n  }\n}`;
+  if (op === 'discoveryTest') {
+    return `query DiscoveryTest($question: String) {\n  discoveryTest(question: $question) {\n    keywords\n    results {\n      _id\n      title\n      parentGenre\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n    }\n  }\n}`;
+  }
+  return `query ($question: String!) {\n  ${op}(question: $question) {\n    results {\n      _id\n      title\n      parentGenre\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n    }\n  }\n}`;
 }
 
 function postGraphQL({ url, token, query, variables }) {
@@ -193,18 +196,37 @@ async function runForEndpoint(op) {
       const container = (data && data.data && data.data[op]) || { results: [] };
       const results = Array.isArray(container.results) ? container.results : [];
       for (const item of results) {
-        rows.push({
-          questionId,
-          endpoint: op,
-          language: lang,
-          question,
-          _id: item._id || '',
-          title: item.title || '',
-          schemaType: item.schemaType || '',
-          parentName: item.parentName || '',
-          parentGenre: item.parentGenre || '',
-          score: typeof item.score === 'number' ? item.score : ''
-        });
+        if (op === 'discoveryTest') {
+          rows.push({
+            questionId,
+            endpoint: op,
+            language: lang,
+            question,
+            _id: item._id || '',
+            title: item.title || '',
+            parentGenre: item.parentGenre || '',
+            contentType: item.contentType || '',
+            indexBrandName: item.indexBrandName || '',
+            indexSeriesName: item.indexSeriesName || '',
+            score: typeof item.score === 'number' ? item.score : '',
+            sortDate: item.sortDate || ''
+          });
+        } else {
+          rows.push({
+            questionId,
+            endpoint: op,
+            language: lang,
+            question,
+            _id: item._id || '',
+            title: item.title || '',
+            parentGenre: item.parentGenre || '',
+            contentType: item.contentType || '',
+            indexBrandName: item.indexBrandName || '',
+            indexSeriesName: item.indexSeriesName || '',
+            score: typeof item.score === 'number' ? item.score : '',
+            sortDate: item.sortDate || ''
+          });
+        }
       }
     }
   }
@@ -213,7 +235,12 @@ async function runForEndpoint(op) {
     console.log(`ℹ️  Collected rows: ${rows.length}`);
   }
 
-  const worksheet = XLSX.utils.json_to_sheet(rows);
+  // Rename _id -> POC_Id for Excel output only (JSON keeps _id)
+  const excelRows = rows.map(r => {
+    const { _id, ...rest } = r;
+    return { POC_Id: _id || '', ...rest };
+  });
+  const worksheet = XLSX.utils.json_to_sheet(excelRows);
   const workbook = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(workbook, worksheet, 'results');
 

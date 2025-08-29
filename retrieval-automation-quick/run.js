@@ -46,7 +46,9 @@ if (questions.length === 0) {
 
 function postGraphQL({ question }) {
   return new Promise((resolve) => {
-    const query = `query ($question: String!) { ${endpoint}(question: $question) { results { _id title schemaType parentName parentGenre score __typename } __typename } }`;
+    const query = endpoint === 'discoveryTest'
+      ? `query DiscoveryTest($question: String) {\n  discoveryTest(question: $question) {\n    keywords\n    results {\n      _id\n      title\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n    }\n  }\n}`
+      : `query ($question: String!) { ${endpoint}(question: $question) { results { _id title contentType indexBrandName indexSeriesName score sortDate __typename } __typename } }`;
     const payload = JSON.stringify({ query, variables: { question } });
     const options = {
       hostname: 'concord.sandsmedia.com',
@@ -67,7 +69,8 @@ function postGraphQL({ question }) {
       res.on('end', () => {
         let json = {};
         try { json = JSON.parse(data); } catch (_) {}
-        const arr = json?.data?.[endpoint]?.results || [];
+        const container = json?.data?.[endpoint] || {};
+        const arr = container?.results || [];
         resolve({ question, ms: Date.now() - start, status: res.statusCode, items: arr });
       });
     });
@@ -86,20 +89,25 @@ async function main() {
     idx += 1;
     const r = await postGraphQL({ question: q });
     console.log(`${r.status === 200 ? '✅' : '❌'} ${endpoint} ${idx}/${questions.length} (${r.ms}ms) - count: ${r.items.length}`);
-    for (const it of r.items) {
+    r.items.forEach((it, idx) => {
+      // Unified output columns for both endpoints with 0-based Rank
       allRows.push({
         Question: q,
+        Rank: idx,
         _id: it._id || '',
         Title: it.title || '',
-        SchemaType: it.schemaType || '',
-        ParentName: it.parentName || '',
-        ParentGenre: it.parentGenre || '',
-        Score: typeof it.score === 'number' ? it.score : ''
+        ContentType: it.contentType || '',
+        IndexBrandName: it.indexBrandName || '',
+        IndexSeriesName: it.indexSeriesName || '',
+        Score: typeof it.score === 'number' ? it.score : '',
+        SortDate: it.sortDate || ''
       });
-    }
+    });
   }
 
-  const ws = XLSX.utils.json_to_sheet(allRows);
+  // Rename _id -> POC_Id for Excel output
+  const excelRows = allRows.map(r => { const {_id, ...rest} = r; return { POC_Id: _id || '', ...rest }; });
+  const ws = XLSX.utils.json_to_sheet(excelRows);
   const wb = XLSX.utils.book_new();
   XLSX.utils.book_append_sheet(wb, ws, endpoint.toUpperCase());
   const ts = new Date().toISOString().replace(/[:.]/g, '-').replace('T', '_').split('.')[0];

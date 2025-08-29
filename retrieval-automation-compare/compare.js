@@ -49,11 +49,11 @@ function buildEndpointSheetRows(grouped) {
         Language: language,
         Question: item.question || '',
         Rank: idx, // 0-based
-        _id: item._id || '',
+        POC_Id: item._id || '',
         Title: item.title || '',
-        SchemaType: item.schemaType || '',
-        ParentName: item.parentName || '',
-        ParentGenre: item.parentGenre || '',
+        ContentType: item.contentType || '',
+        IndexBrandName: item.indexBrandName || '',
+        IndexSeriesName: item.indexSeriesName || '',
         Score: typeof item.score === 'number' ? item.score : ''
       });
     });
@@ -103,12 +103,12 @@ function buildCompareRows(groupedDiscover, groupedDiscoveryTest) {
       compare.push({
         Series: series,
         Language: language,
-        _id: id,
+        POC_Id: id,
         Title: m.title || '',
         Question: m.question || '',
-        SchemaType: m.schemaType || '',
-        ParentName: m.parentName || '',
-        ParentGenre: m.parentGenre || '',
+        ContentType: m.contentType || '',
+        IndexBrandName: m.indexBrandName || '',
+        IndexSeriesName: m.indexSeriesName || '',
         Rank_discover: rankDiscover,
         Score_discover: scoreDiscoverById.has(id) ? scoreDiscoverById.get(id) : '',
         Rank_discoveryTest: rankDiscoveryTest,
