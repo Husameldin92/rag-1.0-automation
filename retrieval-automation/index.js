@@ -195,6 +195,7 @@ async function runForEndpoint(op) {
 
       const container = (data && data.data && data.data[op]) || { results: [] };
       const results = Array.isArray(container.results) ? container.results : [];
+      const keywords = op === 'discoveryTest' ? (container.keywords || '') : '';
       for (const item of results) {
         if (op === 'discoveryTest') {
           rows.push({
@@ -202,6 +203,7 @@ async function runForEndpoint(op) {
             endpoint: op,
             language: lang,
             question,
+            keywords,
             _id: item._id || '',
             title: item.title || '',
             parentGenre: item.parentGenre || '',
@@ -217,6 +219,7 @@ async function runForEndpoint(op) {
             endpoint: op,
             language: lang,
             question,
+            keywords,
             _id: item._id || '',
             title: item.title || '',
             parentGenre: item.parentGenre || '',

@@ -71,7 +71,8 @@ function postGraphQL({ question }) {
         try { json = JSON.parse(data); } catch (_) {}
         const container = json?.data?.[endpoint] || {};
         const arr = container?.results || [];
-        resolve({ question, ms: Date.now() - start, status: res.statusCode, items: arr });
+        const keywords = container?.keywords || '';
+        resolve({ question, ms: Date.now() - start, status: res.statusCode, items: arr, keywords });
       });
     });
     req.on('error', (err) => resolve({ question, ms: Date.now() - start, status: 0, error: err.message, items: [] }));
@@ -93,6 +94,7 @@ async function main() {
       // Unified output columns for both endpoints with 0-based Rank
       allRows.push({
         Question: q,
+        Keywords: r.keywords || '',
         Rank: idx,
         _id: it._id || '',
         Title: it.title || '',
