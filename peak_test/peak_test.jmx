@@ -1,0 +1,4 @@
+# JMeter generated Header file
+Content-Type	application/json
+User-Agent	JMeter-PeakTest
+access-token	${token}
