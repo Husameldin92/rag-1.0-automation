@@ -25,7 +25,7 @@ const verbose = getArg('--verbose', 'true') === 'true';
 const useManual = true; 
 
 // ------------------------------
-// Questions list
+// Questions list: Series + old 90 questions 
 // ------------------------------
 const QUESTIONS_MANUAL = [
   { id: 'API London', en: 'When is next APICon London happening?', de: 'Wann findet die nächste APICon London statt?', nl: 'Wanneer vindt de volgende APICon London plaats?' },
@@ -101,6 +101,7 @@ const QUESTIONS_MANUAL = [
   { id: 'Software Architecture Summit München', en: 'When is next Software Architecture Summit Munich happening?', de: 'Wann findet die nächste Software Architecture Summit München statt?', nl: 'Wanneer vindt die volgende Software Architecture Summit München plaats?' },
   { id: 'webinale', en: 'When is next webinale happening?', de: 'Wann findet die nächste webinale statt?', nl: 'Wanneer vindt die volgende webinale plaats?' },
   { id: 'Web Security Camp', en: 'When is next Web Security Camp happening?', de: 'Wann findet die nächste Web Security Camp statt?', nl: 'Wanneer vindt die volgende Web Security Camp plaats?' },
+  { id: 'Webinale', en: 'When is next Webinale happening?', de: 'Wann findet die nächste Webinale statt?', nl: 'Wanneer vindt die volgende Webinale plaats?' },
   { id: 'Extra 001', en: 'Show me all content by Erik Wilde' },
   { id: 'Extra 002', en: 'Find articles and videos from Erik Wilde' },
   { id: 'Extra 003', en: 'Find Arno Hases Talk at Jax' },
@@ -219,9 +220,9 @@ function readCsvRecords(filePath) {
 function buildQuery(op) {
   // Request only fields we need to minimize payload
   if (op === 'discoveryTest') {
-    return `query DiscoveryTest($question: String) {\n  discoveryTest(question: $question) {\n    keywords\n    results {\n      _id\n      title\n      parentGenre\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n    }\n  }\n}`;
+    return `query DiscoveryTest($question: String) {\n  discoveryTest(question: $question, enableRAG: false) {\n    keywords\n    results {\n      _id\n      title\n      parentGenre\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n      experts {\n        name\n      }\n    }\n  }\n}`;
   }
-  return `query ($question: String!) {\n  ${op}(question: $question) {\n    results {\n      _id\n      title\n      parentGenre\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n    }\n  }\n}`;
+  return `query ($question: String!) {\n  ${op}(question: $question, enableRAG: false) {\n    results {\n      _id\n      title\n      parentGenre\n      contentType\n      indexBrandName\n      indexSeriesName\n      score\n      sortDate\n      experts {\n        name\n      }\n    }\n  }\n}`;
 }
 
 function postGraphQL({ url, token, query, variables }) {
@@ -266,7 +267,9 @@ async function runForEndpoint(op) {
   const languages = languagesArg.split(',').map(s => s.trim()).filter(Boolean);
   const queryString = buildQuery(op);
   const rows = [];
-  const total = QUESTIONS_MANUAL.length * languages.length;
+  const total = QUESTIONS_MANUAL.reduce((sum, rec) => {
+    return sum + languages.filter((lang) => !!rec[lang]).length;
+  }, 0);
   let processed = 0;
 
   for (const rec of QUESTIONS_MANUAL) {
@@ -301,7 +304,8 @@ async function runForEndpoint(op) {
             indexBrandName: item.indexBrandName || '',
             indexSeriesName: item.indexSeriesName || '',
             score: typeof item.score === 'number' ? item.score : '',
-            sortDate: item.sortDate || ''
+            sortDate: item.sortDate || '',
+            experts: Array.isArray(item.experts) ? item.experts.map(e => (e && e.name) ? e.name : '').filter(Boolean) : []
           });
         } else {
           rows.push({
@@ -317,7 +321,8 @@ async function runForEndpoint(op) {
             indexBrandName: item.indexBrandName || '',
             indexSeriesName: item.indexSeriesName || '',
             score: typeof item.score === 'number' ? item.score : '',
-            sortDate: item.sortDate || ''
+            sortDate: item.sortDate || '',
+            experts: Array.isArray(item.experts) ? item.experts.map(e => (e && e.name) ? e.name : '').filter(Boolean) : []
           });
         }
       }

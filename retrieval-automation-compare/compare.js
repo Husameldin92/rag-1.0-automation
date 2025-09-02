@@ -77,6 +77,7 @@ function buildEndpointSheetRows(grouped) {
         IndexBrandName: item.indexBrandName || '',
         IndexSeriesName: item.indexSeriesName || '',
         SortDate: item.sortDate || '',
+        Experts: Array.isArray(item.experts) ? item.experts.join(', ') : '',
         Score: typeof item.score === 'number' ? item.score : ''
       });
     });
@@ -135,6 +136,7 @@ function buildCompareRows(groupedDiscover, groupedDiscoveryTest) {
         IndexBrandName: m.indexBrandName || '',
         IndexSeriesName: m.indexSeriesName || '',
         SortDate: m.sortDate || '',
+        Experts: Array.isArray(m.experts) ? m.experts.join(', ') : '',
         Rank_discover: rankDiscover,
         Score_discover: scoreDiscoverById.has(id) ? scoreDiscoverById.get(id) : '',
         Rank_discoveryTest: rankDiscoveryTest,
