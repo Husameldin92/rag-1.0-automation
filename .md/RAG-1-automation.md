@@ -58,7 +58,7 @@ Options:
 
 Output: a new merged JSON alongside originals: `discoveryTest_<timestamp>_merged.json`.
 
-## STAGE old vs STAGE new (stage mode)
+## STAGE old vs STAGE new (stage mode) ---> this what I acctually neeed just do those 3 steps
 Workflow:
 1) Run STAGE (discoveryTest) to create today’s snapshot JSON:
 ```bash

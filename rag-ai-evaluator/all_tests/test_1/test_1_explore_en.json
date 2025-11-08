@@ -7,13 +7,13 @@
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Angular Signals 17 16 15 features \nAngular Signals in version 17 introduce a new reactive primitive designed to enable fine-grained, glitch-free reactivity and improve change detection performance in Angular applications. The main features and changes related to Angular Signals in version 17 are:\n\nStable Signals API: Signals, introduced as a developer preview in Angular 16, are marked as stable in Angular 17. They provide a new way to inform templates and other parts of the code about data changes, enabling more efficient updates. [1.]\n\nLocal Change Detection: Signals enable 'local change detection,' meaning that only components with changed signal values are checked and updated, rather than the entire component tree or parent components. This leads to improved performance and reduced load on the client system. [1.]\n\nImmutable Signal Updates: The previous signal.mutate() method, which allowed mutating signals directly, has been removed in Angular 17 to avoid inconsistencies. Signals must now be treated as immutable data structures, and updates should be done via the signal.update() method. [2.]\n\nNew Lifecycle Hooks Related to Signals: Angular 17 introduces two new lifecycle hooks, afterRender() and afterNextRender(), which can be used as callbacks after component rendering. These hooks are similar in concept to the computed() function in Signals and help manage side effects related to rendering. [1.]\n\nIntegration with Change Detection Strategy OnPush: Signals work well with Angular's OnPush change detection strategy, allowing components to update efficiently without unnecessary checks. [3.]\n\nSignals as a Replacement for Zone.js: Signals are part of Angular's effort to make zone.js optional by providing a new, signal-based change detection mechanism that is more fine-grained and performant. [1.]\n\nSignals API Usage: Signals are created using the signal() function with an initial value. They can be read by calling them as functions and updated via set() or update() methods. Computed signals and effects are also supported to derive values and react to changes. [3.]\n\n\nIn summary, Angular Signals in version 17 provide a stable, immutable, and fine-grained reactive primitive that enhances change detection by limiting updates to only affected components, supports new lifecycle hooks, and moves Angular closer to a zone.js-free future, all while maintaining backward compatibility and improving performance.\n [1.]",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'Angular Signals 17',\n  'primary_version_array': ['17'],\n  'secondary_version_array': ['16','15'],\n  'year_array': [],\n  'issue_array': []\n} \nAngular Signals in version 17 represent a significant advancement in the framework’s reactivity model, aiming to simplify state management and optimize change detection. They build upon the introduction of Signals in Angular 16, now marked as stable in Angular 17, and enable a more fine-grained, performant, and intuitive reactive programming approach.\nKey features of Angular Signals in version 17 include:\n\nStable Signal API: Signals are now stable and production-ready, providing a simple reactive building block that holds a value and notifies consumers when it changes. This enables fine-grained change detection that targets only components with changed signal values, improving performance over traditional Angular change detection [1.]  [2.].\n\nImmutable Signal Handling: The previous ability to mutate signals directly via signal.mutate() has been removed. Signals must now be treated as immutable data structures, with updates performed through the signal.update() method. This change prevents inconsistencies and aligns with functional reactive programming principles [1.]  [2.].\n\nNew Lifecycle Hooks: Angular 17 introduces two new lifecycle hooks, afterRender() and afterNextRender(), which integrate with signals and allow developers to run code after component rendering phases. These hooks are designed to complement the reactive model enabled by signals [1.].\n\nLocal Change Detection: Signals enable a 'local change detection' mechanism where only components with changed signal values are checked and updated, rather than the entire component tree or parent chains. This leads to more efficient UI updates and reduced overhead [1.]  [2.].\n\nInterop with RxJS: Signals are designed to coexist with RxJS. Angular provides interoperability utilities to convert signals to observables and vice versa, allowing developers to combine the simplicity of signals with the power of RxJS operators when needed [2.].\n\nSignal-based Component Inputs and Outputs: Angular 17 adds new APIs to define component inputs and outputs as signals, replacing the traditional decorators like @Input() and @Output(). This streamlines component communication and aligns with the reactive paradigm [3.].\n\nImproved Template Syntax: Signals use a function-call syntax for reading values (e.g., count()), which integrates naturally with Angular templates and change detection. Computed signals (computed()) allow deriving values reactively from other signals, and effects (effect()) enable running side effects when signals change [3.].\n\nAutomatic Subscription Management: Unlike observables, signals do not require manual unsubscription. Angular automatically manages the lifecycle of signal subscriptions tied to components or other building blocks, reducing boilerplate and potential memory leaks [2.].\n\nSupport for Lazy Loading and SSR Enhancements: While not exclusive to signals, Angular 17’s improvements in lazy loading (e.g., for animations) and server-side rendering (SSR) complement the reactive model signals enable, contributing to better performance and developer experience [1.].\n\n\nIn summary, Angular Signals in version 17 provide a stable, immutable, and efficient reactive primitive that enhances change detection by focusing updates only where needed. They simplify state management, improve performance, and integrate smoothly with existing RxJS-based code, marking a key step in Angular’s evolution towards a more modern and developer-friendly framework.\nIf you want to dive deeper, there are advanced talks and workshops covering the internal implementation and best practices for using signals effectively in enterprise Angular applications [4.]  [5.]  [6.].\nLet me know if you want examples or guidance on migrating existing Angular codebases to use signals!",
   "discovery_data": {
     "query_sent": "What are the main features of Angular Signals in version 17?",
     "results": [
       {
-        "_id": "59c6dfa238c69ebd748cc7dc",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
+        "_id": "0747f0655ef3790a97eba95b",
+        "title": "How to architect Angular apps in 2025",
         "parentGenre": "RHEINGOLD"
       },
       {
@@ -32,8 +32,8 @@
         "parentGenre": null
       },
       {
-        "_id": "eba6f5d083b14f4d8d53d87a",
-        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
+        "_id": "5229d453d1393d2c3d86e145",
+        "title": "Signals und State Management",
         "parentGenre": null
       },
       {
@@ -42,33 +42,8 @@
         "parentGenre": null
       },
       {
-        "_id": "01a63ca630515849aaa314b1",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "68fe3d9fc389515d1d6bea43",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "5229d453d1393d2c3d86e145",
-        "title": "Signals und State Management",
-        "parentGenre": null
-      },
-      {
-        "_id": "b3dccbe48006a54c8a14b9c8",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "5ecf87915aa99dfe10bb64dd",
-        "title": "Is Angular 16 Starting a (R)evolution?",
+        "_id": "eba6f5d083b14f4d8d53d87a",
+        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
         "parentGenre": null
       },
       {
@@ -77,23 +52,8 @@
         "parentGenre": null
       },
       {
-        "_id": "bb97d9e8205e4d23e8d34081",
-        "title": "Angular 15: New Features and Breaking Changes",
-        "parentGenre": null
-      },
-      {
-        "_id": "c57d9896250397cf05488cad",
-        "title": "Modern Angular is easier than React",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "18e1984b93f7b81b65afb3ad",
-        "title": "Rethinking Angular: The Future with Signals and the New Resource API",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "e45840c0b8a784e3b3cf3be3",
-        "title": "RxJS, Signals and Native Observables: What Now?",
+        "_id": "59c6dfa238c69ebd748cc7dc",
+        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
         "parentGenre": "RHEINGOLD"
       },
       {
@@ -102,8 +62,18 @@
         "parentGenre": null
       },
       {
+        "_id": "a527c16f5bc7b4da1bc88ab0",
+        "title": "Angular Resources: Everything you need to know",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
         "_id": "a46f583e86ab963aed1784a1",
         "title": "Master Angular Signals in your existing Codebase",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "01a63ca630515849aaa314b1",
+        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
         "parentGenre": "RHEINGOLD"
       },
       {

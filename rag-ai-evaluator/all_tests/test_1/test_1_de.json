@@ -7,19 +7,14 @@
     "language": "de"
   },
   "prompt": "main",
-  "actual_response": "",
+  "actual_response": "Angular Signals in Version 17 sind ein zentrales neues Feature, das die reaktive Entwicklung in Angular grundlegend verändert und die Change Detection effizienter und feingranularer macht. Die Hauptfunktionen von Angular Signals in Version 17 lassen sich wie folgt zusammenfassen:\n\nReaktiver Basisdatentyp für State ManagementSignals sind Wrapper um Werte, die bei Änderung automatisch interessierte Konsumenten informieren. Sie ermöglichen eine einfache und performante Verwaltung von Zuständen in Angular-Komponenten, ohne dass komplexes Subscription-Management nötig ist. Ein Signal wird mit einem Initialwert erzeugt und kann gelesen (per Funktionsaufruf) und aktualisiert (über set() oder update()) werden [1.],  [2.].\n\nFeingranulare Change Detection ohne zone.jsMit Angular 17 sind Signals stabil und ermöglichen eine lokale Change Detection, die nur die Komponenten aktualisiert, deren Signal-Werte sich geändert haben. Dies reduziert die Last auf das System und verbessert die Performance gegenüber der klassischen globalen Change Detection [3.],  [4.].\n\nComputed Signals und EffectsNeben schreibbaren Signals gibt es auch computed()-Signale, die automatisch neu berechnet werden, wenn abhängige Signale sich ändern. Effekte (effect()) erlauben das Ausführen von Seiteneffekten bei Signaländerungen, ähnlich wie bei RxJS, aber mit einer schlankeren API [2.].\n\nInterop mit RxJSAngular 17 bietet eine Interoperabilitätsschicht zwischen Signals und RxJS, sodass Signale in Observables und umgekehrt konvertiert werden können. So können Entwickler die Einfachheit von Signals mit der Mächtigkeit von RxJS kombinieren [5.].\n\nSignal-basierte KomponentenkommunikationAngular 17 ersetzt klassische Input- und Output-Dekoratoren durch Signal-basierte APIs:  \n\ninput() für Input-Signale (read-only)  \nmodel() für Two-way Bindings (schreibbare Signale)  \noutput() für Event-Outputs (ersetzt EventEmitter)Diese neuen APIs verbessern die Typensicherheit und vereinfachen die Komponentenkommunikation [3.],  [6.].\n\n\nImmutable Signal-DatenstrukturenIn Angular 17 wurde die Möglichkeit entfernt, Signale durch Mutation zu verändern (signal.mutate() ist nicht mehr verfügbar). Stattdessen müssen Signale als immutable behandelt und mit signal.update() aktualisiert werden, was zu besserer Vorhersagbarkeit und Performance führt [3.].\n\nVerbesserte Template-Syntax und Control FlowAngular 17 führt neue Kontrollfluss-Syntaxen ein (@switch, @case, @default, @defer), die eng mit Signals zusammenarbeiten und die Template-Logik vereinfachen und optimieren [4.].\n\n\nZusammenfassend sind Angular Signals in Version 17 ein stabiler, schlanker und leistungsfähiger Mechanismus für reaktive Programmierung, der die Change Detection optimiert, die Komponentenkommunikation modernisiert und eine bessere Integration mit RxJS bietet. Sie sind ein wesentlicher Baustein der „Angular Renaissance“ und sollten in neuen und bestehenden Projekten zunehmend eingesetzt werden [2.],  [3.],  [6.].\nFalls Sie weitere Details oder Beispiele zur praktischen Anwendung von Angular Signals wünschen, stehe ich gerne zur Verfügung.",
   "discovery_data": {
     "query_sent": "Was sind die Hauptfunktionen von Angular Signals in Version 17?",
     "results": [
       {
-        "_id": "59c6dfa238c69ebd748cc7dc",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
-        "parentGenre": null
+        "_id": "1da46606f89dc3ccaa9c0f9d",
+        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 27.03.2026",
+        "parentGenre": "FLEX_CAMP"
       },
       {
         "_id": "04721391f3f7580f0631b9d3",
@@ -32,18 +27,8 @@
         "parentGenre": null
       },
       {
-        "_id": "64ace3828d8056484c3534ab",
-        "title": "Angular 16 released",
-        "parentGenre": null
-      },
-      {
-        "_id": "68fe3d9fc389515d1d6bea43",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "62f599587e3fd28de76c2756",
-        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "_id": "8b35e3d0070110b78d6c9434",
+        "title": "Angular: Signals, Standalone, SSR",
         "parentGenre": null
       },
       {
@@ -52,24 +37,49 @@
         "parentGenre": null
       },
       {
+        "_id": "64ace3828d8056484c3534ab",
+        "title": "Angular 16 released",
+        "parentGenre": null
+      },
+      {
         "_id": "eba6f5d083b14f4d8d53d87a",
         "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
         "parentGenre": null
       },
       {
-        "_id": "b3dccbe48006a54c8a14b9c8",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "_id": "e9905bc3e1a3780619966899",
+        "title": "Jetzt schlägt’s 15: Was ist neu in Angular 15?",
         "parentGenre": null
       },
       {
-        "_id": "bdffbea5001602c274727100",
-        "title": "Quo vadis, Angular State Management?",
+        "_id": "59c6dfa238c69ebd748cc7dc",
+        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
         "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "651822c08be4e71b1d4a39ae",
+        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 27.02.2026",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "af64d26c0f5fa509f9042a4b",
+        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 30.01.2026",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "997635a5c353e259b868ebd8",
+        "title": "Modern Angular Workshop:  Dein Update für Signals, Signal Forms und Signal Store [Freitag, 6. März 2026]",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0e0afe537d051790b6ddde6e",
+        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 27.03.2026",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "647fe3a73077325bfce4a231",
+        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 27.02.2026",
+        "parentGenre": "FLEX_CAMP"
       },
       {
         "_id": "69ab8ba6bfa5d1a198f998c3",
@@ -77,14 +87,14 @@
         "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "51016a4f7675b6b5a755ad43",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.11.2025",
+        "_id": "a2286538c6a2dfaff2eeae27",
+        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.01.2026",
         "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "a61d19f6264fbfdc8c1b46fc",
-        "title": "Signals und die neue Resource API in Angular: 3 Effektive Regeln für Deine Architektur",
-        "parentGenre": "RHEINGOLD"
+        "_id": "51016a4f7675b6b5a755ad43",
+        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.11.2025",
+        "parentGenre": "FLEX_CAMP"
       },
       {
         "_id": "01a63ca630515849aaa314b1",
@@ -102,24 +112,9 @@
         "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "dec1189a81255b786543c122",
-        "title": "Unsere Experten zeigen Signal Forms, Selectorless Components und mehr",
-        "parentGenre": "FSLE"
-      },
-      {
         "_id": "E8GpqxYcngd3MofGq",
         "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
         "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "f16269b011bfcea03895d191",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.03.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "f087768c57a0751c590bbd32",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 02.03.2025",
-        "parentGenre": "FLEX_CAMP"
       },
       {
         "_id": "Kfy5fRbWxdkicginD",
@@ -154,11 +149,6 @@
       {
         "_id": "hiwmMJy6F5TyrrZFY",
         "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "ZM7Cxztnyh7J9Psky",
-        "title": "Signals, Standalone, SSR: So bauen Sie Angular-Apps der Zukunft",
         "parentGenre": "RHEINGOLD"
       }
     ]
