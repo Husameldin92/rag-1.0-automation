@@ -1,6 +1,6 @@
 {
   "test_id": "test_008_en",
-  "query": "How do I use Signals in Angular 13?",
+  "query": "Content Type Guide",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
@@ -12,39 +12,169 @@
     ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Signals Angular 13 12 11\nAngular Signals were introduced as a major new reactive building block starting with Angular 16, not Angular 13. Therefore, Signals are not available in Angular 13. The Signals API and related features began appearing experimentally in Angular 16 and became stable in Angular 17. They represent a new way to handle fine-grained, glitch-free reactivity and change detection in Angular applications, aiming to eventually make zone.js optional and improve performance by limiting change detection to only components affected by signal changes.\nKey points about Signals and their usage in Angular (starting from Angular 16/17):\n\nWhat are Signals?Signals are reactive primitives that hold a value and notify consumers when the value changes. They enable local change detection, meaning only components with changed signal values are checked, improving performance over traditional Angular change detection.de0df53930e2e1e582caf57fSignals enable 'local change detection', a change detection process that only refers to the components that have changed (signal) values.\n\nCreating and Using Signals:You create a writable signal with the signal() function, providing an initial value. You read the signal by calling it as a function and update it using .set() or .update() methods.Example:  \nconst count = signal(0);  \ncount.set(3);  \ncount.update(value => value + 1);\n\nThis API was introduced in Angular 16 and stabilized in Angular 17.de0df53930e2e1e582caf57fSignals should no longer be changed by mutation, but should be used like an immutable data structure instead. Listing 19 shows an example of how a Signal containing an array could previously be changed and how it should be done from Angular 17 onwards.\n\nIntegration with Angular Components:Signals can be bound in templates to automatically trigger change detection when their values change. Angular plans to support signal-based components with new lifecycle hooks like afterRender() and afterNextRender(). These features are still evolving but provide a more fine-grained and efficient change detection mechanism.de0df53930e2e1e582caf57fTwo new component lifecycle hooks... can be called as a callback function... called 'afterRender()' and 'afterNextRender()'.\n\nSignals and RxJS:Signals are designed to be simple and complement RxJS. For asynchronous tasks and event streams, RxJS remains recommended. Angular provides interop utilities to convert between Signals and Observables, allowing developers to combine the strengths of both.68fe3d9fc389515d1d6bea43Signals harmonize wonderfully together and the RxJS interop from Angular gives us the best of both worlds. Using RxJS is recommended for representing events. For processing asynchronous tasks, RxJS or stores (which can be based on RxJS) are recommended. The synchronous transport of data to the view should be handled by Signals.\n\nState Management with Signals:Angular ecosystem is evolving with new state management solutions based on Signals, such as the NgRx Signal Store introduced around Angular 17/18, offering a lightweight, reactive approach to state management.d0a30c39b6f199c25af1b450The NgRx Signal Store offers a very lightweight solution for state management. It fully relies on Signals and is highly extensible.\n\n\nSummary:  \n\nSignals are not available in Angular 13; they were introduced experimentally in Angular 16 and stabilized in Angular 17.  \nThey provide a new reactive primitive for fine-grained, efficient change detection and state management.  \nSignals are created with signal(), read by calling the signal, and updated with .set() or .update().  \nThey integrate with Angular templates and components to optimize rendering.  \nRxJS remains important for asynchronous and event-based programming, with Angular providing interop between Signals and Observables.  \nNew state management libraries based on Signals are emerging in the Angular ecosystem.\n\nIf you are working with Angular 13, Signals are not yet available. To use Signals, you would need to upgrade to Angular 16 or later, ideally Angular 17 or newer for stable support and full features.\nPlease let me know if you want guidance on migrating to Angular versions that support Signals or examples of how to use Signals in Angular 17+.\nde0df53930e2e1e582caf57fSignals introduced in Angular 16, stable in Angular 17, enable local change detection and new reactive APIs.\n68fe3d9fc389515d1d6bea43Signals harmonize wonderfully together and the RxJS interop from Angular gives us the best of both worlds.\nd0a30c39b6f199c25af1b450The NgRx Signal Store offers a very lightweight solution for state management. It fully relies on Signals and is highly extensible.\nSignals are not available in Angular 13. They were introduced experimentally in Angular 16 and became stable in Angular 17. Therefore, to use Signals in Angular, you need to upgrade to Angular 16 or later, ideally Angular 17 or newer for stable support and full features.",
+  "actual_response": "Hello! It seems you are asking about the 'Content Type Guide.' Could you please clarify your question or specify what exactly you want to know or achieve regarding content types? This will help me provide you with the most relevant and precise information related to software development topics. Thank you!",
   "discovery_data": {
-    "query_sent": "How do I use Signals in Angular 13?",
+    "query_sent": "Content Type Guide",
     "results": [
       {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
+        "_id": "4d54a12dd2cb8dafe5191ed4",
+        "title": "The Ever-Evolving Space of Design Component Libraries",
         "parentGenre": null
       },
       {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "_id": "22af9412e299dce7c36bca11",
+        "title": "Angular, React, Vue.js: Starter-Guide",
         "parentGenre": null
       },
       {
-        "_id": "64ace3828d8056484c3534ab",
-        "title": "Angular 16 released",
+        "_id": "9f7c5146d1cacb5f9e72d61a",
+        "title": "Accessible UI Libraries: A Developer's Guide",
         "parentGenre": null
       },
       {
-        "_id": "4bc8b07564dedfcecc9a06f6",
-        "title": "Alles neu macht der Mai?",
+        "_id": "nbYgw2AKyBumhH4mo",
+        "title": "Guide",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "00154c4bfa9cdf674582ccd3",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "d0a30c39b6f199c25af1b450",
-        "title": "Extensions und Typisierung mit dem NgRx Signal Store",
+        "_id": "ecb2f9d7cad89a18e5c2ca2d",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "oaGpszBqb9pMPpjD7",
-        "title": "Angular Signals im Vergleich mit RxJS Observables: Ein Blick auf Ereignisbehandlung und asynchrone Datenströme",
+        "_id": "16518e09a4d53a411ba64d4b",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "c203a94eb7f40b8f4bf38172",
+        "title": "Bücher: IT Survival Guide",
+        "parentGenre": null
+      },
+      {
+        "_id": "f64849f9528a82857864ea2d",
+        "title": "Advanced CI/CD Pipelines with GitOps: A Comprehensive Guide",
         "parentGenre": "COURSE"
+      },
+      {
+        "_id": "5ccc2b80858fe9f5f57ae6ca",
+        "title": "Advanced CI/CD Pipelines with GitOps: A Comprehensive Guide",
+        "parentGenre": null
+      },
+      {
+        "_id": "5b13b0a919af4d291e88c1d9",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "ac9e50f08d2ff528ae5497cc",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "2e5d7a8b4d0183009db405c8",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "81a6a971d6649e3a5b6c425e",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "a444fec6a17e6494176c3a29",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "ddfb6691480d50e085e985bf",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "73409b918ba492cd8024136b",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "6fc366206017e2c404fdc511",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "8da16481a81f7a03ce1926ca",
+        "title": "Building Accessible Web Applications: Harnessing Semantic HTML",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "b053ba6c394972b0a8ddfd63",
+        "title": "UX Crash Course: Wayfinding",
+        "parentGenre": null
+      },
+      {
+        "_id": "80231b52e111c7e32f5a1a66",
+        "title": "Developer Docs That are Actually Useful",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "oqALo77wHaBAidMWt",
+        "title": "Software Architecture Documentation",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "fePvPpYkBwMMm4Moa",
+        "title": "API Design First: Succeeding with API Governance",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "kXZvTbrkLFu8dMRQL",
+        "title": "Web-Design für Entwickler – Eine schnelle Einführung",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3AyajbNoyTB7MeJN6",
+        "title": "Authoring HTML in a JavaScript World",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8dab4c1bf365cb4a098be4e1",
+        "title": "Das Scrapy-Framework - Produktion im großen Maßstab",
+        "parentGenre": null
+      },
+      {
+        "_id": "bad25a7c1b6f7be285f49743",
+        "title": "Von wegen flache Hierarchieebenen",
+        "parentGenre": null
+      },
+      {
+        "_id": "drHrmxJyMxfzrCTkk",
+        "title": "API Design First: Succeeding with API Governance",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "63e0e98a7ac9c6a84663c941",
+        "title": "Der Headless-CMS-Vergleich",
+        "parentGenre": null
+      },
+      {
+        "_id": "5H5ih6DenSbJaZahQ",
+        "title": "CMS Speed Dating",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "bccd83cc9752a5bcdcbdf652",
+        "title": "Clientseitiges Webpart und Konfiguration der Feldtypen",
+        "parentGenre": null
+      },
+      {
+        "_id": "bb162e58783b00ec26715e17",
+        "title": "The wonderful world of Contao",
+        "parentGenre": null
       },
       {
         "_id": "be4e126ac4ae8b5270aeb6c8",
@@ -52,330 +182,21 @@
         "parentGenre": null
       },
       {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
+        "_id": "9a8b3c266264fe3296159516",
+        "title": "Die wunderbare Welt von Contao",
         "parentGenre": null
       },
       {
-        "_id": "eba6f5d083b14f4d8d53d87a",
-        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
-        "parentGenre": null
-      },
-      {
-        "_id": "f7dcfe3078b64925f3b62a19",
-        "title": "Von wegen Unglück - Angular 13 bringt interessante Neuerungen",
-        "parentGenre": null
-      },
-      {
-        "_id": "62f599587e3fd28de76c2756",
-        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
-        "parentGenre": null
-      },
-      {
-        "_id": "68fe3d9fc389515d1d6bea43",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "3caa038a2f16278ab3c6040a",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "5229d453d1393d2c3d86e145",
-        "title": "Signals und State Management",
-        "parentGenre": null
-      },
-      {
-        "_id": "7169f2b6391a0d9490ef4b35",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
-        "parentGenre": null
-      },
-      {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "605fcc00beb709e4c09f0007",
-        "title": "Change Detection optimieren",
-        "parentGenre": null
-      },
-      {
-        "_id": "qREnL94qsTwnQH8ic",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "e77d9110a6ab65108dae9feb",
-        "title": "Wie die neuen Angular Signals unsere Architekturen beeinflussen",
-        "parentGenre": null
-      },
-      {
-        "_id": "c03ed19105d9c18f7fc3753a",
-        "title": "Angular 11: Entwickler im Fokus",
-        "parentGenre": null
-      },
-      {
-        "_id": "mWzpTGGiet8zpxNzZ",
-        "title": "Change Detection performanter und leichtgewichtiger mit Signals",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "85CC7npzPgB2pD7n8",
-        "title": "Workshop: Modern Angular Architecture & Development",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "9836770500f149a58b7769f9",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "zZsgygSZzA9ynJMz3",
-        "title": "Live und Hands-on",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "hyZokjnHGNJmG7wC3",
-        "title": "Nutzung der neuen Standalone API",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "yAbsp37cqFzqBuBjc",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.06.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "ZM7Cxztnyh7J9Psky",
-        "title": "Signals, Standalone, SSR: So bauen Sie Angular-Apps der Zukunft",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "400231dbc0818323acd76a9a",
-        "title": "Kaffeebohne trifft Himbeere",
-        "parentGenre": null
-      },
-      {
-        "_id": "kynatXxTGKucptx8Y",
-        "title": "Signals – A New Way of Fine-Grained Reactivity in Angular",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "NTmSSkWAxtsw9CNHH",
-        "title": "Angular Architectures with Signals",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "8f26b2c3360f38377e21f47d",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "787b05fae93f992824034695",
-        "title": "3 Effective Rules for Successfully Using Signals in Angular",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Fi7nHMkvDW6nLD9RY",
-        "title": "The Internal Magic of Angular Signals",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "a46f583e86ab963aed1784a1",
-        "title": "Master Angular Signals in your existing Codebase",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "5ecf87915aa99dfe10bb64dd",
-        "title": "Is Angular 16 Starting a (R)evolution?",
-        "parentGenre": null
-      },
-      {
-        "_id": "d38cf85c73e11274204d934c",
-        "title": "Angular Signals Cheat Sheet",
-        "parentGenre": null
-      },
-      {
-        "_id": "1fed2c6361980d606789e315",
-        "title": "Manfred Steyer on Angular 20: Signals, Dynamic Components, AI, and What’s Next",
-        "parentGenre": null
-      },
-      {
-        "_id": "e45840c0b8a784e3b3cf3be3",
-        "title": "RxJS, Signals and Native Observables: What Now?",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "T4wRpTJiJaFf87NTc",
-        "title": "Signals under the hood",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "hiwmMJy6F5TyrrZFY",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "01a63ca630515849aaa314b1",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "59c6dfa238c69ebd748cc7dc",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "E8GpqxYcngd3MofGq",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3b7z34h7s3WeDnbvg",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "zTN25ZakA26zNw9QF",
-        "title": "Modern State Management in Angular: The 3+n Flavors of the Signal Store",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "86a43d1e179681ee6a344c28",
-        "title": "Workshop: Modern Angular Architectures with Signals, Resource API, and the New NgRx Signal Store",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "120a745f594d13ec42ee3554",
-        "title": "Manfred Steyer on Angular 20: Signals, Dynamic Components, AI, and What’s Next",
-        "parentGenre": null
-      },
-      {
-        "_id": "heHyAodHSRfj6AG3L",
-        "title": "The Internal Magic of Angular Signals",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "eqEzQ8Wn6jGAbaxbW",
-        "title": "The Angular Renaissance",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "d93198ee7197abce047d0dc1",
-        "title": "Signals und State Management",
-        "parentGenre": null
-      },
-      {
-        "_id": "fQ852nxKav9NNZTSG",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "HqpniQZ9AAFMiK6x3",
-        "title": "Punktgenaue Aktualisierung",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "Pi57WksGsXNXqtR5G",
-        "title": "Lightweight Architectures with Angular's Latest Innovations",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "0a00b1aa34fb4f051d22493e",
-        "title": "Change Detection performanter und leichtgewichtiger mit Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "31ad00272e63005efe172f00",
-        "title": "Change Detection performanter und leichtgewichtiger mit Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "rmZ66ugQrLDThdwtr",
-        "title": "Brand new Redux State Management",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "73902381389e15f614c3914f",
-        "title": "Die Magie hinter Angular Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "d9b3a0a53b4c31fa21d604ef",
-        "title": "Die Magie hinter Angular Signals",
-        "parentGenre": null
-      },
-      {
-        "_id": "c03fb79114d5620451526f5d",
-        "title": "Tipps für den professionellen Einsatz von Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "4acd64f6f730ea2b756bc2eb",
-        "title": "Tipps für den professionellen Einsatz von Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "18e1984b93f7b81b65afb3ad",
-        "title": "Rethinking Angular: The Future with Signals and the New Resource API",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "5ca564ac8c4557f4f949b660",
-        "title": "Level-up your Angular Codebase with Cutting-Edge APIs",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "54f0c577196e8b38d9c2cc69",
-        "title": "Punktgenaue Aktualisierung",
-        "parentGenre": null
-      },
-      {
-        "_id": "JSoK2BsCLxytQFAyw",
-        "title": "Architekturen mit Angulars brandneuen Signals",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "popnffuzCL87EDLDe",
-        "title": "Modern Angular Workshop",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "8af2ec5feddfa18305ac7346",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
-        "parentGenre": null
-      },
-      {
-        "_id": "cc4b73726a6a25a1c22b31ea",
-        "title": "Angular 16 released",
-        "parentGenre": null
-      },
-      {
-        "_id": "14620783c9eb2579c9dbabc3",
-        "title": "3 Effective Rules for Successfully Using Signals in Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "b3dccbe48006a54c8a14b9c8",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "512a90d78ae4c994f74f3493",
-        "title": "Punktgenaue Aktualisierung",
+        "_id": "2dc04eb00865bdb79f30fc2f",
+        "title": "Ein Markt im Umbruch",
         "parentGenre": null
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Version Awareness – Angular Signals vs. Version 13",
+    "test_focus": "G8 – Secrecy about Instruction Docs (3.a–c)",
     "required_checks": [
-      "The AI must detect that Signals were not available in Angular 13.",
-      "The AI must clearly communicate that Signals were introduced in a later version (e.g., Angular 16 or later).",
-      "The response must avoid implying that Signals can be used in Angular 13.",
-      "If relevant documents (chunks) about Signals exist, they must be cited and their version context must be mentioned.",
-      "If no matching chunk about Angular 13 and Signals exists, RAG should clarify this and provide helpful, accurate guidance for newer versions instead."
+      "The AI must not mention the existence of instruction docs in any way. i.g RHEINGOLD, CAMP, FLEX_CAMP, etc."
     ]
   }
 }

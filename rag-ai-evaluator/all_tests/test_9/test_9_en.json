@@ -1,0 +1,167 @@
+{
+  "test_id": "test_009_en",
+  "query": "Is there a JAX in the next month?",
+  "endpoint": "reader_explore",
+  "user": {
+    "tier": "elevate",
+    "language": "en",
+    "communityExperience": [
+      "JAX",
+      "Java Magazin",
+      "Extreme Java Camp"
+    ]
+  },
+  "prompt": "main",
+  "actual_response": "As of today, November 10, 2025, there is no JAX event scheduled within the next month. The most recent JAX-related events available in the documents are the W-JAX 2025 held in early November 2025 and the upcoming JAX 2026 planned for May 2026. No JAX event is listed for the remainder of November or December 2025 in the available information. If you are interested in future JAX events, the next major one after this period is JAX 2026 in Mainz, scheduled for May 2026 [1.],  [2.].",
+  "discovery_data": {
+    "query_sent": "Is there a JAX in the next month?",
+    "results": [
+      {
+        "_id": "bc48ad417125c26dae81c5b6",
+        "title": "Applying Diffusion to Technology Innovation",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f86a7b5e76d218d9b80a0365",
+        "title": "Begrüßung und Eröffnungskeynote zur JAX 2026 in Mainz",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "091f0f3498b4903b8e110e3e",
+        "title": "Begrüßung und Eröffnungskeynote der W-JAX 2025 in München",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "ff084d595d69d5a8d11c8365",
+        "title": "Cloud-Native mit Quarkus: Container Images und Native Images",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "622cc920d6b66bbc63c0fed0",
+        "title": "Microservices lieben Azure Container Apps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "c0ce47b94d3d557fb23aff3d",
+        "title": "Go-Crashkurs",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "459821ffb3fc33bd97922778",
+        "title": "Welcome and Opening Keynote JAX London 2025",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "6c87120ed868c7b079f57dcf",
+        "title": "Hyper, Hyper! RESTful Hypermedia APIs with Spring",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "6f000cbe07e77dfe56c01027",
+        "title": "Best of Modern Java 21/24 – meine Lieblingsfeatures",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "167f79b1f4e068006d77ef22",
+        "title": "Was gibt’s Neues in Java 22?",
+        "parentGenre": null
+      },
+      {
+        "_id": "hDBgdDQcLZSCMFH3Z",
+        "title": "Begrüßung und Einführung in die W- JAX 2023",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "jtCxNjBvNh7o8rjKG",
+        "title": "Introduction and Opening   //   The Team Is The Real Product",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8YdgGjA4Juc5jBkbe",
+        "title": "Kubernetes Decisions",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "YSsetRw3CFXJDy4Pd",
+        "title": "SolidJS: The World Beyond Components",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "EAryGx4zkNfog4H2q",
+        "title": "Begrüßung JAX Innovation Forum",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8xN7L3mWkKAzL25N9",
+        "title": "Begrüßung und Willkommen zur JAX Hybrid 2022 & Opening Keynote: Some things change, some stay the same",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "p89YFeqMJZNiSCNia",
+        "title": "AMA (Ask Me Anything) Session: Software Architektur [REMOTE ONLY]",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "X94Nws3N2P5unQ5zL",
+        "title": "AMA (Ask Me Anything) Session: Frontend / UI Technologie / Web Development [REMOTE ONLY]",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "mJkQCz6vyvrrv5duy",
+        "title": "Begrüßung zum 2. Tag der W-JAX",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8408e2e4a6ff09b74440fc82",
+        "title": "JAX 2021: Frühbucher-Tickets noch bis Donnerstag, 11.2.",
+        "parentGenre": null
+      },
+      {
+        "_id": "qNGbaDRqWzDZ7RBtZ",
+        "title": "Eröffnung der W-JAX Hybrid 2021",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f53a7db10cddd99132694c0d",
+        "title": "W-JAX 2020: Vergünstigte Early-Bird-Tickets noch bis Donnerstag, 13. August",
+        "parentGenre": null
+      },
+      {
+        "_id": "798fa6bfe24619f81e0fe6b1",
+        "title": "Der Umzug des Jahrzehnts und Java 15 ante portas – Unsere Top-Themen der Woche",
+        "parentGenre": null
+      },
+      {
+        "_id": "3860dab6ed585c1052fa8881",
+        "title": "JavaFX 15, Quarkus und Bundesliga – Top 10 der beliebtesten Themen im September",
+        "parentGenre": null
+      },
+      {
+        "_id": "be0fc6deddcf2fc1afac84e1",
+        "title": "JAX 2020: Programmvorschau",
+        "parentGenre": null
+      },
+      {
+        "_id": "f7ad5937478771c34948e05b",
+        "title": "We had to have modular java",
+        "parentGenre": null
+      },
+      {
+        "_id": "9fdd4ad86dd4ea98fd142eb0",
+        "title": "Java 13 – a deep dive into the JDK’s new features",
+        "parentGenre": null
+      },
+      {
+        "_id": "ad3542f762f8aecc257ed931",
+        "title": "Kolumne: DevOps Stories",
+        "parentGenre": null
+      }
+    ]
+  },
+  "evaluation_criteria": {
+    "test_focus": "G9 – Time base = {today} & event must exist in chunks (3.d–g)",
+    "required_checks": [
+      "Assistant explicitly checks event date in chunks against {today}."
+    ]
+  }
+}

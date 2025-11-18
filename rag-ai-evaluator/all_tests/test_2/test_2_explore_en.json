@@ -1,74 +1,145 @@
 {
   "test_id": "test_002_explore_en",
-  "query": "Tell me about React useEffect from tutorials only.",
+  "query": "Explain the main benefits of using Spring Boot Actuator.",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: React useEffect tutorials\nReact's useEffect hook is a fundamental feature for managing side effects in functional components. It allows you to perform operations such as data fetching, subscriptions, or manually changing the DOM after React has updated the UI. Here are the key concepts and usage patterns of useEffect based on the tutorials:\n\nPurpose of useEffect:useEffect is used to handle side effects in React components. Side effects include operations that affect something outside the scope of the function component, like network requests, timers, or interacting with browser APIs. It helps keep the component logic clean and declarative by separating side effects from rendering logic.[1.]\n\nBasic Usage:You call useEffect inside your component to run a function after the component renders. This function can optionally return a cleanup function to run when the component unmounts or before the effect runs again.[1.]\n\nDependency Array:useEffect accepts a second argument, an array of dependencies. The effect runs after the first render and after any render where one of the dependencies has changed. If you pass an empty array, the effect runs only once after the initial render, similar to componentDidMount in class components.[1.]\n\nCleanup Function:If your effect creates subscriptions or timers, you can return a cleanup function from the effect to clean up before the component unmounts or before the effect runs again. This prevents memory leaks and unwanted behavior.[1.]\n\nExample: Timer with useEffect:A common example is setting up a timer inside useEffect and clearing it in the cleanup function to avoid multiple timers running simultaneously or timers running after the component is unmounted.[1.]\n\nAvoiding Common Pitfalls:  \n\nAlways specify dependencies correctly to avoid unnecessary re-renders or missing updates.  \nAvoid side effects directly in the render phase; use useEffect instead.  \nBe mindful of stale closures by including all necessary dependencies or using refs.[1.]\n\n\nIntegration with State and Props:useEffect works closely with component state and props. When state or props change, effects can run to respond to those changes, such as fetching new data or updating the DOM.[1.]\n\n\nIn summary, useEffect is the React hook designed to handle side effects in functional components, replacing lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components. It provides a declarative way to manage effects with control over when they run and how to clean them up, ensuring efficient and predictable component behavior.\nIf you want to dive deeper, the tutorials on React development cover practical examples of useEffect usage, including managing timers, data fetching, and integrating with component state and props for dynamic UI updates.[1.]\nReact's useEffect hook is a fundamental feature for managing side effects in functional components. It allows you to perform operations such as data fetching, subscriptions, or manually changing the DOM after React has updated the UI. Here are the key concepts and usage patterns of useEffect based on the tutorials:\n\nPurpose of useEffect:useEffect is used to handle side effects in React components. Side effects include operations that affect something outside the scope of the function component, like network requests, timers, or interacting with browser APIs. It helps keep the component logic clean and declarative by separating side effects from rendering logic.1. Rendering\n\nBasic Usage:You call useEffect inside your component to run a function after the component renders. This function can optionally return a cleanup function to run when the component unmounts or before the effect runs again.1. Rendering\n\nDependency Array:useEffect accepts a second argument, an array of dependencies. The effect runs after the first render and after any render where one of the dependencies has changed. If you pass an empty array, the effect runs only once after the initial render, similar to componentDidMount in class components.1. Rendering\n\nCleanup Function:If your effect creates subscriptions or timers, you can return a cleanup function from the effect to clean up before the component unmounts or before the effect runs again. This prevents memory leaks and unwanted behavior.1. Rendering\n\nExample: Timer with useEffect:A common example is setting up a timer inside useEffect and clearing it in the cleanup function to avoid multiple timers running simultaneously or timers running after the component is unmounted.1. Rendering\n\nAvoiding Common Pitfalls:  \n\nAlways specify dependencies correctly to avoid unnecessary re-renders or missing updates.  \nAvoid side effects directly in the render phase; use useEffect instead.  \nBe mindful of stale closures by including all necessary dependencies or using refs.1. Rendering\n\n\nIntegration with State and Props:useEffect works closely with component state and props. When state or props change, effects can run to respond to those changes, such as fetching new data or updating the DOM.1. Rendering\n\n\nIn summary, useEffect is the React hook designed to handle side effects in functional components, replacing lifecycle methods like componentDidMount, componentDidUpdate, and componentWillUnmount from class components. It provides a declarative way to manage effects with control over when they run and how to clean them up, ensuring efficient and predictable component behavior.\nIf you want to dive deeper, the tutorials on React development cover practical examples of useEffect usage, including managing timers, data fetching, and integrating with component state and props for dynamic UI updates.1. Rendering",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'Spring Boot Actuator benefits',\n  'primary_version_array': [],\n  'secondary_version_array': [],\n  'year_array': [],\n  'issue_array': []\n} \nSpring Boot Actuator provides essential production-ready features that help developers monitor and manage Spring Boot applications effectively. It exposes various endpoints that offer insights into application health, metrics, configuration, and runtime information, enabling better observability and operational control.\nKey benefits of using Spring Boot Actuator include:\n\nHealth Monitoring: Actuator exposes health endpoints (e.g., /actuator/health) that report the status of the application and its components, such as disk space, database connectivity, and custom health indicators. This helps detect issues early and supports automated health checks in production environments [1.].\n\nMetrics Collection and Export: It integrates with Micrometer to collect detailed metrics about application performance, resource usage (CPU, memory), and request throughput. These metrics can be exported in formats compatible with monitoring systems like Prometheus, facilitating real-time monitoring and alerting [2.].\n\nDistributed Tracing Support: Actuator supports integration with OpenTelemetry, enabling distributed tracing across microservices. This allows developers to track requests end-to-end, diagnose latency issues, and understand service interactions in complex cloud-native architectures [2.].\n\nManagement Endpoints: Beyond health and metrics, Actuator provides endpoints for logging configuration, application info, environment properties, and thread dumps. These endpoints can be customized and secured, offering granular control over what operational data is exposed [2.].\n\nAuto-Configuration and Integration: Actuator automatically configures itself based on the application’s dependencies and environment, reducing manual setup. It detects added starters like Prometheus support and adjusts exposed metrics accordingly, streamlining observability setup [1.].\n\nSecurity and Access Control: By default, sensitive details are hidden, and Actuator endpoints can be restricted via Spring Security or configuration properties. This ensures that operational data is protected in production environments while still accessible for diagnostics when needed [2.].\n\nLightweight and Extensible: Although Actuator adds some overhead (e.g., additional beans and slight runtime cost), it is designed to be lightweight and extensible. Developers can implement custom health indicators and endpoints to tailor monitoring to their specific application needs [2.].\n\n\nIn summary, Spring Boot Actuator equips developers with a powerful toolkit for making applications observable, diagnosable, and manageable in production. It simplifies the collection and exposure of vital operational data, supports integration with modern monitoring and tracing systems, and provides flexible security controls to protect sensitive information.\nThis makes Actuator a cornerstone for building resilient, maintainable, and cloud-ready Spring Boot applications [2.]  [1.].",
   "discovery_data": {
-    "query_sent": "Tell me about React useEffect from tutorials only.",
+    "query_sent": "Explain the main benefits of using Spring Boot Actuator.",
     "results": [
       {
-        "_id": "f84097699062ea49829a9ba7",
-        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
+        "_id": "1ca36afe8381ff71c318446c",
+        "title": "Spring Boot Observability in der Praxis: Actuator, Micrometer und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "um5JzcLvvQZdqw5A7",
+        "title": "Spring Boot Configuration",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "aa3c41758c254f2c90216dd0",
-        "title": "Einstieg in React",
+        "_id": "eRE5fEAe7BdHJ9LYT",
+        "title": "Spring Boot Observability",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "554842349c829ccc79d45375",
-        "title": "Testen und Frontendarchitektur",
+        "_id": "240785dc3effd69d1c0687c5",
+        "title": "Spring Boot 3.0 Features: Aus Magie wird Wissen",
+        "parentGenre": null
+      },
+      {
+        "_id": "a94259bf4cf0b6dcd442f9da",
+        "title": "Boot your own Infrastructure",
+        "parentGenre": null
+      },
+      {
+        "_id": "d1689ddf78de644a24ae44c4",
+        "title": "Monitoring von Applikationen in Kubernetes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "912f60ba7c63fcec333147d5",
+        "title": "Modernizing Java EE Monoliths: a Roadmap to Scalable Microservices",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a681c1fbb5aa263d247db411",
+        "title": "Green Coding mit Spring Boot: Nachhaltigkeit als Weg zu besserer Software",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "ea9ac0178f2d8b9587674c8a",
+        "title": "AI-driven Development Meets Jakarta EE: Why Standards Matter More than Ever",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a2a225a5421861490fb49cda",
+        "title": "Advanced Practices – Evaluator, Observability, Memory, Guardrails & Multi-Model",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "e8e5ad075ba0a3ff7a0c6faf",
-        "title": "Navigation und Web Components",
-        "parentGenre": "TUTORIAL"
+        "_id": "e44d9b2c5e54ff7729e14294",
+        "title": "Write Once, Deploy Everywhere: From Containers to Serverless",
+        "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "e1d26dbff09906066b1da018",
-        "title": "Rendering",
-        "parentGenre": "TUTORIAL"
+        "_id": "7ec824712aab8b7fc71288b1",
+        "title": "PHP Enums... on Steroids!!!",
+        "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "ff4Dt9s49xPhkHtMv",
-        "title": "Einstieg in Next.js",
-        "parentGenre": "TUTORIAL"
+        "_id": "d3418b12ff07ebba27d0a11c",
+        "title": "How Developer Platforms Fail (And How Yours Won’t)",
+        "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "eGRsyb7HRAKGBB9k6",
-        "title": "Routing und Navigation",
-        "parentGenre": "TUTORIAL"
+        "_id": "bebba6065d0ff75d2ec1ad37",
+        "title": "Spring-Tools live – all the Great New Things",
+        "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "RHCyFcwYbMjqqYgkS",
-        "title": "PWA mit React",
-        "parentGenre": "TUTORIAL"
+        "_id": "dbc555aed5dd083ec338794a",
+        "title": "Getting Started with Dapr and Spring Boot: A Hands-On Beginner’s Workshop",
+        "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "W9H9MKNhnkmaDJHCf",
-        "title": "Ausblick/Fazit",
-        "parentGenre": "TUTORIAL"
+        "_id": "f754dada55d201e6c6adae75",
+        "title": "Java and AI for real business Use Cases I Sean Li & Pierre Malarme",
+        "parentGenre": "FSLE"
       },
       {
-        "_id": "r4NMSW8BWMtF2RnBq",
-        "title": "Teil 4: Angular",
-        "parentGenre": "TUTORIAL"
+        "_id": "X2gNHErRki9QSzAYQ",
+        "title": "Migrating From Java EE - To Spring Boot or Something Else?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "bb0cf7e7c0ddfa6d6cfc9609",
+        "title": "Bootiful Spring Boot: A Dogumentary I Josh Long",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "uH6B2uyec74wSQCNA",
+        "title": "Workshop: Spring-Boot-Anwendungen für die Cloud optimieren",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5a4cc9e729fa8227fa66cc5a",
+        "title": "Test-driven Development leicht gemacht mit Spring Boot",
+        "parentGenre": null
+      },
+      {
+        "_id": "ycSjkk4G57CibBAYM",
+        "title": "Von Java EE zu Spring Boot: eine Reise durch die Modernisierung einer essenziellen Java-Anwendung der SCHUFA",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "AgoMBzQowt2yxTAgr",
+        "title": "Deployments done right",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "2Xsr7CYdvEAX4aJGA",
+        "title": "Wie optimiere ich meine Spring-Boot-Anwendungen für die Cloud?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "892b21e3c83eecd3f97cc6ca",
+        "title": "Spring Boot 3",
+        "parentGenre": null
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Content Type Filtering - Tutorials Only",
+    "test_focus": "G2 – Output shape (intro → bullets → conclusion) (System §1.a)",
     "required_checks": [
-      "The AI response must clearly indicate that the content is from tutorials.",
-      "No mention or citation of other content types (e.g., conferences, camps, slides, magazines) should appear in the response.",
-      "The explanation must be educational and appropriate for a tutorial format (step-by-step, practical, or beginner-friendly)."
+      "Starts with 2–4 sentence introduction.",
+      "Follows with bulleted or numbered list of most significant concepts.",
+      "Ends with 1–2 sentence conclusion.",
+      "No extra sections, no headings different from required shape."
     ]
   }
 }

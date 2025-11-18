@@ -1,8 +1,16 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const test_query_en = 'Explain Observables in Angular 15.'
-const test_query_de = 'Erkläre Observables in Angular 15.'
+const test_query_en = 'Give me the steps from the article you just retrieved about observability.'
+const test_query_de = 'Gib mir die Schritte aus dem gerade gefundenen Artikel zur Observability.'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
+
+// Test 11 Evaluation Criteria 
+const evaluation_criteria = {
+  test_focus: "G11 – Only Context Documents as evidence (4.a–d)",
+  required_checks: [
+    "only use the asked content type i.g no other content types like events, tutorials, etc."
+  ]
+} 
 
 export const test11 = () => {
   loginHandel()

@@ -1,6 +1,6 @@
 {
   "test_id": "test_006_en",
-  "query": "Angular better?",
+  "query": "Show the OpenTelemetry export example from the documents.",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
@@ -12,404 +12,139 @@
     ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Angular better\nAngular has significantly evolved in recent versions, especially from Angular 16 onward, introducing features that make it lighter, more intuitive, and potentially easier to use than frameworks like React for building scalable web applications. Key improvements and reasons why Angular is considered better now include:\n\nStandalone Components and APIsAngular has moved towards a modular and maintainable architecture with Standalone Components, reducing the need for NgModules and simplifying application structure. This leads to cleaner, more manageable codebases and easier onboarding for developers.\n\nSignals-Based ReactivityAngular introduced a new reactive model based on Signals, which offers simpler and more performant change detection compared to the traditional Zone.js approach. Signals enable highly reactive and testable architectures, improving developer experience and application performance.\n\nSimplified Template Control FlowNew syntax such as @if, @switch, and @defer replaces older structural directives, making templates more readable and easier to write. This reduces boilerplate and cognitive load when managing conditional rendering and lazy loading.\n\nImproved State Management PatternsAngular supports advanced state management using Signals, RxJS, and custom store implementations, allowing developers to build highly reactive and scalable applications with better testability.\n\nBatteries-Included ApproachAngular continues to provide a comprehensive framework with built-in routing, forms, dependency injection, and server-side rendering (SSR) support. This reduces decision fatigue by offering a consistent, integrated toolset out of the box.\n\nBackward Compatibility and Incremental UpgradesThe Angular team emphasizes reinvention without disruption, ensuring that existing code continues to work while enabling gradual adoption of new features. This is crucial for enterprise environments with long-lived applications.\n\nPerformance OptimizationsFeatures like improved SSR with hydration, esbuild-based faster builds, and optional removal of Zone.js contribute to better runtime and build-time performance.\n\nDeveloper Experience EnhancementsThe Angular CLI now generates standalone applications by default, supports functional HTTP interceptors, and integrates new APIs that simplify common tasks. The documentation and tooling have also improved to support these changes.\n\nCommunity and Ecosystem SupportAngular’s evolution is driven by extensive community feedback and evidence-driven development, ensuring that new features address real developer needs and improve productivity.\n\n\nIn summary, modern Angular (versions 16 and above, with Angular 17 and 18 continuing the trend) offers a more ergonomic, performant, and maintainable framework that balances innovation with stability. It is increasingly seen as easier to use than before and competitive with other popular frameworks like React, especially for large-scale, enterprise-grade applications.\nThis is supported by multiple expert talks and articles highlighting Angular’s new features such as Signals, Standalone Components, improved SSR, and developer tooling improvements, which collectively contribute to a better developer experience and application performancec57d9896250397cf05488cadModern Angular is easier than React For years, Angular has been perceived as the “heavy” framework... Angular 16+ (and now 20+) has changed the game entirely... The power of Standalone Components... The simplicity and performance of the new Signals-based reactivity... Angular’s batteries-included approach... leads to less decision fatigue and more developer focus.1fed2c6361980d606789e315Manfred Steyer: The Angular team has consistently proven that the underlying philosophy and the whole architecture pay off... NgModules are optional, zones are becoming optional, and we’re getting a new set of reactivity primitives with Signals... All of this works without breaking changes... Reinvention without disruption is the theme behind Angular.5ca564ac8c4557f4f949b660The Angular team is propelling the enterprise frontend framework into a promising future with new, robust APIs... Standalone APIs instead of NgModules, and optional RxJS, as well as Zone.js, are paving the way for a brighter future with an easier-to-manage codebase and an excellent developer experience.8b35e3d0070110b78d6c9434Mit der Veröffentlichung der 16. Hauptversion von Angular läutete das Angular-Team die „Angular Renaissance“ ein... Angular-Codebasen werden sich nachhaltig verändern... Verbesserungen der Developer Experience sowie die möglichen Leistungssteigerungen bei Build- und Laufzeitperformance... Um technische Schulden zu vermeiden, ist es ratsam, schnellstmöglich auf neue Angular-Versionen und die neuen Features zu migrieren.de0df53930e2e1e582caf57fAngular 17 comes with a lot of new features... Neue Anwendungen initialisieren den Angular Router standardmäßig und erzeugen Anwendungen als 'standalone' ohne '@NgModule()'. Funktionale HTTP-Interceptoren werden in Angular CLI 17 bevorzugt... Server-Side Rendering Funktionalitäten unter dem Paket '@angular/ssr' wurden eingeführt... Breaking Changes in Angular CLI 17... TypeScript 5.2 must be used.",
+  "actual_response": "Certainly! Here is an example of an OpenTelemetry export configuration based on the content from the documents, illustrating how to set up the OpenTelemetry Collector and Fluent Bit to export telemetry data:\n\nOpenTelemetry Collector Configuration:\n\nreceivers:\n  otlp:\n    protocols:\n      grpc:\n        endpoint: 0.0.0.0:4317\n      http:\n        endpoint: 0.0.0.0:4318\n\nexporters:\n  debug:\n    verbosity: detailed\n\nservice:\n  pipelines:\n    traces:\n      receivers: [otlp]\n      exporters: [debug]\n    metrics:\n      receivers: [otlp]\n      exporters: [debug]\n    logs:\n      receivers: [otlp]\n      exporters: [debug]\n\n\nThis configuration sets up the OTLP receiver to listen on gRPC and HTTP ports.\nThe debug exporter outputs detailed telemetry data for development or debugging purposes.\nPipelines are defined for traces, metrics, and logs, each using the OTLP receiver and debug exporter.\n\n\nRunning the OpenTelemetry Collector Container:\n\ndocker run -p 127.0.0.1:4317:4317 -p 127.0.0.1:4318:4318 \\\\\n  -v $PWD/otel-config.yaml:/etc/otelcol-contrib/config.yaml \\\\\n  otel/opentelemetry-collector-contrib:0.128.0\n\n\nThis command runs the collector container with the above configuration mounted and ports exposed.\n\n\nFluent Bit Configuration to Export to OpenTelemetry Collector:\n\nservice:\n  log_level: info\n\npipeline:\n  inputs:\n    - name: dummy\n      tag: test\n  processors:\n    logs:\n      - name: opentelemetry_envelope\n  outputs:\n    - name: opentelemetry\n      match: '*'\n      host: 127.0.0.1\n      port: 4318\n      tls: off\n      metrics_uri: /v1/metrics\n      logs_uri: /v1/logs\n      traces_uri: /v1/traces\n      log_response_payload: true\n    - name: stdout\n      match: '*'\n\n\nFluent Bit generates dummy log data and processes it with the opentelemetry_envelope processor to set OTEL metadata.\nThe output is sent to the OpenTelemetry Collector at localhost on port 4318 using the OTLP HTTP endpoints for metrics, logs, and traces.\nAdditionally, logs are output to stdout for local visibility.\n\n\nRunning Fluent Bit Container:\n\ndocker run --rm -it --network=host \\\\\n  -v $PWD/fluent-bit.yaml:/fluent-bit/etc/fluent-bit.yaml:ro \\\\\n  fluent/fluent-bit -c /fluent-bit/etc/fluent-bit.yaml\n\n\nThis runs Fluent Bit with the above configuration, using host networking to communicate with the collector.\n\nThis setup demonstrates a basic end-to-end OpenTelemetry export pipeline where Fluent Bit collects and forwards telemetry data to the OpenTelemetry Collector, which then exports it (in this example, to a debug output). This can be extended to export to other backends like Prometheus, Jaeger, or commercial observability platforms by configuring appropriate exporters in the collector.\nThis example is drawn from detailed tutorials and practical sessions on OpenTelemetry integration with Fluent Bit and Kubernetes environments, providing a solid foundation for building observability pipelines in serverless and cloud-native architectures [1.],  [2.], .\nIf you want, I can also provide examples for Java or .NET OpenTelemetry exporters or more advanced configurations.",
   "discovery_data": {
-    "query_sent": "Angular better?",
+    "query_sent": "Show the OpenTelemetry export example from the documents.",
     "results": [
       {
-        "_id": "751b88e1aceba1740578c266",
-        "title": "Performance is high up on the list of architectural goals for Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "1e3dde565bad5109fbd7aef8",
-        "title": "Return to Server-Side Rendering with Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
-        "parentGenre": null
-      },
-      {
-        "_id": "54793be95d590ed758230753",
-        "title": "Return to Server-Side Rendering with Angular",
+        "_id": "54f68226b04b39e8b556c198",
+        "title": "Telemetrie und Distributed Tracing mit OpenTelemetry für ASP.NET Core Microservices",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "yeDqYHwX2d2dnZvTR",
-        "title": "Build the Next Generation of Web Apps With Angular",
+        "_id": "bd7441c521543e7f1c9278ab",
+        "title": "Seven approaches to Electronic documents interchange",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "69ab8ba6bfa5d1a198f998c3",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 30.11.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "b63c53e48518c913ee4e5b88",
-        "title": "What’s new in Angular 5?",
-        "parentGenre": null
-      },
-      {
-        "_id": "60bb03da4058fe9d0cca3a3e",
-        "title": "Was ist neu in Angular 18?",
-        "parentGenre": null
-      },
-      {
-        "_id": "rAtKRZNEciENzrFPT",
-        "title": "Better Angular Architectures with Libraries and Nx",
+        "_id": "71e094cd3cb4b117a73727e0",
+        "title": "OpenTelemetry better practices - navigation the bullsh** bingo",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "2c27b533fbd7a7d0f037a607",
-        "title": "Kolumne: Die Angular-Abenteuer",
-        "parentGenre": null
-      },
-      {
-        "_id": "f105c3b533645c5e79e6dcb2",
-        "title": "Forms With Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "bb97d9e8205e4d23e8d34081",
-        "title": "Angular 15: New Features and Breaking Changes",
-        "parentGenre": null
-      },
-      {
-        "_id": "mWzpTGGiet8zpxNzZ",
-        "title": "Change Detection performanter und leichtgewichtiger mit Signals",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "702fef853902d8e509b74756",
-        "title": "Formulare mit Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "4529750e0fba241f8cad1010",
-        "title": "Angular für Einsteiger",
-        "parentGenre": null
-      },
-      {
-        "_id": "1698a88891c72b41c979e3d9",
-        "title": "Angular 9 is here – Ivy, Lazy Loading and more",
-        "parentGenre": null
-      },
-      {
-        "_id": "85vjrGXi8WLznB97j",
-        "title": "State-Management mit Angular und NgRx",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "0662c9d84416bbfe79439e97",
-        "title": "Featurefeuerwerk: Was bringt Angular 14?",
-        "parentGenre": null
-      },
-      {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
-        "parentGenre": null
-      },
-      {
-        "_id": "f7dcfe3078b64925f3b62a19",
-        "title": "Von wegen Unglück - Angular 13 bringt interessante Neuerungen",
-        "parentGenre": null
-      },
-      {
-        "_id": "e77d9110a6ab65108dae9feb",
-        "title": "Wie die neuen Angular Signals unsere Architekturen beeinflussen",
-        "parentGenre": null
-      },
-      {
-        "_id": "bc0bef25841c96486c56f58f",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 28.09.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "14cc5ed4a89dffe508d6e605",
-        "title": "Progressive Web Apps auf Knopfdruck?",
-        "parentGenre": null
-      },
-      {
-        "_id": "cba21bfb1a8e05112def8cea",
-        "title": "Angular for Beginners",
-        "parentGenre": null
-      },
-      {
-        "_id": "2516e3a18c8e13c6d0d5ede1",
-        "title": "Erfolgreich mit Signals – drei Regeln für Ihre Architektur",
-        "parentGenre": null
-      },
-      {
-        "_id": "eba6f5d083b14f4d8d53d87a",
-        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
-        "parentGenre": null
-      },
-      {
-        "_id": "fecfbff9cd978979b41d4b10",
-        "title": "Das perfekte Projekt-Set-up für Angular: Struktur und Automatismen für mehr Qualität",
-        "parentGenre": null
-      },
-      {
-        "_id": "7cf535c02ec94f7b3dd8cfef",
-        "title": "Angular 10: a round-number birthday",
-        "parentGenre": null
-      },
-      {
-        "_id": "41b489145abe0f659676e83a",
-        "title": "Microfrontends mit Angular Elements",
-        "parentGenre": null
-      },
-      {
-        "_id": "59de534396ce3b7ab22bd4ee",
-        "title": "Kolumne: Die Angular-Abenteuer",
-        "parentGenre": null
-      },
-      {
-        "_id": "344415ae72d6b4b0cdfe1215",
-        "title": "Playwright Component Testing",
+        "_id": "60eb11682d74e071744ffcf8",
+        "title": "OpenTelemetry better practices - navigating the bullsh** bingo",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "825e9c02054279e9c733636b",
-        "title": "How to create your own Angular Schematics",
-        "parentGenre": null
-      },
-      {
-        "_id": "c597106a63fd0c333eca9326",
-        "title": "Kolumne: Die Angular-Abenteuer",
-        "parentGenre": null
-      },
-      {
-        "_id": "12342c3f592725f604e514da",
-        "title": "Von null auf Progressive in einem Schritt",
-        "parentGenre": null
-      },
-      {
-        "_id": "68398ebeb25fe0198415f20f",
-        "title": "Simplifying State Management in Angular with Smart Nano Stores",
+        "_id": "FL7mXpvsqxEbZ4XbA",
+        "title": "Using MySQL Document Store with Node.js",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "c57d9896250397cf05488cad",
-        "title": "Modern Angular is easier than React",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "6080273addd03e001dde0de1",
-        "title": "Angular Camp Basic",
-        "parentGenre": "CAMP"
-      },
-      {
-        "_id": "73a55b4bbeecf374b233deaf",
-        "title": "Angular’s New Era: Unveiling the Most Exciting Features Yet",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "czYsWZLkcH7j5S9zL",
-        "title": "Javascript Fullstack Day London 2022",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "a527c16f5bc7b4da1bc88ab0",
-        "title": "Angular Resources: Everything you need to know",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "eYWqC2w4cdH4f7hyW",
-        "title": "New Lightweight Angular HTTP Interceptors",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "mrkFPBdm5bQQ8Q8nY",
-        "title": "Renovate your Angular App!",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "MvdY7xq8Y43rgzoiF",
-        "title": "Better Angular Architectures with Libraries and Nx",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "5ca564ac8c4557f4f949b660",
-        "title": "Level-up your Angular Codebase with Cutting-Edge APIs",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "qNxLZANzPujn4CZed",
-        "title": "Into the Wild - Going Functional With Angular",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3CghbWD73PW6FyYw7",
-        "title": "Angular Kickstart: von 0 auf 100 Teil 2",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "524db33b51d72e32933f5683",
-        "title": "Two years with Angular and loving it",
+        "_id": "81d0ea682745090420ad37f9",
+        "title": "Die Herausforderungen moderner Microservice-Architekturen",
         "parentGenre": null
       },
       {
-        "_id": "a44eff65614fe5819a164d75",
-        "title": "Angular: One framework",
-        "parentGenre": null
-      },
-      {
-        "_id": "a184cd602d555b7af3f08fa5",
-        "title": "Two years with Angular and loving it",
-        "parentGenre": null
-      },
-      {
-        "_id": "hiwmMJy6F5TyrrZFY",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "a9bb215b2423e54b8b38f37a",
+        "title": "How to implement compliance with the modern IT standards regarding your electronic documents",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "a77cc29d531e2ece8375cfd2",
-        "title": "Angular Performance Optimization Techniques",
+        "_id": "LmYLmc9MqBsbhBtrz",
+        "title": "Tracing edge compute with OpenTelemetry",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "E8GpqxYcngd3MofGq",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "BsPDFmMpN2qivuRuu",
+        "title": "Tracing edge compute with OpenTelemetry",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "3b7z34h7s3WeDnbvg",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "22278246647035e8f75842f1",
+        "title": "Continuous Delivery Expert Check 2020 – CI/CD, security & rolling deployment (Part 1)",
+        "parentGenre": null
+      },
+      {
+        "_id": "bf759bf0ac6efafc1d70d767",
+        "title": "Enhancing Java Observability with OpenTelemetry Extensions",
+        "parentGenre": null
+      },
+      {
+        "_id": "d711da888bd09c02084397fd",
+        "title": "OpenTelemetry: Because 'It Works on My Machine' Isn't a Monitoring Strategy",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "1fed2c6361980d606789e315",
-        "title": "Manfred Steyer on Angular 20: Signals, Dynamic Components, AI, and What’s Next",
-        "parentGenre": null
-      },
-      {
-        "_id": "dd4096071cc62fc09263301a",
-        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
-        "parentGenre": null
-      },
-      {
-        "_id": "8ceadf3ba1bbfe8a5ead3a07",
-        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
-        "parentGenre": null
-      },
-      {
-        "_id": "6dHvWo6JhtsgDnR2S",
-        "title": "Angular Kickstart: von 0 auf 100 Teil 1",
+        "_id": "jpBgWuWq4bq9Ejcd2",
+        "title": "Obervability with OpenTelemetry and Grafana (ENG)",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "PnApHFiNAR2RR6pkD",
-        "title": "Modern Angular: Harnessing Signals, Hydration, and Modern Tooling for Seamless Coding",
+        "_id": "55706a65ccf0c6d49a8f78ae",
+        "title": "Continuous Delivery Expert Check 2020 – Kubernetes and the future of CI/CD (Part 2)",
+        "parentGenre": null
+      },
+      {
+        "_id": "26d01db8331b796597bb007a",
+        "title": "Erste Schritte in Fluent Bit mit OpenTelemetry",
+        "parentGenre": null
+      },
+      {
+        "_id": "313a870a64186401ffae9179",
+        "title": "Observe Cloud Native Applications with OpenTelemetry and MicroProfile Telemetry",
+        "parentGenre": null
+      },
+      {
+        "_id": "1d8573b0c6de16a83cb5134a",
+        "title": "OTel Legends: Build, Break, and Bend Your Collector!",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "8af2ec5feddfa18305ac7346",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
-        "parentGenre": null
-      },
-      {
-        "_id": "7169f2b6391a0d9490ef4b35",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
-        "parentGenre": null
-      },
-      {
-        "_id": "zrjCkwmAH8BAcvhYR",
-        "title": "Keep it Simple in Angular",
+        "_id": "818cea7987a8298159cdec62",
+        "title": "Extension Magic for the OpenTelemetry Java Agent",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "6a223a1bee8d3acae6889b04",
-        "title": "Die Angular-Evolution",
-        "parentGenre": null
-      },
-      {
-        "_id": "0e7432baba67fe0165971d53",
-        "title": "Angular for Beginners",
-        "parentGenre": null
-      },
-      {
-        "_id": "a04e8b81ff3ba9c41767c3be",
-        "title": "Angular für Einsteiger",
-        "parentGenre": null
-      },
-      {
-        "_id": "66492fc012613ae5c77e1ba8",
-        "title": "Angular für Einsteiger",
-        "parentGenre": null
-      },
-      {
-        "_id": "HoySAYYjcPSpN6JPa",
-        "title": "Lektion 5: Formulare | verfügbar bis 01.12.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "af921f07550064fad81caf65",
-        "title": "Angulars neues Standalone API",
-        "parentGenre": null
-      },
-      {
-        "_id": "db60e694e18019b73f7162ee",
-        "title": "Was ist neu in Angular 15?",
-        "parentGenre": null
-      },
-      {
-        "_id": "554b4f1cea4afdc9eaa5b35a",
-        "title": "The Road Ahead: A Look at Angular’s Roadmap",
-        "parentGenre": null
-      },
-      {
-        "_id": "518031862a98816d4f445861",
-        "title": "The road ahead: A look at Angular’s roadmap",
-        "parentGenre": null
-      },
-      {
-        "_id": "2avmyY9SRgg7GZpqR",
-        "title": "Lektion 5: Formulare | verfügbar bis 06.10.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "HMjgiHgaqRmGAddkF",
-        "title": "Modern Angular: Renovierung für Ihre Anwendungen",
+        "_id": "6d0f14ffae4ba518ced6033b",
+        "title": "Fast, Cheap, DIY Observability with Open Source Analytics and Visualization",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "22a125a269ee4ccc064bc5d5",
-        "title": "Building the Next Generation of Supercharged Web Applications Today",
+        "_id": "2d29e068328a1021838fb901",
+        "title": "Adventures in Observability with Fluent Bit, OTEL, and Kubernetes",
+        "parentGenre": null
+      },
+      {
+        "_id": "ba4420cbbe0a1431f5f8a39f",
+        "title": "CI at Scale: Lean, Green, and Fast",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "dM7x62FExyeH8rwcq",
-        "title": "Lektion 5: Formulare | verfügbar bis 21.07.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "f1151315d5ffa6c7887a8812",
-        "title": "Renaissance? Angular 17!",
+        "_id": "109994e6df654d9ba5e715e3",
+        "title": "Metriken, Traces und die OTEL Integration",
         "parentGenre": null
       },
       {
-        "_id": "3f007f4232e835ad3e9f54da",
-        "title": "Where no man has gone before",
-        "parentGenre": null
+        "_id": "e1852b394ff0c65cdfe82618",
+        "title": "Best Practices in OpenTelemetry Adoption from ex-New Relic Engineering Leader",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1f81486610a1dd7344519880",
+        "title": "OTel You It's Not Just for Backend!",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Vague Question handling - Clarification request for Angular",
+    "test_focus": "G5 – Marker format is exact [[[CID:...]]] (1.f–1.h) - Strict marker syntax",
     "required_checks": [
-      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
-      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
-      "The assistant should apply the vague Question fallback logic defined in the prompt."
+      "All markers are exactly [[[CID:{chunk_id}]]].",
+      "chunk_id is taken verbatim from context, not invented.",
+      "No punctuation or spaces inside marker, and no punctuation directly before [[[.",
+      "Max 2 markers per claim, separated by one space."
     ]
   }
 }

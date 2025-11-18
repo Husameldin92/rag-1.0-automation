@@ -1,35 +1,35 @@
 {
   "test_id": "test_004_de",
-  "query": "Was sind typische Fehler bei der Konfiguration von Dockerfiles?",
+  "query": "Gib mir die Schritte aus euren Inhalten, um Micrometer-Tracing in Spring Boot zu aktivieren.",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
     "language": "de"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: typische Fehler Konfiguration Dockerfiles\nTypische Fehler bei der Konfiguration von Dockerfiles lassen sich aus den bereitgestellten Quellen wie folgt zusammenfassen:\n\nZu große Images durch ungeeignete Basis-Images  \n\nDie Wahl eines zu großen Basis-Images (z. B. ein vollständiges Node.js-Image statt einer schlanken Variante wie node:14.14.0-alpine) führt zu unnötig großen Docker-Images, die den Download und das Deployment verlangsamen. Alpine-basierte Images sind oft deutlich kleiner und effizienter, können aber Kompatibilitätsprobleme mit bestimmten Bibliotheken verursachen.  \nEs ist wichtig, stets eine spezifische Version des Images zu verwenden, um reproduzierbare Builds zu gewährleisten und unerwartete Updates zu vermeiden.b31a4aa86ae590aaad7d4d3f„Daher empfiehlt es sich, stattdessen auf das Image node:14.14.0-alpine zu setzen, das mit 117 MByte nur etwa ein Zehntel an Speicherplatz benötigt... Ein weiterer wichtiger Punkt ist, stets die volle Version des Docker Image anzugeben.“\n\n\nUnnötige Layer und fehlende Multistage-Builds  \n\nJede Instruktion im Dockerfile erzeugt einen neuen Layer, was die Image-Größe erhöht. Ohne Multistage-Builds werden oft unnötige Dateien und Build-Artefakte in das finale Image übernommen.  \nMultistage-Builds erlauben es, nur die notwendigen Artefakte in das finale Image zu kopieren, was die Größe reduziert und die Sicherheit erhöht.fd72c56e168bf0c41965821c„Eine der anspruchsvollsten Aufgaben beim Bauen von Docker Images ist es, sie so klein wie möglich zu halten, denn jede Instruktion im Dockerfile fügt einen neuen Layer hinzu... Eine sehr effektive Methode ist die Verwendung eines mehrstufigen Docker Builds.“\n\n\nUnsichere Nutzung des Docker Daemons  \n\nDie Verwendung des Docker Daemons innerhalb von Containern (Docker-in-Docker) erfordert privilegierte Container, was die Sicherheitsisolation aufweicht.  \nAlternativen wie Kaniko oder Jib ermöglichen das Bauen von Images ohne Docker Daemon und sind sicherer für CI/CD-Pipelines.74378d377067d6b89f96a51e„Keinesfalls sollte hier die in manchen Tutorials beschriebene Option gewählt und der – sofern überhaupt dazu eingesetzte – Docker Daemon dem Kubernetes Node verfügbar gemacht werden... Eine davon ist Kaniko... Kaniko kann dabei selbst problemlos in einem nichtprivilegierten Container ausgeführt werden und eignet sich damit auch sehr gut für CI-Pipelines.“\n\n\nFehlende Reproduzierbarkeit und Versionskontrolle  \n\nDas Fehlen von eindeutigen Tags (z. B. Zeitstempel oder Git-Commit-Hash) bei Images kann zu Inkonsistenzen führen, wenn Nodes unterschiedliche Versionen eines Images verwenden.  \nEs empfiehlt sich, Metadaten wie Build-Zeitpunkt, Branch und Commit-Hash als Labels im Image zu hinterlegen, um Nachvollziehbarkeit zu gewährleisten.d9da4ab9891c71eb200d997f„Daher bietet sich an, dass im Tag etwas Eindeutiges wie ein Zeitstempel oder der git-Commit-Hash, aus dem das Image gebaut wurde, verwendet wird... Ein Image kann weiterhin Metadaten als sogenannte Label erhalten.“\n\n\nUnnötiges Kopieren von Dateien und Verzeichnissen  \n\nDas Kopieren von nicht benötigten Dateien (z. B. node_modules bei Node.js-Projekten) in das Image kann zu Problemen und unnötig großen Images führen.  \nDie Verwendung von .dockerignore-Dateien hilft, unnötige Dateien vom Build auszuschließen.b31a4aa86ae590aaad7d4d3f„Dabei ist es wichtig, darauf zu achten, dass man das node_modules-Verzeichnis nicht mit kopiert... Da kompilierte Abhängigkeiten, die beispielsweise auf macOS übersetzt wurden, unter Linux nicht lauffähig sind, sollte man das Hinzufügen des node_modules-Verzeichnisses verhindern.“\n\n\nFehlende oder falsche Nutzung von Dockerfile-Kommandos  \n\nUnklare oder falsche Verwendung von Kommandos wie CMD, ENTRYPOINT, EXPOSE, ENV, WORKDIR kann zu unerwartetem Verhalten führen.  \nBeispielsweise wird nur das letzte CMD ausgeführt, ENTRYPOINT kann nicht von außen überschrieben werden, und EXPOSE teilt nur mit, auf welchen Ports der Container lauscht, ohne Port-Weiterleitung zu konfigurieren.f2d7fc99b75ae5a0234279ad„CMD Kommando beim Start des Containers ausführen (Parameter verändern)... ENTRYPOINT Wie CMD, kann aber nicht von außen überschrieben werden... EXPOSE Ports des Containers...“\n\n\nFehlende Tests und Qualitätssicherung  \n\nWie bei normaler Softwareentwicklung ist es wichtig, Dockerfiles und die daraus resultierenden Images zu testen, um Fehler frühzeitig zu erkennen und zu beheben.26a34a663a9e678d68169576„Mittlerweile wird die Infrastruktur immer mehr mithilfe von Code (Provisionierungsskripte, Dockerfiles, (Shell-)Skripte etc.) beschrieben und automatisiert... Müssen die frisch gebackenen OpsDevs die alten Fehler der Devs wiederholen?“\n\n\n\nZusammenfassend sind typische Fehler bei Dockerfile-Konfigurationen vor allem die Wahl ungeeigneter Basis-Images, fehlende Multistage-Builds, unsichere Nutzung des Docker Daemons, mangelnde Reproduzierbarkeit, das Kopieren unnötiger Dateien, falsche Nutzung von Docker-Kommandos und fehlende Tests. Die Beachtung dieser Punkte führt zu kleineren, sichereren und besser wartbaren Docker-Images und -Containern.\nFalls Sie tiefergehende Praxis-Tipps oder Beispiele wünschen, empfehle ich die Artikel und Sessions von Thomas Kruse und Sascha Möllering, die diese Themen ausführlich behandeln.74378d377067d6b89f96a51e„Es gibt jedoch Alternativen. Eine davon ist Kaniko, ein Projekt von Google... Kaniko kann dabei selbst problemlos in einem nichtprivilegierten Container ausgeführt werden und eignet sich damit auch sehr gut für CI-Pipelines.“\nTypische Fehler bei der Konfiguration von Dockerfiles umfassen:\n\nVerwendung zu großer oder ungeeigneter Basis-Images  \n\nGroße Basis-Images wie das Standard-Node.js-Image können die Image-Größe unnötig aufblähen. Schlankere Varianten wie node:14.14.0-alpine sind deutlich kleiner und effizienter, können aber Kompatibilitätsprobleme verursachen.  \nEs ist wichtig, immer eine spezifische Version des Images zu verwenden, um reproduzierbare Builds sicherzustellen und unerwartete Updates zu vermeiden.\n\n\nFehlende Multistage-Builds und unnötige Layer  \n\nJede Anweisung im Dockerfile erzeugt einen neuen Layer, was die Image-Größe erhöht. Ohne Multistage-Builds werden oft unnötige Build-Artefakte mit in das finale Image übernommen.  \nMultistage-Builds helfen, nur die notwendigen Artefakte in das finale Image zu übernehmen und reduzieren so Größe und Komplexität.\n\n\nUnsichere Nutzung des Docker Daemons (Docker-in-Docker)  \n\nDas Ausführen von Docker innerhalb eines Containers erfordert privilegierte Container, was die Sicherheitsisolation aufweicht.  \nAlternativen wie Kaniko oder Jib ermöglichen das Bauen von Images ohne Docker Daemon und sind sicherer, besonders in CI/CD-Umgebungen.\n\n\nFehlende eindeutige Tags und Metadaten für Images  \n\nDas Fehlen eindeutiger Tags (z. B. Zeitstempel oder Git-Commit-Hash) kann zu Inkonsistenzen führen, wenn Nodes unterschiedliche Image-Versionen verwenden.  \nMetadaten wie Build-Zeitpunkt, Branch und Commit-Hash als Labels verbessern die Nachvollziehbarkeit.\n\n\nUnnötiges Kopieren von Dateien, z. B. node_modules  \n\nDas Kopieren von nicht benötigten Dateien oder Verzeichnissen kann zu großen Images und Problemen führen.  \n.dockerignore-Dateien helfen, unnötige Dateien vom Build auszuschließen.\n\n\nFalsche oder unklare Verwendung von Dockerfile-Kommandos  \n\nBeispielsweise wird nur das letzte CMD ausgeführt, ENTRYPOINT kann nicht von außen überschrieben werden, und EXPOSE teilt nur mit, auf welchen Ports der Container lauscht, ohne Port-Weiterleitung zu konfigurieren.\n\n\nFehlende Tests und Qualitätssicherung  \n\nWie bei normaler Softwareentwicklung sollten Dockerfiles und Images getestet werden, um Fehler frühzeitig zu erkennen.",
+  "actual_response": "Gerne gebe ich dir eine strukturierte Übersicht, wie du Micrometer-Tracing in einer Spring-Boot-Anwendung aktivierst, basierend auf den Inhalten aus unseren Quellen:\n\nAbhängigkeiten einbinden  \n\nFüge in deiner pom.xml die notwendigen Dependencies für Spring Boot Actuator, Micrometer und Micrometer Tracing hinzu.  \nFür die Integration mit einem Tracing-Backend wie Zipkin oder Jaeger kannst du zusätzlich die entsprechenden Starter oder Brücken (z. B. micrometer-tracing-bridge-brave für Zipkin/Brave) einbinden.  \nBeispiel:  <dependency>\n  <groupId>io.micrometer</groupId>\n  <artifactId>micrometer-tracing-bridge-brave</artifactId>\n</dependency>\n<dependency>\n  <groupId>org.springframework.boot</groupId>\n  <artifactId>spring-boot-starter-actuator</artifactId>\n</dependency>\n\n\nIn Tutorials wird auch gezeigt, wie man mit Docker Compose eine Zipkin-Instanz lokal startet, um Traces zu sammeln und anzuzeigen [1.],  [2.].\n\n\nKonfiguration der Anwendung  \n\nAktiviere in der application.properties oder application.yml die notwendigen Einstellungen für das Tracing.  \nBeispiel für Zipkin:  management.tracing.sampling.probability=1.0\nspring.zipkin.base-url=http://localhost:9411/\nmanagement.tracing.enabled=true\n\n\nDie Sampling-Rate kannst du anpassen, um zu steuern, wie viele Anfragen getraced werden.  \nAlternativ kannst du auch OpenTelemetry als Tracing-Backend konfigurieren, indem du die entsprechenden Properties setzt [1.].\n\n\nIntegration in den Code  \n\nSpring Boot Actuator und Micrometer Tracing übernehmen die automatische Instrumentierung vieler Komponenten (z. B. HTTP-Requests, JDBC-Calls).  \nFür benutzerdefinierte Traces kannst du den Tracer injizieren und manuell Spans erzeugen.  \nBeispiel:  @Autowired\nTracer tracer;\n\npublic void someMethod() {\n  Span span = tracer.nextSpan().name('customSpan').start();\n  try (Tracer.SpanInScope ws = tracer.withSpan(span)) {\n    // Logik hier\n  } finally {\n    span.end();\n  }\n}\n\n\nAlternativ kannst du Annotationen wie @WithSpan verwenden, um Methoden automatisch zu tracen [3.].\n\n\nLogging mit Trace-Informationen erweitern  \n\nUm Logs mit Trace- und Span-IDs zu korrelieren, kannst du die Log-Korrelation aktivieren.  \nSpring Boot unterstützt das standardmäßig mit W3C Context Propagation.  \nSo kannst du in den Logs nachvollziehen, welcher Log-Eintrag zu welchem Trace gehört [4.].\n\n\nTracing-Daten visualisieren  \n\nStarte ein Tracing-Backend wie Zipkin oder Jaeger (z. B. per Docker Compose).  \nDie Tracing-Daten werden von Micrometer Tracing an das Backend gesendet.  \nDort kannst du die verteilten Traces visualisieren und analysieren [1.].\n\n\nMonitoring und Observability erweitern  \n\nKombiniere Tracing mit Metriken (Micrometer) und Health-Checks (Spring Boot Actuator), um eine umfassende Observability zu erreichen.  \nExportiere Metriken z. B. an Prometheus und visualisiere sie mit Grafana [4.].\n\n\n\nZusammenfassung:Micrometer Tracing in Spring Boot aktivierst du durch Einbindung der passenden Dependencies, Konfiguration der Tracing-Properties, automatische oder manuelle Instrumentierung im Code, Aktivierung der Log-Korrelation und Anbindung an ein Tracing-Backend wie Zipkin. So erhältst du eine leistungsfähige verteilte Tracing-Lösung, die sich nahtlos in das Spring-Ökosystem einfügt und dir hilft, komplexe Microservice-Architekturen besser zu verstehen und zu überwachen [4.]  [1.]  [2.].\nWenn du möchtest, kann ich dir auch Beispielcode oder eine Schritt-für-Schritt-Anleitung aus einem unserer Tutorials bereitstellen.",
   "discovery_data": {
-    "query_sent": "Was sind typische Fehler bei der Konfiguration von Dockerfiles?",
+    "query_sent": "Gib mir die Schritte aus euren Inhalten, um Micrometer-Tracing in Spring Boot zu aktivieren.",
     "results": [
       {
-        "_id": "6220c7b2d58a34dd9f99926e",
-        "title": "Mobile-UX-Design",
+        "_id": "a2a225a5421861490fb49cda",
+        "title": "Advanced Practices – Evaluator, Observability, Memory, Guardrails & Multi-Model",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "1ca36afe8381ff71c318446c",
+        "title": "Spring Boot Observability in der Praxis: Actuator, Micrometer und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5a842211fdd95e05df81bd60",
+        "title": "Metrikbasiertes Monitoring mit Micrometer und Spring Boot",
         "parentGenre": null
       },
       {
-        "_id": "4fe0dd592fdcf763aa037c14",
-        "title": "Vom Irrtum zum Erfolg",
-        "parentGenre": null
-      },
-      {
-        "_id": "93fb890929759329fc119e00",
-        "title": "Externalized Configuration",
-        "parentGenre": null
-      },
-      {
-        "_id": "d25de79e141c93293db37df3",
-        "title": "Die 5 häufigsten Fehler auf AWS",
-        "parentGenre": null
+        "_id": "eRE5fEAe7BdHJ9LYT",
+        "title": "Spring Boot Observability",
+        "parentGenre": "TUTORIAL"
       },
       {
         "_id": "um5JzcLvvQZdqw5A7",
@@ -37,384 +37,104 @@
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "bcjENEpvemLDyXS9N",
-        "title": "Typische Microservice-Architekturen interaktiv am Beispiel (online-only)",
+        "_id": "240785dc3effd69d1c0687c5",
+        "title": "Spring Boot 3.0 Features: Aus Magie wird Wissen",
+        "parentGenre": null
+      },
+      {
+        "_id": "G3AhHFJwMXqcz8YDZ",
+        "title": "Logs, Metrics, Distributed Tracing und OpenTelemetry",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "vv4Sv7g4oqWHimR4w",
-        "title": "Typische Microservice-Architekturen interaktiv am Beispiel (online-only)",
+        "_id": "cbac16438d8543fcf2cdeb5d",
+        "title": "Monitoring von Applikationen in Kubernetes",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "107928163d1cbc1874ef935d",
-        "title": "Auf Fehler ist Verlass",
-        "parentGenre": null
-      },
-      {
-        "_id": "840a539a1a7ae6ee99662d59",
-        "title": "Die Top Ten methodischer Fehler",
-        "parentGenre": null
-      },
-      {
-        "_id": "23fb6f99024b895178dfa19c",
-        "title": "Konfiguration schützen",
-        "parentGenre": null
-      },
-      {
-        "_id": "9f96b8fe9d72cd1c57d3810a",
-        "title": "Kotlin-Kubernetes-Backend-App",
-        "parentGenre": null
-      },
-      {
-        "_id": "3eedafc1107e1e63ee046602",
-        "title": "Alle Zügel in einer Hand",
-        "parentGenre": null
-      },
-      {
-        "_id": "41c93e9856f12126a9fa6582",
-        "title": "Systemadministration für Developer",
-        "parentGenre": null
-      },
-      {
-        "_id": "1e4f9bc1434d8b13e70edee0",
-        "title": "Meine größten Angular-Fehler ... und wie du sie vermeiden kannst",
+        "_id": "e4074dd4f050a9f03a4e2ad1",
+        "title": "Implementierung von DDD leicht gemacht mit Spring und jMolecules",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "c094f6e7e74cac07b60a1ade",
-        "title": "Einstellungen zentral verwalten",
+        "_id": "81d0ea682745090420ad37f9",
+        "title": "Die Herausforderungen moderner Microservice-Architekturen",
         "parentGenre": null
       },
       {
-        "_id": "19ee7f210878fda1f1194df2",
-        "title": "Komfortzone Spring Boot",
-        "parentGenre": null
-      },
-      {
-        "_id": "afc60c851ec50dc1b3041832",
-        "title": "Eclipse + Docker = doclipser",
-        "parentGenre": null
-      },
-      {
-        "_id": "PEs7BQiiMjTzfhtnB",
-        "title": "Die \\\"magischen\\\" Features von Spring Boot entschlüsseln ...",
+        "_id": "cfe286f4a61704cdb908b3a4",
+        "title": "Spring Authorization Server: OAuth2 und OIDC im praktischen Einsatz",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "61f2b69451660861eca0f423",
-        "title": "Result-Pattern statt Exceptions",
-        "parentGenre": null
-      },
-      {
-        "_id": "74378d377067d6b89f96a51e",
-        "title": "17 Toptipps aus der Praxis für bessere Anwendungen mit Kubernetes",
-        "parentGenre": null
-      },
-      {
-        "_id": "24cb7ee0a539fbec411970ff",
-        "title": "Auch Umgebungen fallen vom Himmel",
-        "parentGenre": null
-      },
-      {
-        "_id": "612738b589fdd071d5f60c15",
-        "title": "Aus Fehlern lernen",
-        "parentGenre": null
-      },
-      {
-        "_id": "ac0cfb48aa37bc3344bba3c9",
-        "title": "Docker und .NET - ein Beispiel",
-        "parentGenre": null
-      },
-      {
-        "_id": "830a965f3cf395580b7ff43a",
-        "title": "Java-basierte Konfiguration",
-        "parentGenre": null
-      },
-      {
-        "_id": "c7fa08b18c2c2e2951988d51",
-        "title": "Typische Architekturfehler – der dritte wird Sie schockieren!",
-        "parentGenre": null
-      },
-      {
-        "_id": "2v2FidBoRBNk2KBzy",
-        "title": "Welcher Machine-Learning-Typ passt zu deinem Projekt?",
+        "_id": "684be6439d4d470d376d16a0",
+        "title": "Von 0 auf Spring AI",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "BhCDayp2QQxG9txFP",
-        "title": "Docker für Delphi-Entwickler:innen",
+        "_id": "3c4443256c13f1aedb24f19a",
+        "title": "Operaton: eine lokale Workflow-Engine für Java",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "22f71730c127c38d51651ef0",
-        "title": "Konfiguration in Java",
-        "parentGenre": null
-      },
-      {
-        "_id": "7db36e52e464ae0e76d21ff4",
-        "title": "Viele Plattformen - ein Anwendungscode",
-        "parentGenre": null
-      },
-      {
-        "_id": "26a34a663a9e678d68169576",
-        "title": "Infrastructure as Code – muss man nicht testen, Hauptsache es läuft?",
-        "parentGenre": null
-      },
-      {
-        "_id": "d0e0b5efba2cbae0eef95371",
-        "title": "Keine Angst vor Chaos",
-        "parentGenre": null
-      },
-      {
-        "_id": "0e5b2acbe31694cdc69afff7",
-        "title": "Triple-D, oder: Mit Docker ist alles testbar",
-        "parentGenre": null
-      },
-      {
-        "_id": "680fc074cd101baa28b588aa",
-        "title": "Flexible Pipeline",
-        "parentGenre": null
-      },
-      {
-        "_id": "f22e0a985658df7911aa384f",
-        "title": "Docker",
-        "parentGenre": null
-      },
-      {
-        "_id": "c5cb2cb71620ee0601d7205e",
-        "title": "Docker-Basics",
-        "parentGenre": null
-      },
-      {
-        "_id": "f427f90913112093b6cae301",
-        "title": "Docker-Basics",
-        "parentGenre": null
-      },
-      {
-        "_id": "d299380b851898f9721c182b",
-        "title": "Kolumne: Docker rockt Java",
-        "parentGenre": null
-      },
-      {
-        "_id": "ad2b2f066843de058c4c0419",
-        "title": "Dev Container mit Visual Studio Code",
-        "parentGenre": null
-      },
-      {
-        "_id": "6f449b95b50d1cf3beb3e564",
-        "title": "Migration nach AWS",
-        "parentGenre": null
-      },
-      {
-        "_id": "fd72c56e168bf0c41965821c",
-        "title": "Optimierung bei Containern",
-        "parentGenre": null
-      },
-      {
-        "_id": "b74c46f6982000a4f1fc0504",
-        "title": "Tools und Helferlein",
-        "parentGenre": null
-      },
-      {
-        "_id": "66285f661fc5e35d0771ea3e",
-        "title": "Docker: Die eigentliche Komplexität geht erst nach der Entwicklung los",
-        "parentGenre": null
-      },
-      {
-        "_id": "098b92a2ac7cba3989f233e7",
-        "title": "Dockern in Azure",
-        "parentGenre": null
-      },
-      {
-        "_id": "9fce62f7c30762c4060812cb",
-        "title": "Heute schon gedockert? Was Docker im Alltag alles kann",
-        "parentGenre": null
-      },
-      {
-        "_id": "e03c5211b6e6282d18cf4323",
-        "title": "Migration nach AWS: Optimierung bei Containern",
-        "parentGenre": null
-      },
-      {
-        "_id": "882fa6acbdf03979e68baa7a",
-        "title": "Projektspezifisch und dynamisch",
-        "parentGenre": null
-      },
-      {
-        "_id": "6b90c5cdd72b122b34d5161e",
-        "title": "Kubernetes Continuous Delivery mit ArgoCD",
-        "parentGenre": null
-      },
-      {
-        "_id": "d9da4ab9891c71eb200d997f",
-        "title": "Kubernetes Continuous Delivery mit ArgoCD",
-        "parentGenre": null
-      },
-      {
-        "_id": "cd94d34598d7b4b38ba5edcb",
-        "title": "Kubernetes Continuous Delivery mit ArgoCD",
-        "parentGenre": null
-      },
-      {
-        "_id": "e04961520fb52b6cc00a1369",
-        "title": "Dockern in Azure",
-        "parentGenre": null
-      },
-      {
-        "_id": "152ac1a391aee607c8dca47c",
-        "title": "Wie sicher ist Docker?",
-        "parentGenre": null
-      },
-      {
-        "_id": "f2d7fc99b75ae5a0234279ad",
-        "title": "Docker-Schwarm mit dem Raspberry Pi aufbauen",
-        "parentGenre": null
-      },
-      {
-        "_id": "e2fcf4c039b0bb8abbaa0795",
-        "title": "Docker-Schwarm mit dem Raspberry Pi aufbauen",
-        "parentGenre": null
-      },
-      {
-        "_id": "8d1094ce304026850ab2d321",
-        "title": "Ein mächtiges Werkzeug",
-        "parentGenre": null
-      },
-      {
-        "_id": "b31a4aa86ae590aaad7d4d3f",
-        "title": "Infrastruktur verwalten mit Node.js",
-        "parentGenre": null
-      },
-      {
-        "_id": "cb5fac5d3ddad03d1515e57f",
-        "title": "Infrastruktur verwalten mit Node.js",
-        "parentGenre": null
-      },
-      {
-        "_id": "87ad7ffbe01ef25738b9f122",
-        "title": "Konfigurationsmanagement im Container",
-        "parentGenre": null
-      },
-      {
-        "_id": "b80a4388e38f4ae7bbb76736",
-        "title": "Container als Datenbankhabitat",
-        "parentGenre": null
-      },
-      {
-        "_id": "9b45b36610a68544c7d15e69",
-        "title": "Container als Datenbankhabitat",
-        "parentGenre": null
-      },
-      {
-        "_id": "3511bdf0265f38d646758692",
-        "title": "Migration nach AWS: Verwendung von Containern",
-        "parentGenre": null
-      },
-      {
-        "_id": "488c5f208881fb4725e28507",
-        "title": "Aus der Architektur entsteht die Lösung",
-        "parentGenre": null
-      },
-      {
-        "_id": "bdaa5812829034d77bbcc0da",
-        "title": "Docker-Sicherheit im Überblick",
-        "parentGenre": null
-      },
-      {
-        "_id": "5faf5f01cada88397b46fcdb",
-        "title": "Aus der Architektur entsteht die Lösung",
-        "parentGenre": null
-      },
-      {
-        "_id": "d85b5afe13b162ac75840713",
-        "title": "Sanftes Segeln",
-        "parentGenre": null
-      },
-      {
-        "_id": "b36302c7a1e9663df80d950b",
-        "title": "2 Implementierung der Docker-Container",
-        "parentGenre": null
-      },
-      {
-        "_id": "KWyPBa8AqBh2boreK",
-        "title": "Container als Datenbankhabitat",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "d179b2670c4423ddcf947ea1",
-        "title": "Apache Tomcat meets Docker: Webanwendungen als Docker-Images herstellen",
-        "parentGenre": null
-      },
-      {
-        "_id": "142931a5b7b30e37cda1afc7",
-        "title": "DevOps-Level-up: der Weg zur Expertise",
-        "parentGenre": null
-      },
-      {
-        "_id": "1d66499fcae3ca3dc4cca82a",
-        "title": "DevOps-Level-up: der Weg zur Expertise",
-        "parentGenre": null
-      },
-      {
-        "_id": "bc4c4aacf52ad9f954ad4c98",
-        "title": "DevOps-Level-up: der Weg zur Expertise",
-        "parentGenre": null
-      },
-      {
-        "_id": "7525f874e6d1496137a4fd04",
-        "title": "17 Toptipps aus der Praxis für bessere Anwendungen mit Kubernetes",
-        "parentGenre": null
-      },
-      {
-        "_id": "850ab90080601ceac9a3f138",
-        "title": "Docker und du",
-        "parentGenre": null
-      },
-      {
-        "_id": "b0fda0876320f7c0782d9eac",
-        "title": "Vom toten Pferd absteigen …",
-        "parentGenre": null
-      },
-      {
-        "_id": "85ebd0ef312a0f1a76d13570",
-        "title": "Container Orchestration at Scale",
-        "parentGenre": null
-      },
-      {
-        "_id": "d704bc6638ff3aed15ed19ab",
-        "title": "Build, Test, Deploy mit Angular und CI",
-        "parentGenre": null
-      },
-      {
-        "_id": "c26ffd9c9d7db1db8de44714",
-        "title": "GitOps mit Kubernetes: Einführung und Praxis",
+        "_id": "db65bb660aa0a56c92a0a0d6",
+        "title": "Missverständnisse zu Softwarearchitektur",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "f033f68f13452f1d8e2a0997",
-        "title": "Docker für ASP.NET Core Anwendungen: Best Practices von der Entwicklung bis zur Produktion",
+        "_id": "d1689ddf78de644a24ae44c4",
+        "title": "Monitoring von Applikationen in Kubernetes",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "TtpBjLAu2XvCXLe8h",
-        "title": "Grundlagen der Containerisierung",
+        "_id": "bebba6065d0ff75d2ec1ad37",
+        "title": "Spring-Tools live – all the Great New Things",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "b100e81d15cbe75c871497df",
-        "title": "Docker Cheat Sheet",
+        "_id": "956dd3d063595860dde7e728",
+        "title": "Der Preis von Microfrontends – und welche Alternativen Sie haben!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5a4cc9e729fa8227fa66cc5a",
+        "title": "Test-driven Development leicht gemacht mit Spring Boot",
         "parentGenre": null
+      },
+      {
+        "_id": "AEPeMEBNv7TnmSjdq",
+        "title": "Logs, Metrics, Distributed Tracing und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "TPePaCMfBhNd9B7ej",
+        "title": "Service-Mesh-Workshop: Erstellung, Management und Test eines Java Service Mesh mit Istio",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "892b21e3c83eecd3f97cc6ca",
+        "title": "Spring Boot 3",
+        "parentGenre": null
+      },
+      {
+        "_id": "2asCysmtjSPBK3Peg",
+        "title": "Live-Coding mit Quarkus 3.x, Kafka und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "iz4s7gB2aG7iQ9pQc",
+        "title": "Ahead of Time - Spring Boot Native",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Detailed Chunk Prioritization - Dockerfile Mistakes",
+    "test_focus": "G4 – Inline per-claim citations, no bundles (1.b–1.d, 1.j)",
     "required_checks": [
-      "Discovery data must prioritize chunks that give a complete and detailed explanation of common Dockerfile mistakes",
-      "Chunks that only mention Dockerfiles or errors briefly must not be selected if deeper ones exist",
-      "AI response must focus on real and relevant mistakes (e.g., large images, excessive layers, missing .dockerignore, root user, etc.)",
-      "Prompt applied: Use only relevant document chunks for output generation. Prefer chunks that provide a more detailed and complete treatment of the feature, method, or solution requested in the user query over those that mention it only briefly."
+      "Every supported claim has a marker right after the claim.",
+      "No vertical list of citations.",
+      "No trailing bundle of citations for several earlier claims.",
+      "Conclusion does not repeat citations unless it adds a new supported claim."
     ]
   }
 }

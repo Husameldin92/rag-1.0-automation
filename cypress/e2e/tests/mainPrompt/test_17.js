@@ -1,8 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const test_query_en = 'How to implement microservices in Node.js?'
-const test_query_de = 'Wie implementiert man Microservices mit Node.js?'
+const test_query_en = 'How far is Berlin from Hamburg?'
+const test_query_de = 'Wie weit ist Berlin von Hamburg?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
+
+// Test 17 Evaluation Criteria
+const evaluation_criteria = {
+  test_focus: "G17 – Off-domain refusal, no filler (6.b–e) - Strict domain enforcement",
+  required_checks: [
+    "Assistant refuses or asks to rephrase into software/dev context.",
+    "Assistant does NOT answer the non-software question.",
+    "Assistant does NOT force reinterpretation just to answer."
+  ]
+}
 
 export const test17 = () => {
   loginHandel()

@@ -1,119 +1,130 @@
 {
   "test_id": "test_002_de",
-  "query": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
+  "query": "Erkläre die wichtigsten Vorteile von Spring Boot Actuator.",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
     "language": "de"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: React useEffect Tutorials\nReact useEffect ist ein Hook, der in React-Komponenten verwendet wird, um Nebenwirkungen (Side Effects) zu handhaben, die nicht direkt mit dem Rendern zusammenhängen. Aus den Tutorials lassen sich folgende wesentliche Punkte zu useEffect zusammenfassen:\n\nZweck von useEffectuseEffect wird genutzt, um Effekte auszuführen, die nach dem Rendern einer Komponente stattfinden sollen, wie z.B. das Laden von Daten, das Abonnieren von Events oder das manuelle Manipulieren des DOMs. Es hilft dabei, Seiteneffekte sauber von der reinen Render-Logik zu trennen.[1.]\n\nFunktionsweise und AusführunguseEffect nimmt eine Callback-Funktion entgegen, die nach dem Rendern ausgeführt wird. Optional kann diese Callback eine Aufräumfunktion zurückgeben, die vor dem nächsten Effekt oder beim Unmounten der Komponente ausgeführt wird. So lassen sich z.B. Event-Listener sauber entfernen.[1.]\n\nAbhängigkeiten-Array (Dependency Array)useEffect kann ein zweites Argument erhalten, ein Array von Abhängigkeiten. Der Effekt wird nur dann erneut ausgeführt, wenn sich eine dieser Abhängigkeiten ändert. Ein leeres Array bewirkt, dass der Effekt nur einmal nach dem ersten Rendern ausgeführt wird.[1.]\n\nBeispielhafte AnwendungIn einem Beispiel wird ein Timer gezeigt, der mit useEffect gesteuert wird. Der Effekt startet den Timer und räumt ihn bei Änderungen oder beim Verlassen der Komponente wieder auf, um Speicherlecks zu vermeiden.[1.]\n\nTrennung von Logik und RenderinguseEffect ermöglicht es, Geschäftslogik und Nebenwirkungen aus der Renderfunktion auszulagern, was die Komponenten sauberer und wartbarer macht.[1.]\n\n\nZusammenfassend ist useEffect ein essenzieller Hook in React, um kontrolliert und effizient Nebenwirkungen zu verwalten, die nicht direkt mit dem Rendern zusammenhängen. Er sorgt für sauberen Code durch klare Trennung von Rendering und Effekten sowie durch Aufräummechanismen.\nFalls Sie tiefer in die Thematik einsteigen möchten, empfehle ich die Tutorials „Zustand und Logik“ von David Tanzer auf entwickler.de, die diese Konzepte praxisnah und verständlich vermitteln.[1.]",
+  "actual_response": "Spring Boot Actuator bietet eine Reihe von wichtigen Vorteilen, die insbesondere für die Entwicklung und den Betrieb von Cloud-nativen und serverlosen Anwendungen sehr wertvoll sind:\n\nProduction-Ready FeaturesActuator stellt zahlreiche „Production-ready“-Funktionen bereit, die es ermöglichen, den Zustand und die Gesundheit einer Anwendung in Echtzeit zu überwachen. Dazu gehören Health-Checks, Metriken, Tracing, Logging und weitere Betriebsinformationen, die für den produktiven Einsatz essenziell sind [1.].\n\nVielfältige Endpunkte (Endpoints)Über HTTP oder JMX können verschiedene Endpunkte abgefragt werden, z. B. /actuator/health für den Gesundheitsstatus, /actuator/metrics für Metriken oder /actuator/loggers zur dynamischen Anpassung von Log-Leveln. Diese Endpunkte sind standardmäßig sicher konfiguriert und können granular aktiviert oder eingeschränkt werden, um Sicherheit und Performance zu gewährleisten [1.],  [2.].\n\nAutomatische Integration und AutokonfigurationActuator integriert sich nahtlos in das Spring-Ökosystem und profitiert von der Autokonfiguration von Spring Boot. So werden z. B. Metriken automatisch erfasst und können mit Micrometer an Monitoring-Systeme wie Prometheus exportiert werden. Das reduziert den Konfigurationsaufwand erheblich [3.],  [1.].\n\nErweiterbarkeit durch eigene Endpunkte und Health IndicatorsEntwickler können eigene Actuator-Endpunkte und Health Indicators implementieren, um spezifische Betriebsinformationen oder individuelle Gesundheitsprüfungen bereitzustellen. Diese Erweiterbarkeit macht Actuator sehr flexibel und anpassbar an individuelle Anforderungen [3.].\n\nUnterstützung für Observability (Monitoring, Tracing, Logging)Actuator arbeitet eng mit Micrometer und OpenTelemetry zusammen, um umfassende Observability zu ermöglichen. So lassen sich Metriken erfassen, verteiltes Tracing realisieren und Logs zentral auswerten. Dies ist besonders wichtig für komplexe Microservice-Architekturen und Cloud-Umgebungen [2.], .\n\nGranulare Sicherheits- und ZugriffskontrolleDie Endpunkte können gezielt abgesichert werden, z. B. durch Spring Security, und es ist möglich, den Zugriff auf bestimmte IP-Adressen zu beschränken oder Endpunkte nur lesbar zu machen. So wird verhindert, dass sensible Informationen ungeschützt zugänglich sind [2.].\n\nPerformancebewusstseinObwohl Actuator viele zusätzliche Beans und Messungen in die Anwendung einbringt, ist es so konzipiert, dass die Performance möglichst wenig beeinträchtigt wird. Entwickler können gezielt steuern, welche Endpunkte aktiv sind, um den Overhead zu minimieren [2.].\n\n\nZusammenfassend ermöglicht Spring Boot Actuator eine einfache, aber mächtige Möglichkeit, Anwendungen produktionsreif zu machen, indem es umfassende Einblicke in den Zustand, die Performance und das Verhalten der Anwendung bietet. Es unterstützt Entwickler und Betriebsteams dabei, Probleme frühzeitig zu erkennen, die Stabilität zu erhöhen und die Wartbarkeit zu verbessern – alles mit minimalem Konfigurationsaufwand und hoher Flexibilität [1.],  [2.].\nFalls du Interesse hast, kann ich dir auch Beispiele zeigen, wie man Actuator in einer Spring Boot Anwendung konfiguriert und nutzt.",
   "discovery_data": {
-    "query_sent": "Erkläre mir React useEffect, aber nur anhand von Tutorials.",
+    "query_sent": "Erkläre die wichtigsten Vorteile von Spring Boot Actuator.",
     "results": [
       {
-        "_id": "a5dcfc84b51456a6b4b27fce",
-        "title": "Die Welt der Web Components",
+        "_id": "1ca36afe8381ff71c318446c",
+        "title": "Spring Boot Observability in der Praxis: Actuator, Micrometer und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "um5JzcLvvQZdqw5A7",
+        "title": "Spring Boot Configuration",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "aa3c41758c254f2c90216dd0",
-        "title": "Einstieg in React",
+        "_id": "eRE5fEAe7BdHJ9LYT",
+        "title": "Spring Boot Observability",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "RHCyFcwYbMjqqYgkS",
-        "title": "PWA mit React",
+        "_id": "240785dc3effd69d1c0687c5",
+        "title": "Spring Boot 3.0 Features: Aus Magie wird Wissen",
+        "parentGenre": null
+      },
+      {
+        "_id": "a94259bf4cf0b6dcd442f9da",
+        "title": "Boot your own Infrastructure",
+        "parentGenre": null
+      },
+      {
+        "_id": "d1689ddf78de644a24ae44c4",
+        "title": "Monitoring von Applikationen in Kubernetes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a2a225a5421861490fb49cda",
+        "title": "Advanced Practices – Evaluator, Observability, Memory, Guardrails & Multi-Model",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "554842349c829ccc79d45375",
-        "title": "Testen und Frontendarchitektur",
+        "_id": "bebba6065d0ff75d2ec1ad37",
+        "title": "Spring-Tools live – all the Great New Things",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "cccade614e9bf7d9a1ba2719",
+        "title": "Spring Boot 3.5: mehr Struktur, neue Freiheiten",
+        "parentGenre": null
+      },
+      {
+        "_id": "uH6B2uyec74wSQCNA",
+        "title": "Workshop: Spring-Boot-Anwendungen für die Cloud optimieren",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5a4cc9e729fa8227fa66cc5a",
+        "title": "Test-driven Development leicht gemacht mit Spring Boot",
+        "parentGenre": null
+      },
+      {
+        "_id": "2d78dbea61166627fe6618dc",
+        "title": "Neuerungen in Spring Framework 6.2 und Spring Boot 3.4",
+        "parentGenre": null
+      },
+      {
+        "_id": "892b21e3c83eecd3f97cc6ca",
+        "title": "Spring Boot 3",
+        "parentGenre": null
+      },
+      {
+        "_id": "ZSNiGQg9YBFYCjnYJ",
+        "title": "Workshop: Spring-Boot-Anwendungen für die Cloud optimieren",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "Ehj9PdhBREaALzWGP",
+        "title": "Was Quarkus und Spring Boot voneinander lernen können",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "PZRZtMuzEiiMjEJM2",
+        "title": "Schlanke Spring-Boot-Applikationen für die Cloud",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3efc6d7304238f4c178bbe6b",
+        "title": "Spring migriert Java-Anwendungen mit der bestehenden Infrastruktur",
+        "parentGenre": null
+      },
+      {
+        "_id": "bYRbdPeuu8its2qGi",
+        "title": "Schlanke Spring-Boot-Applikationen für die Cloud",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "GsibEwgpahCBm5ywv",
+        "title": "Einführung",
         "parentGenre": "TUTORIAL"
       },
       {
-        "_id": "f84097699062ea49829a9ba7",
-        "title": "Shadow DOM (Teil 3): Server-Side Rendering",
-        "parentGenre": "TUTORIAL"
+        "_id": "7d91255f81ef9f39ef5ae281",
+        "title": "Chaos Monkey für Spring Boot",
+        "parentGenre": null
       },
       {
-        "_id": "e8e5ad075ba0a3ff7a0c6faf",
-        "title": "Navigation und Web Components",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "ff4Dt9s49xPhkHtMv",
-        "title": "Einstieg in Next.js",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "3b7e565f2d4ec78c908b0498",
-        "title": "Zustand und Logik",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "W9H9MKNhnkmaDJHCf",
-        "title": "Ausblick/Fazit",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "a1ccc2e901e8a644e6a5623f",
-        "title": "Dark-Mode-Selektor-Komponente",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "r4NMSW8BWMtF2RnBq",
-        "title": "Teil 4: Angular",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "e1d26dbff09906066b1da018",
-        "title": "Rendering",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "fa2059cdcde5a39f69818b69",
-        "title": "Die Welt der Web Components (Teil 2)",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "208b945facef57470b50eaf8",
-        "title": "Toolbox für Web Components",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "66b3c693b10a0911cff5995b",
-        "title": "Events und Lifecycle",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "e041b16a103e515fb3ff7fa7",
-        "title": "Zugriff auf lokale Datenbanken",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "DCC4BrWquTbrB5qnR",
-        "title": "Qualität und Sicherheit in einer Next.js-Applikation",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "sL4RBMFEkkZJPGdtF",
-        "title": "Erweiterte Konzepte und Bereitstellung",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "27migMB7Nwi92F3Fi",
-        "title": "Rendern und Datenmanagement",
-        "parentGenre": "TUTORIAL"
+        "_id": "PEs7BQiiMjTzfhtnB",
+        "title": "Die \\\"magischen\\\" Features von Spring Boot entschlüsseln ...",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Content Type Filtering - Tutorials Only",
+    "test_focus": "G2 – Output shape (intro → bullets → conclusion) (System §1.a)",
     "required_checks": [
-      "The AI response must clearly indicate that the content is from tutorials.",
-      "No mention or citation of other content types (e.g., conferences, camps, slides, magazines) should appear in the response.",
-      "The explanation must be educational and appropriate for a tutorial format (step-by-step, practical, or beginner-friendly)."
+      "Starts with 2–4 sentence introduction.",
+      "Follows with bulleted or numbered list of most significant concepts.",
+      "Ends with 1–2 sentence conclusion.",
+      "No extra sections, no headings different from required shape."
     ]
   }
 }

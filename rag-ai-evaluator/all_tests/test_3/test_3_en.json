@@ -1,449 +1,225 @@
 {
   "test_id": "test_003_en",
-  "query": "Can you summarize recent events on DevOps from articles?",
+  "query": "when is the next Delphi Camp happening? ",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: DevOps events articles 2025 2024\nCertainly! Here is a summary of recent events and insights on DevOps from the curated articles:\n\nReal-World DevOps Attacks and Security Challenges  \n\nDevOps pipelines protect critical assets like source code, secrets, and release keys, but attackers increasingly exploit build scripts, workflow actions, container tags, and infrastructure templates to insert malicious components into production undetected.  \nKeynotes at DevOpsCon events have dissected headline-making breaches, identifying pipeline stages vulnerable to attacks and common blind spots.  \nRecommended defenses include adopting short-lived tokens, pinning workflow actions, reducing GitHub permissions, enabling reproducible builds, and using staged progressive deployment strategies like canaries and automated rollbacks.  \nTeams are encouraged to threat model their DevOps environments and regularly practice incident response drills to improve resilience.1\n\n\nScaling CI/CD Pipelines in Highly Regulated Environments  \n\nSessions at DevOpsCon San Diego 2025 addressed the challenges of building compliant, scalable, and secure CI/CD pipelines in financial services and other regulated industries.  \nKey takeaways include embedding compliance requirements from day zero via automation ('Compliance as Code'), automating and standardizing pipelines to reduce variation and human error, integrating security tightly with DevOps to form DevSecOps, empowering developers with guardrails and fast onboarding lanes, and measuring everything with metrics to demonstrate success to internal and external stakeholders including auditors.  \nThe approach turns compliance from a hindrance into a competitive advantage by making it a natural byproduct of the delivery process.2\n\n\nDevOps Culture, Organization, and Platform Engineering  \n\nDevOps is evolving beyond traditional roles, with some organizations rebranding DevOps teams as DevEx or platform engineering teams to better align with product goals and strategic enablement.  \nChallenges remain in clarifying goals, breaking down silos, and fostering collaboration between development, operations, and security teams.  \nPlatform engineering is highlighted as a way to empower DevOps engineers to think and operate like product engineers, focusing on user-centric design, strategy, and enabling full-stack teams with autonomy and ownership.3\n\n\nDevOps Failures and Sociotechnical Lessons  \n\nHistorical and sociotechnical system theory perspectives show that automation investments alone do not guarantee productivity or morale improvements.  \nCross-functional teams that integrate social and technical factors perform better, safer, and happier.  \nDevOps failures often stem from neglecting the human and organizational aspects, not just technology.  \nContinuous learning from past failures and adopting a holistic approach that balances culture, processes, and tools is essential.4\n\n\nDevSecOps Trends: Generative AI and ClickOps  \n\nDevSecOps adoption is growing but faces skill gaps and complexity challenges.  \nGenerative AI (GenAI) tools like GitHub Copilot are boosting developer productivity by automating code generation and documentation, accelerating secure software delivery.  \nClickOps platforms (low-code/no-code) empower non-developers to build and manage infrastructure and automation, democratizing DevSecOps capabilities beyond specialized teams.  \nGartner predicts that by 2026, over 80% of organizations will have integrated GenAI capabilities, and developers outside formal IT will dominate low-code tool usage.  \nOrganizations adopting these innovations must focus on trust, transparency, and change management to realize benefits.5\n\n\nDevOps Plus and Future Directions  \n\nThe concept of 'DevOps Plus' is emerging, focusing on expanding choices, continuous upskilling, and integrating emerging technologies like AI, observability, and progressive delivery.  \nThe next generation of DevOps capabilities will emphasize value creation, collaboration, and sustainable management of fragmented tools and applications.  \nOngoing education and role evolution are key to maintaining relevance and driving innovation in DevOps teams.6\n\n\n\nIn summary, recent DevOps events and articles emphasize the critical importance of security in pipelines, especially against sophisticated attacks, the integration of compliance and security from the start, the cultural and organizational evolution towards platform engineering, lessons from historical failures focusing on sociotechnical balance, and the transformative potential of AI and low-code platforms in accelerating DevSecOps adoption. The future of DevOps is framed as a continuous journey of adaptation, upskilling, and embracing emerging technologies to deliver value securely and efficiently.\nIf you want, I can provide more detailed insights or specific session highlights from any",
+  "actual_response": "The next Delphi Code Camp is scheduled to start on July 1, 2025. It includes multiple workshop days, with the second day focusing on developing a REST API and securely deploying it to the Azure Cloud, covering topics such as user management, authentication, error handling, and OWASP basics. The camp requires participants to have solid Delphi skills and object-oriented development knowledge, and a laptop with the latest Delphi 12 version is recommended. Note that the third day of the camp will be conducted in English, requiring corresponding language skills [1.],  [2.],  [3.].\nIf you are interested in attending, this is a premium CAMP workshop, and as an Elevate user, you can request participation directly on entwickler.de with your full discount automatically applied. If you need more details or booking assistance, feel free to ask.",
   "discovery_data": {
-    "query_sent": "Can you summarize recent events on DevOps from articles?",
+    "query_sent": "when is the next Delphi Camp happening? ",
     "results": [
       {
-        "_id": "dd4096071cc62fc09263301a",
-        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
-        "parentGenre": null
+        "_id": "b0864bcb5e4df6ec563eb9fa",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "60b1315f2a750f20b91a97f5",
-        "title": "Der .NET-Upgrade-Assistent",
-        "parentGenre": null
+        "_id": "2105a4eaa77027c95f0e2a74",
+        "title": "Tag 3: Mobile Apps mit Delphi & REST-Anbindung entwickeln",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "d64628d5c08e7decd491c8ce",
-        "title": "How Generative AI and ClickOps will Transform DevSecOps in 2024",
-        "parentGenre": null
+        "_id": "1fceeff3a56fffe52c28b29b",
+        "title": "Tag 1: REST verstehen, vergleichen und gezielt einsetzen",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "59a3ca449c3b930b5f2432c6",
-        "title": "JavaScript Trends to Watch: Who’s Taking the Lead?",
-        "parentGenre": null
+        "_id": "6dfe28634f67b908f1f08fb1",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "57868ce7d247728d832ce6d6",
-        "title": "Der große .NET-Jahresrückblick 2024",
-        "parentGenre": null
+        "_id": "46355b56f8d96aadc3ddba40",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "706951e0a3b546ccbb006301",
-        "title": "State of PHP: Highlights, Trends, Prognosen",
-        "parentGenre": null
+        "_id": "887cbbc49c759b328a372891",
+        "title": "Software Architecture Camp Flexible",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "2a0f3ecad8f30c4a31cd83ae",
-        "title": "Neues in React",
-        "parentGenre": null
+        "_id": "9ac5e49d83a4007f48a62f20",
+        "title": "Tag 2: Eigene REST-API entwickeln & sicher in die Cloud bringen",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "e3e688caa9ae1564fe427b3a",
-        "title": "GenAI und Low Code: Brückenschlag in DevSecOps",
-        "parentGenre": null
+        "_id": "b8a9da705aa4d9381cd1d2dc",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "03836460e8a948e77789e989",
-        "title": "Windows Server 2025 for IoT",
-        "parentGenre": null
+        "_id": "e1a16119104227e3ac465d68",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "e5be18d7df939feb57f29e90",
-        "title": "Das Jahr in .NET und JavaScript",
-        "parentGenre": null
+        "_id": "89dc2b26c54951ffc48609d8",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "7f349002ed7db73f80d06e04",
-        "title": "Gültigkeit von Websitezertifikaten prüfen",
-        "parentGenre": null
+        "_id": "cb2102d37658e737ec5d523d",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur-Copy",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "fc36777caa7d201dde8fb058",
-        "title": "Das Jahr in JavaScript – Rückblick und Vorschau",
-        "parentGenre": null
+        "_id": "7a089f28c371deb309c650d5",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "c7aed8a7a2b3e6c0e3ea326c",
-        "title": "Neuerungen in .NET 10.0 Preview 1 und 2",
-        "parentGenre": null
+        "_id": "defe86069de8a99eed86786c",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "fae582b18950466eac9c5147",
-        "title": "Systems Thinking: Schnell von der Anforderung zum Anwender",
-        "parentGenre": null
+        "_id": "49108fcb7e611e655c51fc1c",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "fc8a69238c23bff4b4b5298a",
-        "title": "JavaScript-Trends 2024: Highlights, Flops und Geheimtipps",
-        "parentGenre": null
+        "_id": "8d0ed35e44b0f51da0284d8d",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "4bbcffc756f74573b8118231",
-        "title": "Charting the Way Forward for AI-Native Software Organizations",
-        "parentGenre": null
+        "_id": "bfbf887ec85cc16c105ee7ac",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "a3e8e952e5a98f47c7294d85",
-        "title": "XRechnungen mit .NET: Hintergrund und Umsetzung",
-        "parentGenre": null
+        "_id": "1dae4f1dd3553713162731bb",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "0d4978a9971caa6a3a8e9f5e",
-        "title": "Terraform and Azure DevOps",
-        "parentGenre": null
+        "_id": "cf94e67dcc679964be76a3d7",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "c6e4724bc0ba6b02918d2ce7",
-        "title": "Neuerungen in .NET 9.0 Preview 5 bis 7 – Teil 1",
-        "parentGenre": null
+        "_id": "03ef56383493f8cea5c522ca",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "9e8fd692f55786ff0ce8995f",
-        "title": "Social Learning und kontinuierliches Lernen als Teil einer zukunftsfähigen Unternehmenskultur",
-        "parentGenre": null
+        "_id": "4450dfa716e5e90546142615",
+        "title": "Woche 3: Lektion 7: Angular Formulare und Validierung: Dateneingabe mit Sicherheit und Komfort | verfügbar bis 27.02.2026",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "ed9508913b14c3049436c385",
-        "title": "Svelte 4 Under the Hood",
-        "parentGenre": null
+        "_id": "69ef6c499a1df1b2aecedfa8",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "1d157596566e7ab7af98f057",
-        "title": "Agiles Arbeiten zwischen Obsoleszenz und Unverzichtbarkeit",
-        "parentGenre": null
+        "_id": "4be4c392cb6573f730f5a994",
+        "title": "Woche 3: Lektion 7: Angular Formulare und Validierung: Dateneingabe mit Sicherheit und Komfort | verfügbar bis 30.01.2026",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "3e12e5b65144bde1b98db2c6",
-        "title": "Kolumne: Grünfläche",
-        "parentGenre": null
+        "_id": "41fc2c246eaab0e5cc8056db",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "a75c3970c6a00495ac8b59d6",
-        "title": "Quereinstieg in der Praxis – lohnt es sich?",
-        "parentGenre": null
+        "_id": "8d2952af8f3ab5da36319842",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "55e444c8514beebaf2c83f68",
-        "title": "Was tut sich in der Java-Welt?",
-        "parentGenre": null
+        "_id": "b8326db5b42894007169ee95",
+        "title": "Tag 5: Qualitätsbewertung & Prüfungsvorbereitung iSAQB-Zertifizierung",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "6fdc59521133389909a5848a",
-        "title": "Runtime-Security als vernachlässigter Teil der Anwendungssicherheit",
-        "parentGenre": null
+        "_id": "6ae8f622c24effb80ed4ad70",
+        "title": "Tag 4: Entwicklung von Architektursichten & Architekturdokumentation",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "6b8904c1c23685967725b0a7",
-        "title": "Entwickler Pulse 2025 – Der Reality Check für die IT-Branche",
-        "parentGenre": null
+        "_id": "5c7b739a30c3d63146f25b5d",
+        "title": "Tag 3: Systematische Entwicklung & Werkzeuge der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "7cde861962f43c4f8d2210b8",
-        "title": "Das Geheimnis der Soft Skills für den IT-Erfolg",
-        "parentGenre": null
+        "_id": "bebfff400f3739e664585834",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "24b47e882e364bc09c3bbb82",
-        "title": "Security und Privacy: das Internet of Things, Smart Devices und KI",
-        "parentGenre": null
+        "_id": "f5b320fc9a2d1b1d235febe3",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "9f71a8992c3db364414f5f72",
-        "title": "Ensuring Security in Container Adoption",
-        "parentGenre": null
+        "_id": "359127520ad0d067c368a161",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "39709c765940be92f7476a2b",
-        "title": "Checkliste KI-Verordnung – wer muss was wann wie beachten?",
-        "parentGenre": null
+        "_id": "4e4e9b4e6c922c93db6f0fa4",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "00c9b0014c6a2c9a4da4abf9",
-        "title": "DevOps Plus: More Open Source, AI-Enabled, Next Generation Services",
-        "parentGenre": null
+        "_id": "7954a9ed5b20c113f43bd36c",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "09390f3f9b1f977237bef4d8",
-        "title": ".NET 9.0 Preview 3 und 4",
-        "parentGenre": null
+        "_id": "e4c8f6d096e09ac557c3a331",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "063970c811a7557678d66d3a",
-        "title": "Java 24 – großes Release zum 30. Geburtstag",
-        "parentGenre": null
+        "_id": "LoXreGxPuDounzry9",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "85b3ae4a253158cc4314f517",
-        "title": "Green AI: Making Future Technologies Sustainable",
-        "parentGenre": null
+        "_id": "kNkYzMYQupXCm7PC2",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "66308bea60fb2a20d5360c75",
-        "title": "From Zero to DevOps Hero: Lessons from Scaling CI/CD Pipelines in Highly Regulated Environments",
-        "parentGenre": "COURSE"
+        "_id": "tfAfSZdrs3brtS8Nt",
+        "title": "Delphi Language Update",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "d431cff9e5e1f4b3ae142cad",
-        "title": "From Zero to DevOps Hero: Lessons from Scaling CI/CD Pipelines in Highly Regulated Environments",
-        "parentGenre": "RHEINGOLD"
+        "_id": "yCqyKNFMFFBz69WEX",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "a4f9e2921e179687f89987af",
-        "title": "From Zero to DevOps Hero: Lessons from Scaling CI/CD Pipelines in Highly Regulated Environments",
-        "parentGenre": "FSLE"
+        "_id": "9WXd3t7wWwWcRvXK2",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "59746af2606e6ef067852b8d",
-        "title": "Top 10 DevOps topics to look for in 2019",
-        "parentGenre": null
+        "_id": "LsisM4tEM8yk9PAff",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "ad9bc924baf65876b3a47f06",
-        "title": "Kolumne: DevOps Stories",
-        "parentGenre": null
-      },
-      {
-        "_id": "shikmNoieP7JPKpeA",
-        "title": "DevOps transformation – the good, the bad and the ugly",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "RMP4MpbD6sdjGKbgo",
-        "title": "Architecture, Infrastructure, DevOps, Oh My!",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "d71fd997da05d5adfb477cb5",
-        "title": "Die DevOps-Bewegung",
-        "parentGenre": null
-      },
-      {
-        "_id": "RJFhGcZybrCxdkcoj",
-        "title": "Making DevOps Valuable",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "09ebadcadf02a6a8b5542826",
-        "title": "The road to serverless maturity: Running away from “NoOps” or toward it?",
-        "parentGenre": null
-      },
-      {
-        "_id": "c296fede31d236a63eda1239",
-        "title": "DevOps Check",
-        "parentGenre": null
-      },
-      {
-        "_id": "aXfeSyoFg58JQ8N2j",
-        "title": "Devops, DevSecOps, GitOps and AppOps, an engineer guide to 21st century",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "w6wkhWKh4PHPyzDEA",
-        "title": "Safe to fail DevSecOps culture",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "oMQzvqibhFneaoWaF",
-        "title": "Opening of the DevOps Transformation Day // Session: Transformation Hacks - Setting up an agile culture in a non-agile environment",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Yzk3sCJcApJXcuihD",
-        "title": "Gamify it until you make it: Improving Agile Development and Operations with Gamification",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "EkqFkk2GE6H7JRDcE",
-        "title": "Beyond Checkboxes: Embedding True Cyber Resilience",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "KbbDwbus8BbiwrLQQ",
-        "title": "Zero-Trust DevOps - The devil is in the details",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "RiMxJmimAaQsqfSNu",
-        "title": "How I used GitOps and CDevents to achieve automated compliance in a FinServ context",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "FqZvWzDQMR2E7u4Ab",
-        "title": "Welcome and opening of the DevOpsCon – Munich 2022 // Keynote:The Things I've Seen, How DevOps is Evolving in Practice",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "m2bcEt4MBx4qCTfxB",
-        "title": "Getting People Engaged into Agile with Self-Assessments",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "GRbeDQTq8aEQTTiqn",
-        "title": "Opening of the DevOps Transformation Day",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "WhfKQSYCMdvMqRa2n",
-        "title": "Welcome and opening of the DevOpsCon Berlin 2023 // Keynote:The Long History of DevOps Failures",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "46c3a4214ae09e672d1afc48",
-        "title": "DevOps: A Must-Have Skill for Every Team",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "TcoyWqgjqKbrF5E2n",
-        "title": "Adapting DevOps in a World of Growing Software Supply Chain Attacks",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "mTsZS6TeoXEbKYJd6",
-        "title": "Finding the Sweet Spots in your Agile journey",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "hJtpzoX6AcjTdmfgM",
-        "title": "DevOps Test Data Management - The future is here",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3830f9f5131700e1fb078655",
-        "title": "DevOps in an immutable world",
-        "parentGenre": null
-      },
-      {
-        "_id": "66e8a808aa23e804870173ad",
-        "title": "DevOps trends and limitations forecasted for 2018",
-        "parentGenre": null
-      },
-      {
-        "_id": "383cc2d9165bde1494104e33",
-        "title": "Domain Driven DevOps Demystified",
-        "parentGenre": null
-      },
-      {
-        "_id": "665e85583cb88f0d6ca782f9",
-        "title": "Real‑World DevOps Attacks: Breaches from Push to Prod",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "a506357e4ace803d88892d57",
-        "title": "Real‑World DevOps Attacks: Breaches from Push to Prod",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "bd930e45a5e68291eca36314",
-        "title": "Das Leben nach dem Release, Machine Learning visualisiert und Herangehensweisen an DevOps – unsere Top-Themen der Woche",
-        "parentGenre": null
-      },
-      {
-        "_id": "0f9ca3622cf46bdbd8ecfa67",
-        "title": "Zehn Releases am Tag",
-        "parentGenre": null
-      },
-      {
-        "_id": "domJyvPwRNmBdSNYo",
-        "title": "DevOps is dead, long live DevOps",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "NCL9LBHdXJnGaGfkD",
-        "title": "The Long History of DevOps FailuresThe Long History of DevOps Failures",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "9a2fdeea745d38cc851eab7e",
-        "title": "10 reasons why we can't do Continuous Delivery",
-        "parentGenre": "FSLE"
-      },
-      {
-        "_id": "a7a2bc9ff491b84e95e0c998",
-        "title": "DevOps becomes BizDevOps: 4 steps to add more value to your work",
-        "parentGenre": null
-      },
-      {
-        "_id": "f32e63a157be099bdab4a76c",
-        "title": "10 reasons why we can't do Continuous Delivery",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "bSLAN7XuqjBRXvdLq",
-        "title": "DevOps is dead, long live DevOps",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "afc9ac159a5693cd2200afb7",
-        "title": "Why Your DevOps Transformation Failed: A Deep Dive into Common Pitfalls",
-        "parentGenre": null
-      },
-      {
-        "_id": "fcq4WmCYsqAwEpN5q",
-        "title": "Retrospective: Where DevOps nearly caused havoc",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "aoyu3WJZ3obcEL8xR",
-        "title": "Seven years and counting – The DevOps journey at Hermes Germany",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "BWiLLA2M2PWcNwv23",
-        "title": "Evolution of Software Architecture Trends",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "ed6d512010141817147054c1",
-        "title": "5 Ways for Enterprise Teams to Secure Their DevOps Pipelines in 2023",
-        "parentGenre": null
-      },
-      {
-        "_id": "EZn4K2K4KbA4uk2g9",
-        "title": "Domain Driven DevOps Demystified",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "c7cee9d2c8d02e7c0e87eaed",
-        "title": "Collaboration or survival of the fittest: Who runs the DevOps world?",
-        "parentGenre": null
-      },
-      {
-        "_id": "A7cJnb6mrnhr8mLv4",
-        "title": "Wait a Sec... how do we implement DevSecOps",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "d6540b8aeebc00ab54a5c229",
-        "title": "Streamline Your DevOps: Managing and Shipping Infrastructure and Services in a Single Git Flow",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "YMMn82WLC7fpuRBRv",
-        "title": "How to build an effective DevOps Org",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "7d4df4973e9b6a7a79d2096a",
-        "title": "Tackling DevEx Imposter Syndrome or how to evolve your DevOps through Platform Engineering",
-        "parentGenre": "RHEINGOLD"
+        "_id": "xo7puZLDHcETXGcf9",
+        "title": "Fragestunde mit Manfred Steyer - 2",
+        "parentGenre": "FLEX_CAMP"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Content Type Filtering - Articles Only",
+    "test_focus": "G3 – Upcoming-event exact sentence (1.a1 + 5.g)",
     "required_checks": [
-      "AI response must indicate the content is based on articles.",
-      "AI response must not mention or cite content types like tutorials, events, or courses.",
-      "Summary should align with article-style information (e.g., informative, topical, not step-by-step)."
+      "If all event dates in context < {today}, first sentence is exactly: 'There is no upcoming event as of {today}.'.",
+      "Does NOT start with 'the next ...'.",
+      "Mentions only events actually in Context Documents.",
+      "Uses {today} from prompt as time base."
     ]
   }
 }

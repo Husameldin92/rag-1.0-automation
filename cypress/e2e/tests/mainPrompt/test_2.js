@@ -1,17 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
 
-const test_query_en = 'Tell me about React useEffect from tutorials only.'
-const test_query_de = 'Erkläre mir React useEffect, aber nur anhand von Tutorials.'
+const test_query_en = 'Explain the main benefits of using Spring Boot Actuator.'
+const test_query_de = 'Erkläre die wichtigsten Vorteile von Spring Boot Actuator.'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
-// Test Evaluation Criteria 
+// Output shape (intro → bullets → conclusion) (System §1.a)
 const evaluation_criteria = {
-  test_focus: "Content Type Filtering - Tutorials Only",
+  test_focus: "G2 – Output shape (intro → bullets → conclusion) (System §1.a)",
   required_checks: [
-    "The AI response must clearly indicate that the content is from tutorials.",
-    "No mention or citation of other content types (e.g., conferences, camps, slides, magazines) should appear in the response.",
-    "The explanation must be educational and appropriate for a tutorial format (step-by-step, practical, or beginner-friendly)."
+    "Starts with 2–4 sentence introduction.",
+    "Follows with bulleted or numbered list of most significant concepts.",
+    "Ends with 1–2 sentence conclusion.",
+    "No extra sections, no headings different from required shape."
   ]
 }
 

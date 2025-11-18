@@ -1,145 +1,170 @@
 {
   "test_id": "test_001_explore_en",
-  "query": "What are the main features of Angular Signals in version 17?",
+  "query": "Who are you in this platform and who can use you?",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'Angular Signals 17',\n  'primary_version_array': ['17'],\n  'secondary_version_array': ['16','15'],\n  'year_array': [],\n  'issue_array': []\n} \nAngular Signals in version 17 represent a significant advancement in the framework’s reactivity model, aiming to simplify state management and optimize change detection. They build upon the introduction of Signals in Angular 16, now marked as stable in Angular 17, and enable a more fine-grained, performant, and intuitive reactive programming approach.\nKey features of Angular Signals in version 17 include:\n\nStable Signal API: Signals are now stable and production-ready, providing a simple reactive building block that holds a value and notifies consumers when it changes. This enables fine-grained change detection that targets only components with changed signal values, improving performance over traditional Angular change detection [1.]  [2.].\n\nImmutable Signal Handling: The previous ability to mutate signals directly via signal.mutate() has been removed. Signals must now be treated as immutable data structures, with updates performed through the signal.update() method. This change prevents inconsistencies and aligns with functional reactive programming principles [1.]  [2.].\n\nNew Lifecycle Hooks: Angular 17 introduces two new lifecycle hooks, afterRender() and afterNextRender(), which integrate with signals and allow developers to run code after component rendering phases. These hooks are designed to complement the reactive model enabled by signals [1.].\n\nLocal Change Detection: Signals enable a 'local change detection' mechanism where only components with changed signal values are checked and updated, rather than the entire component tree or parent chains. This leads to more efficient UI updates and reduced overhead [1.]  [2.].\n\nInterop with RxJS: Signals are designed to coexist with RxJS. Angular provides interoperability utilities to convert signals to observables and vice versa, allowing developers to combine the simplicity of signals with the power of RxJS operators when needed [2.].\n\nSignal-based Component Inputs and Outputs: Angular 17 adds new APIs to define component inputs and outputs as signals, replacing the traditional decorators like @Input() and @Output(). This streamlines component communication and aligns with the reactive paradigm [3.].\n\nImproved Template Syntax: Signals use a function-call syntax for reading values (e.g., count()), which integrates naturally with Angular templates and change detection. Computed signals (computed()) allow deriving values reactively from other signals, and effects (effect()) enable running side effects when signals change [3.].\n\nAutomatic Subscription Management: Unlike observables, signals do not require manual unsubscription. Angular automatically manages the lifecycle of signal subscriptions tied to components or other building blocks, reducing boilerplate and potential memory leaks [2.].\n\nSupport for Lazy Loading and SSR Enhancements: While not exclusive to signals, Angular 17’s improvements in lazy loading (e.g., for animations) and server-side rendering (SSR) complement the reactive model signals enable, contributing to better performance and developer experience [1.].\n\n\nIn summary, Angular Signals in version 17 provide a stable, immutable, and efficient reactive primitive that enhances change detection by focusing updates only where needed. They simplify state management, improve performance, and integrate smoothly with existing RxJS-based code, marking a key step in Angular’s evolution towards a more modern and developer-friendly framework.\nIf you want to dive deeper, there are advanced talks and workshops covering the internal implementation and best practices for using signals effectively in enterprise Angular applications [4.]  [5.]  [6.].\nLet me know if you want examples or guidance on migrating existing Angular codebases to use signals!",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'platform',\n  'primary_version_array': [],\n  'secondary_version_array': [],\n  'year_array': [],\n  'issue_array': []\n} \nI am your expert guide within the Serverless Architecture community on entwickler.de, here to provide you with curated, in-depth insights and explanations specifically tailored to software professionals working with serverless and cloud-native platforms. My role is to interpret and deliver relevant technical content from the platform’s extensive resources, helping you navigate complex topics like platform engineering, developer experience, and cloud-native best practices.\nAccess to my expertise is available to authenticated users with appropriate membership levels, such as Fullstack or Elevate, who seek advanced knowledge in serverless architecture and related fields. I support developers, architects, DevOps engineers, and other software professionals by synthesizing the latest conference talks, workshops, articles, and tutorials focused on serverless and platform engineering topics, ensuring you get precise, actionable information aligned with your professional needs and interests on entwickler.de.",
   "discovery_data": {
-    "query_sent": "What are the main features of Angular Signals in version 17?",
+    "query_sent": "Who are you in this platform and who can use you?",
     "results": [
       {
-        "_id": "0747f0655ef3790a97eba95b",
-        "title": "How to architect Angular apps in 2025",
+        "_id": "f0436208d234631c19db874e",
+        "title": "Workshop: Mastering Platform Engineering – from Design to Value",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "_id": "d9ae896a64905e23e3dd8105",
+        "title": "XAML überall: .NET MAUI, Avalonia UI und Uno Platform im Überblick",
         "parentGenre": null
       },
       {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
+        "_id": "a2d7f9c9b9db30f053f329eb",
+        "title": "Platform Engineering: zwischen DevOps-Ideal und Over-Engineering",
         "parentGenre": null
       },
       {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
+        "_id": "f5916d677c7e331424b553a6",
+        "title": "Platform Engineering mit GitHub Actions",
         "parentGenre": null
       },
       {
-        "_id": "5229d453d1393d2c3d86e145",
-        "title": "Signals und State Management",
+        "_id": "74348f9d843bec2a24e11407",
+        "title": "Platform Success Factors: Make your platform journey a success",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "7582433cd55a24c52c2c7cdf",
+        "title": "Redefining the Platform",
         "parentGenre": null
       },
       {
-        "_id": "64ace3828d8056484c3534ab",
-        "title": "Angular 16 released",
+        "_id": "dc4f1073766572759e32e428",
+        "title": "Interview mit Paul Webster vom Platform-UI-Team",
         "parentGenre": null
       },
       {
-        "_id": "eba6f5d083b14f4d8d53d87a",
-        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
+        "_id": "622c587934121b48d3561ea7",
+        "title": "Reducing Developer Cognitive Load with Platform Engineering",
         "parentGenre": null
       },
       {
-        "_id": "e9905bc3e1a3780619966899",
-        "title": "Jetzt schlägt’s 15: Was ist neu in Angular 15?",
-        "parentGenre": null
+        "_id": "d9c03c85523199698fd9bbae",
+        "title": "Lessons from 10 years of Platform Engineering",
+        "parentGenre": "COURSE"
       },
       {
-        "_id": "59c6dfa238c69ebd748cc7dc",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
+        "_id": "nxXAKZ4sDcAt2mmrQ",
+        "title": "DevOps: The Original Platform Engineers",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "1fed2c6361980d606789e315",
-        "title": "Manfred Steyer on Angular 20: Signals, Dynamic Components, AI, and What’s Next",
-        "parentGenre": null
-      },
-      {
-        "_id": "a527c16f5bc7b4da1bc88ab0",
-        "title": "Angular Resources: Everything you need to know",
+        "_id": "uQJ3WsDnzPm5BkpSh",
+        "title": "DevOps: The Original Platform Engineers",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "a46f583e86ab963aed1784a1",
-        "title": "Master Angular Signals in your existing Codebase",
+        "_id": "bfd0075394e4f30296228881",
+        "title": "Platform Engineering 2025: Trends, Challenges and How to Stay Ahead",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "01a63ca630515849aaa314b1",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
+        "_id": "9fbf9770a8b80e1f1a1c3cef",
+        "title": "How Developer Platforms Fail (And How Yours Won’t)",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "9836770500f149a58b7769f9",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "73a55b4bbeecf374b233deaf",
-        "title": "Angular’s New Era: Unveiling the Most Exciting Features Yet",
+        "_id": "cbee753b4661ce63a53faa62",
+        "title": "Workshop: Mastering Platform Engineering – from Design to Value",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "69a73aaa7784b829b85889ba",
-        "title": "What's New in Angular 17?",
-        "parentGenre": null
-      },
-      {
-        "_id": "7169f2b6391a0d9490ef4b35",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
-        "parentGenre": null
-      },
-      {
-        "_id": "E8GpqxYcngd3MofGq",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "02aa174706c1bd3eca686770",
+        "title": "Workshop: Mastering Platform Engineering – from Design to Value",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "787b05fae93f992824034695",
-        "title": "3 Effective Rules for Successfully Using Signals in Angular",
+        "_id": "d3418b12ff07ebba27d0a11c",
+        "title": "How Developer Platforms Fail (And How Yours Won’t)",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "fQ852nxKav9NNZTSG",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "_id": "9b46dbec7b7724edc8304e3e",
+        "title": "You need a Frontend Platform team. Here's why.",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "ZM7Cxztnyh7J9Psky",
-        "title": "Signals, Standalone, SSR: So bauen Sie Angular-Apps der Zukunft",
+        "_id": "5dea1fd1fe39a48ce18e9e0c",
+        "title": "AI Meets Low Code: Building Smarter Solutions in the Microsoft Ecosystem",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "popnffuzCL87EDLDe",
-        "title": "Modern Angular Workshop",
+        "_id": "0122a8ecc7edd868a32a3b60",
+        "title": "\"Death of the Browser\" The web as we know it is ending and AI agents are the executioners.",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "heHyAodHSRfj6AG3L",
-        "title": "The Internal Magic of Angular Signals",
+        "_id": "46fd812f5f218713790faa0a",
+        "title": "Platform Engineering: Herding the Electric Sheep",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "kynatXxTGKucptx8Y",
-        "title": "Signals – A New Way of Fine-Grained Reactivity in Angular",
+        "_id": "a019e930853842d9dd56ea82",
+        "title": "Platform Engineering: Trends and Challenges in 2025",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1a2e89aa67fbc162d43ee12a",
+        "title": "Tackling DevEx Imposter Syndrome or how to evolve your DevOps through Platform Engineering",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "9986343e9f1db75fde8ed3e3",
+        "title": "Eröffnung und Begrüßung & Keynote: How Developer Platforms Fail (And How Yours Won’t)",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "6fd1a9f837bb83551defdcc1",
+        "title": "Welcome and Opening Remarks & Keynote Pitfalls of building internal developer platforms",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "39d841aae62500979ea9c42a",
+        "title": "Platform Engineering for Software Developers and Architects",
+        "parentGenre": "COURSE"
+      },
+      {
+        "_id": "7d4df4973e9b6a7a79d2096a",
+        "title": "Tackling DevEx Imposter Syndrome or how to evolve your DevOps through Platform Engineering",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "02d4fca20815ed5e53c72a63",
+        "title": "Eröffnung und Begrüßung & Keynote: How Developer Platforms Fail (And How Yours Won’t)",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a8c883bbce65004c55d35b63",
+        "title": "Platform Engineering for Software Developers and Architects",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "b402967d80ec59401bea9131",
+        "title": "Introduction and Opening of API Con 2024/ Serveless Architecture Conference in Berlin",
         "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Version-Specific Chunk Selection and Content Analysis",
+    "test_focus": "G1 – Identity & Brand (System §0, Brand derivation)",
     "required_checks": [
-      "Discovery data must include chunks relevant to Angular Signals and/or Angular version 17 (titles can mention either Angular Signals OR version 17 OR both)",
-      "AI response must mention Angular Signals and version 17 explicitly in the main content",
-      "Response content must be accurate and match information available in the selected chunks",
-      "The status of Angular Signals in v17 must be accurate (e.g., stable, new features, breaking changes)"
+      "When platform=entwickler.de → assistant names itself 'Entwickler Intelligence'.",
+      "When platform=devmio or devmio.nl → assistant names itself 'Dev Intelligence'.",
+      "Assistant says/implies it is available inside the logged-in product experience, not external.",
+      "Assistant does NOT call itself ChatGPT/LLM/external service."
     ]
   }
 }

@@ -1,6 +1,6 @@
 {
   "test_id": "test_006_de",
-  "query": "Angular besser?",
+  "query": "Zeig mir das OpenTelemetry-Export-Beispiel aus den Dokumenten.",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
@@ -12,504 +12,114 @@
     ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Angular besser\nAngular wird mit den neuesten Versionen, insbesondere Angular 18, kontinuierlich verbessert und bietet Entwicklern eine Vielzahl neuer Features und Optimierungen, die die Entwicklung moderner Webanwendungen effizienter und performanter machen. Hier sind die wichtigsten Aspekte, die Angular 'besser' machen:\n\nModernisierung und Performance-Optimierung  \n\nAngular 18 bringt zahlreiche Performanceverbesserungen, z.B. schnellere Builds durch den Einsatz von ESBuild im Angular CLI, was kleinere Bundles und schnellere Kompilierung ermöglicht.  \nDie Change Detection wird durch das neue Signals-Konzept feingranularer und effizienter, da Angular genau erkennt, welche Komponenten aktualisiert werden müssen, anstatt den gesamten Komponentenbaum zu prüfen.  \nServer-Side Rendering (SSR) ist nun zentraler Bestandteil, mit vereinfachter Integration und verbessertem Hydration-Mechanismus, was zu schnellerem Seitenaufbau und besserer SEO führt.\n\n\nReaktive Programmierung mit Signals  \n\nAngular führt das Signals-Konzept ein, das von anderen Frameworks bekannt ist und die reaktive Entwicklung vereinfacht.  \nSignals ermöglichen eine präzise Benachrichtigung bei Datenänderungen, was die Performance steigert und die Change Detection optimiert.  \nDies reduziert unnötige Updates und macht Anwendungen reaktiver und ressourcenschonender.\n\n\nFortschrittliche API-Entwicklung und funktionale Schnittstellen  \n\nAngular setzt zunehmend auf funktionale APIs und ersetzt alte objektorientierte Muster sowie TypeScript-Dekoratoren.  \nStandalone-Komponenten und -APIs sind Standard, was die Modularität und Wiederverwendbarkeit verbessert.  \nNeue Kontrollfluss-Syntax im Template erleichtert häufige Anwendungsfälle und macht den Code klarer und wartbarer.\n\n\nVerbesserte Entwicklererfahrung  \n\nAngular CLI unterstützt jetzt standardmäßig den Angular Router und generiert Anwendungen als Standalone ohne @NgModule().  \nFunktionale HTTP-Interceptor sind Standard, was den Code schlanker und moderner macht.  \nDie kontinuierliche Weiterentwicklung sorgt für eine robuste, zukunftssichere Plattform, die sich an moderne Webentwicklung anpasst.\n\n\nHerausforderungen und Lernkurve  \n\nDurch die Vielzahl neuer APIs und Konzepte wird Angular komplexer und schwerer zu erlernen, da Entwickler alte und neue Konzepte parallel beherrschen müssen.  \nDas Angular-Team bemüht sich, die Balance zwischen Rückwärtskompatibilität und innovativen Features zu halten, um den kognitiven Ballast zu minimieren.\n\n\nPraxisnahe Schulungen und Trainingsangebote  \n\nEs gibt umfangreiche Trainings, Camps und Tutorials, die Entwicklern helfen, Angular besser zu verstehen und effektiv einzusetzen, z.B. zu Themen wie Subkomponenten, Datenbindung, Formularen, Validierung und dem neuen Signals-Konzept.\n\n\n\nZusammenfassend lässt sich sagen, dass Angular durch kontinuierliche Innovationen, Performance-Verbesserungen und moderne Programmiermodelle wie Signals deutlich besser wird. Gleichzeitig steigt die Komplexität, weshalb gezielte Weiterbildung und der Einsatz moderner Tools empfohlen werden, um das volle Potenzial von Angular auszuschöpfen289cab1ef800cbd306a62af3Mit Angular 18 steht Entwickler:innen eine Vielzahl neuer Features und Verbesserungen zur Verfügung, die die Entwicklung moderner Webanwendungen weiter optimieren. Angular 18 baut auf die Fortschritte der Vorgängerversionen auf und führt zahlreiche Performanceoptimierungen sowie neue APIs ein, die die Arbeit mit dem Framework noch effizienter gestalten.xrng8DfDqckoEKvMrSeit Angular 16 hat Google umfassende Änderungen an seinem SPA-Framework vorgenommen, um es in das nächste Jahrzehnt der Webentwicklung zu führen. ... Signals breiten sich Stück für Stück im Framework aus, sodass reaktive Programmierung immer wichtiger wird. Standalone-Komponenten und -APIs sind längst zum Standard geworden und die neue Kontrollfluss-Syntax vereinfacht häufige Anwendungsfälle im Template erheblich. Nicht zuletzt ist auch Server-Side Rendering nun zentraler Bestandteil des Frameworks geworden ...hiwmMJy6F5TyrrZFYDas Angular-Team stellt sein reaktives Modell auf den Prüfstand und schlägt als neuen Ansatz die von anderen Frameworks bekannten Signals vor. ... Signals entscheidende Vorteile gegenüber dem bestehenden Modell. ... Yannick Baron von Thinktecture und Google Developer Expert für Angular beantwortet alle Fragen rund um die neuen Angular-Signals.bc0bef25841c96486c56f58fAngular sagt sich, theoretisch kann dieser Event-Handler alles verändert haben, was angezeigt wird. Und deswegen muss dann Angular zur Sicherheit die Property Bindings durchführen, was im schlimmsten Fall bedeutet, alle Komponenten werden einmal überprüft, aber eben nur einmal und nicht mehr mehrfach so wie früher. ... Die Signals, die haben wir jetzt da seit ein paar wenigen Angular-Versionen und die werden in Zukunft dazu beitragen, genauer herauszufinden, wo Angular hinschauen muss aufgrund der Datenänderungen.04721391f3f7580f0631b9d3Angular 17: Neues Release des Web-Frameworks ... Neue Anwendungen initialisieren den Angular-Router standardmäßig und erzeugen Anwendungen als Standalone ohne @NgModule(). Funktionale HTTP Interceptors werden in Angular CLI 17 bevorzugt, klassenbasierte sind optional.",
+  "actual_response": "Gerne! Hier ist ein Beispiel für die Konfiguration des OpenTelemetry-Exports, wie es in den Dokumenten beschrieben wird:\n\nDer OpenTelemetry Collector wird als einfacher OTEL-Empfänger gestartet, der Telemetriedaten empfängt und ausgibt. Die Konfiguration definiert Receiver für OTLP über gRPC und HTTP sowie Exporter für Debug-Ausgaben. Die Pipelines für Traces, Metriken und Logs sind jeweils mit dem OTLP-Receiver und dem Debug-Exporter verbunden.\n\nBeispiel-Konfiguration (YAML):\n\n\nreceivers:\n  otlp:\n    protocols:\n      grpc:\n        endpoint: 0.0.0.0:4317\n      http:\n        endpoint: 0.0.0.0:4318\n\nexporters:\n  debug:\n    verbosity: detailed\n\nservice:\n  pipelines:\n    traces:\n      receivers: [otlp]\n      exporters: [debug]\n    metrics:\n      receivers: [otlp]\n      exporters: [debug]\n    logs:\n      receivers: [otlp]\n      exporters: [debug]\n\n\nDer Collector wird dann mit dieser Konfiguration als Docker-Container gestartet:\n\ndocker run -p 127.0.0.1:4317:4317 -p 127.0.0.1:4318:4318 -v $PWD/otel-config.yaml:/etc/otelcol-contrib/config.yaml otel/opentelemetry-collector-contrib:0.128.0\n\n\nFluent Bit kann so konfiguriert werden, dass es OpenTelemetry-Daten an den Collector sendet. Beispiel Fluent Bit Pipeline:\n\nservice:\n  log_level: info\n\npipeline:\n  inputs:\n    - name: dummy\n      tag: test\n\n  processors:\n    logs:\n      - name: opentelemetry_envelope\n\n  outputs:\n    - name: opentelemetry\n      match: '*'\n      host: 127.0.0.1\n      port: 4318\n      tls: off\n      metrics_uri: /v1/metrics\n      logs_uri: /v1/logs\n      traces_uri: /v1/traces\n      log_response_payload: true\n    - name: stdout\n      match: '*'\n\n\nDiese Konfiguration sorgt dafür, dass Fluent Bit Dummy-Logs generiert, diese mit OTEL-Metadaten versieht und an den Collector sendet. Gleichzeitig werden die Logs auch lokal auf stdout ausgegeben, um die Daten sichtbar zu machen.\n\nDie OpenTelemetry-Integration unterstützt Metriken, Traces und Logs im OTLP-Format und ermöglicht so eine herstellerunabhängige, standardisierte Observability-Pipeline.\n\n\nDieses Beispiel zeigt, wie man mit OpenTelemetry Collector und Fluent Bit eine vollständige Telemetrie-Pipeline aufbauen kann, die Metriken, Logs und Traces empfängt, verarbeitet und exportiert [1.]   [2.].\nZusätzlich wird in den Dokumenten erläutert, dass OpenTelemetry als offener Standard für Metriken, Traces und Logs gilt und von vielen Tools wie Prometheus, Jaeger, Grafana und Tempo unterstützt wird. Die Instrumentierung kann sowohl automatisch als auch manuell erfolgen, z.B. mit OpenTelemetry SDKs in verschiedenen Programmiersprachen [3.]  [4.].\nFalls Sie ein konkretes Beispiel für die Java-Instrumentierung oder weitere Details zur Fluent Bit Konfiguration wünschen, kann ich diese gerne ergänzen.",
   "discovery_data": {
-    "query_sent": "Angular besser?",
+    "query_sent": "Zeig mir das OpenTelemetry-Export-Beispiel aus den Dokumenten.",
     "results": [
       {
-        "_id": "39c9ac7b977cdd279124c732",
-        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
-        "parentGenre": "CAMP"
-      },
-      {
-        "_id": "50024113ac0748c41f96b513",
-        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
-        "parentGenre": "CAMP"
-      },
-      {
-        "_id": "ec9c9cad403e04ffdec0e2fb",
-        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
-        "parentGenre": "CAMP"
-      },
-      {
-        "_id": "69ab8ba6bfa5d1a198f998c3",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 30.11.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "b0ea417104478bb628fc9b82",
-        "title": "Software Design Patterns in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "a6aaaad93956456a9df86f8b",
-        "title": "Tag 2: Angular Subkomponenten & Datenbindung, Angular Formulare und Validierung",
-        "parentGenre": "CAMP"
-      },
-      {
-        "_id": "BkNkZqA36gh25fLgE",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 21.07.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "87b56808e72a040d1b285fca",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 02.03.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "3CghbWD73PW6FyYw7",
-        "title": "Angular Kickstart: von 0 auf 100 Teil 2",
+        "_id": "54f68226b04b39e8b556c198",
+        "title": "Telemetrie und Distributed Tracing mit OpenTelemetry für ASP.NET Core Microservices",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "6dHvWo6JhtsgDnR2S",
-        "title": "Angular Kickstart: von 0 auf 100 Teil 1",
+        "_id": "fda00cbb205dc2e4e8917a6e",
+        "title": "Dokument - streng vertraulich!",
+        "parentGenre": null
+      },
+      {
+        "_id": "27e9ff46d7c0962dda308b74",
+        "title": "Kaffee in Zellen",
+        "parentGenre": null
+      },
+      {
+        "_id": "c64c8a3139920f092e3d54cc",
+        "title": "Digital Druck machen",
+        "parentGenre": null
+      },
+      {
+        "_id": "81d0ea682745090420ad37f9",
+        "title": "Die Herausforderungen moderner Microservice-Architekturen",
+        "parentGenre": null
+      },
+      {
+        "_id": "71e094cd3cb4b117a73727e0",
+        "title": "OpenTelemetry better practices - navigation the bullsh** bingo",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "aa6a7f9008d27de89aefa234",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 28.09.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "bc0bef25841c96486c56f58f",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 28.09.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "7a544827ca8b4eadad3f58de",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 31.03.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "a5a69221356758745e15c884",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 28.05.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
+        "_id": "5d717a00015e22dd1d7594a7",
+        "title": "Dokumente offline",
         "parentGenre": null
       },
       {
-        "_id": "dea5a7e6f23b52d8771efbb4",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 21.07.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "77ffca842de18655074628ed",
-        "title": "Brücken von Modul zu Modul bauen",
+        "_id": "20121eea75830f7a579e3383",
+        "title": "Apache POI: Fantastische Excel Sheets",
         "parentGenre": null
       },
       {
-        "_id": "c597106a63fd0c333eca9326",
-        "title": "Kolumne: Die Angular-Abenteuer",
-        "parentGenre": null
-      },
-      {
-        "_id": "bc8800875ed1c1bcb4d83ea3",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 31.03.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "TedCaqZKqyjfksqvQ",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 06.10.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "2c27b533fbd7a7d0f037a607",
-        "title": "Kolumne: Die Angular-Abenteuer",
-        "parentGenre": null
-      },
-      {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "f105c3b533645c5e79e6dcb2",
-        "title": "Forms With Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "047890a566b22b615ae30568",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 27.07.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "mWzpTGGiet8zpxNzZ",
-        "title": "Change Detection performanter und leichtgewichtiger mit Signals",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "702fef853902d8e509b74756",
-        "title": "Formulare mit Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "4529750e0fba241f8cad1010",
-        "title": "Angular für Einsteiger",
-        "parentGenre": null
-      },
-      {
-        "_id": "0c0c79e23ddf4be8e09da055",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 02.03.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "e9905bc3e1a3780619966899",
-        "title": "Jetzt schlägt’s 15: Was ist neu in Angular 15?",
-        "parentGenre": null
-      },
-      {
-        "_id": "85vjrGXi8WLznB97j",
-        "title": "State-Management mit Angular und NgRx",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "0662c9d84416bbfe79439e97",
-        "title": "Featurefeuerwerk: Was bringt Angular 14?",
-        "parentGenre": null
-      },
-      {
-        "_id": "cbH252wTFQkBD22B2",
-        "title": "Die Magie hinter Angular Signals",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
-        "parentGenre": null
-      },
-      {
-        "_id": "275b6f5d91d6ddc1b5cf0ad7",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 28.05.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "e238f3c5cfb29a4be2e4210e",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 27.07.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "viA3ihKfz7gpdHRZ7",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 01.12.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "c361ecd62bddb3e278df55a6",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 30.11.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "qREnL94qsTwnQH8ic",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "rqXEXBCCwwxo4ny6f",
-        "title": "Angular 101 - der Workshop für Einsteiger - Teil 2",
+        "_id": "AEPeMEBNv7TnmSjdq",
+        "title": "Logs, Metrics, Distributed Tracing und OpenTelemetry",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "14cc5ed4a89dffe508d6e605",
-        "title": "Progressive Web Apps auf Knopfdruck?",
+        "_id": "d6431419e6afcfdf234fd8fa",
+        "title": "Integrated Search",
         "parentGenre": null
       },
       {
-        "_id": "e77d9110a6ab65108dae9feb",
-        "title": "Wie die neuen Angular Signals unsere Architekturen beeinflussen",
+        "_id": "2d0328e798025f44794ab9a7",
+        "title": "Semantisches Content Management",
         "parentGenre": null
       },
       {
-        "_id": "cba21bfb1a8e05112def8cea",
-        "title": "Angular for Beginners",
+        "_id": "26d01db8331b796597bb007a",
+        "title": "Erste Schritte in Fluent Bit mit OpenTelemetry",
         "parentGenre": null
       },
       {
-        "_id": "4bc8b07564dedfcecc9a06f6",
-        "title": "Alles neu macht der Mai?",
+        "_id": "109994e6df654d9ba5e715e3",
+        "title": "Metriken, Traces und die OTEL Integration",
         "parentGenre": null
       },
       {
-        "_id": "CuvxMP3bMuyjvfS43",
-        "title": "BERLIN & ONLINE | Angular 101 - der Workshop für Einsteiger - Teil 1",
+        "_id": "650e1daa4b0fba5af465446f",
+        "title": "Service-Instrumentierung mit eBPF und Beyla",
+        "parentGenre": null
+      },
+      {
+        "_id": "1ca36afe8381ff71c318446c",
+        "title": "Spring Boot Observability in der Praxis: Actuator, Micrometer und OpenTelemetry",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "uG8J4gdskguJmFJHp",
-        "title": "Woche 1: Angular Basics, Erste Komponenten, Service und Dependency Injection in Angular (Lektionen 1,2 & 3) | verfügbar bis 01.12.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "fecfbff9cd978979b41d4b10",
-        "title": "Das perfekte Projekt-Set-up für Angular: Struktur und Automatismen für mehr Qualität",
-        "parentGenre": null
-      },
-      {
-        "_id": "4e4479c254378288782cb621",
-        "title": "Kolumne: Die Angular-Abenteuer",
-        "parentGenre": null
-      },
-      {
-        "_id": "41b489145abe0f659676e83a",
-        "title": "Microfrontends mit Angular Elements",
-        "parentGenre": null
-      },
-      {
-        "_id": "af921f07550064fad81caf65",
-        "title": "Angulars neues Standalone API",
-        "parentGenre": null
-      },
-      {
-        "_id": "0c5f4e497c452a2254969bad",
-        "title": "Angular 16 released",
-        "parentGenre": null
-      },
-      {
-        "_id": "07d4986415a99a96543c2ae5",
-        "title": "Go 1.15, Angular Roadmap & JEP 381 – Unsere Top-Themen der Woche",
-        "parentGenre": null
-      },
-      {
-        "_id": "09295d39c3b1f8240614846f",
-        "title": "Mehr erreichen mit weniger Code",
-        "parentGenre": null
-      },
-      {
-        "_id": "8a9330221cf947d4a20f5f5c",
-        "title": "Mehr erreichen mit weniger Code",
-        "parentGenre": null
-      },
-      {
-        "_id": "1e4f9bc1434d8b13e70edee0",
-        "title": "Meine größten Angular-Fehler ... und wie du sie vermeiden kannst",
+        "_id": "a4f34dd8286798ae57045901",
+        "title": "LLMs im Griff: Observability, Tracing und Security",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "xrng8DfDqckoEKvMr",
-        "title": "Angular 18: Neue Features optimal nutzen und Bestandsprojekte effizient migrieren",
+        "_id": "f3c25a06fcd7976543f62593",
+        "title": "Semantic AI in Action: Architektur-Patterns für Language- und Embedding-Modelle",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "6a223a1bee8d3acae6889b04",
-        "title": "Die Angular-Evolution",
-        "parentGenre": null
-      },
-      {
-        "_id": "E8GpqxYcngd3MofGq",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "cbac16438d8543fcf2cdeb5d",
+        "title": "Monitoring von Applikationen in Kubernetes",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "3b7z34h7s3WeDnbvg",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "26fccf119cf104a78826edc3",
+        "title": "Kubernetes: One Size Fits All – die Plattform für alles, was kommt",
         "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "c03ed19105d9c18f7fc3753a",
-        "title": "Angular 11: Entwickler im Fokus",
-        "parentGenre": null
-      },
-      {
-        "_id": "59214c306e810778b9a47272",
-        "title": "Von wegen Unglück",
-        "parentGenre": null
-      },
-      {
-        "_id": "e0be1b0647c3b423d88e76cd",
-        "title": "Von wegen Unglück",
-        "parentGenre": null
-      },
-      {
-        "_id": "48cd20810a6c6c3ba0cb58d6",
-        "title": "JavaScript im Expertencheck: Wohin geht die Reise?",
-        "parentGenre": null
-      },
-      {
-        "_id": "cc4b73726a6a25a1c22b31ea",
-        "title": "Angular 16 released",
-        "parentGenre": null
-      },
-      {
-        "_id": "f7dcfe3078b64925f3b62a19",
-        "title": "Von wegen Unglück - Angular 13 bringt interessante Neuerungen",
-        "parentGenre": null
-      },
-      {
-        "_id": "tc2Fso9oMgkREWLJs",
-        "title": "BERLIN & ONLINE | Angular 101 - der Workshop für Einsteiger - Teil 2",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "hiwmMJy6F5TyrrZFY",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "a04e8b81ff3ba9c41767c3be",
-        "title": "Angular für Einsteiger",
-        "parentGenre": null
-      },
-      {
-        "_id": "66492fc012613ae5c77e1ba8",
-        "title": "Angular für Einsteiger",
-        "parentGenre": null
-      },
-      {
-        "_id": "f8b89d79f2e57024c15feb78",
-        "title": "„JavaScript kann gerne noch viel mächtiger werden.“",
-        "parentGenre": null
-      },
-      {
-        "_id": "289cab1ef800cbd306a62af3",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "52ef1d82560c140fe2ed1886",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "3caa038a2f16278ab3c6040a",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "716e141fb1acae69460b0dd2",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "16b7f80d5b4b04e3989c2532",
-        "title": "Angular 18 – erwachsen, aber aktiv",
-        "parentGenre": null
-      },
-      {
-        "_id": "7dc6911e30b7ad6f9587f8c7",
-        "title": "Angular 5 Beta-Phase, Agile Neurowissenschaft & Node.js 2017 User Survey – unser Wochenrückblick KW 31",
-        "parentGenre": null
-      },
-      {
-        "_id": "f9c59f0fbb4c7c9ebb2f60fc",
-        "title": "Get ready to rumble!",
-        "parentGenre": null
-      },
-      {
-        "_id": "1170d894426b330dfcf37b1c",
-        "title": "Die Ruhe vor dem Sturm",
-        "parentGenre": null
-      },
-      {
-        "_id": "f1151315d5ffa6c7887a8812",
-        "title": "Renaissance? Angular 17!",
-        "parentGenre": null
-      },
-      {
-        "_id": "d4b777abeb1f33f40a80222b",
-        "title": "Erleichterung im Entwickleralltag",
-        "parentGenre": null
-      },
-      {
-        "_id": "HoySAYYjcPSpN6JPa",
-        "title": "Lektion 5: Formulare | verfügbar bis 01.12.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "adab83ef35bb67cd675fcee4",
-        "title": "Angular wird 18 - erwachsen aber dynamisch",
-        "parentGenre": null
-      },
-      {
-        "_id": "dM7x62FExyeH8rwcq",
-        "title": "Lektion 5: Formulare | verfügbar bis 21.07.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "2767b3527f1fee59fc44ea2c",
-        "title": "Brave New JS World",
-        "parentGenre": null
-      },
-      {
-        "_id": "r4NMSW8BWMtF2RnBq",
-        "title": "Teil 4: Angular",
-        "parentGenre": "TUTORIAL"
-      },
-      {
-        "_id": "22adb8ba6400b2e8b31aaef6",
-        "title": "Die Zukunft der Webentwicklung mit JavaScript",
-        "parentGenre": null
-      },
-      {
-        "_id": "2avmyY9SRgg7GZpqR",
-        "title": "Lektion 5: Formulare | verfügbar bis 06.10.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "db60e694e18019b73f7162ee",
-        "title": "Was ist neu in Angular 15?",
-        "parentGenre": null
-      },
-      {
-        "_id": "1f8d32096eac438e149087fa",
-        "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "89dffa5139c919cc01fac4b6",
-        "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "9ce1548208b991d24a8e5264",
-        "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "d8a1394b06e1ccc1d57c7c08",
-        "title": "Die Zukunft der Webentwicklung mit JavaScript: Ein Blick auf die neuen Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "c68bd9c3984f39efe13a798e",
-        "title": "Der Beginn einer wunderbaren Freundschaft …",
-        "parentGenre": null
-      },
-      {
-        "_id": "3e895e342fffb427bf26c9a9",
-        "title": "Hydration, Server Components, Metaframeworks und Resumability",
-        "parentGenre": null
-      },
-      {
-        "_id": "9c63aeca06d527c424beba76",
-        "title": "Hydration, Server Components, Metaframeworks und Resumability",
-        "parentGenre": null
-      },
-      {
-        "_id": "67fa7cd0ee66393777b25ba6",
-        "title": "Angular 9 and Friends",
-        "parentGenre": null
-      },
-      {
-        "_id": "d5cd28205516424cbf93b58a",
-        "title": "Angular 9 and Friends",
-        "parentGenre": null
-      },
-      {
-        "_id": "cf5d012d748fba2ec1f43243",
-        "title": "Angular 9 and Friends",
-        "parentGenre": null
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Vague Question handling - Clarification request for Angular",
+    "test_focus": "G5 – Marker format is exact [[[CID:...]]] (1.f–1.h) - Strict marker syntax",
     "required_checks": [
-      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
-      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
-      "The assistant should apply the vague Question fallback logic defined in the prompt."
+      "All markers are exactly [[[CID:{chunk_id}]]].",
+      "chunk_id is taken verbatim from context, not invented.",
+      "No punctuation or spaces inside marker, and no punctuation directly before [[[.",
+      "Max 2 markers per claim, separated by one space."
     ]
   }
 }

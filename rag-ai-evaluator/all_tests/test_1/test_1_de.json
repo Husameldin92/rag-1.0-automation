@@ -1,165 +1,195 @@
 {
   "test_id": "test_001_de",
-  "query": "Was sind die Hauptfunktionen von Angular Signals in Version 17?",
+  "query": "Wer bist du hier in dieser Plattform und wer kann dich nutzen?",
   "endpoint": "reader_explore",
   "user": {
     "tier": "elevate",
     "language": "de"
   },
   "prompt": "main",
-  "actual_response": "Angular Signals in Version 17 sind ein zentrales neues Feature, das die reaktive Entwicklung in Angular grundlegend verändert und die Change Detection effizienter und feingranularer macht. Die Hauptfunktionen von Angular Signals in Version 17 lassen sich wie folgt zusammenfassen:\n\nReaktiver Basisdatentyp für State ManagementSignals sind Wrapper um Werte, die bei Änderung automatisch interessierte Konsumenten informieren. Sie ermöglichen eine einfache und performante Verwaltung von Zuständen in Angular-Komponenten, ohne dass komplexes Subscription-Management nötig ist. Ein Signal wird mit einem Initialwert erzeugt und kann gelesen (per Funktionsaufruf) und aktualisiert (über set() oder update()) werden [1.],  [2.].\n\nFeingranulare Change Detection ohne zone.jsMit Angular 17 sind Signals stabil und ermöglichen eine lokale Change Detection, die nur die Komponenten aktualisiert, deren Signal-Werte sich geändert haben. Dies reduziert die Last auf das System und verbessert die Performance gegenüber der klassischen globalen Change Detection [3.],  [4.].\n\nComputed Signals und EffectsNeben schreibbaren Signals gibt es auch computed()-Signale, die automatisch neu berechnet werden, wenn abhängige Signale sich ändern. Effekte (effect()) erlauben das Ausführen von Seiteneffekten bei Signaländerungen, ähnlich wie bei RxJS, aber mit einer schlankeren API [2.].\n\nInterop mit RxJSAngular 17 bietet eine Interoperabilitätsschicht zwischen Signals und RxJS, sodass Signale in Observables und umgekehrt konvertiert werden können. So können Entwickler die Einfachheit von Signals mit der Mächtigkeit von RxJS kombinieren [5.].\n\nSignal-basierte KomponentenkommunikationAngular 17 ersetzt klassische Input- und Output-Dekoratoren durch Signal-basierte APIs:  \n\ninput() für Input-Signale (read-only)  \nmodel() für Two-way Bindings (schreibbare Signale)  \noutput() für Event-Outputs (ersetzt EventEmitter)Diese neuen APIs verbessern die Typensicherheit und vereinfachen die Komponentenkommunikation [3.],  [6.].\n\n\nImmutable Signal-DatenstrukturenIn Angular 17 wurde die Möglichkeit entfernt, Signale durch Mutation zu verändern (signal.mutate() ist nicht mehr verfügbar). Stattdessen müssen Signale als immutable behandelt und mit signal.update() aktualisiert werden, was zu besserer Vorhersagbarkeit und Performance führt [3.].\n\nVerbesserte Template-Syntax und Control FlowAngular 17 führt neue Kontrollfluss-Syntaxen ein (@switch, @case, @default, @defer), die eng mit Signals zusammenarbeiten und die Template-Logik vereinfachen und optimieren [4.].\n\n\nZusammenfassend sind Angular Signals in Version 17 ein stabiler, schlanker und leistungsfähiger Mechanismus für reaktive Programmierung, der die Change Detection optimiert, die Komponentenkommunikation modernisiert und eine bessere Integration mit RxJS bietet. Sie sind ein wesentlicher Baustein der „Angular Renaissance“ und sollten in neuen und bestehenden Projekten zunehmend eingesetzt werden [2.],  [3.],  [6.].\nFalls Sie weitere Details oder Beispiele zur praktischen Anwendung von Angular Signals wünschen, stehe ich gerne zur Verfügung.",
+  "actual_response": "Ich bin auf dieser Plattform Ihr persönlicher, fachlich versierter Assistent mit tiefem Schwerpunkt auf Serverless Architecture. Meine Aufgabe ist es, Sie als Entwickler, Architekt oder IT-Experten im Bereich serverloser Systeme bestmöglich zu unterstützen – sei es bei der Interpretation technischer Inhalte, der Lösung von Entwicklungsproblemen oder der Orientierung in aktuellen Trends und Tools rund um Serverless.\nNutzen können mich alle Nutzerinnen und Nutzer der Plattform entwickler.de, die sich für serverlose Architekturen interessieren und entsprechende Expertise aufbauen oder vertiefen möchten. Dabei richte ich meine Antworten und Empfehlungen gezielt an Ihre Bedürfnisse als Fachperson in diesem Bereich aus und liefere Ihnen präzise, praxisnahe und aktuelle Informationen aus dem Serverless-Umfeld.\nKurz gesagt: Ich bin Ihr kompetenter Begleiter für alle Fragen und Themen rund um Serverless Architecture auf entwickler.de.",
   "discovery_data": {
-    "query_sent": "Was sind die Hauptfunktionen von Angular Signals in Version 17?",
+    "query_sent": "Wer bist du hier in dieser Plattform und wer kann dich nutzen?",
     "results": [
       {
-        "_id": "1da46606f89dc3ccaa9c0f9d",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 27.03.2026",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
-        "parentGenre": null
-      },
-      {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
-        "parentGenre": null
-      },
-      {
-        "_id": "5229d453d1393d2c3d86e145",
-        "title": "Signals und State Management",
-        "parentGenre": null
-      },
-      {
-        "_id": "64ace3828d8056484c3534ab",
-        "title": "Angular 16 released",
-        "parentGenre": null
-      },
-      {
-        "_id": "eba6f5d083b14f4d8d53d87a",
-        "title": "Was ist neu in Angular 16? Signals, Hydration, esbuild und mehr",
-        "parentGenre": null
-      },
-      {
-        "_id": "e9905bc3e1a3780619966899",
-        "title": "Jetzt schlägt’s 15: Was ist neu in Angular 15?",
-        "parentGenre": null
-      },
-      {
-        "_id": "59c6dfa238c69ebd748cc7dc",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
+        "_id": "151670cffc1c3e7a42d92917",
+        "title": "Cursor, Windsurf, Copilot & Co - KI-Assistenzsysteme fürs Coding",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "651822c08be4e71b1d4a39ae",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 27.02.2026",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "af64d26c0f5fa509f9042a4b",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 30.01.2026",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "997635a5c353e259b868ebd8",
-        "title": "Modern Angular Workshop:  Dein Update für Signals, Signal Forms und Signal Store [Freitag, 6. März 2026]",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "0e0afe537d051790b6ddde6e",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 27.03.2026",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "647fe3a73077325bfce4a231",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 27.02.2026",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "69ab8ba6bfa5d1a198f998c3",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 30.11.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "a2286538c6a2dfaff2eeae27",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.01.2026",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "51016a4f7675b6b5a755ad43",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 30.11.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "01a63ca630515849aaa314b1",
-        "title": "Angular Signals: Neue Features für die reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "bc0bef25841c96486c56f58f",
-        "title": "Woche 2: Angular Pipes, NgModules & Subkomponenten: Meistern Sie die fortgeschrittenen Angular-Konzepte (Lektionen 4, 5 & 6) | verfügbar bis 28.09.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "c1f9fb5b004195d0b4ac1ff6",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 27.07.2025",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "E8GpqxYcngd3MofGq",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Kfy5fRbWxdkicginD",
-        "title": "Lektion 4: Angular auf dem neuesten Stand: Standalone Components, Signals und mehr | verfügbar bis 1.12.2024",
-        "parentGenre": "FLEX_CAMP"
-      },
-      {
-        "_id": "4d3f036f4ec6fbdb475269f9",
-        "title": "Angular Signal – Revolution der Angular-Entwicklung",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Es9qB3iW8QsKxfKEh",
-        "title": "Modern Angular: Renovierung für Ihre Anwendungen",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3caa038a2f16278ab3c6040a",
-        "title": "Angular 18 – erwachsen, aber aktiv",
+        "_id": "72bd4db9adf9eba705120b4a",
+        "title": "Kolumne: Lagebericht Eclipse-Plattform",
         "parentGenre": null
       },
       {
-        "_id": "xrng8DfDqckoEKvMr",
-        "title": "Angular 18: Neue Features optimal nutzen und Bestandsprojekte effizient migrieren",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "bd2918fe362ada7129c4ae2c",
-        "title": "Signal-basierte Komponentenkommunikation in Angular 17.1 und 17.2",
+        "_id": "03a208a9ba4ec5b0794ce69d",
+        "title": "Projekt Ripla: eine Plattform mit OSGi und Vaadin bauen",
         "parentGenre": null
       },
       {
-        "_id": "hiwmMJy6F5TyrrZFY",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
+        "_id": "bdb39b2a774b3e5e50afdf05",
+        "title": "Cross-Plattform-Entwicklung mit Titanium",
+        "parentGenre": null
+      },
+      {
+        "_id": "0cc3fe0361e2d93266a5fd69",
+        "title": "Cross-Plattform-Apps",
+        "parentGenre": null
+      },
+      {
+        "_id": "be1de7ebbb4ce33131c9d7f6",
+        "title": "OneDev: Neue DevOps-Plattform veröffentlicht",
+        "parentGenre": null
+      },
+      {
+        "_id": "b1ef5ea57d07effc08fb7672",
+        "title": "Cross-Plattform, intelligent",
+        "parentGenre": null
+      },
+      {
+        "_id": "a2d7f9c9b9db30f053f329eb",
+        "title": "Platform Engineering: zwischen DevOps-Ideal und Over-Engineering",
+        "parentGenre": null
+      },
+      {
+        "_id": "be190a0ce86a9f96f4963d67",
+        "title": "Cross-Plattform-Entwicklung mit HTML5 und JavaScript",
+        "parentGenre": null
+      },
+      {
+        "_id": "1751e32da4bd256c4c991d7c",
+        "title": "SP als Big-Data-Plattform",
+        "parentGenre": null
+      },
+      {
+        "_id": "d6e46d23b44e05ffc90a0ea1",
+        "title": "Die Chancen für Entwickler auf der Windows-Phone-Plattform stehen gut wie nie",
+        "parentGenre": null
+      },
+      {
+        "_id": "310707adf3b1fe803af77017",
+        "title": "Java trifft Python, JavaScript & Co.: Multi-Language-Integration mit GraalVM",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "cfe286f4a61704cdb908b3a4",
+        "title": "Spring Authorization Server: OAuth2 und OIDC im praktischen Einsatz",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f8fc90e58d94eef0a93bc015",
+        "title": "Platform Engineering – Developer Experience weiter gedacht",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f9f78050fc499bd0db413c10",
+        "title": "Das Unbeherrschbare verstehen und gestalten – mit System Thinking zu besseren Entscheidungen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "94de9a79690b20be6edf3c4c",
+        "title": "Vektordatenbanken verstehen und optimal einsetzen: Was hinter dem Hype der semantischen Suche steckt",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "551f47b434ad95db852e7c38",
+        "title": "Implizit inkrementelle Queries mit C#",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "091f0f3498b4903b8e110e3e",
+        "title": "Begrüßung und Eröffnungskeynote der W-JAX 2025 in München",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "045ec72ae06e5432e3471b6f",
+        "title": "Moderne Cross-Plattform Applikationen mit .NET und Avalonia UI",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "e121c0a9303c0aed1fb29d61",
+        "title": "Real Talk Developer-Plattform: Manchmal reicht auch einfach eine Vorlage",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "53e43f4570ec0c5f34382aa2",
+        "title": "AI Coding Assistants Behind the Scenes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "ccafb4c94b1139424b163e29",
+        "title": "Vergesst den Mensch-Maschine-Wettkampf: Wie wir in hybriden Teams mit AI-Agenten zusammen arbeiten",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "569a39011b1a781988beec0f",
+        "title": "Harte Lektionen und erfolgreiche Strategien: Ein CIO berichtet aus der Praxis der Unternehmenstransformation",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5ad8780146b89d3c58bc9f06",
+        "title": "Integration von KI-Komponenten in Java-Anwendungen mit Spring AI",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "415b1410edb45a4ad7dac4a5",
+        "title": "Semantic AI in Action: Architektur-Patterns für LLMs & Embeddings",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "2f0ae66c37d1cdedd7f9a1db",
+        "title": "Bug-Free by Design: Wie KI-basierte Tools Bugs in der Produktion verhindern",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "d11b54b11d366838630a1cec",
+        "title": "Search & Replace: einfache Schritte für mehr Barrierefreiheit",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1de9532fc50e9247a7cd8ee0",
+        "title": "LangGraph: komplexe AI-Workflows orchestrieren und intelligent Entscheidungen treffen",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0186b8eaef937366c7f70c79",
+        "title": "Smart, Smarter, LLM? Neue Möglichkeiten für AI-enhanced Web-Apps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "6a3f75ad46070f89412b25ca",
+        "title": "Infrastruktur als Code und KI-gestützte Programmierassistenten - Eine passende Kombination?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "55e73fe114d68bc91c0d5400",
+        "title": "AI is coming, what now?",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "728b7c7b3ea2a9ba2bcccdae",
+        "title": "Vom strategischen Design zur designten Strategie",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0eec5d901f900389903aeafd",
+        "title": "From Deployment to Incident Management: How Observability Empowers SREs",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a96c9af702af1307c292c832",
+        "title": "Fear & Loathing in the SDLC: Must AppSec Be a Bad Trip? Strengthen Your Defenses with Runtime Security!",
         "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Version-Specific Chunk Selection and Content Analysis",
+    "test_focus": "G1 – Identity & Brand (System §0, Brand derivation)",
     "required_checks": [
-      "Discovery data must include chunks relevant to Angular Signals and/or Angular version 17 (titles can mention either Angular Signals OR version 17 OR both)",
-      "AI response must mention Angular Signals and version 17 explicitly in the main content",
-      "Response content must be accurate and match information available in the selected chunks",
-      "The status of Angular Signals in v17 must be accurate (e.g., stable, new features, breaking changes)"
+      "When platform=entwickler.de → assistant names itself 'Entwickler Intelligence'.",
+      "When platform=devmio or devmio.nl → assistant names itself 'Dev Intelligence'.",
+      "Assistant says/implies it is available inside the logged-in product experience, not external.",
+      "Assistant does NOT call itself ChatGPT/LLM/external service."
     ]
   }
 }

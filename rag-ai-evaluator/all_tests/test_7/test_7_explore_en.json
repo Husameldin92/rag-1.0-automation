@@ -1,6 +1,6 @@
 {
   "test_id": "test_007_explore_en",
-  "query": "Give me something cool about tech.",
+  "query": "How do I configure metrics in Spring Boot 3",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
@@ -12,69 +12,141 @@
     ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: tech cool\nCertainly! Here are some cool insights about tech drawn from recent expert discussions and profiles of inspiring tech professionals:\n\nTech Blogging as a Learning and Branding ToolWriting tech blogs is not only a way to share knowledge but also a powerful method to deepen your own understanding and build your professional brand. It encourages continuous learning, helps you organize your thoughts, and connects you with the developer community. Overcoming barriers like fear of originality or language imperfections is key, and tools like AI can assist in refining your writing without replacing your unique voice. Starting with small, manageable steps and building a habit can lead to becoming a recognized tech blogger or speaker over time.\n\nDiversity Drives Innovation and Better ResultsStudies and expert interviews highlight that diverse teams produce better outcomes. Increasing representation of women and people of color in tech leads to richer ideas, more creativity, and more inclusive products. However, challenges remain, such as unconscious bias in hiring, lack of mentorship, and workplace culture issues. Many tech leaders emphasize the importance of mentorship, inclusive hiring practices, and creating supportive environments to retain diverse talent.\n\nWomen in Tech: Challenges and TriumphsWomen in tech often face stereotypes, lack of support, and toxic environments, yet many have risen to leadership roles and advocate for change. Profiles of women leaders reveal common themes: the importance of persistence, finding mentors, building supportive communities, and speaking up confidently. Initiatives like women-focused meetups, mentorship programs, and diversity surveys are helping to improve the landscape.\n\nTech Tools and Integration: Choosing WiselyIn the realm of software architecture and integration, the right tool choice is crucial. Whether it’s messaging systems like Kafka or API management platforms, understanding the use case, operational impact, and organizational readiness is essential. Integration is not just about technology but also about governance, data quality, and collaboration between development and operations teams.\n\nJava’s jshell and Time Zone HandlingOn a more technical note, Java’s jshell tool allows developers to quickly test code snippets interactively, which is great for experimenting with complex topics like time zones and date-time APIs. Handling time zones correctly is critical, as shown by the historical Y2K problem and the upcoming 2038 issue related to integer overflow in time representations. Java’s built-in time zone database, updated regularly, helps manage these complexities effectively.\n\n\nIn summary, tech is not just about code and tools; it’s a vibrant ecosystem where continuous learning, diversity, thoughtful tool selection, and community engagement play vital roles in driving innovation and personal growth.\nIf you want, I can share more specific insights or stories from any of these areas!",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'metrics Spring Boot 3',\n  'primary_version_array': ['3'],\n  'secondary_version_array': ['2','1'],\n  'year_array': [],\n  'issue_array': []\n} \nConfiguring metrics in Spring Boot 3 is essential for gaining insights into your application's performance and health, especially in serverless and cloud-native environments. Spring Boot 3 leverages Micrometer as its metrics facade, which integrates seamlessly with monitoring systems like Prometheus. Here’s how you can configure and use metrics effectively in Spring Boot 3:\n\nEnable Actuator and Micrometer DependenciesInclude the Spring Boot Actuator and Micrometer dependencies in your project. Actuator exposes production-ready endpoints, including metrics, while Micrometer provides the instrumentation. For example, add the following dependencies to your pom.xml:  \n<dependency>  \n  <groupId>org.springframework.boot</groupId>  \n  <artifactId>spring-boot-starter-actuator</artifactId>  \n</dependency>  \n<dependency>  \n  <groupId>io.micrometer</groupId>  \n  <artifactId>micrometer-registry-prometheus</artifactId>  \n</dependency>\n\nThis setup enables Prometheus as a metrics backend. You can choose other registries as needed [1.].\n\nConfigure Metrics Exposure via ActuatorBy default, Actuator exposes metrics endpoints under /actuator/metrics. You can configure which endpoints are exposed over HTTP in your application.properties or application.yml:  \nmanagement.endpoints.web.exposure.include=health,info,metrics,prometheus  \n\nThis ensures that the metrics and Prometheus endpoints are accessible. Also, secure these endpoints appropriately, for example, with Spring Security [2.].\n\nUse Micrometer MeterRegistry to Define Custom MetricsYou can inject the MeterRegistry bean to create custom metrics such as counters, gauges, timers, and distribution summaries. For example, in a Spring component:  \n@Component  \npublic class TransactionService {  \n    private final Counter transactionCounter;  \n\n    public TransactionService(MeterRegistry meterRegistry) {  \n        this.transactionCounter = meterRegistry.counter('transactions_total', 'type', 'payment');  \n    }  \n\n    public void processTransaction() {  \n        // business logic  \n        transactionCounter.increment();  \n    }  \n}  \n\nThis example creates a counter metric named transactions_total with a tag type=payment and increments it on each transaction [3.].\n\nExport Metrics to Prometheus and VisualizeSpring Boot with Micrometer supports exporting metrics to Prometheus, which scrapes the /actuator/prometheus endpoint. You can then use Grafana or other tools to visualize these metrics and set up alerts. The integration is straightforward and widely adopted in Kubernetes environments [1.] [3.].\n\nAdvanced Configuration: Histogram and PercentilesMicrometer allows configuring histograms and percentiles for metrics to better understand latency distributions and other performance characteristics. For example, you can configure service level objectives (SLOs) and percentiles in your properties to capture detailed metrics:  \nmanagement.metrics.distribution.percentiles=0.5,0.9,0.99  \nmanagement.metrics.distribution.sla=500ms,1s  \n\nThis helps in setting up alerts and dashboards based on latency thresholds [1.].\n\nIntegration with OpenTelemetry for Distributed TracingSpring Boot 3 also supports integration with OpenTelemetry for distributed tracing alongside metrics. This enables tracing of requests across microservices, improving observability in complex architectures. You can enable OpenTelemetry by adding the appropriate dependencies and configuring exporters [4.] [1.].\n\nUse Spring Boot Actuator Endpoints for Runtime InsightsThe Actuator provides endpoints like /actuator/health, /actuator/info, and /actuator/metrics that give real-time insights into application health and metrics. These endpoints can be customized and extended as needed [2.].\n\n\nIn summary, configuring metrics in Spring Boot 3 involves enabling Actuator and Micrometer, exposing the necessary endpoints, defining custom metrics via MeterRegistry, and exporting these metrics to monitoring systems like Prometheus. Advanced features like histograms, percentiles, and OpenTelemetry integration further enhance observability for cloud-native and serverless applications.\nIf you want to explore practical examples and detailed configuration, the Spring Boot 3 tutorial series and conference talks on observability provide excellent guidance [1.].\nThis approach ensures you can monitor your Spring Boot 3 applications effectively, enabling proactive performance tuning and reliable operation in production environments.",
   "discovery_data": {
-    "query_sent": "Give me something cool about tech.",
+    "query_sent": "How do I configure metrics in Spring Boot 3",
     "results": [
       {
-        "_id": "61704cf00894999654f2a32d",
-        "title": "Channeling your Inner Tech Blogger",
+        "_id": "a681c1fbb5aa263d247db411",
+        "title": "Green Coding mit Spring Boot: Nachhaltigkeit als Weg zu besserer Software",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "07d1c03928eb1c9b7a5db5b5",
-        "title": "Ein Tool für jede Zeitenwende",
+        "_id": "42b64c0da5470cc2b0a36d54",
+        "title": "Spring Cloud Function Framework",
         "parentGenre": null
       },
       {
-        "_id": "uDEHMoqxwZAF9Gz55",
-        "title": "A fool with a tool is still a fool - wenn Integration, dann aber richtig!",
+        "_id": "a0d7d441c15396e7cb9e4c0d",
+        "title": "AWS: Spring Cloud Function Framework",
+        "parentGenre": null
+      },
+      {
+        "_id": "4838c53487d1fbf653972d71",
+        "title": "GraalVM Native Image mit Spring Cloud",
+        "parentGenre": null
+      },
+      {
+        "_id": "5033cc0d5af81cdde2dc423f",
+        "title": "Benutzerdefiniertes Docker Image",
+        "parentGenre": null
+      },
+      {
+        "_id": "j2JS2z44pQGhFG9sW",
+        "title": "Spring Boot 3 and Spring Framework 6 – a new generation",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "5c6bd4fcc3cfb37b58b1e823",
-        "title": "2020 PoC in Tech Report: “Diverse teams produce better results”",
+        "_id": "ggpXsbznZEKSNjGTM",
+        "title": "WinUI 3: Moderne Windows-Desktop-Apps entwickeln",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "um5JzcLvvQZdqw5A7",
+        "title": "Spring Boot Configuration",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "wRDXXoPQvkxHjPWQT",
+        "title": "Vue.js 3 – eine leichtgewichtige SPA-Alternative",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1ca36afe8381ff71c318446c",
+        "title": "Spring Boot Observability in der Praxis: Actuator, Micrometer und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "313a870a64186401ffae9179",
+        "title": "Observe Cloud Native Applications with OpenTelemetry and MicroProfile Telemetry",
         "parentGenre": null
       },
       {
-        "_id": "98dc65fbb5958bce0638c270",
-        "title": "How to succeed in tech: CloudBees’ Isabel Muñoz Vilacides shares her tips & tricks",
+        "_id": "cbac16438d8543fcf2cdeb5d",
+        "title": "Monitoring von Applikationen in Kubernetes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "14573ae41c2f0e738f119bbd",
+        "title": "Spring Boot 3.5: More Structure, New Freedom",
         "parentGenre": null
       },
       {
-        "_id": "f87bb95ae2a3577cc176d292",
-        "title": "“Many companies lack the infrastructure & career growth opportunities to support female employees”",
+        "_id": "3fc03cbcdbf5a73df28cb49b",
+        "title": "Planet-Scale Dashboards - How Google Mitigates Scaling Problems",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "cccade614e9bf7d9a1ba2719",
+        "title": "Spring Boot 3.5: mehr Struktur, neue Freiheiten",
         "parentGenre": null
       },
       {
-        "_id": "e328c39c74352411c9396b0a",
-        "title": "How to succeed in tech: Agnès Crepet gives her tips",
+        "_id": "d49e5fb66b723b44a8c23ff5",
+        "title": "Getting unstuck in levelling up - Patterns for personal development | Paul van der Slot",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "f754dada55d201e6c6adae75",
+        "title": "Java and AI for real business Use Cases I Sean Li & Pierre Malarme",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "82f6bfc1962957169a9835cc",
+        "title": "Monitoring Java Application Security with JDK Tools and JFR events I Ana Maria Mihalceanu",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "2950930a0005220927c5b7ab",
+        "title": "Achieving Zero Trust Security in a DevOps Environment",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "fc77fd0125d2806ecded3690",
+        "title": "The Observability Myth",
         "parentGenre": null
       },
       {
-        "_id": "a593f47beafc81e28b473ce7",
-        "title": "There is too much allowance for tolerating toxic people in tech",
+        "_id": "oRzxocgfwrL9FvSRb",
+        "title": "Horizontal Autoscaling with Kubernetes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "AgoMBzQowt2yxTAgr",
+        "title": "Deployments done right",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "892b21e3c83eecd3f97cc6ca",
+        "title": "Spring Boot 3",
         "parentGenre": null
       },
       {
-        "_id": "f0cdbd19e08444d1bf7d3710",
-        "title": "“Diversity ensures continuous innovation”",
-        "parentGenre": null
+        "_id": "7RA4sagHev3rzeuAS",
+        "title": "Effective Observability for Cloud-native Applications",
+        "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "5a7f4cd5f0bcb06d93c0192a",
-        "title": "Transitioning into a tech career? Silicon Valley culture is one of the biggest initial obstacles",
-        "parentGenre": null
+        "_id": "cmL2jC9S7uhDHzKYe",
+        "title": "Advanced monitoring for effective API Governance in mature ecosystems",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Vague Question handling - Clarification request with Brand Experience",
+    "test_focus": "language check",
     "required_checks": [
-      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
-      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
-      "The assistant should apply the vague Question fallback logic defined in the prompt."
+      "the Answer should be in the same language as the question."
     ]
   }
 }

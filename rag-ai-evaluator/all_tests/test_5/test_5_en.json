@@ -7,48 +7,43 @@
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: \nHello! How can I assist you today? If you have any questions or need information on software development, architecture, or any related topic, feel free to ask.",
+  "actual_response": "Hello! How can I assist you today with your Serverless Architecture topics or any related software development questions?",
   "discovery_data": {
     "query_sent": "What’s up?",
     "results": [
       {
-        "_id": "wMWwTeRmBavtjwdZQ",
-        "title": "State of the Art in the PHP World: Panel & Discussion",
-        "parentGenre": "RHEINGOLD"
+        "_id": "816bd24d0c88aff49cab65a3",
+        "title": "Neuromarketing Rebooted: How AI is Taking the Guesswork Out of Effective Marketing",
+        "parentGenre": null
       },
       {
-        "_id": "f7e7694ee174cde72552d4e1",
-        "title": "The State of DevOps: 15 Years In, Where Do We Stand? Ask the Experts...and Your Peers!",
-        "parentGenre": "RHEINGOLD"
+        "_id": "a40e20324ce4b160f7d57529",
+        "title": "Upgrading Legacy Applications to PHP 8",
+        "parentGenre": null
       },
       {
-        "_id": "Dc6wFDfTcFDS2kwia",
-        "title": "Designers vs Developers: Who Is in Control Here?",
-        "parentGenre": "RHEINGOLD"
+        "_id": "6fcb92f445fa52d65c238a3f",
+        "title": "Modern Backend JavaScript Development: Part 1",
+        "parentGenre": null
       },
       {
-        "_id": "b69E746Arn9TooLoo",
-        "title": "Vue.js and TypeScript: Working Together like Peanut Butter and Jelly",
-        "parentGenre": "RHEINGOLD"
+        "_id": "159685ae0e576c44bd6cc2cb",
+        "title": "AKS-Cluster mit privaten Ressourcen absichern",
+        "parentGenre": null
       },
       {
-        "_id": "i2F7JiWfotd9N9k4k",
-        "title": "OpenDataCam – an open source Tool to quantify the World",
-        "parentGenre": "RHEINGOLD"
+        "_id": "2126ca560af0d5bc5d1cfd82",
+        "title": "Vom Post-it zur Spezifikation – APIs aus Workshopergebnissen generieren",
+        "parentGenre": null
       },
       {
-        "_id": "nBcrG9ozjd4RZBS49",
-        "title": "Everything AI? Opportunities at the intersection of AI and APIs",
-        "parentGenre": "RHEINGOLD"
+        "_id": "075f5d9542e6296815028dce",
+        "title": "Is Cursor Evolving into a Developer AI Cloud Platform?",
+        "parentGenre": null
       },
       {
-        "_id": "96v5buJfR46BBZWj6",
-        "title": "Processing data from the James Webb Space Telescope",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "9451743a76a51bc8a6c7629a",
-        "title": "Kubernetes: One Size Fits All – the Platform for Everything  (even Containers)",
+        "_id": "1366ac2570d4f62aa137f2a9",
+        "title": "Get-Together",
         "parentGenre": "RHEINGOLD"
       },
       {
@@ -57,28 +52,33 @@
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "17ab751101f3ed98c9bcef68",
-        "title": "Platform Engineering: Paving the Road to Effective Software Development",
+        "_id": "9451743a76a51bc8a6c7629a",
+        "title": "Kubernetes: One Size Fits All – the Platform for Everything  (even Containers)",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "QBF75aoBuhEhmt5Bv",
-        "title": "Mastering Node.js Performance - Version 2",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "09c1d40fca67448b12b69d10",
-        "title": "State Management in React",
-        "parentGenre": null
-      },
-      {
-        "_id": "22c4f3f3971bad4bc4647a0d",
-        "title": "Unleashing the Power of Azure with AI",
+        "_id": "a4c76aec5194a4ac2fbdb21a",
+        "title": "Coupling, Cohesion and Change, the blueprint of modern software design I Boyen van Gorp",
         "parentGenre": "FSLE"
       },
       {
-        "_id": "d0d58129aa16fd0e6d71ea86",
-        "title": "Paths Unseen: Leadership Lessons from Middle Earth",
+        "_id": "6fd1a9f837bb83551defdcc1",
+        "title": "Welcome and Opening Remarks & Keynote Pitfalls of building internal developer platforms",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "0600bb296cea1a2f1f55b1d1",
+        "title": "LLMS Need a good retriever",
+        "parentGenre": null
+      },
+      {
+        "_id": "180b29293213ef6f8fd4e2e7",
+        "title": "Welcome and Opening Remarks followed by Algorithms, AI, and Misinformation: A National Security Imperative",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "a87ee31edf47077f2449ebbf",
+        "title": "Islands of Hydration",
         "parentGenre": "RHEINGOLD"
       },
       {
@@ -92,19 +92,19 @@
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "33939f1f0da7f7874fab123d",
-        "title": "Aktueller New-Relic-Report: Trends im Java-Ökosystem",
+        "_id": "454cb1e7b80f466f91b7cbf9",
+        "title": "Adapting to Changing Needs in Space Exploration with Industrial DevOps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "433e2b3406c9ed4eac19f18b",
+        "title": "Column: Superficially in Depth",
         "parentGenre": null
       },
       {
-        "_id": "c066c62502d24cac5dac504f",
-        "title": "Zusammenspiel von Technik, Organisation und Business",
-        "parentGenre": null
-      },
-      {
-        "_id": "c4a0240592dc1f26ea18f6a6",
-        "title": "Architekturunfälle vermeiden mit Architekturcommunities",
-        "parentGenre": null
+        "_id": "17ab751101f3ed98c9bcef68",
+        "title": "Platform Engineering: Paving the Road to Effective Software Development",
+        "parentGenre": "RHEINGOLD"
       },
       {
         "_id": "a522a79c33147ddef9dc193a",
@@ -112,188 +112,18 @@
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "4d09abaa2f678ffba49dd227",
-        "title": "Leveraging ArchUnit to Identify and Resolve Architectural Errors",
-        "parentGenre": null
-      },
-      {
-        "_id": "289ed20082d3c9390923e419",
-        "title": "Security und Privacy: das Internet of Things, Smart Devices und KI",
-        "parentGenre": null
-      },
-      {
-        "_id": "2a0d0f7f05db8f5660fa11bf",
-        "title": "Shopping mit SharePoint",
-        "parentGenre": null
-      },
-      {
-        "_id": "beec20b7889b4ec304c6b8a2",
-        "title": "Laravel 12: Create Your Web App in 15 Minutes",
-        "parentGenre": null
-      },
-      {
-        "_id": "38a062fe226e9b07ee26e67e",
-        "title": "RAG & MCP for ML Devs: Practical AI Implementation",
-        "parentGenre": null
-      },
-      {
-        "_id": "acfe7cb7fca7e7966d32feff",
-        "title": "Clear the Clutter: Decluttering Your Agile Team for Peak Efficiency",
-        "parentGenre": null
-      },
-      {
-        "_id": "03e591acdf635d0a3c18e55a",
-        "title": "Postponing Design Decisions",
-        "parentGenre": null
-      },
-      {
-        "_id": "4b153401cd20deae955c2e94",
-        "title": "Local-First API Development with Bruno & Kreya",
-        "parentGenre": null
-      },
-      {
-        "_id": "da3908ce06e7548e821c66f3",
-        "title": "Mit Strategic Design zu nachhaltigen Frontend-Lösungen",
-        "parentGenre": null
-      },
-      {
-        "_id": "1678ae643dc47c24c2b1a969",
-        "title": "TypeScript 5.7/5.8 – das ist neu!",
-        "parentGenre": null
-      },
-      {
-        "_id": "39094f2e889bbf04d6f2672e",
-        "title": "Geodatenbanken: Standards, Formate, Anwendungsbeispiele",
-        "parentGenre": null
-      },
-      {
-        "_id": "E9A55ewEkQA42MkPS",
-        "title": "Solving the Cloud Security Puzzle",
+        "_id": "d0d58129aa16fd0e6d71ea86",
+        "title": "Paths Unseen: Leadership Lessons from Middle Earth",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "8zfh2HcqfELkL3zB5",
-        "title": "Beyond PHP: It's Not (Just) About the Code!",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "BWA3BxKYMd6XuwcgW",
-        "title": "The Goal is Standing in our Scrum Master's Way",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "JpMMqndJPaLRirA5k",
-        "title": "Hidden in plain sight: Innovation and Ethics with Computer Vision and AI in IoT and beyond",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "6fd1a9f837bb83551defdcc1",
-        "title": "Welcome and Opening Remarks & Keynote Pitfalls of building internal developer platforms",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Tj7Psvge99xb5AasS",
-        "title": "AI-Powered Automated Incident Management",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3706bbd5d99bc6366bdc3502",
-        "title": "5 Höre immer auf den User",
-        "parentGenre": null
-      },
-      {
-        "_id": "qdZPeAuBZvk3uh8Hm",
-        "title": "Scaling: From 0 to 20 Million Users",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "yqGnkj9RLiyzKm5pK",
-        "title": "Unexpected Forces Shaping AI",
-        "parentGenre": "RHEINGOLD"
+        "_id": "2584b29577c57764395f8c72",
+        "title": "Looking at music, an experiment with Kotlin, javaFX, MIDI, and virtual Threads I Frank Delporte & Vik Delporte",
+        "parentGenre": "FSLE"
       },
       {
         "_id": "PPbPwnqmyP3PNEWbb",
         "title": "Translating a Cretan Book using Java and ChatGPT API",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "JeYaEkfbrwWWp9yGh",
-        "title": "Wearable, Shareable... Unbearable? The IoT and AI Tech Nobody Asked For but Cybercriminals Love!",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "GRbeDQTq8aEQTTiqn",
-        "title": "Opening of the DevOps Transformation Day",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "180b29293213ef6f8fd4e2e7",
-        "title": "Welcome and Opening Remarks followed by Algorithms, AI, and Misinformation: A National Security Imperative",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "iMPvWQjZHwKwm4zBn",
-        "title": "Some API Questions to Ask Yourself",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "JvXKb5xePsh7NuQto",
-        "title": "Optimizing flow on a DevOps “Journey to Value”",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "3KySo4h9vQS2P5Sus",
-        "title": "The Future of Web Development",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "7CEMG2ePcduyX5CWq",
-        "title": "Shrek, Onions and Architecture",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Gsh8oxwareb5wG7to",
-        "title": "Bridging the Gap",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "Bqi3awQYWmf3fg8t5",
-        "title": "Create an Enterprise-Grade ML Platform with Cloud Native Architectures",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "5sxgHibysZaHSyAz2",
-        "title": "Making Decisions in a Fast-changing World",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "M8Xgm6aQkhq4R8ETG",
-        "title": "The Team Is The Real Product",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "e03b1ed47e9232e80a3a8b22",
-        "title": "QUIC and HTTP/3: the next step in web performance",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "a506357e4ace803d88892d57",
-        "title": "Real‑World DevOps Attacks: Breaches from Push to Prod",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "cw2LJ6JHw8aEmMHAH",
-        "title": "Monolith to Composable Architecture: Why the trend?",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "qPjAaxSn7vwkk2roy",
-        "title": "The 5 Vicious Circles at Work: Detecting and Breaking Them Up",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "6883afe7f10bc00f03909bef",
-        "title": "Built to last: Angular's Lessons in Framework Resilience",
         "parentGenre": "RHEINGOLD"
       }
     ]

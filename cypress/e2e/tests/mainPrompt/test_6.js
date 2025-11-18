@@ -1,18 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
 
-const test_query_en = "Angular better?"
-const test_query_de = "Angular besser?"
+const test_query_en = "Show the OpenTelemetry export example from the documents."
+const test_query_de = "Zeig mir das OpenTelemetry-Export-Beispiel aus den Dokumenten."
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
 // Test 6 Evaluation Criteria 
 const evaluation_criteria = {
-  test_focus: "Vague Question handling - Clarification request for Angular",
+  test_focus: "G5 – Marker format is exact [[[CID:...]]] (1.f–1.h) - Strict marker syntax",
   required_checks: [
-    "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-    "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
-    "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
-    "The assistant should apply the vague Question fallback logic defined in the prompt."
+    "All markers are exactly [[[CID:{chunk_id}]]].",
+    "chunk_id is taken verbatim from context, not invented.", 
+    "No punctuation or spaces inside marker, and no punctuation directly before [[[.",
+    "Max 2 markers per claim, separated by one space."
   ]
 }
 

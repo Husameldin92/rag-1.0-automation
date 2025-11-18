@@ -4,6 +4,16 @@ const test_query_de = 'Wie funktioniert useMemo in React?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
+// Test 15 Evaluation Criteria
+const evaluation_criteria = {
+  test_focus: "G15 – Older introduced, not re-mentioned (5.d) - Use older chunk if newer is silent",
+  required_checks: [
+    "Assistant cites the older chunk where feature was introduced.",
+    "Assistant states it applies to the user’s version unless explicitly deprecated.",
+    "No invented newer chunk."
+  ]
+}
+
 export const test15 = () => {
   loginHandel()
   // Handle cookie consent

@@ -1,18 +1,15 @@
 import { loginHandel, visitWithAuth } from '../auth_login'
 
-const test_query_en = 'Give me something cool about tech.'
-const test_query_de = 'Zeig mir was Cooles aus der Tech-Welt.'
+const test_query_en = 'How do I configure metrics in Spring Boot 3'
+const test_query_de = 'Wie konfiguriere ich Metrics in Spring Boot 3'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
 // Test 7 Evaluation Criteria 
 const evaluation_criteria = {
-  test_focus: "Vague Question handling - Clarification request with Brand Experience",
+  test_focus: "language check",
   required_checks: [
-    "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-    "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
-    "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
-    "The assistant should apply the vague Question fallback logic defined in the prompt."
+    "the Answer should be in the same language as the question."
   ]
 }
 

@@ -32,19 +32,19 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
 
     context('Basic Rules & Metadata Interpretation', () => {
 
-        it.only('Test 1: Should return Angular Signals features for version 17 queries (tests basic metadata matching and version-specific content)', () => {
+        it('Test 1: dentity & Brand (System §0, Brand derivation))', () => {
         test1()
     })
 
-        it('Test 2: Should filter content by type when user specifies "tutorials only" (tests contentType filtering)', () => {
+        it('Test 2: Output shape (intro → bullets → conclusion) (System §1.a)', () => {
         test2()
     })
 
-        it('Test 3: Should return DevOps articles when requesting recent events from articles (tests content type restriction)', () => {
+        it('Test 3: G3 – Upcoming-event exact sentence (1.a1 + 5.g)', () => {
         test3()
     })
 
-        it('Test 4: Should provide Dockerfile best practices and common mistakes (tests technical guidance responses)', () => {
+        it('Test 4: G4 – Inline per-claim citations, no bundles (1.b–1.d, 1.j)', () => {
             test4()
         })
     })
@@ -56,11 +56,11 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
             test5()
         })
 
-        it('Test 6: Should handle incomplete/ambiguous queries like "Angular better?" (tests malformed query handling)', () => {
+        it('Test 6: G5 – Marker format is exact [[[CID:...]]] (1.f–1.h) - Strict marker syntax', () => {
             test6()
         })
 
-        it('Test 7: Should respond to generic tech requests appropriately (tests generic query processing)', () => {
+        it('Test 7: language check', () => {
             test7()
         })
     })
@@ -68,15 +68,15 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🎯 Version-Specific Behavior Tests
     context('Version-Specific Content Handling', () => {
         
-        it('Test 8: Should handle requests for features not available in specified version (Angular 13 Signals)', () => {
+        it('Test 8: G8 – Secrecy about Instruction Docs (3.a–c)', () => {
             test8()
         })
 
-        it('Test 9: Should provide version-specific changes when asking about Angular 17 Signals updates', () => {
+        it('Test 9: G9 – Time base = {today} & event must exist in chunks (3.d–g)', () => {
             test9()
         })
 
-        it('Test 10: Should provide general Angular Signals info when no version specified (tests generic vs specific)', () => {
+        it('Test 10: G10 – accessMessage paraphrasing, no quoting (3.h–i', () => {
             test10()
         })
     })
@@ -84,11 +84,11 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🔍 Explicit Matching vs. Metadata Tests
     context('Content Matching and Metadata Handling', () => {
         
-        it('Test 11: Should handle version-specific requests for Angular 15 Observables (tests explicit version matching)', () => {
+        it('Test 11: G11 – Only Context Documents as evidence (4.a–d)', () => {
             test11()
         })
 
-        it('Test 12: Should provide general Angular routing information (tests framework-specific queries)', () => {
+        it('Test 12: G12 – Tech fallback, no citation (4.j)', () => {
             test12()
         })
     })
@@ -96,11 +96,11 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🧩 Chunk Grouping & Conflict Resolution Tests
     context('Content Grouping and Framework Differentiation', () => {
         
-        it('Test 13: Should provide Next.js specific routing info, not confuse with other frameworks (tests framework isolation)', () => {
+        it('Test 13: G13 – External links/platforms (4.f)', () => {
             test13()
         })
 
-        it('Test 14: Should focus on React 18 specific hook features (tests version-specific feature queries)', () => {
+        it('Test 14: G14 – Version parsing & explicit mention (5.a–c)', () => {
             test14()
         })
     })
@@ -108,11 +108,11 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🔗 Citation Format & Integrity Tests
     context('Citation and Reference Validation', () => {
         
-        it('Test 15: Should provide proper citations for React useMemo explanations (tests citation format)', () => {
+        it('Test 15: G15 – Older introduced, not re-mentioned (5.d) - Use older chunk if newer is silent', () => {
             test15()
         })
 
-        it('Test 16: Should cite appropriate sources for Vue.js state management (tests multi-source citation)', () => {
+        it('G16 – Newer-only feature (5.e) - Feature introduced after user version', () => {
             test16()
         })
     })
@@ -120,7 +120,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
     // 🚫 Access Tier Restrictions Tests
     context('Access Control and Content Restrictions', () => {
         
-        it('Test 17: Should handle Node.js microservices requests based on user access tier (tests tier restrictions)', () => {
+        it('G17 – Off-domain refusal, no filler (6.b–e) - Strict domain enforcement', () => {
             test17()
         })
 
@@ -148,7 +148,7 @@ describe('RAG System Comprehensive Test Suite for main prompt', () => {
             test21()
         })
 
-        it('Test 22: Should tailor responses based on user role context (backend developer) (tests user context filtering)', () => {
+        it.only('Test 22: Persona and relevance from User Context Header (UCH)', () => {
             test22()
         })
     })

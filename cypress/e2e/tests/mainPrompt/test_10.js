@@ -1,8 +1,19 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const test_query_en = 'How do I use Signals in Angular?'
-const test_query_de = 'Wie verwendet man Signals in Angular?'
+const test_query_en = 'can user with basic tier watch recording?'
+const test_query_de = 'Kann ein Benutzer mit Basic-Tier Aufnahmen ansehen?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
+
+// Test 10 Evaluation Criteria 
+const evaluation_criteria = {
+  test_focus: "G10 – accessMessage paraphrasing, no quoting (3.h–i",
+  required_checks: [
+    "Assistant uses meaning of accessMessage to explain access/upgrade.",
+    "Assistant does NOT quote accessMessage verbatim.",
+    "Assistant does NOT recompute access logic on its own.",
+    "Assistant keeps required structure and language."
+  ]
+}
 
 export const test10 = () => {
   loginHandel()
@@ -86,7 +97,7 @@ export const test10 = () => {
     })
 
   //Screenshot the response
-  cy.screenshot('test-10-angular-signals-generic-de')
+  cy.screenshot('test-10-basic-tier-watch-recording-de')
 
   // ========================================
   // SECOND ENDPOINT: reader/explore?explore-text=true

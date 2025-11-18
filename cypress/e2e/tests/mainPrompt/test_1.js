@@ -1,18 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
 
-const test_query_en = 'What are the main features of Angular Signals in version 17?'
-const test_query_de = 'Was sind die Hauptfunktionen von Angular Signals in Version 17?'
+const test_query_en = 'Who are you in this platform and who can use you?'
+const test_query_de = 'Wer bist du hier in dieser Plattform und wer kann dich nutzen?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
-// Test 1 Evaluation Criteria 
+// Test 1 Evaluation Criteria
+// main prompt rules: G1 – Identity & Brand (System §0, Brand derivation)
 const evaluation_criteria = {
-  test_focus: "Version-Specific Chunk Selection and Content Analysis",
+  test_focus: "G1 – Identity & Brand (System §0, Brand derivation)",
   required_checks: [
-    "Discovery data must include chunks relevant to Angular Signals and/or Angular version 17 (titles can mention either Angular Signals OR version 17 OR both)",
-    "AI response must mention Angular Signals and version 17 explicitly in the main content",
-    "Response content must be accurate and match information available in the selected chunks",
-    "The status of Angular Signals in v17 must be accurate (e.g., stable, new features, breaking changes)"
+    "When platform=entwickler.de → assistant names itself 'Entwickler Intelligence' || 'entwickler.de'.",
+    "Assistant says/implies it is available inside the logged-in product experience, not external.",
+    "Assistant does NOT call itself ChatGPT/LLM/external service. It should be a specific assistant name that is part of the platform."
   ]
 }
 

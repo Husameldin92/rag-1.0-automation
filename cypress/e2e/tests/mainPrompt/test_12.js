@@ -1,8 +1,19 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const test_query_en = 'How does Angular handle routing?'
-const test_query_de = 'Wie funktioniert das Routing in Angular?'
+const test_query_en = 'How do I enable feature X in the newest Angular if it’s not in your docs?'
+const test_query_de = 'Wie aktiviere ich Feature X im neuesten Angular, wenn es in euren Dokumenten nicht steht?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
+
+// Test 12 Evaluation Criteria 
+const evaluation_criteria = {
+  test_focus: "G12 – Tech fallback, no citation (4.j)",
+  required_checks: [
+    "Assistant clearly says the feature is not explicitly covered in retrieved chunks.",
+    "Assistant suggests a generic/typical solution for that tech.",
+    "Assistant does NOT add [[[CID:...]]] to the generic part.",
+    "Structure is still respected."
+  ]
+}
 
 export const test12 = () => {
   loginHandel()
@@ -60,7 +71,7 @@ export const test12 = () => {
     })
 
   //Screenshot the response
-  cy.screenshot('test-12-angular-routing-en')
+  cy.screenshot('test-12-angular-feature-x-en')
 
   // German query: Wie funktioniert das Routing in Angular? elevate user tier
   cy.get('.rounded-0 > .col-12').clear()
@@ -86,7 +97,7 @@ export const test12 = () => {
     })
 
   //Screenshot the response
-  cy.screenshot('test-12-angular-routing-de')
+  cy.screenshot('test-12-angular-feature-x-de')
 
   // ========================================
   // SECOND ENDPOINT: reader/explore?explore-text=true

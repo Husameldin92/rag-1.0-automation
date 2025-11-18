@@ -1,6 +1,6 @@
 {
   "test_id": "test_008_explore_de",
-  "query": "Wie verwende ich Signals in Angular 13?",
+  "query": "Content Type Guide",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
@@ -12,70 +12,191 @@
     ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Signals Angular 13 12 11\nDie Verwendung von Signals in Angular ist ein zentrales Thema ab Angular 16 und wird in den neueren Versionen weiter ausgebaut. Da Angular 13 noch keine Signals unterstützt, ist eine direkte Nutzung dort nicht möglich. Allerdings kann ich Ihnen basierend auf den verfügbaren Dokumenten erklären, wie Signals in Angular ab Version 16 eingeführt und verwendet werden, damit Sie eine Vorstellung davon bekommen, wie die Migration und Nutzung in neueren Angular-Versionen aussieht.\nEinführung in Angular Signals (ab Angular 16)\n\nWas sind Signals?Signals sind reaktive primitive Werte, die eine synchrone Benachrichtigung über Änderungen ermöglichen. Sie sind eine Alternative zur bisherigen Change Detection mit Zone.js und bieten eine feinere Granularität bei der Aktualisierung von Komponenten. Ein Signal hält einen Wert und informiert automatisch alle Abonnenten, wenn sich dieser Wert ändert.oaGpszBqbMPpjD7Signals sind reaktive primitive Werte, die eine synchrone Benachrichtigung über Änderungen ermöglichen. Sie sind eine Alternative zur bisherigen Change Detection mit Zone.js und bieten eine feinere Granularität bei der Aktualisierung von Komponenten.\n\nErzeugen eines Signals:Ein Signal wird mit der Funktion signal() erzeugt und benötigt einen initialen Wert. Der Wert wird über einen Funktionsaufruf gelesen, z.B. count().  \nimport { signal } from '@angular/core';\n\nconst count = signal(0);\nconsole.log(count()); // Wert auslesen\ncount.set(1);         // Wert setzen\ncount.update(c => c + 1); // Wert basierend auf vorherigem Wert aktualisieren\n\noaGpszBqbMPpjD7Ein Signal wird mit der Funktion signal() erzeugt und benötigt einen initialen Wert. Der Wert wird über einen Funktionsaufruf gelesen, z.B. count().\n\nComputed Signals:Computed Signals sind abgeleitete Werte, die automatisch neu berechnet werden, wenn sich abhängige Signals ändern.  \nimport { computed } from '@angular/core';\n\nconst count = signal(1);\nconst doubleCount = computed(() => count() * 2);\nconsole.log(doubleCount()); // 2\n\noaGpszBqbMPpjD7Computed Signals sind abgeleitete Werte, die automatisch neu berechnet werden, wenn sich abhängige Signals ändern.\n\nEffekte (Effects):Effekte sind Funktionen, die ausgeführt werden, wenn sich ein Signal ändert, z.B. für Logging oder andere Nebenwirkungen. Sie dürfen keine Signale verändern, um Endlosschleifen zu vermeiden.  \nimport { effect } from '@angular/core';\n\neffect(() => {\n  console.log(count());\n});\n\noaGpszBqbMPpjD7Effekte sind Funktionen, die ausgeführt werden, wenn sich ein Signal ändert, z.B. für Logging oder andere Nebenwirkungen. Sie dürfen keine Signale verändern, um Endlosschleifen zu vermeiden.\n\nIntegration in Komponenten:In Angular-Komponenten werden Signals als Member definiert und im Template mit Funktionsaufruf verwendet:  \n@Component({\n  selector: 'app-counter',\n  template: `\n    <p>Count: {{ count() }}</p>\n    <button (click)='increment()'>Increment</button>\n  `\n})\nexport class CounterComponent {\n  count = signal(0);\n\n  increment() {\n    this.count.update(c => c + 1);\n  }\n}\n\noaGpszBqbMPpjD7In Angular-Komponenten werden Signals als Member definiert und im Template mit Funktionsaufruf verwendet.\n\nWichtig:  \n\nSignale sind ab Angular 16 verfügbar, nicht in Angular 13.  \nDie Nutzung von Signalen erfordert ein Umdenken im Vergleich zu klassischen Observables und Change Detection.  \nSignale sind synchron und eignen sich besonders gut für UI-Updates.  \nFür asynchrone Datenströme und komplexe State-Management-Szenarien wird weiterhin RxJS empfohlen, wobei eine Interoperabilität zwischen RxJS und Signals besteht.oaGpszBqbMPpjD7Signale sind ab Angular 16 verfügbar, nicht in Angular 13. Die Nutzung von Signalen erfordert ein Umdenken im Vergleich zu klassischen Observables und Change Detection. Signale sind synchron und eignen sich besonders gut für UI-Updates. Für asynchrone Datenströme und komplexe State-Management-Szenarien wird weiterhin RxJS empfohlen.\n\n\n\nFazit\n\nAngular Signals sind eine moderne, performante Alternative zur bisherigen Change Detection und bieten eine fein granulare Reaktivität.  \nSie sind ab Angular 16 verfügbar und werden in den folgenden Versionen weiter ausgebaut.  \nIn Angular 13 gibt es keine native Unterstützung für Signals; ein Upgrade auf Angular 16 oder höher ist notwendig, um Signals zu nutzen.  \nFür die Migration empfiehlt es sich, zunächst neue Komponenten oder kleine Teile der Anwendung mit Signals zu implementieren und schrittweise zu migrieren.  \nDie Kombination von Signals mit RxJS ist möglich und wird empfohlen, um asynchrone Operationen und komplexe State-Management-Szenarien abzudecken.\n\nWenn Sie also Angular Signals verwenden möchten, sollten Sie auf Angular 16 oder höher aktualisieren und die oben beschriebenen Patterns nutzen.  \nBei Interesse kann ich Ihnen auch gerne Beispiele für die Migration von klassischen Angular-Versionen auf Angular mit Signals geben oder weitere Details zu State Management mit dem NgRx Signal Store erläutern.\noaGpszBqbMPpjD7Signale sind ab Angular 16 verfügbar, nicht in Angular 13. Die Nutzung von Signalen erfordert ein Umdenken im Vergleich zu klassischen Observables und Change Detection. Signale sind synchron und eignen sich besonders gut für UI-Updates. Für asynchrone Datenströme und komplexe State-Management-Szenarien wird weiterhin RxJS empfohlen.9836770500f14958Signals sind reaktive primitive Werte, die eine synchrone Benachrichtigung über Änderungen ermöglichen. Sie sind eine Alternative zur bisherigen Change Detection mit Zone.js und bieten eine feinere Granularität bei der Aktualisierung von Komponenten.9836770500f14958Ein Signal wird mit der Funktion signal() erzeugt und benötigt einen initialen Wert. Der Wert wird über einen Funktionsaufruf gelesen, z.B. count().9836770500f14958Computed Signals sind abgeleitete Werte, die automatisch neu berechnet werden, wenn sich abhängige Signals ändern.9836770500f14958Effekte sind Funktionen, die ausgeführt werden, wenn sich ein Signal ändert, z.B. für Logging oder andere Nebenwirkungen. Sie dürfen keine Signale verändern, um Endlosschleifen zu vermeiden.9836770500f14958In Angular-Komponenten werden Signals als Member definiert und im Template mit Funktionsaufruf verwendet.9836770500f14958Signale sind synchron und eignen sich besonders gut für UI-Updates. Für asynchrone Datenströme und komplexe State-Management-Szenarien wird weiterhin RxJS empfohlen.oaGpszBqbMPpjD7Signale sind reaktive primitive Werte, die eine synchrone Benachrichtigung über Änderungen ermöglichen. Sie sind eine Alternative zur bisherigen Change Detection mit Zone.js und bieten eine feinere Granularität bei der Aktualisierung von Komponenten.oaGpszBqbMPpjD7Ein Signal wird mit der Funktion signal() erzeugt und benötigt einen initialen Wert. Der Wert wird über einen Funktionsaufruf gelesen, z.B. count().oaGpszBqbMPpjD7Computed Signals sind abgeleitete Werte, die automatisch neu berechnet werden, wenn sich abhängige Signals ändern.oaGpszBqbMPpjD7Effekte sind Funktionen, die ausgeführt werden, wenn sich ein Signal ändert, z.B. für Logging oder andere Nebenwirkungen. Sie dürfen keine Signale verändern, um Endlosschleifen zu vermeiden.oaGpszBqbMPpjD7In Angular-Komponenten werden Signals als Member definiert und im Template mit Funktionsaufruf verwendet.oaGpszBqbMPpjD7Signale sind synchron und eignen sich besonders gut für UI-Updates. Für asynchrone Datenströme und komplexe State-Management-Szenarien wird weiterhin RxJS empfohlen.  \nLeider gibt es keine Dokumente in den verfügbaren Quellen, die die Verwendung von Signals in Angular 13 beschreiben, da Signals erst ab Angular 16 eingeführt wurden. Für Angular 13 ist die native Nutzung von Signals nicht möglich.",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'Guide',\n  'primary_version_array': [],\n  'secondary_version_array': [],\n  'year_array': [],\n  'issue_array': []\n} \nSorry, I can’t share internal guides. If you tell me what specific information or topic you want to know about, I’ll be happy to help based on available materials.",
   "discovery_data": {
-    "query_sent": "Wie verwende ich Signals in Angular 13?",
+    "query_sent": "Content Type Guide",
     "results": [
       {
-        "_id": "b3dccbe48006a54c8a14b9c8",
-        "title": "Mastering State Management in Angular with the NgRx Signal Store",
+        "_id": "4d54a12dd2cb8dafe5191ed4",
+        "title": "The Ever-Evolving Space of Design Component Libraries",
+        "parentGenre": null
+      },
+      {
+        "_id": "22af9412e299dce7c36bca11",
+        "title": "Angular, React, Vue.js: Starter-Guide",
+        "parentGenre": null
+      },
+      {
+        "_id": "9f7c5146d1cacb5f9e72d61a",
+        "title": "Accessible UI Libraries: A Developer's Guide",
+        "parentGenre": null
+      },
+      {
+        "_id": "nbYgw2AKyBumhH4mo",
+        "title": "Guide",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "00154c4bfa9cdf674582ccd3",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "ecb2f9d7cad89a18e5c2ca2d",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "16518e09a4d53a411ba64d4b",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "c203a94eb7f40b8f4bf38172",
+        "title": "Bücher: IT Survival Guide",
+        "parentGenre": null
+      },
+      {
+        "_id": "f64849f9528a82857864ea2d",
+        "title": "Advanced CI/CD Pipelines with GitOps: A Comprehensive Guide",
         "parentGenre": "COURSE"
       },
       {
-        "_id": "9836770500f149a58b7769f9",
-        "title": "Professional Tips for Using Signals in Angular",
+        "_id": "5ccc2b80858fe9f5f57ae6ca",
+        "title": "Advanced CI/CD Pipelines with GitOps: A Comprehensive Guide",
         "parentGenre": null
       },
       {
-        "_id": "62f599587e3fd28de76c2756",
-        "title": "Signals werden erwachsen – das neue Resource API in Angular 19",
+        "_id": "5b13b0a919af4d291e88c1d9",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "1c2d0d1ddbcc6e6469e58943",
-        "title": "Angular 19: Incremental Hydration, Hybrid Rendering und Signals",
+        "_id": "ac9e50f08d2ff528ae5497cc",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
+        "_id": "2e5d7a8b4d0183009db405c8",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
+        "_id": "81a6a971d6649e3a5b6c425e",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "7169f2b6391a0d9490ef4b35",
-        "title": "Angular Turns 18 - Grown Up But Dynamic",
+        "_id": "a444fec6a17e6494176c3a29",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
         "parentGenre": null
       },
       {
-        "_id": "oaGpszBqb9pMPpjD7",
-        "title": "Angular Signals im Vergleich mit RxJS Observables: Ein Blick auf Ereignisbehandlung und asynchrone Datenströme",
-        "parentGenre": "COURSE"
+        "_id": "ddfb6691480d50e085e985bf",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
       },
       {
-        "_id": "qREnL94qsTwnQH8ic",
-        "title": "Angular Signals: Gamechanger für reaktive Entwicklung",
-        "parentGenre": "COURSE"
+        "_id": "73409b918ba492cd8024136b",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
       },
       {
-        "_id": "64ace3828d8056484c3534ab",
-        "title": "Angular 16 released",
+        "_id": "6fc366206017e2c404fdc511",
+        "title": "Kolumne: Hitchhiker’s Guide to Docs as Code",
+        "parentGenre": null
+      },
+      {
+        "_id": "8da16481a81f7a03ce1926ca",
+        "title": "Building Accessible Web Applications: Harnessing Semantic HTML",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "b053ba6c394972b0a8ddfd63",
+        "title": "UX Crash Course: Wayfinding",
+        "parentGenre": null
+      },
+      {
+        "_id": "80231b52e111c7e32f5a1a66",
+        "title": "Developer Docs That are Actually Useful",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "oqALo77wHaBAidMWt",
+        "title": "Software Architecture Documentation",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "fePvPpYkBwMMm4Moa",
+        "title": "API Design First: Succeeding with API Governance",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "kXZvTbrkLFu8dMRQL",
+        "title": "Web-Design für Entwickler – Eine schnelle Einführung",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "3AyajbNoyTB7MeJN6",
+        "title": "Authoring HTML in a JavaScript World",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8dab4c1bf365cb4a098be4e1",
+        "title": "Das Scrapy-Framework - Produktion im großen Maßstab",
+        "parentGenre": null
+      },
+      {
+        "_id": "w4tS3QRJE2yamTsY8",
+        "title": "The Influential Software Engineer",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "drHrmxJyMxfzrCTkk",
+        "title": "API Design First: Succeeding with API Governance",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "63e0e98a7ac9c6a84663c941",
+        "title": "Der Headless-CMS-Vergleich",
+        "parentGenre": null
+      },
+      {
+        "_id": "5H5ih6DenSbJaZahQ",
+        "title": "CMS Speed Dating",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "bccd83cc9752a5bcdcbdf652",
+        "title": "Clientseitiges Webpart und Konfiguration der Feldtypen",
+        "parentGenre": null
+      },
+      {
+        "_id": "bc00c54af61ea02073db0bd2",
+        "title": "Warum machen wir das überhaupt?",
+        "parentGenre": null
+      },
+      {
+        "_id": "bb162e58783b00ec26715e17",
+        "title": "The wonderful world of Contao",
+        "parentGenre": null
+      },
+      {
+        "_id": "be4e126ac4ae8b5270aeb6c8",
+        "title": "Ivy für alle",
+        "parentGenre": null
+      },
+      {
+        "_id": "9a8b3c266264fe3296159516",
+        "title": "Die wunderbare Welt von Contao",
         "parentGenre": null
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Version Awareness – Angular Signals vs. Version 13",
+    "test_focus": "G8 – Secrecy about Instruction Docs (3.a–c)",
     "required_checks": [
-      "The AI must detect that Signals were not available in Angular 13.",
-      "The AI must clearly communicate that Signals were introduced in a later version (e.g., Angular 16 or later).",
-      "The response must avoid implying that Signals can be used in Angular 13.",
-      "If relevant documents (chunks) about Signals exist, they must be cited and their version context must be mentioned.",
-      "If no matching chunk about Angular 13 and Signals exists, RAG should clarify this and provide helpful, accurate guidance for newer versions instead."
+      "The AI must not mention the existence of instruction docs in any way. i.g RHEINGOLD, CAMP, FLEX_CAMP, etc."
     ]
   }
 }

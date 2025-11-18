@@ -1,74 +1,225 @@
 {
   "test_id": "test_003_explore_en",
-  "query": "Can you summarize recent events on DevOps from articles?",
+  "query": "when is the next Delphi Camp happening? ",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: DevOps events articles 2025 2024\nCertainly! Here is a summary of recent developments and insights on DevOps from the latest articles:\n\nDevOps Philosophy and Optimization (DevOpsCon Magazin 4.2025)  \n\nDevOps is understood as a holistic approach to software delivery, breaking down silos between development and operations to optimize the entire value stream from requirement to end-user deployment.  \nThe '3 Ways' of DevOps by Gene Kim emphasize:  \nFirst Way: Optimize flow to reduce time to market by identifying bottlenecks, limiting work in progress, reducing batch sizes, visualizing work, and automating deployments.  \nSecond Way: Amplify feedback loops for faster learning and correction.  \nThird Way: Foster a culture of continual experimentation and learning.\n\n\nKey strategies include reducing wait times, minimizing context switching, automating deployments to make them routine 'none-events,' and encouraging cross-functional collaboration.  \nOrganizational changes such as forming vertical, cross-disciplinary teams help improve flow and responsibility ownership.  \nThe approach is supported by research showing improved outcomes when adopting lean and systems thinking principles in software delivery.\n\n\nDevOps Plus: Future Trends and AI Integration (DevOpsCon Magazine Volume 21, 2025)  \n\nThe concept of 'DevOps Plus' is introduced as the next evolution of DevOps, integrating more open source, AI-enabled capabilities, quantum-ready features, and next-generation software and services.  \nOpen source continues to be a key enabler for collaboration, flexibility, and reducing vendor lock-in.  \nAI is impacting all aspects of DevOps, from AI-powered CI/CD patterns to AI agents in workflows, but practitioners must ensure AI integration does not reduce productivity.  \nQuantum computing integration is emerging, with initiatives like Microsoft’s Quantum Ready program and IBM’s Qiskit.  \nNew tools and practices such as OpenTelemetry, OpenSLO, and observability-driven development are shaping the future DevOps ecosystem.\n\n\nDevSecOps Transformation with Generative AI and ClickOps (DevOps Magazine 2024)  \n\nDevSecOps has become essential for integrating security into agile development, but skill gaps and complex cloud environments remain challenges.  \nGenerative AI (GenAI) tools like GitHub Copilot are boosting productivity by automating code generation and documentation, with Gartner predicting widespread adoption by 2026.  \nClickOps platforms (low-code/no-code) empower non-developers to contribute to DevSecOps processes, democratizing capabilities beyond specialized teams.  \nCombining GenAI and ClickOps can accelerate secure software delivery and help address talent shortages.  \nOrganizations adopting these technologies must focus on trust, transparency, and change management to maximize benefits.\n\n\nAutomation of Infrastructure as Code (IaC) with Terraform in Azure DevOps Pipelines  \n\nAutomation pipelines in Azure DevOps enable reliable, repeatable deployment of infrastructure defined as code with Terraform.  \nKey practices include remote state management (e.g., Azure Storage with Azure AD authentication), security scanning (e.g., Checkov), and approval gates for destructive changes.  \nPipelines can be structured into preparation, approval, and deployment jobs, improving security and stability.  \nVariables and secrets management are critical for secure and flexible pipeline execution.  \nTesting infrastructure with tools like Terratest can be integrated into pipelines for validation.\n\n\n\nSummary:Recent DevOps content highlights a maturing philosophy focused on optimizing flow, feedback, and culture for faster, reliable software delivery. The future of DevOps ('DevOps Plus') integrates AI, open source, and emerging technologies like quantum computing. DevSecOps is evolving with generative AI and low-code ClickOps platforms to address skill gaps and accelerate secure delivery. Automation of infrastructure provisioning via CI/CD pipelines, especially with Terraform and Azure DevOps, is a best practice for reliability and security. These trends collectively point to a more integrated, automated, and intelligent DevOps ecosystem in the near future.\nIf you want more detailed guidance or examples on any of these topics, feel",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'Delphi Camp',\n  'primary_version_array': [],\n  'secondary_version_array': [],\n  'year_array': ['2025','2026'],\n  'issue_array': []\n} \nThere is no upcoming Delphi Camp as of 2025-11-10. The latest Delphi Code Camp sessions available in the context are scheduled through mid-2026, with detailed workshops such as 'Tag 1: Grundlegende Strukturen der Softwarearchitektur' in June 2026 and 'Tag 2: Eigene REST-API entwickeln & sicher in die Cloud bringen' in July 2025, but no future Delphi Camp beyond these dates is listed [1.]  [2.]  [3.]  [4.].\nThese camps focus on deep technical topics such as Delphi language updates, REST API development, mobile app development with Delphi, and software architecture fundamentals, providing comprehensive training for Delphi developers [1.]  [2.]  [5.].\nIf you are interested in attending a Delphi Camp, I recommend monitoring the platform for announcements of new events beyond mid-2026 or exploring related workshops and flexible online formats currently available.",
   "discovery_data": {
-    "query_sent": "Can you summarize recent events on DevOps from articles?",
+    "query_sent": "when is the next Delphi Camp happening? ",
     "results": [
       {
-        "_id": "fae582b18950466eac9c5147",
-        "title": "Systems Thinking: Schnell von der Anforderung zum Anwender",
-        "parentGenre": null
+        "_id": "b0864bcb5e4df6ec563eb9fa",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "00c9b0014c6a2c9a4da4abf9",
-        "title": "DevOps Plus: More Open Source, AI-Enabled, Next Generation Services",
-        "parentGenre": null
+        "_id": "2105a4eaa77027c95f0e2a74",
+        "title": "Tag 3: Mobile Apps mit Delphi & REST-Anbindung entwickeln",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "59a3ca449c3b930b5f2432c6",
-        "title": "JavaScript Trends to Watch: Who’s Taking the Lead?",
-        "parentGenre": null
+        "_id": "1fceeff3a56fffe52c28b29b",
+        "title": "Tag 1: REST verstehen, vergleichen und gezielt einsetzen",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "57868ce7d247728d832ce6d6",
-        "title": "Der große .NET-Jahresrückblick 2024",
-        "parentGenre": null
+        "_id": "6dfe28634f67b908f1f08fb1",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "706951e0a3b546ccbb006301",
-        "title": "State of PHP: Highlights, Trends, Prognosen",
-        "parentGenre": null
+        "_id": "46355b56f8d96aadc3ddba40",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "dd4096071cc62fc09263301a",
-        "title": "JavaScript Trends, Innovations, and Insights: A 2024 Annual Review",
-        "parentGenre": null
+        "_id": "887cbbc49c759b328a372891",
+        "title": "Software Architecture Camp Flexible",
+        "parentGenre": "FLEX_CAMP"
       },
       {
-        "_id": "e3e688caa9ae1564fe427b3a",
-        "title": "GenAI und Low Code: Brückenschlag in DevSecOps",
-        "parentGenre": null
+        "_id": "9ac5e49d83a4007f48a62f20",
+        "title": "Tag 2: Eigene REST-API entwickeln & sicher in die Cloud bringen",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "0d4978a9971caa6a3a8e9f5e",
-        "title": "Terraform and Azure DevOps",
-        "parentGenre": null
+        "_id": "b8a9da705aa4d9381cd1d2dc",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "d64628d5c08e7decd491c8ce",
-        "title": "How Generative AI and ClickOps will Transform DevSecOps in 2024",
-        "parentGenre": null
+        "_id": "e1a16119104227e3ac465d68",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
       },
       {
-        "_id": "2a0f3ecad8f30c4a31cd83ae",
-        "title": "Neues in React",
-        "parentGenre": null
+        "_id": "89dc2b26c54951ffc48609d8",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "cb2102d37658e737ec5d523d",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur-Copy",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "7a089f28c371deb309c650d5",
+        "title": "Tag 1: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "defe86069de8a99eed86786c",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "49108fcb7e611e655c51fc1c",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "8d0ed35e44b0f51da0284d8d",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "bfbf887ec85cc16c105ee7ac",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "1dae4f1dd3553713162731bb",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "cf94e67dcc679964be76a3d7",
+        "title": "Tag 2: Grundlegende Strukturen der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "03ef56383493f8cea5c522ca",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "4450dfa716e5e90546142615",
+        "title": "Woche 3: Lektion 7: Angular Formulare und Validierung: Dateneingabe mit Sicherheit und Komfort | verfügbar bis 27.02.2026",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "69ef6c499a1df1b2aecedfa8",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "4be4c392cb6573f730f5a994",
+        "title": "Woche 3: Lektion 7: Angular Formulare und Validierung: Dateneingabe mit Sicherheit und Komfort | verfügbar bis 30.01.2026",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "41fc2c246eaab0e5cc8056db",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "8d2952af8f3ab5da36319842",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "b8326db5b42894007169ee95",
+        "title": "Tag 5: Qualitätsbewertung & Prüfungsvorbereitung iSAQB-Zertifizierung",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "6ae8f622c24effb80ed4ad70",
+        "title": "Tag 4: Entwicklung von Architektursichten & Architekturdokumentation",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "5c7b739a30c3d63146f25b5d",
+        "title": "Tag 3: Systematische Entwicklung & Werkzeuge der Softwarearchitektur",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "bebfff400f3739e664585834",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "f5b320fc9a2d1b1d235febe3",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "359127520ad0d067c368a161",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "4e4e9b4e6c922c93db6f0fa4",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "7954a9ed5b20c113f43bd36c",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "e4c8f6d096e09ac557c3a331",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "LoXreGxPuDounzry9",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "kNkYzMYQupXCm7PC2",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "tfAfSZdrs3brtS8Nt",
+        "title": "Delphi Language Update",
+        "parentGenre": "CAMP"
+      },
+      {
+        "_id": "yCqyKNFMFFBz69WEX",
+        "title": "Fragestunde mit Manfred Steyer 2",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "9WXd3t7wWwWcRvXK2",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "LsisM4tEM8yk9PAff",
+        "title": "Zweite Fragestunde mit Manfred Steyer",
+        "parentGenre": "FLEX_CAMP"
+      },
+      {
+        "_id": "xo7puZLDHcETXGcf9",
+        "title": "Fragestunde mit Manfred Steyer - 2",
+        "parentGenre": "FLEX_CAMP"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Content Type Filtering - Articles Only",
+    "test_focus": "G3 – Upcoming-event exact sentence (1.a1 + 5.g)",
     "required_checks": [
-      "AI response must indicate the content is based on articles.",
-      "AI response must not mention or cite content types like tutorials, events, or courses.",
-      "Summary should align with article-style information (e.g., informative, topical, not step-by-step)."
+      "If all event dates in context < {today}, first sentence is exactly: 'There is no upcoming event as of {today}.'.",
+      "Does NOT start with 'the next ...'.",
+      "Mentions only events actually in Context Documents.",
+      "Uses {today} from prompt as time base."
     ]
   }
 }

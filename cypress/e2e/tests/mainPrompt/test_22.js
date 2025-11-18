@@ -4,6 +4,18 @@ const test_query_de = 'Ich bin Backend-Entwickler. Zeig mir passende Tutorials.'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
+// Test 17 Evaluation Criteria
+const evaluation_criteria = {
+  test_focus: "Persona and relevance from User Context Header (UCH)",
+  required_checks: [
+    "Assistant selects only tutorials related to backend development (e.g., Java, Spring, Node.js, databases).",
+    "Tone, examples, and terminology fit a backend developer’s technical level (no frontend or unrelated examples).",
+    "Assistant clearly uses UCH fields (platform, communityExperience, tags) to filter relevance.",
+    "Answer is written in the user's languagePreference.",
+    "No leakage of raw UCH field names or metadata in user-visible text."
+  ]
+}
+
 export const test22 = () => {
   loginHandel()
   // Handle cookie consent

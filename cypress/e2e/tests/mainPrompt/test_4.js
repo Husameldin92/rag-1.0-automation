@@ -1,18 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
 
-const test_query_en = 'What are some common mistakes in Dockerfile configuration?'
-const test_query_de = 'Was sind typische Fehler bei der Konfiguration von Dockerfiles?'
+const test_query_en = 'Give me the steps from your content to enable Micrometer tracing in Spring Boot.'
+const test_query_de = 'Gib mir die Schritte aus euren Inhalten, um Micrometer-Tracing in Spring Boot zu aktivieren.'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
 // Test 4 Evaluation Criteria 
 const evaluation_criteria = {
-  test_focus: "Detailed Chunk Prioritization - Dockerfile Mistakes",
+  test_focus: "G4 – Inline per-claim citations, no bundles (1.b–1.d, 1.j)",
   required_checks: [
-    "Discovery data must prioritize chunks that give a complete and detailed explanation of common Dockerfile mistakes",
-    "Chunks that only mention Dockerfiles or errors briefly must not be selected if deeper ones exist",
-    "AI response must focus on real and relevant mistakes (e.g., large images, excessive layers, missing .dockerignore, root user, etc.)",
-    "Prompt applied: Use only relevant document chunks for output generation. Prefer chunks that provide a more detailed and complete treatment of the feature, method, or solution requested in the user query over those that mention it only briefly."
+    "Every supported claim has a marker right after the claim.",
+    "No vertical list of citations.",
+    "No trailing bundle of citations for several earlier claims.",
+    "Conclusion does not repeat citations unless it adds a new supported claim."
   ]
 }
 

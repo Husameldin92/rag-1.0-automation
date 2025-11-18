@@ -1,6 +1,6 @@
 {
   "test_id": "test_006_explore_en",
-  "query": "Angular better?",
+  "query": "Show the OpenTelemetry export example from the documents.",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
@@ -12,69 +12,139 @@
     ]
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Angular better\nBased on the latest insights from the Angular ecosystem, Angular is undergoing significant evolution to better meet modern web development needs, focusing on developer experience, performance, and architectural improvements. Here are the key points illustrating how Angular is becoming better:\n\nSignals and Reactive Programming  \n\nAngular introduced Signals as a new reactive primitive, enabling fine-grained, efficient change detection that can replace or reduce reliance on zone.js. Signals provide a simpler, more intuitive way to manage state and reactivity, improving performance and developer ergonomics.  \nSignals are interoperable with RxJS, allowing developers to combine the best of both worlds for handling synchronous and asynchronous data flows.  \nAngular’s move towards Signals supports a more precise and performant change detection mechanism, reducing unnecessary updates and improving app responsiveness.  \nThe Angular team is working towards making zone.js optional, with Signals enabling local change detection and better performance.8b35cfb0-0a3a-4a3a-9a3a-0a3a4a3a9a3aSignals enable a local change detection mechanism that only updates components with changed signal values, improving performance and developer experience.\n\n\nStandalone Components and APIs  \n\nAngular is shifting away from the traditional NgModule system towards standalone components and APIs, simplifying the application structure and reducing boilerplate.  \nStandalone components declare their own dependencies, making it easier to understand and manage component dependencies without navigating complex module hierarchies.  \nThis change improves developer productivity and aligns Angular with modern frontend frameworks that favor component-centric architectures.8b35cfb0-0a3a-4a3a-9a3a-0a3a4a3a9a3aStandalone components and APIs simplify Angular development by removing the need for NgModules and making dependencies explicit at the component level.\n\n\nImproved Server-Side Rendering (SSR) and Hydration  \n\nAngular has integrated SSR more deeply, including support for hydration, which allows server-rendered pages to become interactive without full re-rendering on the client, reducing flicker and improving perceived performance.  \nThe Angular team is working on features like event replay during hydration to avoid the 'uncanny valley' where the UI appears ready but is not yet interactive.  \nSSR improvements also include better caching strategies and tooling support, making Angular apps faster and more SEO-friendly.1e3dde565bad510fbdafefAngular’s SSR with hydration and event replay improves performance and user experience by delivering fully rendered pages quickly and enabling smooth interactivity.\n\n\nNew Control Flow Syntax and Lazy Loading  \n\nAngular is introducing a new declarative control flow syntax (e.g., @if, @for, @switch) that is more readable and expressive than the traditional structural directives.  \nThis new syntax supports advanced features like deferred loading of components with fine-grained triggers (e.g., on interaction, on hover, on timer), enabling smarter lazy loading and prefetching strategies.  \nThese features help optimize bundle sizes and improve app startup times by loading only what is needed when it is needed.de0df53930e2e-582caf57Angular’s new control flow syntax and deferred loading enable more readable templates and smarter lazy loading strategies, improving performance and developer experience.\n\n\nTooling and Build Improvements  \n\nAngular’s build system has been modernized with the new Application Builder based on esbuild and Vite, significantly speeding up build times and improving developer feedback loops.  \nThe Angular CLI now generates standalone applications by default and supports automatic migrations to new APIs and syntax, easing upgrades and adoption of new features.  \nAngular DevTools have been enhanced to support debugging of hydration and signals, providing better insights into app behavior.60bb03da4058fe0ccaThe new Application Builder and CLI improvements speed up builds and simplify migration, enhancing developer productivity.\n\n\nBackward Compatibility and Migration Support  \n\nDespite rapid innovation, Angular maintains backward compatibility, allowing gradual adoption of new features like Signals and standalone components.  \nMigration tools and schematics help automate code transformations, reducing the effort required to upgrade existing applications.  \nThe Angular team emphasizes smooth upgrades to minimize disruption for enterprise users.de0df53930e2e-582caf57Angular provides migration tools and maintains backward compatibility to support gradual adoption of new features.\n\n\n\nSummaryAngular is becoming better by embracing modern reactive primitives (Signals), simplifying application architecture (standalone components), enhancing performance (SSR with hydration), improving developer experience (new control flow syntax, tooling), and supporting smooth migrations. These changes position Angular to build faster, more maintainable, and user-friendly web applications aligned with current and future web standards.\nIf you want to explore these improvements, consider starting with Angular 17 or later, which stabilizes Signals and introduces many of these features, while keeping compatibility with existing Angular codebases.\nShould you want detailed guidance on migrating or adopting these features, I can provide tailored advice or point you to relevant tutorials and courses.",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'OpenTelemetry export example documents',\n  'primary_version_array': [],\n  'secondary_version_array': [],\n  'year_array': [],\n  'issue_array': []\n} \nOpenTelemetry export examples demonstrate how telemetry data such as logs, metrics, and traces can be sent from an application or collector to various backends for analysis and visualization. Here are key concepts and a concrete example of OpenTelemetry export configuration based on the retrieved content:\n\nOpenTelemetry Collector Export ConfigurationThe OpenTelemetry Collector can be configured with exporters to send telemetry data to different backends. For example, a simple collector configuration includes receivers for OTLP (OpenTelemetry Protocol) over gRPC and HTTP, and exporters such as debug, Prometheus, and Jaeger. The collector pipelines define how traces, metrics, and logs flow from receivers to exporters. This setup allows you to receive telemetry data and export it to multiple destinations simultaneously [1.].\n\nFluent Bit Export to OpenTelemetry CollectorFluent Bit, a telemetry collector, can be configured to send data to the OpenTelemetry Collector using the OpenTelemetry output plugin. The configuration specifies the host, port, and URIs for metrics, logs, and traces. For example, the output section in Fluent Bit’s YAML config might look like this:  \noutputs:\n  - name: opentelemetry\n    match: '*'\n    host: 127.0.0.1\n    port: 4318\n    tls: off\n    metrics_uri: /v1/metrics\n    logs_uri: /v1/logs\n    traces_uri: /v1/traces\n    log_response_payload: true\n\nThis configuration sends all matched telemetry data to the local OpenTelemetry Collector endpoint [2.].\n\nOpenTelemetry Export in .NET ApplicationsIn .NET, OpenTelemetry SDK is registered via dependency injection, configuring resources with tracing, metrics, and logging. Exporters are set up to send data to backends like Jaeger for traces, Prometheus for metrics, and Loki for logs. The exporter can be switched easily by changing the configuration without altering the instrumentation code. This flexibility allows seamless integration with various observability backends [3.].\n\nCollector Exporter Example SnippetA minimal OpenTelemetry Collector configuration snippet for receivers and exporters looks like this:  \nreceivers:\n  otlp:\n    protocols:\n      grpc:\n        endpoint: 0.0.0.0:4317\n      http:\n        endpoint: 0.0.0.0:4318\nexporters:\n  debug:\n    verbosity: detailed\nservice:\n  pipelines:\n    traces:\n      receivers: [otlp]\n      exporters: [debug]\n    metrics:\n      receivers: [otlp]\n      exporters: [debug]\n    logs:\n      receivers: [otlp]\n      exporters: [debug]\n\nThis configuration receives OTLP data and exports it to a debug exporter for development and troubleshooting purposes [4.].\n\nOpenTelemetry Java Agent ExportThe OpenTelemetry Java agent can be attached to JVM applications with the -javaagent argument, and exporters are configured via JVM startup parameters (e.g., otel.traces.exporter). This agent automatically instruments supported frameworks and exports telemetry data to configured backends without code changes [5.].\n\n\nIn summary, OpenTelemetry export examples typically involve configuring the OpenTelemetry Collector or SDKs in applications to send telemetry data to various backends such as Prometheus, Jaeger, or custom endpoints. Fluent Bit can also be integrated as a telemetry forwarder to the OpenTelemetry Collector using the OTLP protocol. Export configurations are flexible and can be adapted to different environments and observability tools.\nIf you want a specific example snippet to start with, here is a Fluent Bit output configuration sending telemetry to an OpenTelemetry Collector on localhost port 4318:\noutputs:\n  - name: opentelemetry\n    match: '*'\n    host: 127.0.0.1\n    port: 4318\n    tls: off\n    metrics_uri: /v1/metrics\n    logs_uri: /v1/logs\n    traces_uri: /v1/traces\n    log_response_payload: true\n\nThis example shows how Fluent Bit forwards logs, metrics, and traces to the OpenTelemetry Collector for further processing and export [2.].\nLet me know if you want export examples for a specific language or tool!",
   "discovery_data": {
-    "query_sent": "Angular better?",
+    "query_sent": "Show the OpenTelemetry export example from the documents.",
     "results": [
       {
-        "_id": "1e3dde565bad5109fbd7aef8",
-        "title": "Return to Server-Side Rendering with Angular",
-        "parentGenre": "COURSE"
-      },
-      {
-        "_id": "9836770500f149a58b7769f9",
-        "title": "Professional Tips for Using Signals in Angular",
-        "parentGenre": null
-      },
-      {
-        "_id": "60bb03da4058fe9d0cca3a3e",
-        "title": "Was ist neu in Angular 18?",
-        "parentGenre": null
-      },
-      {
-        "_id": "8b35e3d0070110b78d6c9434",
-        "title": "Angular: Signals, Standalone, SSR",
-        "parentGenre": null
-      },
-      {
-        "_id": "04721391f3f7580f0631b9d3",
-        "title": "Angular 17: Neues Release des Web-Frameworks",
-        "parentGenre": null
-      },
-      {
-        "_id": "de0df53930e2e1e582caf57f",
-        "title": "Angular 17: The Web Framework's Newest Release",
-        "parentGenre": null
-      },
-      {
-        "_id": "yeDqYHwX2d2dnZvTR",
-        "title": "Build the Next Generation of Web Apps With Angular",
+        "_id": "54f68226b04b39e8b556c198",
+        "title": "Telemetrie und Distributed Tracing mit OpenTelemetry für ASP.NET Core Microservices",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "f105c3b533645c5e79e6dcb2",
-        "title": "Forms With Angular",
+        "_id": "bd7441c521543e7f1c9278ab",
+        "title": "Seven approaches to Electronic documents interchange",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "71e094cd3cb4b117a73727e0",
+        "title": "OpenTelemetry better practices - navigation the bullsh** bingo",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "60eb11682d74e071744ffcf8",
+        "title": "OpenTelemetry better practices - navigating the bullsh** bingo",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "FL7mXpvsqxEbZ4XbA",
+        "title": "Using MySQL Document Store with Node.js",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "81d0ea682745090420ad37f9",
+        "title": "Die Herausforderungen moderner Microservice-Architekturen",
         "parentGenre": null
       },
       {
-        "_id": "751b88e1aceba1740578c266",
-        "title": "Performance is high up on the list of architectural goals for Angular",
+        "_id": "a9bb215b2423e54b8b38f37a",
+        "title": "How to implement compliance with the modern IT standards regarding your electronic documents",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "LmYLmc9MqBsbhBtrz",
+        "title": "Tracing edge compute with OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "BsPDFmMpN2qivuRuu",
+        "title": "Tracing edge compute with OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "22278246647035e8f75842f1",
+        "title": "Continuous Delivery Expert Check 2020 – CI/CD, security & rolling deployment (Part 1)",
         "parentGenre": null
       },
       {
-        "_id": "14cc5ed4a89dffe508d6e605",
-        "title": "Progressive Web Apps auf Knopfdruck?",
+        "_id": "bf759bf0ac6efafc1d70d767",
+        "title": "Enhancing Java Observability with OpenTelemetry Extensions",
         "parentGenre": null
+      },
+      {
+        "_id": "d711da888bd09c02084397fd",
+        "title": "OpenTelemetry: Because 'It Works on My Machine' Isn't a Monitoring Strategy",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "jpBgWuWq4bq9Ejcd2",
+        "title": "Obervability with OpenTelemetry and Grafana (ENG)",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "55706a65ccf0c6d49a8f78ae",
+        "title": "Continuous Delivery Expert Check 2020 – Kubernetes and the future of CI/CD (Part 2)",
+        "parentGenre": null
+      },
+      {
+        "_id": "26d01db8331b796597bb007a",
+        "title": "Erste Schritte in Fluent Bit mit OpenTelemetry",
+        "parentGenre": null
+      },
+      {
+        "_id": "313a870a64186401ffae9179",
+        "title": "Observe Cloud Native Applications with OpenTelemetry and MicroProfile Telemetry",
+        "parentGenre": null
+      },
+      {
+        "_id": "1d8573b0c6de16a83cb5134a",
+        "title": "OTel Legends: Build, Break, and Bend Your Collector!",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "818cea7987a8298159cdec62",
+        "title": "Extension Magic for the OpenTelemetry Java Agent",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "6d0f14ffae4ba518ced6033b",
+        "title": "Fast, Cheap, DIY Observability with Open Source Analytics and Visualization",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "2d29e068328a1021838fb901",
+        "title": "Adventures in Observability with Fluent Bit, OTEL, and Kubernetes",
+        "parentGenre": null
+      },
+      {
+        "_id": "ba4420cbbe0a1431f5f8a39f",
+        "title": "CI at Scale: Lean, Green, and Fast",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "109994e6df654d9ba5e715e3",
+        "title": "Metriken, Traces und die OTEL Integration",
+        "parentGenre": null
+      },
+      {
+        "_id": "e1852b394ff0c65cdfe82618",
+        "title": "Best Practices in OpenTelemetry Adoption from ex-New Relic Engineering Leader",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "1f81486610a1dd7344519880",
+        "title": "OTel You It's Not Just for Backend!",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Vague Question handling - Clarification request for Angular",
+    "test_focus": "G5 – Marker format is exact [[[CID:...]]] (1.f–1.h) - Strict marker syntax",
     "required_checks": [
-      "If the Question is vague, ambiguous, malformed, or unrelated to software development, do not answer.",
-      "Instead, ask the user to clarify their Question, or suggest likely topics based on their communityExperience.",
-      "AI response may provide broad topic suggestions but should not dive into specific recommendations or solutions unless intent is clear.",
-      "The assistant should apply the vague Question fallback logic defined in the prompt."
+      "All markers are exactly [[[CID:{chunk_id}]]].",
+      "chunk_id is taken verbatim from context, not invented.",
+      "No punctuation or spaces inside marker, and no punctuation directly before [[[.",
+      "Max 2 markers per claim, separated by one space."
     ]
   }
 }

@@ -1,0 +1,10 @@
+{
+  "test_id": "test_011_en",
+  "query": "Give me the steps from the article you just retrieved about observability.",
+  "user": {
+    "tier": "elevate",
+    "language": "en"
+  },
+  "prompt": "main",
+  "actual_response": "arrow_forward_ios"
+}

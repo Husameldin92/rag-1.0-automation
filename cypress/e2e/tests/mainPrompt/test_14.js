@@ -1,8 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const test_query_en = 'What\'s new in React 18 hooks?'
-const test_query_de = 'Was ist neu bei React 18 Hooks?'
+const test_query_en = 'What changed in Angular 18 for Signals?'
+const test_query_de = 'Was hat sich in Angular 18 bei Signals geändert?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
+
+// Test 14 Evaluation Criteria
+const evaluation_criteria = {
+  test_focus: "G14 – Version parsing & explicit mention (5.a–c)",
+  required_checks: [
+    "Assistant looks for chunks that explicitly mention Angular 18 and Signals.",
+    "Assistant does NOT infer relevance from title/date alone.",
+    "If only Angular 17 is found, assistant explains applicability to 18."
+  ]
+}
 
 export const test14 = () => {
   loginHandel()

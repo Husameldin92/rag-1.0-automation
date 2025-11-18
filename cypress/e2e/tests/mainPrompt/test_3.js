@@ -1,17 +1,18 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
 
-const test_query_en = 'Can you summarize recent events on DevOps from articles?'
-const test_query_de = 'Kannst du aktuelle Ereignisse zu DevOps aus Artikeln zusammenfassen?'
+const test_query_en = 'when is the next Delphi Camp happening? '
+const test_query_de = 'Wann ist das nächste Delphi Camp?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
 
 // Test 3 Evaluation Criteria 
 const evaluation_criteria = {
-    test_focus: "Content Type Filtering - Articles Only",
+    test_focus: "G3 – Upcoming-event exact sentence (1.a1 + 5.g)",
     required_checks: [
-      "AI response must indicate the content is based on articles.",
-      "AI response must not mention or cite content types like tutorials, events, or courses.",
-      "Summary should align with article-style information (e.g., informative, topical, not step-by-step)."
+      "If all event dates in context < {today}, first sentence is exactly: 'There is no upcoming event as of {today}.'.",
+      "Does NOT start with 'the next ...'.",
+      "Mentions only events actually in Context Documents.",
+      "Uses {today} from prompt as time base."
     ]
 }
 

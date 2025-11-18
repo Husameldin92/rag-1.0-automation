@@ -1,30 +1,30 @@
 {
   "test_id": "test_004_explore_en",
-  "query": "What are some common mistakes in Dockerfile configuration?",
+  "query": "Give me the steps from your content to enable Micrometer tracing in Spring Boot.",
   "endpoint": "reader_explore_text",
   "user": {
     "tier": "elevate",
     "language": "en"
   },
   "prompt": "main",
-  "actual_response": "gpt-4.1-mini keyword: Dockerfile configuration mistakes\nWhen working with Dockerfile configurations, several common mistakes can impact build efficiency, security, and maintainability. Based on the provided documents, here are key points and best practices to avoid typical pitfalls:\n\nInefficient Layering and Caching  \n\nDocker builds images in layers, and each command in a Dockerfile creates a new layer. If commands that change frequently (like copying source code) are placed before commands that rarely change (like installing dependencies), Docker's cache is invalidated more often, leading to longer build times.  \nBest practice: Place commands that change less frequently (e.g., installing dependencies) before copying application source code to maximize cache reuse.  \nUse multi-stage builds to separate build-time dependencies from runtime images, reducing image size and attack surface.Q8umqYEAyRP5QsNB“The first thing you actually want to do is put all the dependencies ... prior to the files that change frequently ... so you save a lot of time on npm install.”Q8umqYEAyRP5QsNB“Multi-stage builds ... reduce the size of the docker image because we don't carry the entire SDK with us.”\n\n\nIncluding Build Tools in Production Images  \n\nLeaving build tools and SDKs in the final image increases size and potential security risks.  \nBest practice: Use multi-stage builds where the first stage contains build tools and the second stage contains only the runtime environment and built artifacts.AuLbLsuCJeJD“You don't want build tools in production image ... so split the Dockerfile into build and runtime stages.”\n\n\nUsing Unpinned or Latest Tags for Base Images  \n\nUsing unpinned tags like latest can lead to non-reproducible builds and unexpected changes when base images update.  \nBest practice: Pin base images to specific versions or digests to ensure reproducible builds.AuLbLsuCJeJD“Including a specific image digest ... ensures reproducible builds and avoids unexpected changes.”\n\n\nNot Managing Secrets Securely  \n\nHardcoding secrets or environment variables in Dockerfiles or images can expose sensitive data.  \nBest practice: Use build arguments or external secret management tools; avoid embedding secrets in images.Q8umqYEAyRP5QsNB“Use build arguments for secrets ... they are only available during build and not in the final image.”\n\n\nNot Using Non-Root Users  \n\nRunning containers as root increases security risks if the container is compromised.  \nBest practice: Create and switch to a non-root user in the Dockerfile for running the application.Q8umqYEAyRP5QsNB“Don't use root user ... attackers get full access if container runs as root.”\n\n\nIgnoring Image Size Optimization  \n\nLarge images increase deployment time and resource usage.  \nBest practice: Use minimal base images (e.g., Alpine), remove unnecessary files, and combine commands to reduce layers and image size.Q8umqYEAyRP5QsNB“Using Alpine base images ... results in smaller images.”\n\n\nNot Using Health Checks and Proper Entrypoints  \n\nOmitting health checks can lead to undetected container failures.  \nBest practice: Define HEALTHCHECK instructions and use ENTRYPOINT and CMD properly to control container startup and lifecycle.AuLbLsuCJeJD“Use ENTRYPOINT for commands that should not be overridden and CMD for default arguments.”\n\n\nNot Using .dockerignore Files  \n\nIncluding unnecessary files in the build context increases build time and image size.  \nBest practice: Use .dockerignore files to exclude files and directories not needed in the image.AuLbLsuCJeJD“The .dockerignore file excludes files from the build context, similar to .gitignore.”\n\n\nNot Leveraging Docker Compose or Orchestration Tools for Multi-Container Apps  \n\nManually managing multiple containers can be error-prone.  \nBest practice: Use Docker Compose files to define multi-container applications with clear service dependencies, volumes, and networks.f2fcda5ae“Docker Compose manages images and containers, describing configuration for all services.”\n\n\nNot Cleaning Up After Builds  \n\nLeaving temporary files or build artifacts in images increases size and complexity.  \nBest practice: Clean package caches and temporary files in the same RUN command to avoid bloated layers.Q8umqYEAyRP5QsNB“Combine package installation and cleanup in one RUN command to reduce image size.”\n\n\n\nSummary:Common Dockerfile mistakes include inefficient layering that leads to slow builds, including build tools in production images, using unpinned base images, insecure handling of secrets, running containers as root, large image sizes, missing health checks, not using .dockerignore, poor multi-container management, and leaving build artifacts in images. Following best practices such as multi-stage builds, pinning image versions, using non-root users, optimizing image size, and leveraging orchestration tools can greatly improve Docker image quality and deployment reliability.\nIf you want, I can also provide example Dockerfile snippets illustrating these best practices.",
+  "actual_response": "gpt-4.1-mini keyword: {\n  'phrase_out': 'Micrometer tracing Spring Boot',\n  'primary_version_array': [],\n  'secondary_version_array': [],\n  'year_array': [],\n  'issue_array': []\n} \nEnabling Micrometer tracing in Spring Boot involves integrating Micrometer Tracing with your Spring Boot application to capture distributed traces and export them to tracing systems like OpenTelemetry, Zipkin, or Jaeger. Here are the key steps distilled from the available expert content:\n\nAdd Micrometer Tracing DependencyInclude the Micrometer Tracing starter in your Spring Boot project dependencies. This enables tracing capabilities alongside Micrometer metrics. For example, add the micrometer-tracing dependency and any bridge dependencies for your chosen tracing backend (e.g., OpenTelemetry, Zipkin, Brave). This setup is essential to start capturing trace data within your application [1.].\n\nEnable and Configure Tracing in ApplicationBy default, tracing might be disabled or require explicit activation. You need to configure properties to enable tracing, such as setting otel.sdk.disabled=false and defining the service name with otel.service.name=yourServiceName. These properties activate OpenTelemetry tracing support within Micrometer Tracing [2.].\n\nAutomatic Instrumentation for RESTful ServicesMicrometer Tracing supports automatic instrumentation of RESTful service invocations, especially when using Jakarta RESTful Web Services or MicroProfile REST Client. This requires no code changes and automatically traces service calls, capturing spans for inbound and outbound HTTP requests [3.].\n\nManual Instrumentation (Optional)For more control, you can manually instrument your code using OpenTelemetry APIs. This involves injecting a Tracer instance via CDI and creating spans programmatically. You can also use annotations like @WithSpan to mark methods for tracing. Remember to properly end spans to avoid memory leaks [3.].\n\nIntegrate with Spring Boot Actuator and MicrometerUse Spring Boot Actuator to expose tracing endpoints and Micrometer to collect and export metrics. Micrometer Tracing integrates with Actuator to provide trace data alongside metrics. This integration allows you to visualize traces and metrics in tools like Prometheus, Grafana, Jaeger, or Zipkin [1.].\n\nConfigure Exporters and Visualization ToolsConfigure exporters in your application properties to send trace data to your chosen backend (e.g., Jaeger, Zipkin, OpenTelemetry Collector). Additionally, set up visualization tools such as Zipkin UI, Jaeger UI, or Grafana to analyze traces and metrics effectively [1.].\n\nEnable Log Correlation (Optional but Recommended)Enhance observability by enabling log correlation, which adds trace and span IDs to your logs. This allows you to correlate logs with traces for better debugging and monitoring. Spring Boot supports this with standard logging patterns and W3C context propagation [1.].\n\nTest and Validate Tracing SetupAfter configuration, test your application by making requests and verifying that traces are captured and visible in your tracing backend. Use tools like Spring Boot Admin or tracing UIs to confirm that spans and trace data are correctly recorded [1.].\n\n\nIn summary, enabling Micrometer tracing in Spring Boot requires adding the appropriate dependencies, configuring tracing properties, leveraging automatic or manual instrumentation, integrating with Actuator and exporters, and optionally enabling log correlation for comprehensive observability. This setup empowers you to trace distributed requests across microservices and gain deep insights into your application's runtime behavior [1.].\nIf you want, I can also provide example configuration snippets or code samples to help you get started.",
   "discovery_data": {
-    "query_sent": "What are some common mistakes in Dockerfile configuration?",
+    "query_sent": "Give me the steps from your content to enable Micrometer tracing in Spring Boot.",
     "results": [
       {
-        "_id": "08323da6140679bd15fd9f78",
-        "title": "Building a Docker Swarm With the Raspberry Pi",
+        "_id": "1ca36afe8381ff71c318446c",
+        "title": "Spring Boot Observability in der Praxis: Actuator, Micrometer und OpenTelemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "5a842211fdd95e05df81bd60",
+        "title": "Metrikbasiertes Monitoring mit Micrometer und Spring Boot",
         "parentGenre": null
       },
       {
-        "_id": "Q8umqYEiAyRP5QsNB",
-        "title": "Mastering the Docker Build Process: Reducing Build Time & Increasing Image Safety",
-        "parentGenre": "RHEINGOLD"
-      },
-      {
-        "_id": "nhk7497gHYNbvPAKN",
-        "title": "Mistakes We Made at the Start of Our Cloud Journey",
-        "parentGenre": "RHEINGOLD"
+        "_id": "eRE5fEAe7BdHJ9LYT",
+        "title": "Spring Boot Observability",
+        "parentGenre": "TUTORIAL"
       },
       {
         "_id": "um5JzcLvvQZdqw5A7",
@@ -37,39 +37,94 @@
         "parentGenre": null
       },
       {
-        "_id": "9f96b8fe9d72cd1c57d3810a",
-        "title": "Kotlin-Kubernetes-Backend-App",
-        "parentGenre": null
-      },
-      {
-        "_id": "AuLbLsu2y7eCJeCjd",
-        "title": "From Build Script to Dockerfile",
+        "_id": "G3AhHFJwMXqcz8YDZ",
+        "title": "Logs, Metrics, Distributed Tracing und OpenTelemetry",
         "parentGenre": "RHEINGOLD"
       },
       {
-        "_id": "f2d7fc99b75ae5a0234279ad",
-        "title": "Docker-Schwarm mit dem Raspberry Pi aufbauen",
+        "_id": "a2a225a5421861490fb49cda",
+        "title": "Advanced Practices – Evaluator, Observability, Memory, Guardrails & Multi-Model",
+        "parentGenre": "TUTORIAL"
+      },
+      {
+        "_id": "313a870a64186401ffae9179",
+        "title": "Observe Cloud Native Applications with OpenTelemetry and MicroProfile Telemetry",
         "parentGenre": null
       },
       {
-        "_id": "5faf5f01cada88397b46fcdb",
-        "title": "Aus der Architektur entsteht die Lösung",
+        "_id": "81d0ea682745090420ad37f9",
+        "title": "Die Herausforderungen moderner Microservice-Architekturen",
         "parentGenre": null
       },
       {
-        "_id": "afc60c851ec50dc1b3041832",
-        "title": "Eclipse + Docker = doclipser",
+        "_id": "bf759bf0ac6efafc1d70d767",
+        "title": "Enhancing Java Observability with OpenTelemetry Extensions",
         "parentGenre": null
+      },
+      {
+        "_id": "cbac16438d8543fcf2cdeb5d",
+        "title": "Monitoring von Applikationen in Kubernetes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "818cea7987a8298159cdec62",
+        "title": "Extension Magic for the OpenTelemetry Java Agent",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "54f68226b04b39e8b556c198",
+        "title": "Telemetrie und Distributed Tracing mit OpenTelemetry für ASP.NET Core Microservices",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "d1689ddf78de644a24ae44c4",
+        "title": "Monitoring von Applikationen in Kubernetes",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "f754dada55d201e6c6adae75",
+        "title": "Java and AI for real business Use Cases I Sean Li & Pierre Malarme",
+        "parentGenre": "FSLE"
+      },
+      {
+        "_id": "PuKhCGKjgaYNREA4o",
+        "title": "Verteiltes Logging und Tracing über Microservices und Web-Apps",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "7RA4sagHev3rzeuAS",
+        "title": "Effective Observability for Cloud-native Applications",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "8aabtCa2EXqvZWE2R",
+        "title": "Tracing Microservices Using MicroProfile Telemetry",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "YuWiHh2BH6JR8QCDX",
+        "title": "Predicting Production Outages: Unleashing the Power of Micro-Metrics",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "TPePaCMfBhNd9B7ej",
+        "title": "Service-Mesh-Workshop: Erstellung, Management und Test eines Java Service Mesh mit Istio",
+        "parentGenre": "RHEINGOLD"
+      },
+      {
+        "_id": "TCLkWrX6zX3QeowfP",
+        "title": "Fantastic Virtual Threads and How to Monitor Them",
+        "parentGenre": "RHEINGOLD"
       }
     ]
   },
   "evaluation_criteria": {
-    "test_focus": "Detailed Chunk Prioritization - Dockerfile Mistakes",
+    "test_focus": "G4 – Inline per-claim citations, no bundles (1.b–1.d, 1.j)",
     "required_checks": [
-      "Discovery data must prioritize chunks that give a complete and detailed explanation of common Dockerfile mistakes",
-      "Chunks that only mention Dockerfiles or errors briefly must not be selected if deeper ones exist",
-      "AI response must focus on real and relevant mistakes (e.g., large images, excessive layers, missing .dockerignore, root user, etc.)",
-      "Prompt applied: Use only relevant document chunks for output generation. Prefer chunks that provide a more detailed and complete treatment of the feature, method, or solution requested in the user query over those that mention it only briefly."
+      "Every supported claim has a marker right after the claim.",
+      "No vertical list of citations.",
+      "No trailing bundle of citations for several earlier claims.",
+      "Conclusion does not repeat citations unless it adds a new supported claim."
     ]
   }
 }

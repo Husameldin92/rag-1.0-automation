@@ -1,8 +1,19 @@
 import {loginHandel, visitWithAuth } from '../auth_login'
-const test_query_en = 'What\'s the best way to manage state in Vue.js?'
-const test_query_de = 'Was ist der beste Weg, um State in Vue.js zu verwalten?'
+const test_query_en = 'I’m on Angular 16 – can I use the routing feature you describe?'
+const test_query_de = 'Ich nutze Angular 16 – kann ich das Routing-Feature verwenden, das du beschreibst?'
 const user_login_elevate = 'hosman+1@jax.de'
 const user_password = 'Hossamaccent2015+'
+
+// Test 16 Evaluation Criteria
+const evaluation_criteria = {
+  test_focus: "G16 – Newer-only feature (5.e) - Feature introduced after user version",
+  required_checks: [
+    "Assistant identifies the chunk where feature is actually introduced.",
+    "Assistant clearly says it was introduced after the user’s version.",
+    "Assistant cites that introducing chunk.",
+    "No guessing that it works on older versions."
+  ]
+}
 
 export const test16 = () => {
   loginHandel()
